@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<odoo>
-    <data>
-        <record id="besco_pricelist.template_import_product_pricelist" model="ir.actions.report">
-            <field name="module">phuclong_pricelist</field>
-            <field name="py3o_template_fallback">report/template_import_product_pricelist.ods</field>
-        </record>
-    </data>
-</odoo>

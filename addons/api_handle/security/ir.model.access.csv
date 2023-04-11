@@ -1,3 +1,0 @@
-id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-assets_res_partner,assets_res_partner,model_res_account_handle,,1,1,1,1
-assets_res_partner_portal,assets_res_partner_portal,model_res_account_handle,base.group_portal,1,1,1,1

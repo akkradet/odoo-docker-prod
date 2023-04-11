@@ -1,9 +1,0 @@
-<?xml version='1.0' encoding='utf-8'?>
-<odoo>
-    <data noupdate="0">
-        <!-- Add you code here -->
-        <!-- This Menu Item must have a parent and an action -->
-        <menuitem id="mobile_notification_menu_act" parent="phuclong_mobile_backend.config_app_menu_categ" action="mobile_notification_action" sequence="10" groups="phuclong_mobile_notification.group_mobile_notification"/>
-        <menuitem id="mobile_notification_auto_menu_act" parent="phuclong_mobile_backend.config_app_menu_categ" action="mobile_notification_auto_action" sequence="11" groups="phuclong_mobile_notification.group_mobile_notification_auto"/>
-    </data>
-</odoo>

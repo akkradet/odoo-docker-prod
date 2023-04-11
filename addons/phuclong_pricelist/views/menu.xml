@@ -1,7 +1,0 @@
-<?xml version='1.0' encoding='utf-8'?>
-<odoo>
-    <data noupdate="0">
-        <!-- Add you code here -->
-        <menuitem parent="besco_product.menu_master_pricelist" action="product_pricelist_card_code_action" id="menu_product_pricelist_card_code" sequence="5" groups="besco_pricelist.group_sale_pricelist_manager"/>
-    </data>
-</odoo>

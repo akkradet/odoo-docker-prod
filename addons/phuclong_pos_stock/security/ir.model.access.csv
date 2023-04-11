@@ -1,5 +1,0 @@
-id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_config_additional_warehouses_user,access_config_additional_warehouses_user,model_config_additional_warehouses,,1,1,1,1
-access_config_additional_warehouses_line_user,access_config_additional_warehouses_line_user,model_config_additional_warehouses_line,,1,1,1,1
-,,,,,,,
-access_config_additional_warehouses_edit_user,access_config_additional_warehouses_edit_user,base.model_res_users,phuclong_pos_stock.group_config_support_warehouse,1,1,0,0

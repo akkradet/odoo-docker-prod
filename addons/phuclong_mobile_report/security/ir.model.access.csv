@@ -1,3 +1,0 @@
-"id","name","model_id:id","group_id:id","perm_read","perm_write","perm_create","perm_unlink"
-access_report_mobile_order_marketing_lead,access_report_mobile_order_marketing_lead,model_report_mobile_order,phuclong_mobile_backend.group_marketing_lead,1,1,1,1
-access_report_mobile_order_marketing_manager,access_report_mobile_order_marketing_manager,model_report_mobile_order,phuclong_mobile_backend.group_marketing_manager,1,1,1,1

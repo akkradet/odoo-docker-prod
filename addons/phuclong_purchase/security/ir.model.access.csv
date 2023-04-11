@@ -1,8 +1,0 @@
-id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_reason_config_purchase_user,access_reason_config_purchase_user,model_reason_config,purchase.group_purchase_user,1,0,0,0
-access_reason_config_purchase_manager,access_reason_config_purchase_manager,model_reason_config,purchase.group_purchase_manager,1,1,1,0
-access_reason_config_erp_manager,access_reason_config_erp_manager,model_reason_config,base.group_erp_manager,1,1,1,1
-,,,,,,,
-access_purchase_type_config_user,access_purchase_type_config_user,model_purchase_type_config,,1,0,0,0
-access_purchase_type_config_purchase_manager,access_purchase_type_config_purchase_manager,model_purchase_type_config,purchase.group_purchase_manager,1,1,1,1
-

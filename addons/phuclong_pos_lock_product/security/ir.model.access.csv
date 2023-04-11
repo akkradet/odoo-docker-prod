@@ -1,3 +1,0 @@
-"id","name","model_id:id","group_id:id","perm_read","perm_write","perm_create","perm_unlink"
-"access_product_lock_user","access_product_lock_user","model_pos_product_lock",,1,0,0,0
-"access_product_lock_manager","access_product_lock_manager","model_pos_product_lock","point_of_sale.group_pos_manager",1,1,1,1

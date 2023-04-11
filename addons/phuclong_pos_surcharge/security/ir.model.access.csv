@@ -1,6 +1,0 @@
-"id","name","model_id:id","group_id:id","perm_read","perm_write","perm_create","perm_unlink"
-"access_product_surcharge_header_user","access_product_surcharge_header_user","model_product_surcharge_header",,1,0,0,0
-"access_product_surcharge_header_manager","access_product_surcharge_header_manager","model_product_surcharge_header","group_surcharge_manager",1,1,1,1
-,,,,,,,
-"access_product_surcharge_line_user","access_product_surcharge_line_user","model_product_surcharge_line",,1,0,0,0
-"access_product_surcharge_line_manager","access_product_surcharge_line_manager","model_product_surcharge_line","group_surcharge_manager",1,1,1,1

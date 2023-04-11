@@ -1,9 +1,0 @@
-"id","name","model_id:id","group_id:id","perm_read","perm_write","perm_create","perm_unlink"
-"access_cardcode_publish_user","access_cardcode_publish_user","model_cardcode_publish","phuclong_cardcode.group_card_code_user",1,0,0,0
-"access_cardcode_publish_manager","access_cardcode_publish_manager","model_cardcode_publish","phuclong_cardcode.group_card_code_manager",1,1,1,1
-"access_cardcode_info_user","access_cardcode_info_user","model_cardcode_info","phuclong_cardcode.group_card_code_user",1,0,0,0
-"access_cardcode_info_manager","access_cardcode_info_manager","model_cardcode_info","phuclong_cardcode.group_card_code_manager",1,1,1,1
-"access_cardcode_history_group_user","access_cardcode_history_group_user","model_cardcode_history","base.group_user",1,1,1,1
-"access_cardcode_history_user","access_cardcode_history_user","model_cardcode_history","phuclong_cardcode.group_card_code_user",1,1,1,1
-"access_cardcode_history_manager","access_cardcode_history_manager","model_cardcode_history","phuclong_cardcode.group_card_code_manager",1,1,1,1
-"access_cardcode_info_base_user","access_cardcode_info_base_user","model_cardcode_info","base.group_user",1,0,0,0
