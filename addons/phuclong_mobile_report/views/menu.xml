@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data noupdate="0">
+        <!-- Add you code here -->
+        <!-- This Menu Item Must have a parent -->
+        <menuitem id="report_menu_categ" name="Reporting" parent="phuclong_mobile_backend.menu_mobile_root" sequence="15"/>
+        <!-- This Menu Item must have a parent and an action -->
+        <menuitem id="report_mobile_order_menu_act" parent="report_menu_categ" action="report_mobile_order_action" sequence="1" groups="phuclong_mobile_backend.group_marketing_lead,phuclong_mobile_backend.group_marketing_manager"/>
+        <menuitem id="pos_payment_menu_act" parent="report_menu_categ" action="pos_payment_action" sequence="10" groups="phuclong_mobile_backend.group_marketing_manager,phuclong_mobile_backend.group_mobile_accounting"/>
+    </data>
+</odoo>

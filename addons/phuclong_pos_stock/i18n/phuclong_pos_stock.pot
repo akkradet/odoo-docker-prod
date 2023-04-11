@@ -1,0 +1,210 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* phuclong_pos_stock
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0+e-20200401\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: phuclong_pos_stock
+#: model_terms:ir.ui.view,arch_db:phuclong_pos_stock.view_config_additional_warehouses_form
+msgid "Apply"
+msgstr ""
+
+#. module: phuclong_pos_stock
+#: model_terms:ir.ui.view,arch_db:phuclong_pos_stock.view_config_additional_warehouses_form
+msgid "Are you sure to apply?"
+msgstr ""
+
+#. module: phuclong_pos_stock
+#: model:ir.actions.server,name:phuclong_pos_stock.auto_config_user_warehouses_ir_actions_server
+#: model:ir.cron,cron_name:phuclong_pos_stock.auto_config_user_warehouses
+#: model:ir.cron,name:phuclong_pos_stock.auto_config_user_warehouses
+msgid "Auto Config User Warehouses"
+msgstr ""
+
+#. module: phuclong_pos_stock
+#: model:ir.model.fields,field_description:phuclong_pos_stock.field_pos_order__cancel_duplicate
+msgid "Cancel Duplicate"
+msgstr ""
+
+#. module: phuclong_pos_stock
+#: model:ir.model.fields,field_description:phuclong_pos_stock.field_config_additional_warehouses_line__config_id
+msgid "Config"
+msgstr ""
+
+#. module: phuclong_pos_stock
+#: model:ir.actions.act_window,name:phuclong_pos_stock.action_config_additional_warehouses
+#: model:ir.model,name:phuclong_pos_stock.model_config_additional_warehouses
+#: model:ir.ui.menu,name:phuclong_pos_stock.menu_config_additional_warehouses
+msgid "Config Additional Warehouses"
+msgstr ""
+
+#. module: phuclong_pos_stock
+#: model:ir.model,name:phuclong_pos_stock.model_config_additional_warehouses_line
+msgid "Config Additional Warehouses Line"
+msgstr ""
+
+#. module: phuclong_pos_stock
+#: model:res.groups,name:phuclong_pos_stock.group_config_support_warehouse
+msgid "Config Support Warehouses"
+msgstr ""
+
+#. module: phuclong_pos_stock
+#: model:ir.model.fields,field_description:phuclong_pos_stock.field_stock_picking__create_from_pos
+msgid "Create From POS"
+msgstr ""
+
+#. module: phuclong_pos_stock
+#: model_terms:ir.ui.view,arch_db:phuclong_pos_stock.stock_warehouse_form_inherit_phuclong_pos_stock
+msgid "Create POS Picking"
+msgstr ""
+
+#. module: phuclong_pos_stock
+#: model:ir.model.fields,field_description:phuclong_pos_stock.field_config_additional_warehouses__create_uid
+#: model:ir.model.fields,field_description:phuclong_pos_stock.field_config_additional_warehouses_line__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: phuclong_pos_stock
+#: model:ir.model.fields,field_description:phuclong_pos_stock.field_config_additional_warehouses__create_date
+#: model:ir.model.fields,field_description:phuclong_pos_stock.field_config_additional_warehouses_line__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: phuclong_pos_stock
+#: model:ir.model.fields,field_description:phuclong_pos_stock.field_config_additional_warehouses_line__warehouse_ids
+msgid "Current Working Warehouse"
+msgstr ""
+
+#. module: phuclong_pos_stock
+#: code:addons/phuclong_pos_stock/models/config_additional_warehouses.py:0
+#, python-format
+msgid "Date From must be before Date To"
+msgstr ""
+
+#. module: phuclong_pos_stock
+#: model:ir.model.fields,field_description:phuclong_pos_stock.field_config_additional_warehouses__name
+#: model_terms:ir.ui.view,arch_db:phuclong_pos_stock.view_config_additional_warehouses_form
+msgid "Description"
+msgstr ""
+
+#. module: phuclong_pos_stock
+#: model:ir.model.fields,field_description:phuclong_pos_stock.field_config_additional_warehouses__display_name
+#: model:ir.model.fields,field_description:phuclong_pos_stock.field_config_additional_warehouses_line__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: phuclong_pos_stock
+#: model:ir.model.fields,field_description:phuclong_pos_stock.field_config_additional_warehouses__from_date
+msgid "From Date"
+msgstr ""
+
+#. module: phuclong_pos_stock
+#: model:ir.model.fields,field_description:phuclong_pos_stock.field_config_additional_warehouses__check_applied
+msgid "Has Applied"
+msgstr ""
+
+#. module: phuclong_pos_stock
+#: model:ir.model.fields,field_description:phuclong_pos_stock.field_config_additional_warehouses__check_expired
+msgid "Has Expired"
+msgstr ""
+
+#. module: phuclong_pos_stock
+#: model:ir.model.fields,field_description:phuclong_pos_stock.field_stock_move__has_missed_custom_material_config
+msgid "Has Missed Custom Material Config"
+msgstr ""
+
+#. module: phuclong_pos_stock
+#: model:ir.model.fields,field_description:phuclong_pos_stock.field_config_additional_warehouses__id
+#: model:ir.model.fields,field_description:phuclong_pos_stock.field_config_additional_warehouses_line__id
+msgid "ID"
+msgstr ""
+
+#. module: phuclong_pos_stock
+#: model_terms:ir.ui.view,arch_db:phuclong_pos_stock.picking_form_inherit_besco_stock_phuclong_pos
+msgid "IN NHIỆT"
+msgstr ""
+
+#. module: phuclong_pos_stock
+#: model:ir.model.fields,field_description:phuclong_pos_stock.field_config_additional_warehouses____last_update
+#: model:ir.model.fields,field_description:phuclong_pos_stock.field_config_additional_warehouses_line____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: phuclong_pos_stock
+#: model:ir.model.fields,field_description:phuclong_pos_stock.field_config_additional_warehouses__write_uid
+#: model:ir.model.fields,field_description:phuclong_pos_stock.field_config_additional_warehouses_line__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: phuclong_pos_stock
+#: model:ir.model.fields,field_description:phuclong_pos_stock.field_config_additional_warehouses__write_date
+#: model:ir.model.fields,field_description:phuclong_pos_stock.field_config_additional_warehouses_line__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: phuclong_pos_stock
+#: model:ir.model.fields,field_description:phuclong_pos_stock.field_config_additional_warehouses__line_ids
+msgid "Lines"
+msgstr ""
+
+#. module: phuclong_pos_stock
+#: model:ir.model.fields,field_description:phuclong_pos_stock.field_pos_order__create_picking_error_log
+msgid "Picking Create Error Log"
+msgstr ""
+
+#. module: phuclong_pos_stock
+#: model:ir.model,name:phuclong_pos_stock.model_pos_order
+msgid "Point of Sale Orders"
+msgstr ""
+
+#. module: phuclong_pos_stock
+#: model:ir.model.fields,field_description:phuclong_pos_stock.field_stock_move__pos_order_line_id
+msgid "Product Order"
+msgstr ""
+
+#. module: phuclong_pos_stock
+#: model:ir.model,name:phuclong_pos_stock.model_stock_move
+msgid "Stock Move"
+msgstr ""
+
+#. module: phuclong_pos_stock
+#: model:ir.model.fields,field_description:phuclong_pos_stock.field_config_additional_warehouses_line__support_warehouse_ids
+msgid "Support Warehouse"
+msgstr ""
+
+#. module: phuclong_pos_stock
+#: code:addons/phuclong_pos_stock/models/pos_order.py:0
+#, python-format
+msgid ""
+"This transfer has been created from the point of sale session: <a href=# "
+"data-oe-model=pos.order data-oe-id=%d>%s</a>"
+msgstr ""
+
+#. module: phuclong_pos_stock
+#: model:ir.model.fields,field_description:phuclong_pos_stock.field_config_additional_warehouses__to_date
+msgid "To Date"
+msgstr ""
+
+#. module: phuclong_pos_stock
+#: model:ir.model,name:phuclong_pos_stock.model_stock_picking
+msgid "Transfer"
+msgstr ""
+
+#. module: phuclong_pos_stock
+#: model:ir.model.fields,field_description:phuclong_pos_stock.field_config_additional_warehouses_line__user_id
+msgid "User"
+msgstr ""
+
+#. module: phuclong_pos_stock
+#: model:ir.model,name:phuclong_pos_stock.model_stock_warehouse
+msgid "Warehouse"
+msgstr ""

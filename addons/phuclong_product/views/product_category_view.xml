@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+    
+        <record id="product_category_form_inherit_phuclong" model="ir.ui.view">
+        	<field name="name">product_category_form_inherit_phuclong</field>
+            <field name="model">product.category</field>
+            <field name="inherit_id" ref="besco_product.product_category_form_inherit_besco_product"/>
+            <field name="arch" type="xml">
+            	<xpath expr="//field[@name='parent_id']" position="after">
+                    <field name='fnb_type' attrs="{'invisible': [('type', '!=', 'normal')], 'required': [('type', '=', 'normal')]}"/>
+                </xpath>
+            </field>
+        </record>
+        
+        <record id="product_category_list_inherit_phuclong" model="ir.ui.view">
+        	<field name="name">product_category_list_inherit_phuclong</field>
+            <field name="model">product.category</field>
+            <field name="inherit_id" ref="besco_product.product_category_list_inherit_besco_product"/>
+            <field name="arch" type="xml">
+            	<xpath expr="//field[@name='code']" position="after">
+                    <field name='fnb_type' />
+                </xpath>
+            </field>
+        </record>
+        
+    </data>
+</odoo>

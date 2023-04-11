@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<record id="wizard_update_reward_publise_effective_date" model="ir.ui.view">
+			<field name="name">wizard_update_reward_publise_effective_date</field>
+			<field name="model">wizard.update.reward.publish</field>
+			<field name="arch" type="xml">
+				<form string="Update Effective Date">
+					<group>
+						<group>
+							<field name="reward_publish_id" readonly="1"/>
+							<field name="update_for_publish"/>
+						</group>
+						<group>
+							<field name="effective_date_from" class="oe_inline" required="1"/>
+							<field name="effective_date_to" class="oe_inline" required="1"/>
+						</group>
+					</group>
+					<footer>
+						<button string="Confirm" type="object"
+							name="update_effective_date" class="oe_highlight" />
+						<button string="Cancel" special="cancel" />
+					</footer>
+				</form>
+			</field>
+		</record>
+
+		<record id="action_update_effective_date" model="ir.actions.act_window">
+			<field name="name">Update Reward Publish Effective Date</field>
+			<field name="res_model">wizard.update.reward.publish</field>
+			<field name="view_mode">form</field>
+			<field name="view_id" ref="wizard_update_reward_publise_effective_date" />
+			<field name="target">new</field>
+		</record>
+
+	</data>
+</odoo>

@@ -1,0 +1,582 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-04-08 04:56+0000\n"
+"PO-Revision-Date: 2021-05-23 05:05+0000\n"
+"Last-Translator: Nguyễn Thanh Tùng <tung.nt@besco.vn>\n"
+"Language-Team: Vietnamese <http://weblate.besco.vn/projects/besco-phuc-long/"
+"phuclong_product/vi_VN/>\n"
+"Language: vi_VN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 3.8\n"
+
+#. module: phuclong_product
+#: model:ir.model.fields,help:phuclong_product.field_product_product__type
+#: model:ir.model.fields,help:phuclong_product.field_product_template__type
+msgid ""
+"A storable product is a product for which you manage stock. The Inventory "
+"app has to be installed.\n"
+"A consumable product is a product for which stock is not managed.\n"
+"A service is a non-material product you provide."
+msgstr ""
+"Sản phẩm có thể lưu kho là sản phẩm mà bạn quản lý. Ứng dụng kho phải được "
+"cài đặt.\n"
+"Sản phẩm tiêu thụ là sản phẩm mà bạn không quản lý.\n"
+"Dịch vụ không phải là nguyên liệu sản phẩm do bạn cung cấp."
+
+#. module: phuclong_product
+#: model:ir.model.fields.selection,name:phuclong_product.selection__product_template__lock_item_method__auto
+msgid "Auto"
+msgstr "Tự động"
+
+#. module: phuclong_product
+#: model:ir.model.fields.selection,name:phuclong_product.selection__product_custom_material_qty__custom_type__below
+#: model:ir.model.fields.selection,name:phuclong_product.selection__product_material_option__type__below
+msgid "Below"
+msgstr "Ít"
+
+#. module: phuclong_product
+#: model:ir.model.fields,field_description:phuclong_product.field_product_material_line__product_material_id
+msgid "Bill of Material Line"
+msgstr "Hoá đơn dòng nguyên liệu"
+
+#. module: phuclong_product
+#: model_terms:ir.ui.view,arch_db:phuclong_product.view_users_form_inherit_category_security
+msgid "Category control"
+msgstr "Khoá ngành hàng"
+
+#. module: phuclong_product
+#: code:addons/phuclong_product/models/product_template.py:0
+#, python-format
+msgid "Changed"
+msgstr ""
+
+#. module: phuclong_product
+#: code:addons/phuclong_product/models/product_custom_material.py:0
+#, python-format
+msgid "Config must be unique per Material and Custom type."
+msgstr "Cấu hình mỗi nguyên liệu và kiểu tuỳ biến phải là duy nhất."
+
+#. module: phuclong_product
+#: model:ir.model,name:phuclong_product.model_product_conversion
+msgid "Configure conversion rules for product"
+msgstr "Cấu hình quy tắc chuyển đổi cho sản phẩm"
+
+#. module: phuclong_product
+#: model:ir.model.fields,field_description:phuclong_product.field_product_custom_material__create_uid
+#: model:ir.model.fields,field_description:phuclong_product.field_product_custom_material_qty__create_uid
+#: model:ir.model.fields,field_description:phuclong_product.field_product_material__create_uid
+#: model:ir.model.fields,field_description:phuclong_product.field_product_material_line__create_uid
+#: model:ir.model.fields,field_description:phuclong_product.field_product_material_option__create_uid
+#: model:ir.model.fields,field_description:phuclong_product.field_product_size__create_uid
+msgid "Created by"
+msgstr "Được tạo bởi"
+
+#. module: phuclong_product
+#: model:ir.model.fields,field_description:phuclong_product.field_product_custom_material__create_date
+#: model:ir.model.fields,field_description:phuclong_product.field_product_custom_material_qty__create_date
+#: model:ir.model.fields,field_description:phuclong_product.field_product_material__create_date
+#: model:ir.model.fields,field_description:phuclong_product.field_product_material_line__create_date
+#: model:ir.model.fields,field_description:phuclong_product.field_product_material_option__create_date
+#: model:ir.model.fields,field_description:phuclong_product.field_product_size__create_date
+msgid "Created on"
+msgstr "Được tạo vào"
+
+#. module: phuclong_product
+#: model:ir.model.fields.selection,name:phuclong_product.selection__product_category__fnb_type__cup
+msgid "Cup"
+msgstr "Ly"
+
+#. module: phuclong_product
+#: model:ir.model.fields,field_description:phuclong_product.field_product_product__cup_type
+#: model:ir.model.fields,field_description:phuclong_product.field_product_template__cup_type
+msgid "Cup Type"
+msgstr "Loại ly"
+
+#. module: phuclong_product
+#: model_terms:ir.ui.view,arch_db:phuclong_product.template_only_form_inherit_phuclong
+#, fuzzy
+#| msgid "Custom Materials"
+msgid "Custom Material list"
+msgstr "Nguyên liệu tuỳ biến"
+
+#. module: phuclong_product
+#: model:ir.model.fields,field_description:phuclong_product.field_product_product__custom_material_ids
+#: model:ir.model.fields,field_description:phuclong_product.field_product_template__custom_material_ids
+#: model_terms:ir.ui.view,arch_db:phuclong_product.template_only_form_inherit_phuclong
+msgid "Custom Materials"
+msgstr "Nguyên liệu tuỳ biến"
+
+#. module: phuclong_product
+#: model:ir.model.fields,field_description:phuclong_product.field_product_custom_material_qty__custom_type
+msgid "Custom Type"
+msgstr "Kiểu tuỳ biến"
+
+#. module: phuclong_product
+#: model:ir.model.fields.selection,name:phuclong_product.selection__product_category__fnb_type__customizable_material
+msgid "Customizable Material"
+msgstr "Nguyên liệu tuỳ biến"
+
+#. module: phuclong_product
+#: model:ir.model.fields,help:phuclong_product.field_product_custom_material__product_uom_id
+#: model:ir.model.fields,help:phuclong_product.field_product_custom_material_qty__product_uom_id
+#: model:ir.model.fields,help:phuclong_product.field_product_material_line__product_uom_id
+msgid "Default Unit of Measure used for storage."
+msgstr "Đơn vị đo lường mặc định được sử dụng để lưu trữ."
+
+#. module: phuclong_product
+#: model:ir.model.fields,field_description:phuclong_product.field_product_size__description
+msgid "Description"
+msgstr "Mô tả"
+
+#. module: phuclong_product
+#: model:ir.model.fields,field_description:phuclong_product.field_product_custom_material__display_name
+#: model:ir.model.fields,field_description:phuclong_product.field_product_custom_material_qty__display_name
+#: model:ir.model.fields,field_description:phuclong_product.field_product_material__display_name
+#: model:ir.model.fields,field_description:phuclong_product.field_product_material_line__display_name
+#: model:ir.model.fields,field_description:phuclong_product.field_product_material_option__display_name
+#: model:ir.model.fields,field_description:phuclong_product.field_product_product__display_name
+#: model:ir.model.fields,field_description:phuclong_product.field_product_size__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: phuclong_product
+#: model:ir.model.fields.selection,name:phuclong_product.selection__product_category__fnb_type__drink
+msgid "Drink"
+msgstr "Thức uống"
+
+#. module: phuclong_product
+#: model:ir.model.fields,field_description:phuclong_product.field_product_product__effective_day
+#: model:ir.model.fields,field_description:phuclong_product.field_product_template__effective_day
+msgid "Effective Day"
+msgstr ""
+
+#. module: phuclong_product
+#: code:addons/phuclong_product/models/product_template.py:0
+#, python-format
+msgid "Effective Day must >= 0"
+msgstr ""
+
+#. module: phuclong_product
+#: model:ir.model.fields,field_description:phuclong_product.field_product_product__eng_name
+#: model:ir.model.fields,field_description:phuclong_product.field_product_template__eng_name
+msgid "English Name"
+msgstr "Tên Tiếng Anh"
+
+#. module: phuclong_product
+#: model_terms:ir.ui.view,arch_db:phuclong_product.template_only_form_inherit_phuclong
+msgid "Fixed Materials"
+msgstr "Nguyên liệu cố định"
+
+#. module: phuclong_product
+#: model:ir.model.fields,field_description:phuclong_product.field_product_category__fnb_type
+#: model:ir.model.fields,field_description:phuclong_product.field_product_product__fnb_type
+#: model:ir.model.fields,field_description:phuclong_product.field_product_template__fnb_type
+msgid "FnB Type"
+msgstr "Loại ngành hàng"
+
+#. module: phuclong_product
+#: model:ir.model.fields.selection,name:phuclong_product.selection__product_category__fnb_type__food
+msgid "Food"
+msgstr "Món ăn"
+
+#. module: phuclong_product
+#: model:ir.model.fields,field_description:phuclong_product.field_product_custom_material__id
+#: model:ir.model.fields,field_description:phuclong_product.field_product_custom_material_qty__id
+#: model:ir.model.fields,field_description:phuclong_product.field_product_material__id
+#: model:ir.model.fields,field_description:phuclong_product.field_product_material_line__id
+#: model:ir.model.fields,field_description:phuclong_product.field_product_material_option__id
+#: model:ir.model.fields,field_description:phuclong_product.field_product_size__id
+msgid "ID"
+msgstr "Mã ID"
+
+#. module: phuclong_product
+#: model:ir.model.fields,field_description:phuclong_product.field_product_product__is_cashless
+#: model:ir.model.fields,field_description:phuclong_product.field_product_template__is_cashless
+msgid "Is Cashless"
+msgstr "Cho phép kích hoạt"
+
+#. module: phuclong_product
+#: model:ir.model.fields,field_description:phuclong_product.field_product_custom_material____last_update
+#: model:ir.model.fields,field_description:phuclong_product.field_product_custom_material_qty____last_update
+#: model:ir.model.fields,field_description:phuclong_product.field_product_material____last_update
+#: model:ir.model.fields,field_description:phuclong_product.field_product_material_line____last_update
+#: model:ir.model.fields,field_description:phuclong_product.field_product_material_option____last_update
+#: model:ir.model.fields,field_description:phuclong_product.field_product_size____last_update
+msgid "Last Modified on"
+msgstr "Chỉnh sửa lần cuối vào"
+
+#. module: phuclong_product
+#: model:ir.model.fields,field_description:phuclong_product.field_product_custom_material__write_uid
+#: model:ir.model.fields,field_description:phuclong_product.field_product_custom_material_qty__write_uid
+#: model:ir.model.fields,field_description:phuclong_product.field_product_material__write_uid
+#: model:ir.model.fields,field_description:phuclong_product.field_product_material_line__write_uid
+#: model:ir.model.fields,field_description:phuclong_product.field_product_material_option__write_uid
+#: model:ir.model.fields,field_description:phuclong_product.field_product_size__write_uid
+msgid "Last Updated by"
+msgstr "Cập nhật lần cuối bởi"
+
+#. module: phuclong_product
+#: model:ir.model.fields,field_description:phuclong_product.field_product_custom_material__write_date
+#: model:ir.model.fields,field_description:phuclong_product.field_product_custom_material_qty__write_date
+#: model:ir.model.fields,field_description:phuclong_product.field_product_material__write_date
+#: model:ir.model.fields,field_description:phuclong_product.field_product_material_line__write_date
+#: model:ir.model.fields,field_description:phuclong_product.field_product_material_option__write_date
+#: model:ir.model.fields,field_description:phuclong_product.field_product_size__write_date
+msgid "Last Updated on"
+msgstr "Cập nhật lần cuối vào"
+
+#. module: phuclong_product
+#: model:ir.model.fields,field_description:phuclong_product.field_product_product__lid_id
+#: model:ir.model.fields,field_description:phuclong_product.field_product_template__lid_id
+#: model:ir.model.fields.selection,name:phuclong_product.selection__product_category__fnb_type__lid
+msgid "Lid"
+msgstr "Nắp"
+
+#. module: phuclong_product
+#: model:ir.model.fields,field_description:phuclong_product.field_product_product__lock_item_method
+#: model:ir.model.fields,field_description:phuclong_product.field_product_template__lock_item_method
+msgid "Lock Item Method"
+msgstr "Cách thức khoá món"
+
+#. module: phuclong_product
+#: model:ir.model.fields.selection,name:phuclong_product.selection__product_template__lock_item_method__manual
+msgid "Manual"
+msgstr "Thủ công"
+
+#. module: phuclong_product
+#: model:ir.model.fields,field_description:phuclong_product.field_product_custom_material__material_id
+#: model:ir.model.fields,field_description:phuclong_product.field_product_custom_material_qty__material_id
+#: model:ir.model.fields,field_description:phuclong_product.field_product_material_line__product_id
+#: model:ir.model.fields.selection,name:phuclong_product.selection__product_category__fnb_type__material
+msgid "Material"
+msgstr "Nguyên liệu"
+
+#. module: phuclong_product
+#: model:ir.model.fields,field_description:phuclong_product.field_product_material__material_line_ids
+#: model_terms:ir.ui.view,arch_db:phuclong_product.product_material_view_form
+msgid "Material Line"
+msgstr "Dòng nguyên liệu"
+
+#. module: phuclong_product
+#: model_terms:ir.ui.view,arch_db:phuclong_product.product_material_view_form
+msgid "Material List Name"
+msgstr "Tên danh sách nguyên liệu"
+
+#. module: phuclong_product
+#: model_terms:ir.ui.view,arch_db:phuclong_product.template_only_form_inherit_phuclong
+msgid "Material list"
+msgstr "Danh sách nguyên liệu"
+
+#. module: phuclong_product
+#: model_terms:ir.ui.view,arch_db:phuclong_product.product_material_view_form
+#: model_terms:ir.ui.view,arch_db:phuclong_product.template_only_form_inherit_phuclong
+msgid "Materials"
+msgstr "Nguyên liệu"
+
+#. module: phuclong_product
+#: model:ir.model.fields,field_description:phuclong_product.field_product_material__name
+#: model:ir.model.fields,field_description:phuclong_product.field_product_product__name
+#: model:ir.model.fields,field_description:phuclong_product.field_product_size__name
+#: model:ir.model.fields,field_description:phuclong_product.field_product_template__name
+msgid "Name"
+msgstr "Tên"
+
+#. module: phuclong_product
+#: model:ir.model.fields.selection,name:phuclong_product.selection__product_material_option__type__none
+msgid "None"
+msgstr "Không"
+
+#. module: phuclong_product
+#: model:ir.model.fields.selection,name:phuclong_product.selection__product_material_option__type__normal
+msgid "Normal"
+msgstr "Bình thường"
+
+#. module: phuclong_product
+#: model:ir.model.fields,field_description:phuclong_product.field_product_material__option_unavailable_dom
+msgid "Option Unavailable Dom"
+msgstr "Tuỳ chọn không khả dụng"
+
+#. module: phuclong_product
+#: model:ir.model.fields.selection,name:phuclong_product.selection__product_custom_material_qty__custom_type__over
+#: model:ir.model.fields.selection,name:phuclong_product.selection__product_material_option__type__over
+msgid "Over"
+msgstr "Nhiều"
+
+#. module: phuclong_product
+#: model:ir.model.fields,field_description:phuclong_product.field_pos_category__product_ids
+msgid "POS Products"
+msgstr "Sản phẩm POS"
+
+#. module: phuclong_product
+#: model:ir.model.fields.selection,name:phuclong_product.selection__product_category__fnb_type__packaged_product
+msgid "Packaged Product"
+msgstr "Sản phẩm đóng gói"
+
+#. module: phuclong_product
+#: model:ir.model.fields.selection,name:phuclong_product.selection__product_template__cup_type__paper
+msgid "Paper"
+msgstr "Giấy"
+
+#. module: phuclong_product
+#: model:ir.model.fields,field_description:phuclong_product.field_product_product__parent_code
+#: model:ir.model.fields,field_description:phuclong_product.field_product_template__parent_code
+msgid "Parent Code"
+msgstr "Mã cha"
+
+#. module: phuclong_product
+#: model:ir.model.fields.selection,name:phuclong_product.selection__product_template__cup_type__plastic
+msgid "Plastic"
+msgstr "Nhựa"
+
+#. module: phuclong_product
+#: model:ir.model,name:phuclong_product.model_pos_category
+msgid "Point of Sale Category"
+msgstr "Ngành hàng POS"
+
+#. module: phuclong_product
+#: model:ir.model.fields,field_description:phuclong_product.field_product_product__pos_sequence
+#: model:ir.model.fields,field_description:phuclong_product.field_product_template__pos_sequence
+msgid "Pos Sequence"
+msgstr "Trình tự POS"
+
+#. module: phuclong_product
+#: model:ir.model.fields,help:phuclong_product.field_product_product__list_price
+#: model:ir.model.fields,help:phuclong_product.field_product_template__list_price
+#: model:ir.model.fields,help:phuclong_product.field_product_template__lst_price
+msgid "Price at which the product is sold to customers."
+msgstr ""
+
+#. module: phuclong_product
+#: model:ir.model,name:phuclong_product.model_product_product
+#: model:ir.model.fields,field_description:phuclong_product.field_product_custom_material__product_id
+#: model:ir.model.fields,field_description:phuclong_product.field_product_material__product_custom_id
+#: model:ir.model.fields,field_description:phuclong_product.field_product_material__product_id
+msgid "Product"
+msgstr "Sản phẩm"
+
+#. module: phuclong_product
+#: model:ir.model,name:phuclong_product.model_product_category
+#: model:ir.model.fields,field_description:phuclong_product.field_res_users__category_allow_ids
+msgid "Product Category"
+msgstr "Ngành hàng"
+
+#. module: phuclong_product
+#: model:ir.model.fields,field_description:phuclong_product.field_res_users__product_category_dom
+#, fuzzy
+#| msgid "Product Category"
+msgid "Product Category Dom"
+msgstr "Ngành hàng"
+
+#. module: phuclong_product
+#: model_terms:ir.ui.view,arch_db:phuclong_product.product_custom_material_qty_tree_view
+msgid "Product Custom Material"
+msgstr "Nguyên liệu sản phẩm tuỳ biến"
+
+#. module: phuclong_product
+#: model:ir.model,name:phuclong_product.model_product_material
+#: model:ir.model.fields,field_description:phuclong_product.field_product_product__product_material_ids
+#: model:ir.model.fields,field_description:phuclong_product.field_product_template__product_material_ids
+msgid "Product Material"
+msgstr "Nguyên liệu sản phẩm"
+
+#. module: phuclong_product
+#: model:ir.model,name:phuclong_product.model_product_material_line
+msgid "Product Material Line"
+msgstr "Dòng nguyên liệu sản phẩm"
+
+#. module: phuclong_product
+#: model:ir.model,name:phuclong_product.model_product_material_option
+#, fuzzy
+#| msgid "Product Material Line"
+msgid "Product Material Option"
+msgstr "Dòng nguyên liệu sản phẩm"
+
+#. module: phuclong_product
+#: model:ir.actions.act_window,name:phuclong_product.action_product_size
+#: model:ir.ui.menu,name:phuclong_product.menu_product_size_action
+#: model_terms:ir.ui.view,arch_db:phuclong_product.product_size_tree_view
+msgid "Product Size"
+msgstr "Size"
+
+#. module: phuclong_product
+#: model:ir.model,name:phuclong_product.model_product_template
+msgid "Product Template"
+msgstr "Sản phẩm"
+
+#. module: phuclong_product
+#: model:ir.model.fields,field_description:phuclong_product.field_product_product__type
+#: model:ir.model.fields,field_description:phuclong_product.field_product_template__type
+msgid "Product Type"
+msgstr "Loại sản phẩm"
+
+#. module: phuclong_product
+#: model_terms:ir.ui.view,arch_db:phuclong_product.product_material_view_form
+msgid "Product material"
+msgstr "Nguyên liệu sản phẩm"
+
+#. module: phuclong_product
+#: model_terms:ir.ui.view,arch_db:phuclong_product.besco_product_product_form_inherit_phuclong_product
+#: model_terms:ir.ui.view,arch_db:phuclong_product.template_only_form_inherit_phuclong
+msgid "Property"
+msgstr "Đặc điểm"
+
+#. module: phuclong_product
+#: model:ir.model.fields,field_description:phuclong_product.field_product_product__provided_by
+#: model:ir.model.fields,field_description:phuclong_product.field_product_template__provided_by
+msgid "Provided By"
+msgstr "Cung cấp bởi"
+
+#. module: phuclong_product
+#: model:ir.model.fields,field_description:phuclong_product.field_product_template__lst_price
+#, fuzzy
+#| msgid "Show Original Price"
+msgid "Public Price"
+msgstr "Hiển thị giá gốc"
+
+#. module: phuclong_product
+#: model:ir.model.fields,field_description:phuclong_product.field_product_custom_material__custom_qty
+#: model:ir.model.fields,field_description:phuclong_product.field_product_custom_material_qty__custom_qty
+#: model:ir.model.fields,field_description:phuclong_product.field_product_material_line__product_qty
+msgid "Quantity"
+msgstr "Số lượng"
+
+#. module: phuclong_product
+#: model:ir.actions.act_window,name:phuclong_product.action_product_custom_material_qty
+#: model:ir.ui.menu,name:phuclong_product.menu_product_custom_material_qty_action
+msgid "Quantity Custom Config"
+msgstr "Cấu hình định lượng tuỳ biến"
+
+#. module: phuclong_product
+#: model:ir.model.fields,field_description:phuclong_product.field_product_product__ref_code
+#: model:ir.model.fields,field_description:phuclong_product.field_product_template__ref_code
+msgid "Reference Code"
+msgstr "Mã tham chiếu"
+
+#. module: phuclong_product
+#: model:ir.model.fields,field_description:phuclong_product.field_product_product__list_price
+#: model:ir.model.fields,field_description:phuclong_product.field_product_template__list_price
+#, fuzzy
+#| msgid "Show Original Price"
+msgid "Sales Price"
+msgstr "Hiển thị giá gốc"
+
+#. module: phuclong_product
+#: model:ir.model.fields,field_description:phuclong_product.field_product_material_line__sequence
+#: model:ir.model.fields,field_description:phuclong_product.field_product_size__sequence
+msgid "Sequence"
+msgstr "Trình tự"
+
+#. module: phuclong_product
+#: model:ir.model.fields.selection,name:phuclong_product.selection__product_template__type__service
+msgid "Service"
+msgstr "Dịch vụ"
+
+#. module: phuclong_product
+#: model:ir.model.fields,field_description:phuclong_product.field_product_product__short_name
+#: model:ir.model.fields,field_description:phuclong_product.field_product_template__short_name
+msgid "Short Name"
+msgstr "Tên viết tắt"
+
+#. module: phuclong_product
+#: model:ir.model.fields,field_description:phuclong_product.field_pos_category__allow_show_original_price
+msgid "Show Original Price"
+msgstr "Hiển thị giá gốc"
+
+#. module: phuclong_product
+#: model:ir.model.fields,field_description:phuclong_product.field_product_product__size_id
+#: model:ir.model.fields,field_description:phuclong_product.field_product_template__size_id
+msgid "Size"
+msgstr "Size"
+
+#. module: phuclong_product
+#: model:ir.model.fields,field_description:phuclong_product.field_product_product__spoon_id
+#: model:ir.model.fields,field_description:phuclong_product.field_product_template__spoon_id
+msgid "Spoon"
+msgstr "Muỗng"
+
+#. module: phuclong_product
+#: model:ir.model.fields.selection,name:phuclong_product.selection__product_template__type__product
+msgid "Storable Product"
+msgstr "Sản phẩm lưu kho"
+
+#. module: phuclong_product
+#: code:addons/phuclong_product/models/product_material_line.py:0
+#: code:addons/phuclong_product/models/product_size.py:0
+#, python-format
+msgid "The sequence is must be positive numbers!"
+msgstr "Trình tự phải là số dương!"
+
+#. module: phuclong_product
+#: model:ir.model.constraint,message:phuclong_product.constraint_product_material_line_sequence_material_line_uniq
+msgid ""
+"The sequence of the product material line must be unique per product "
+"material list!"
+msgstr ""
+"Trình tự của dòng nguyên liệu sản phẩm phải là duy nhất cho mỗi danh sách "
+"nguyên liệu sản phẩm!"
+
+#. module: phuclong_product
+#: model:ir.model.fields,field_description:phuclong_product.field_product_product__suitable_topping_ids
+#: model:ir.model.fields,field_description:phuclong_product.field_product_template__suitable_topping_ids
+#: model:ir.model.fields.selection,name:phuclong_product.selection__product_category__fnb_type__topping
+msgid "Topping"
+msgstr "Topping"
+
+#. module: phuclong_product
+#: model:ir.model.fields,field_description:phuclong_product.field_product_material_option__name
+#: model:ir.model.fields,field_description:phuclong_product.field_product_material_option__type
+#, fuzzy
+#| msgid "Cup Type"
+msgid "Type"
+msgstr "Loại ly"
+
+#. module: phuclong_product
+#: model:ir.model.fields,field_description:phuclong_product.field_product_material__option_unavailable_ids
+msgid "Unavailable Options"
+msgstr "Tuỳ chọn không khả dụng"
+
+#. module: phuclong_product
+#: model:ir.model.fields,field_description:phuclong_product.field_product_custom_material__product_uom_id
+#: model:ir.model.fields,field_description:phuclong_product.field_product_custom_material_qty__product_uom_id
+#: model:ir.model.fields,field_description:phuclong_product.field_product_material_line__product_uom_id
+msgid "Unit of Measure"
+msgstr "Đơn vị đo lường"
+
+#. module: phuclong_product
+#: model:ir.model.fields,field_description:phuclong_product.field_product_product__update_coupon_expiration
+#: model:ir.model.fields,field_description:phuclong_product.field_product_template__update_coupon_expiration
+msgid "Update Coupon Expiration"
+msgstr "Cập nhật thời hạn coupon"
+
+#. module: phuclong_product
+#: model:ir.model,name:phuclong_product.model_res_users
+msgid "Users"
+msgstr "Người dùng"
+
+#. module: phuclong_product
+#: model:ir.model,name:phuclong_product.model_product_custom_material
+msgid "product.custom.material"
+msgstr "Nguyên liệu tuỳ biến"
+
+#. module: phuclong_product
+#: model:ir.model,name:phuclong_product.model_product_custom_material_qty
+msgid "product.custom.material.qty"
+msgstr "Số lượng nguyên liệu tuỳ biến"
+
+#. module: phuclong_product
+#: model:ir.model,name:phuclong_product.model_product_size
+msgid "product.size"
+msgstr "kích cỡ sản phẩm"
+
+#, fuzzy
+#~| msgid "Created by"
+#~ msgid "Create"
+#~ msgstr "Được tạo bởi"
+
+#~ msgid "Product Custom Materials"
+#~ msgstr "Nguyên liệu sản phẩm tuỳ biến"

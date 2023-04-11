@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+
+		<record id="sale_promo_lines_benefit_form" model="ir.ui.view">
+			<field name="name">sale_promo_lines_benefit_form</field>
+			<field name="model">sale.promo.lines.benefit</field>
+			<field name="arch" type="xml">
+				<form>
+					<group>
+						<group>
+							<field name="allow_additional_price"/>
+						</group>
+						<group>
+							<field name="additional_price" attrs="{'invisible':[('allow_additional_price','!=', True)]}"/>
+							<field name="product_qty" attrs="{'invisible':[('allow_additional_price','=', True)]}"/>
+						</group>
+						<label for="product_ids" />
+						<field name="product_ids" options="{'no_create': True, 'no_edit': True}">
+							<tree>
+								<field name="default_code"/>
+								<field name="name" />
+								<field name="list_price"/>
+							</tree>
+						</field>
+					</group>
+				</form>
+			</field>
+		</record>
+
+		<record id="view_sale_promo_header_form_phuclong" model="ir.ui.view">
+			<field name="model">sale.promo.header</field>
+			<field name="inherit_id" ref="besco_promotion.view_sale_promo_header_form"/>
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='order_type']" position="replace">
+					<field name="sale_type_ids" widget="many2many_tags" options="{'no_create_edit': True}" attrs="{'readonly':[('state','=','approved')]}"/>
+					<field name="pos_payment_method_id" options="{'no_create_edit': True}" domain="[('use_for','=','visa')]" attrs="{'readonly':[('state','=','approved')], 'invisible':[('list_type','=','PRO')]}"/>
+				</xpath>
+
+				<xpath expr="//field[@name='currency_id']" position="replace">
+					<field name="day_of_week" widget="many2many_tags" options="{'no_create_edit': True}" attrs="{'readonly':[('state','=','approved')]}"/>
+				</xpath>
+
+				<xpath expr="//button[@name='action_approve']" position="attributes">
+					<attribute name="groups">phuclong_pos_promo_combo.group_promotion_approval</attribute>
+				</xpath>
+
+				<xpath expr="//button[@name='action_cancel']" position="replace">
+					<button name="action_cancel" states="approved" string="Cancel" type="object" groups="phuclong_pos_promo_combo.group_promotion_approval"/>
+					<button name="action_cancel" states="draft" string="Cancel" type="object" groups="besco_promotion.group_promotion_manager"/>
+				</xpath>
+
+				<xpath expr="//button[@name='action_reset']" position="attributes">
+					<attribute name="groups">besco_promotion.group_promotion_manager,phuclong_pos_promo_combo.group_promotion_approval</attribute>
+				</xpath>
+
+			</field>
+		</record>
+
+		<record id="view_sale_promo_header_tree_phuclong" model="ir.ui.view">
+			<field name="model">sale.promo.header</field>
+			<field name="inherit_id" ref="besco_promotion.view_sale_promo_header_tree"/>
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='order_type']" position="after">
+					<!-- Add your fields here -->
+					<field name="sale_type_ids" widget="many2many_tags"/>
+				</xpath>
+				<xpath expr="//field[@name='end_hour']" position="after">
+					<field name="state"/>
+				</xpath>
+
+			</field>
+		</record>
+
+		<!-- Promotion Line -->
+		<record id="view_sale_promo_lines_form_phuclong" model="ir.ui.view">
+			<field name="name">view_sale_promo_lines_form_phuclong</field>
+			<field name="model">sale.promo.lines</field>
+			<field name="inherit_id" ref="besco_promotion.view_sale_promo_lines_form"/>
+			<field name="arch" type="xml">
+				<form position="replace">
+					<form string="Sale Promotion Line">
+						<h1>
+							<field name="name"/>
+						</h1>
+						<group>
+							<group>
+								<field name="active" invisible='1'/>
+								<field name="product_attribute" string="Apply on"/>
+								<field name="categ_id" options="{'no_create': True, 'no_open': True}" attrs="{'invisible':[('product_attribute','!=','cat')], 'required':[('product_attribute','=','cat')]}"/>
+								<field name="categ_ids" options="{'no_create': True, 'no_open': True}" string="List Categories"
+			                	attrs="{'invisible':[('product_attribute','!=','list_cat')], 'required':[('product_attribute','=','list_cat')]}">
+			                		<tree>
+										<field name="name" />	                				
+	                				</tree>
+	                			</field>
+								<field name="product_id" options="{'no_create': True, 'no_open': True}" attrs="{'invisible':[('product_attribute','!=','product')], 'required':[('product_attribute','=','product')]}"/>
+								<field name="product_tmpl_id" options="{'no_create': True, 'no_open': True}" attrs="{'invisible':[('product_attribute','!=','product_template')], 'required':[('product_attribute','=','product_template')]}"/>
+								<field name="product_ean" attrs="{'invisible':[('product_attribute','!=','product')]}"/>
+								<field name="product_uom" options="{'no_create': True, 'no_open': True}" attrs="{'invisible':[('product_attribute','not in',['product','product_template'])], 'required':[('product_attribute','in',['product','product_template'])]}" context="{'product_id':product_id, 'product_tmpl_id': product_tmpl_id}"/>
+							</group>
+							<group>
+								<label for="start_date_active"/>
+								<div>
+									<field name="start_date_active" class="oe_inline"/>
+									<field name="end_date_active" class="oe_inline"/>
+								</div>
+								<field name="break_type"/>
+								<field name="modify_type" string="Modify Type"/>
+								<field name="company_id" invisible ='1'/>
+								<field name="promotion_id" invisible ='1'/>
+								<field name="discount_id" invisible ='1'/>
+								<field name="discount_value" attrs="{'required':[('modify_type','!=','pro_goods')],'invisible':[('modify_type','==','pro_goods')]}"/>
+								<field name="count_discount_limit" attrs="{'required':[('modify_type','!=','pro_goods')],'invisible':[('modify_type','==','pro_goods')]}"/>
+								<field name="amount_discount_limit" attrs="{'invisible':['|',('product_attribute','!=','order'), ('modify_type','!=','disc_percent')]}" />
+							</group>
+						</group>
+						<group string='Product List' attrs="{'invisible':[('product_attribute','!=','combo')]}">
+							<field name="product_ids" attrs="{'required':[('product_attribute','==','combo')]}" string="Product List"/>
+						</group>
+						<newline/>
+						<separator string='Promotion/Discount Information'/>
+						<group>
+							<field name="check_orgin_price" attrs="{'invisible':[('product_attribute','!=','order')]}"/>
+							<label for="volume_type" string="Base"/>
+							<div class="o_row">
+								<field name="volume_type" class="oe_inline"/>
+								<span>: </span>
+								<field name="operator"/>
+								<field name="value_from" attrs="{'required':[('operator','=','between')]}"/>
+								<field name="value_to" attrs="{'invisible':[('operator','!=','between')], 'required':[('operator','=','between')]}"/>
+							</div>
+						</group>
+						<group>
+							<group>
+								<field name='benefit_type' attrs="{'required':[('modify_type','==','pro_goods')], 'invisible':[('modify_type','!=','pro_goods'),('product_attribute','in',('order','combo'))]}"/>
+								<field name="same_price" attrs="{'invisible':['|',('benefit_type','not in',('cat','list_product_template','list_cat')),('modify_type','!=','pro_goods')]}"/>
+								<field name="benefit_product_tmpl_id" options="{'no_create': True, 'no_open': True}" attrs="{'required':[('benefit_type','==','product_template'),('modify_type','==','pro_goods')], 'invisible':['|',('benefit_type','!=','product_template'),'&amp;',('product_attribute','in',('order','combo')),('modify_type','!=','pro_goods')]}"/>
+								<field name="benefit_product_id" options="{'no_create': True, 'no_open': True}" attrs="{'required':[('benefit_type','==','product'),('modify_type','==','pro_goods')], 'invisible':[('benefit_type','!=','product')]}"/>
+								<field name="product_default_code" invisible="1" />
+								<field name="benefit_uom" options="{'no_create': True, 'no_open': True}" context="{'product_id': benefit_product_id}" attrs="{'required':[('benefit_type','==','product'),('modify_type','==','pro_goods')], 'invisible':[('benefit_type','!=','product')]}"/>
+								<field name="benefit_categ_id" options="{'no_create': True, 'no_open': True}" attrs="{'required':[('benefit_type','==','cat'),('modify_type','==','pro_goods')], 'invisible':[('benefit_type','!=','cat')]}"/>
+								<field name="benefit_categ_ids" options="{'no_create': True, 'no_open': True}" string="List Categories"
+	                			attrs="{'required':[('benefit_type','==','list_cat'),('modify_type','==','pro_goods')],
+	                			'invisible':[('benefit_type','!=','list_cat')]}">
+	                				<tree>
+										<field name="name" />	                				
+	                				</tree>
+	                			</field>
+								
+							</group>
+							<group>
+								<!-- <field name="discount_value" attrs="{'required':[('modify_type','!=','pro_goods')],'invisible':[('modify_type','==','pro_goods')]}"/> -->
+								<field name="benefit_qty" attrs="{'required':[('modify_type','!=','pro_goods')],'invisible':['|',('benefit_type','=','combo_product'),('modify_type','!=','pro_goods')]}"/>
+								<field name="benefit_limit" invisible="1" attrs="{'required':[('modify_type','!=','pro_goods')],'invisible':[('modify_type','!=','pro_goods')]}"/>
+							</group>
+						</group>
+						<group>
+							<field name="reward_code_ids" options="{'no_create': True, 'no_open': True}" context="{'benefit_type': benefit_type, 'product_default_code':product_default_code}" attrs="{'invisible':['|','|',('benefit_type','!=','product_template'),('benefit_product_tmpl_id','=',False),('product_default_code','!=','reward_code')]}">
+								<tree>
+									<field name="name" />
+									<field name="publish_date" />
+									<field name="effective_date_from" />
+									<field name="effective_date_to" />
+								</tree>
+							</field>
+							<field name="product_benefit_ids" attrs="{'required':[('benefit_type','==','combo_product'),('modify_type','==','pro_goods')], 'invisible':['|',('benefit_type','!=','combo_product'),('modify_type','!=','pro_goods')]}">
+								<tree>
+									<field name="allow_additional_price" />
+									<field name="product_qty" />
+									<field name="additional_price" />
+								</tree>
+							</field>
+							<field name="benefit_product_tmpl_ids" options="{'no_create': True, 'no_open': True}" attrs="{'required':[('benefit_type','==','list_product_template'),('modify_type','==','pro_goods')], 'invisible':[('benefit_type','!=','list_product_template')]}">
+								<tree>
+									<field name="default_code" />
+									<field name="name" />
+									<field name="list_price" />
+								</tree>
+							</field>
+						</group>
+						<separator string="Condition" invisible="1"/>
+						<field context="{'default_modify_type': modify_type}" name="promo_line_ids" invisible="1">
+							<tree string="Details" editable='top'>
+								<field name="logical"/>
+								<field name="product_attribute" string="Apply on"/>
+								<field name="categ_id" options="{'no_create': True, 'no_open': True}" attrs="{'invisible':[('product_attribute','!=','cat')], 'required':[('product_attribute','=','cat')]}"/>
+								<field name="product_tmpl_id" options="{'no_create': True, 'no_open': True}" attrs="{'invisible':[('product_attribute','!=','product_template')], 'required':[('product_attribute','=','product_template')]}"/>
+								<field name="product_id" options="{'no_create': True, 'no_open': True}" attrs="{'invisible':[('product_attribute','!=','product')], 'required':[('product_attribute','=','product')]}"/>
+								<field name="product_ean" options="{'no_create': True, 'no_open': True}" invisible="1" attrs="{'invisible':[('product_attribute','not in',['product','product_template'])]}"/>
+								<field name="product_uom" options="{'no_create': True, 'no_open': True}" context="{'product_id': product_id}" attrs="{'invisible':[('product_attribute','not in',['product','product_template'])], 'required':[('product_attribute','in',['product','product_template'])]}"/>
+								<field name="volume_type"/>
+								<field name="break_type" invisible ='1'/>
+								<field name="operator"/>
+								<field name="value_from"/>
+								<field name="value_to" attrs="{'readonly':[('operator','!=','between')]}"/>
+								<field name="active" invisible ='1'/>
+								<field name="company_id" invisible ='1'/>
+								<field name="parent_line_id" invisible ='1'/>
+							</tree>
+						</field>
+					</form>
+				</form>
+			</field>
+		</record>
+
+	</data>
+</odoo>

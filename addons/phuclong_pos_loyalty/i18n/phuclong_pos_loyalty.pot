@@ -1,0 +1,569 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* phuclong_pos_loyalty
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0+e-20200401\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: phuclong_pos_loyalty
+#: code:addons/phuclong_pos_loyalty/models/loyalty.py:0
+#, python-format
+msgid " ,Birthday is not right format: "
+msgstr ""
+
+#. module: phuclong_pos_loyalty
+#: code:addons/phuclong_pos_loyalty/models/loyalty.py:0
+#, python-format
+msgid " ,Customer have expired Loyalty: "
+msgstr ""
+
+#. module: phuclong_pos_loyalty
+#: code:addons/phuclong_pos_loyalty/models/loyalty.py:0
+#, python-format
+msgid " ,Customer is not allowed to import loyalty point: "
+msgstr ""
+
+#. module: phuclong_pos_loyalty
+#: code:addons/phuclong_pos_loyalty/models/loyalty.py:0
+#, python-format
+msgid " ,Mobile are required: "
+msgstr ""
+
+#. module: phuclong_pos_loyalty
+#: code:addons/phuclong_pos_loyalty/models/loyalty.py:0
+#, python-format
+msgid " ,Mobile is not existed: "
+msgstr ""
+
+#. module: phuclong_pos_loyalty
+#: code:addons/phuclong_pos_loyalty/models/loyalty.py:0
+#: code:addons/phuclong_pos_loyalty/models/loyalty.py:0
+#, python-format
+msgid " ,Mobile is not right format: "
+msgstr ""
+
+#. module: phuclong_pos_loyalty
+#: code:addons/phuclong_pos_loyalty/models/loyalty.py:0
+#, python-format
+msgid " ,Name are required: "
+msgstr ""
+
+#. module: phuclong_pos_loyalty
+#: code:addons/phuclong_pos_loyalty/models/loyalty.py:0
+#, python-format
+msgid " ,Please check customer point: "
+msgstr ""
+
+#. module: phuclong_pos_loyalty
+#: code:addons/phuclong_pos_loyalty/models/loyalty.py:0
+#, python-format
+msgid " ,Point column is not in float format: "
+msgstr ""
+
+#. module: phuclong_pos_loyalty
+#: code:addons/phuclong_pos_loyalty/models/loyalty.py:0
+#, python-format
+msgid " ,Year of birthday much be after 1900: "
+msgstr ""
+
+#. module: phuclong_pos_loyalty
+#: model_terms:ir.ui.view,arch_db:phuclong_pos_loyalty.view_loyalty_level_form_add_rule_phuclong
+msgid "<span>month(s)</span>"
+msgstr ""
+
+#. module: phuclong_pos_loyalty
+#: model:ir.model.fields,field_description:phuclong_pos_loyalty.field_pos_order_line__old_price_total
+#: model_terms:ir.ui.view,arch_db:phuclong_pos_loyalty.view_report_loyalty_gift_tree
+msgid "Amount"
+msgstr ""
+
+#. module: phuclong_pos_loyalty
+#: code:addons/phuclong_pos_loyalty/models/pos_order.py:0
+#, python-format
+msgid ""
+"An order for a new Loyalty level has applied. if canceled this order, the "
+"Loyalty expiration date will not be updated."
+msgstr ""
+
+#. module: phuclong_pos_loyalty
+#: model:ir.model.fields,field_description:phuclong_pos_loyalty.field_loyalty_point_history__appear_code_id
+#: model:ir.model.fields,field_description:phuclong_pos_loyalty.field_pos_order_line__appear_code_id
+msgid "Appear Code"
+msgstr ""
+
+#. module: phuclong_pos_loyalty
+#: code:addons/phuclong_pos_loyalty/models/pos_order.py:0
+#, python-format
+msgid ""
+"Availability point is not enough for deduction, you cannot cancel this order"
+msgstr ""
+
+#. module: phuclong_pos_loyalty
+#: model:ir.model.fields,field_description:phuclong_pos_loyalty.field_loyalty_point_history__bill_amount
+msgid "Bill Amount"
+msgstr ""
+
+#. module: phuclong_pos_loyalty
+#: model:ir.model.fields.selection,name:phuclong_pos_loyalty.selection__pos_order_line__loyalty_gift_type__birthday_gift
+#: model_terms:ir.ui.view,arch_db:phuclong_pos_loyalty.view_report_loyalty_gift_search
+msgid "Birthday Gift"
+msgstr ""
+
+#. module: phuclong_pos_loyalty
+#: code:addons/phuclong_pos_loyalty/models/pos_order.py:0
+#, python-format
+msgid "Cancel"
+msgstr ""
+
+#. module: phuclong_pos_loyalty
+#: model:ir.model.fields,field_description:phuclong_pos_loyalty.field_loyalty_program__categ_ids
+msgid "Categories"
+msgstr ""
+
+#. module: phuclong_pos_loyalty
+#: model:ir.model.fields,field_description:phuclong_pos_loyalty.field_loyalty_program__categories_dom
+msgid "Categories Dom"
+msgstr ""
+
+#. module: phuclong_pos_loyalty
+#: model:ir.ui.menu,name:phuclong_pos_loyalty.cardcode_history_loyalty_menu
+msgid "Change Card Code History"
+msgstr ""
+
+#. module: phuclong_pos_loyalty
+#: code:addons/phuclong_pos_loyalty/models/loyalty.py:0
+#, python-format
+msgid "Check file complete"
+msgstr ""
+
+#. module: phuclong_pos_loyalty
+#: model:ir.model.fields.selection,name:phuclong_pos_loyalty.selection__loyalty_point_history_import__state__checked
+msgid "Checked"
+msgstr ""
+
+#. module: phuclong_pos_loyalty
+#: model:ir.model.fields.selection,name:phuclong_pos_loyalty.selection__loyalty_level__downgrade_method__close
+msgid "Close"
+msgstr ""
+
+#. module: phuclong_pos_loyalty
+#: model:ir.model.fields.selection,name:phuclong_pos_loyalty.selection__report_customer__type__coming_downgrade
+msgid "Coming Downgrade Soon"
+msgstr ""
+
+#. module: phuclong_pos_loyalty
+#: code:addons/phuclong_pos_loyalty/models/pos_order.py:0
+#, python-format
+msgid "Confirm"
+msgstr ""
+
+#. module: phuclong_pos_loyalty
+#: model:ir.model,name:phuclong_pos_loyalty.model_res_partner
+msgid "Contact"
+msgstr ""
+
+#. module: phuclong_pos_loyalty
+#: model:ir.model.fields,field_description:phuclong_pos_loyalty.field_loyalty_point_history__current_point_act
+msgid "Current Available Point"
+msgstr ""
+
+#. module: phuclong_pos_loyalty
+#: model:ir.model.fields,field_description:phuclong_pos_loyalty.field_loyalty_point_history__current_change_date_level
+msgid "Current Change Date Level"
+msgstr ""
+
+#. module: phuclong_pos_loyalty
+#: model:ir.model.fields,field_description:phuclong_pos_loyalty.field_loyalty_point_history__current_expired_date
+msgid "Current Expired Date"
+msgstr ""
+
+#. module: phuclong_pos_loyalty
+#: model:ir.model.fields,field_description:phuclong_pos_loyalty.field_loyalty_point_history__current_loyalty_level
+msgid "Current Loyalty Level"
+msgstr ""
+
+#. module: phuclong_pos_loyalty
+#: model:ir.model.fields,field_description:phuclong_pos_loyalty.field_loyalty_point_history__current_total_point_act
+msgid "Current Total Point"
+msgstr ""
+
+#. module: phuclong_pos_loyalty
+#: model:ir.model.fields,field_description:phuclong_pos_loyalty.field_loyalty_point_history__partner_id
+#: model_terms:ir.ui.view,arch_db:phuclong_pos_loyalty.view_report_loyalty_gift_search
+msgid "Customer"
+msgstr ""
+
+#. module: phuclong_pos_loyalty
+#: model:ir.model.fields,field_description:phuclong_pos_loyalty.field_pos_order_line__partner_id
+#: model_terms:ir.ui.view,arch_db:phuclong_pos_loyalty.view_report_loyalty_gift_tree
+msgid "Customer Name"
+msgstr ""
+
+#. module: phuclong_pos_loyalty
+#: model_terms:ir.ui.view,arch_db:phuclong_pos_loyalty.phuclong_pos_loyalty_inherit_form_besco_loyalty
+msgid "Date"
+msgstr ""
+
+#. module: phuclong_pos_loyalty
+#: model:ir.model.fields,field_description:phuclong_pos_loyalty.field_loyalty_point_history_import__date_done
+msgid "Date Done"
+msgstr ""
+
+#. module: phuclong_pos_loyalty
+#: model_terms:ir.ui.view,arch_db:phuclong_pos_loyalty.phuclong_pos_loyalty_inherit_form_besco_loyalty
+msgid "Date get Loyalty Card"
+msgstr ""
+
+#. module: phuclong_pos_loyalty
+#: model:ir.model.fields.selection,name:phuclong_pos_loyalty.selection__loyalty_point_history_import__state__done
+msgid "Done"
+msgstr ""
+
+#. module: phuclong_pos_loyalty
+#: model:ir.model.fields.selection,name:phuclong_pos_loyalty.selection__loyalty_level__downgrade_method__down
+#: model:ir.model.fields.selection,name:phuclong_pos_loyalty.selection__loyalty_point_history__method__downgrade
+msgid "Downgrade"
+msgstr ""
+
+#. module: phuclong_pos_loyalty
+#: model:ir.model.fields,field_description:phuclong_pos_loyalty.field_loyalty_level__downgrade_method
+msgid "Downgrade Method"
+msgstr ""
+
+#. module: phuclong_pos_loyalty
+#: model:ir.model.fields.selection,name:phuclong_pos_loyalty.selection__loyalty_point_history_import__state__draft
+msgid "Draft"
+msgstr ""
+
+#. module: phuclong_pos_loyalty
+#: model:ir.model.fields,field_description:phuclong_pos_loyalty.field_loyalty_level__effective_time
+msgid "Effective time"
+msgstr ""
+
+#. module: phuclong_pos_loyalty
+#: model:ir.model,name:phuclong_pos_loyalty.model_hr_employee
+msgid "Employee"
+msgstr ""
+
+#. module: phuclong_pos_loyalty
+#. openerp-web
+#: code:addons/phuclong_pos_loyalty/static/src/js/models.js:0
+#: code:addons/phuclong_pos_loyalty/static/src/js/models.js:0
+#: code:addons/phuclong_pos_loyalty/static/src/js/models.js:0
+#, python-format
+msgid "Error: Could not Save Changes"
+msgstr ""
+
+#. module: phuclong_pos_loyalty
+#: code:addons/phuclong_pos_loyalty/models/loyalty.py:0
+#, python-format
+msgid "Everything seem valid, Validate to confirm import"
+msgstr ""
+
+#. module: phuclong_pos_loyalty
+#: model:ir.model.fields,field_description:phuclong_pos_loyalty.field_loyalty_point_history__exchange_point
+msgid "Exchange Point"
+msgstr ""
+
+#. module: phuclong_pos_loyalty
+#: model:ir.model.fields,field_description:phuclong_pos_loyalty.field_pos_order_line__date_order
+msgid "Gift Date"
+msgstr ""
+
+#. module: phuclong_pos_loyalty
+#: model_terms:ir.ui.view,arch_db:phuclong_pos_loyalty.view_report_loyalty_gift_tree
+msgid "Gift Name"
+msgstr ""
+
+#. module: phuclong_pos_loyalty
+#: model_terms:ir.ui.view,arch_db:phuclong_pos_loyalty.view_report_loyalty_gift_search
+msgid "Gift Type"
+msgstr ""
+
+#. module: phuclong_pos_loyalty
+#: model_terms:ir.ui.view,arch_db:phuclong_pos_loyalty.view_report_loyalty_gift_search
+msgid "Group By..."
+msgstr ""
+
+#. module: phuclong_pos_loyalty
+#: model:ir.model.fields,field_description:phuclong_pos_loyalty.field_loyalty_point_history__is_downgrade_from_import
+msgid "Is Downgrade From Import?"
+msgstr ""
+
+#. module: phuclong_pos_loyalty
+#: model:ir.model.fields,field_description:phuclong_pos_loyalty.field_hr_employee__is_pos_manager
+#: model:ir.model.fields,field_description:phuclong_pos_loyalty.field_hr_employee_public__is_pos_manager
+msgid "Is POS Manager"
+msgstr ""
+
+#. module: phuclong_pos_loyalty
+#: model:ir.model.fields.selection,name:phuclong_pos_loyalty.selection__loyalty_point_history__method__locked
+msgid "Locked"
+msgstr ""
+
+#. module: phuclong_pos_loyalty
+#: model:ir.model.fields,field_description:phuclong_pos_loyalty.field_pos_order_line__loyalty_gift_type
+msgid "Loyalty Gift Type"
+msgstr ""
+
+#. module: phuclong_pos_loyalty
+#: model:ir.actions.act_window,name:phuclong_pos_loyalty.action_view_report_loyalty_gift
+#: model:ir.ui.menu,name:phuclong_pos_loyalty.menu_action_view_report_loyalty_gift
+#: model_terms:ir.ui.view,arch_db:phuclong_pos_loyalty.view_report_loyalty_gift_search
+msgid "Loyalty Gifts"
+msgstr ""
+
+#. module: phuclong_pos_loyalty
+#: model:ir.actions.server,name:phuclong_pos_loyalty.auto_import_partner_point_history_ir_actions_server
+#: model:ir.cron,cron_name:phuclong_pos_loyalty.auto_import_partner_point_history
+#: model:ir.cron,name:phuclong_pos_loyalty.auto_import_partner_point_history
+msgid "Loyalty: Auto Import Partner Point History"
+msgstr ""
+
+#. module: phuclong_pos_loyalty
+#: model:ir.actions.server,name:phuclong_pos_loyalty.ir_cron_downgrade_loyalty_level_action_ir_actions_server
+#: model:ir.cron,cron_name:phuclong_pos_loyalty.ir_cron_downgrade_loyalty_level_action
+#: model:ir.cron,name:phuclong_pos_loyalty.ir_cron_downgrade_loyalty_level_action
+msgid "Loyalty: Cron Downgrade Partner Loyalty Level"
+msgstr ""
+
+#. module: phuclong_pos_loyalty
+#: model:ir.model.fields.selection,name:phuclong_pos_loyalty.selection__loyalty_point_history__method__maintain
+msgid "Maintain"
+msgstr ""
+
+#. module: phuclong_pos_loyalty
+#: model_terms:ir.ui.view,arch_db:phuclong_pos_loyalty.view_loyalty_level_form_add_rule_phuclong
+msgid "Maintain Rule"
+msgstr ""
+
+#. module: phuclong_pos_loyalty
+#: model:ir.model.fields,field_description:phuclong_pos_loyalty.field_loyalty_point_history__method
+msgid "Method"
+msgstr ""
+
+#. module: phuclong_pos_loyalty
+#: model:ir.model.fields,field_description:phuclong_pos_loyalty.field_loyalty_level__minimum_point
+msgid "Minimum Point"
+msgstr ""
+
+#. module: phuclong_pos_loyalty
+#: model:ir.model.fields,field_description:phuclong_pos_loyalty.field_loyalty_point_history__more_info
+msgid "More Information"
+msgstr ""
+
+#. module: phuclong_pos_loyalty
+#: model:ir.model.fields,field_description:phuclong_pos_loyalty.field_loyalty_program__multiply_point_loyalty
+msgid "Multiply Point Loyalty"
+msgstr ""
+
+#. module: phuclong_pos_loyalty
+#: model:ir.model.fields.selection,name:phuclong_pos_loyalty.selection__report_customer__type__new_customers
+msgid "New Customers"
+msgstr ""
+
+#. module: phuclong_pos_loyalty
+#: model:ir.model.fields,field_description:phuclong_pos_loyalty.field_loyalty_point_history__not_update_partner
+msgid "Not Update Partner?"
+msgstr ""
+
+#. module: phuclong_pos_loyalty
+#: model_terms:ir.ui.view,arch_db:phuclong_pos_loyalty.view_report_loyalty_gift_tree
+msgid "Order Ref"
+msgstr ""
+
+#. module: phuclong_pos_loyalty
+#: model_terms:ir.ui.view,arch_db:phuclong_pos_loyalty.view_report_loyalty_gift_tree
+msgid "Original Sale Price"
+msgstr ""
+
+#. module: phuclong_pos_loyalty
+#: model:ir.model.fields,field_description:phuclong_pos_loyalty.field_loyalty_point_history__pos_order_id
+msgid "POS Order Ref"
+msgstr ""
+
+#. module: phuclong_pos_loyalty
+#: model:ir.model.fields,field_description:phuclong_pos_loyalty.field_pos_order__partner_expired_date
+msgid "Partner Expired Date"
+msgstr ""
+
+#. module: phuclong_pos_loyalty
+#: model:ir.model.fields,field_description:phuclong_pos_loyalty.field_pos_order__partner_insert_type
+msgid "Partner Insert Type"
+msgstr ""
+
+#. module: phuclong_pos_loyalty
+#: code:addons/phuclong_pos_loyalty/models/loyalty.py:0
+#: code:addons/phuclong_pos_loyalty/models/loyalty.py:0
+#, python-format
+msgid "Please check error line before begin import"
+msgstr ""
+
+#. module: phuclong_pos_loyalty
+#: code:addons/phuclong_pos_loyalty/models/loyalty.py:0
+#: code:addons/phuclong_pos_loyalty/models/loyalty.py:0
+#, python-format
+msgid "Please check file before import"
+msgstr ""
+
+#. module: phuclong_pos_loyalty
+#: model:ir.model.fields,field_description:phuclong_pos_loyalty.field_pos_order_line__loyalty_point_cost
+msgid "Point Cost"
+msgstr ""
+
+#. module: phuclong_pos_loyalty
+#: model_terms:ir.ui.view,arch_db:phuclong_pos_loyalty.view_import_point_customer_form_phuclong
+#: model_terms:ir.ui.view,arch_db:phuclong_pos_loyalty.view_loyalty_point_history_tree_add_level
+msgid "Point Down"
+msgstr ""
+
+#. module: phuclong_pos_loyalty
+#: model:ir.model.fields.selection,name:phuclong_pos_loyalty.selection__pos_order_line__loyalty_gift_type__point_exchange
+#: model_terms:ir.ui.view,arch_db:phuclong_pos_loyalty.view_report_loyalty_gift_search
+msgid "Point Exchange"
+msgstr ""
+
+#. module: phuclong_pos_loyalty
+#: model_terms:ir.ui.view,arch_db:phuclong_pos_loyalty.view_import_point_customer_form_phuclong
+#: model_terms:ir.ui.view,arch_db:phuclong_pos_loyalty.view_loyalty_point_history_tree_add_level
+msgid "Point Up"
+msgstr ""
+
+#. module: phuclong_pos_loyalty
+#: model:ir.model,name:phuclong_pos_loyalty.model_pos_order_line
+msgid "Point of Sale Order Lines"
+msgstr ""
+
+#. module: phuclong_pos_loyalty
+#: model:ir.model,name:phuclong_pos_loyalty.model_pos_order
+msgid "Point of Sale Orders"
+msgstr ""
+
+#. module: phuclong_pos_loyalty
+#: model:ir.model.fields,field_description:phuclong_pos_loyalty.field_loyalty_point_history__prior_point_act
+msgid "Prior Available Point"
+msgstr ""
+
+#. module: phuclong_pos_loyalty
+#: model:ir.model.fields,field_description:phuclong_pos_loyalty.field_loyalty_point_history__prior_loyalty_level
+msgid "Prior Loyalty Level"
+msgstr ""
+
+#. module: phuclong_pos_loyalty
+#: model:ir.model.fields,field_description:phuclong_pos_loyalty.field_loyalty_point_history__prior_total_point_act
+msgid "Prior Total Point"
+msgstr ""
+
+#. module: phuclong_pos_loyalty
+#: model:ir.model,name:phuclong_pos_loyalty.model_hr_employee_public
+msgid "Public Employee"
+msgstr ""
+
+#. module: phuclong_pos_loyalty
+#: model_terms:ir.ui.view,arch_db:phuclong_pos_loyalty.view_employee_form_add_pos_manager
+msgid "Related User"
+msgstr ""
+
+#. module: phuclong_pos_loyalty
+#: model:ir.model.fields,field_description:phuclong_pos_loyalty.field_report_customer__type
+msgid "Report Type"
+msgstr ""
+
+#. module: phuclong_pos_loyalty
+#: model:ir.model.fields,field_description:phuclong_pos_loyalty.field_loyalty_program__sale_type_ids
+msgid "Sale Types"
+msgstr ""
+
+#. module: phuclong_pos_loyalty
+#: model:ir.model.fields.selection,name:phuclong_pos_loyalty.selection__pos_order__partner_insert_type__scan
+msgid "Scan"
+msgstr ""
+
+#. module: phuclong_pos_loyalty
+#: model:ir.model.fields.selection,name:phuclong_pos_loyalty.selection__pos_order__partner_insert_type__search
+msgid "Search"
+msgstr ""
+
+#. module: phuclong_pos_loyalty
+#: model:ir.model.fields,field_description:phuclong_pos_loyalty.field_loyalty_point_history_import__state
+msgid "State"
+msgstr ""
+
+#. module: phuclong_pos_loyalty
+#: model:ir.model.fields,field_description:phuclong_pos_loyalty.field_pos_order_line__warehouse_id
+#: model_terms:ir.ui.view,arch_db:phuclong_pos_loyalty.view_report_loyalty_gift_search
+msgid "Store"
+msgstr ""
+
+#. module: phuclong_pos_loyalty
+#: model:ir.model.fields,field_description:phuclong_pos_loyalty.field_loyalty_point_history_import__include_prior_point_act
+msgid "Update Available Point"
+msgstr ""
+
+#. module: phuclong_pos_loyalty
+#: model:ir.model.fields.selection,name:phuclong_pos_loyalty.selection__loyalty_point_history__method__upgrade
+msgid "Upgrade"
+msgstr ""
+
+#. module: phuclong_pos_loyalty
+#: model:ir.model.fields.selection,name:phuclong_pos_loyalty.selection__loyalty_point_history_import__state__validated
+msgid "Validated"
+msgstr ""
+
+#. module: phuclong_pos_loyalty
+#: model:ir.model.fields,field_description:phuclong_pos_loyalty.field_loyalty_point_history__warehouse_id
+msgid "Warehouse"
+msgstr ""
+
+#. module: phuclong_pos_loyalty
+#: model:ir.model.fields,field_description:phuclong_pos_loyalty.field_hr_employee__warehouses_dom
+msgid "Warehouse Domain"
+msgstr ""
+
+#. module: phuclong_pos_loyalty
+#: code:addons/phuclong_pos_loyalty/models/pos_order.py:0
+#, python-format
+msgid "Warning"
+msgstr ""
+
+#. module: phuclong_pos_loyalty
+#. openerp-web
+#: code:addons/phuclong_pos_loyalty/static/src/js/models.js:0
+#: code:addons/phuclong_pos_loyalty/static/src/js/models.js:0
+#: code:addons/phuclong_pos_loyalty/static/src/js/models.js:0
+#, python-format
+msgid "Your Internet connection is probably down."
+msgstr ""
+
+#. module: phuclong_pos_loyalty
+#: model:ir.model,name:phuclong_pos_loyalty.model_loyalty_level
+msgid "loyalty.level"
+msgstr ""
+
+#. module: phuclong_pos_loyalty
+#: model:ir.model,name:phuclong_pos_loyalty.model_loyalty_point_history
+msgid "loyalty.point.history"
+msgstr ""
+
+#. module: phuclong_pos_loyalty
+#: model:ir.model,name:phuclong_pos_loyalty.model_loyalty_point_history_import
+msgid "loyalty.point.history.import"
+msgstr ""
+
+#. module: phuclong_pos_loyalty
+#: model:ir.model,name:phuclong_pos_loyalty.model_loyalty_program
+msgid "loyalty.program"
+msgstr ""
+
+#. module: phuclong_pos_loyalty
+#: model:ir.model,name:phuclong_pos_loyalty.model_report_customer
+msgid "report.customer"
+msgstr ""

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<menuitem name="Surcharge" id="surcharge_menu" sequence="18" parent="besco_base.menu_master_data" 
+			groups="phuclong_pos_surcharge.group_surcharge_manager" />
+			
+    	<menuitem
+            id="surcharge_publish_menu"
+            name="Surcharge"
+            parent="surcharge_menu"
+            action="action_product_surcharge_header"
+            sequence="1"/>
+	</data>
+</odoo>

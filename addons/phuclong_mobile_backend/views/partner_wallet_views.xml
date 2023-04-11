@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="partner_wallet_form" model="ir.ui.view">
+            <field name="name">partner_wallet_form</field>
+            <field name="model">partner.wallet</field>
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+                        <button name="confirm" string="Confirm" states="new" type="object" class="oe_highlight"/>
+                        <button name="cancel" string="Cancel" type="object" />
+                        <button name="set_draft" string="Set to New" states="cancel" type="object" class="oe_highlight" />
+                        <field name="state" widget="statusbar" nolabel="1"/>
+                    </header>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name" />
+                                <field name="amount_total" readonly="1" force_save="1"/>
+                                <field name="image_front" widget="image" options="{'preview_image': 'image_front'}"/>
+                            </group>
+                            <group>
+                                <field name="id_number"/>
+                                <field name="image_back" widget="image" options="{'preview_image': 'image_back'}"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Order">
+                                <field name="order_ids" readonly="1"/>
+                            </page>
+                            <page string="Payment">
+                                <field name="pos_payment_ids" readonly="1"/>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="partner_wallet_tree" model="ir.ui.view">
+            <field name="name">partner_wallet_tree</field>
+            <field name="model">partner.wallet</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="id_number"/>
+                    <field name="amount_total"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="partner_wallet_act" model="ir.actions.act_window">
+            <field name="name">Partner Wallet</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">partner.wallet</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+    </data>
+</odoo>

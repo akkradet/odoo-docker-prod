@@ -1,0 +1,554 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* phuclong_product
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0+e-20200401\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: phuclong_product
+#: model:ir.model.fields,help:phuclong_product.field_product_product__type
+#: model:ir.model.fields,help:phuclong_product.field_product_template__type
+msgid ""
+"A storable product is a product for which you manage stock. The Inventory app has to be installed.\n"
+"A consumable product is a product for which stock is not managed.\n"
+"A service is a non-material product you provide."
+msgstr ""
+
+#. module: phuclong_product
+#: model:ir.model.fields.selection,name:phuclong_product.selection__product_template__lock_item_method__auto
+msgid "Auto"
+msgstr ""
+
+#. module: phuclong_product
+#: model:ir.model.fields.selection,name:phuclong_product.selection__product_custom_material_qty__custom_type__below
+#: model:ir.model.fields.selection,name:phuclong_product.selection__product_material_option__type__below
+msgid "Below"
+msgstr ""
+
+#. module: phuclong_product
+#: model:ir.model.fields,field_description:phuclong_product.field_product_material_line__product_material_id
+msgid "Bill of Material Line"
+msgstr ""
+
+#. module: phuclong_product
+#: model_terms:ir.ui.view,arch_db:phuclong_product.view_users_form_inherit_category_security
+msgid "Category control"
+msgstr ""
+
+#. module: phuclong_product
+#: code:addons/phuclong_product/models/product_template.py:0
+#, python-format
+msgid "Changed"
+msgstr ""
+
+#. module: phuclong_product
+#: code:addons/phuclong_product/models/product_custom_material.py:0
+#, python-format
+msgid "Config must be unique per Material and Custom type."
+msgstr ""
+
+#. module: phuclong_product
+#: model:ir.model,name:phuclong_product.model_product_conversion
+msgid "Configure conversion rules for product"
+msgstr ""
+
+#. module: phuclong_product
+#: model:ir.model.fields,field_description:phuclong_product.field_product_custom_material__create_uid
+#: model:ir.model.fields,field_description:phuclong_product.field_product_custom_material_qty__create_uid
+#: model:ir.model.fields,field_description:phuclong_product.field_product_material__create_uid
+#: model:ir.model.fields,field_description:phuclong_product.field_product_material_line__create_uid
+#: model:ir.model.fields,field_description:phuclong_product.field_product_material_option__create_uid
+#: model:ir.model.fields,field_description:phuclong_product.field_product_size__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: phuclong_product
+#: model:ir.model.fields,field_description:phuclong_product.field_product_custom_material__create_date
+#: model:ir.model.fields,field_description:phuclong_product.field_product_custom_material_qty__create_date
+#: model:ir.model.fields,field_description:phuclong_product.field_product_material__create_date
+#: model:ir.model.fields,field_description:phuclong_product.field_product_material_line__create_date
+#: model:ir.model.fields,field_description:phuclong_product.field_product_material_option__create_date
+#: model:ir.model.fields,field_description:phuclong_product.field_product_size__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: phuclong_product
+#: model:ir.model.fields.selection,name:phuclong_product.selection__product_category__fnb_type__cup
+msgid "Cup"
+msgstr ""
+
+#. module: phuclong_product
+#: model:ir.model.fields,field_description:phuclong_product.field_product_product__cup_type
+#: model:ir.model.fields,field_description:phuclong_product.field_product_template__cup_type
+msgid "Cup Type"
+msgstr ""
+
+#. module: phuclong_product
+#: model_terms:ir.ui.view,arch_db:phuclong_product.template_only_form_inherit_phuclong
+msgid "Custom Material list"
+msgstr ""
+
+#. module: phuclong_product
+#: model:ir.model.fields,field_description:phuclong_product.field_product_product__custom_material_ids
+#: model:ir.model.fields,field_description:phuclong_product.field_product_template__custom_material_ids
+#: model_terms:ir.ui.view,arch_db:phuclong_product.template_only_form_inherit_phuclong
+msgid "Custom Materials"
+msgstr ""
+
+#. module: phuclong_product
+#: model:ir.model.fields,field_description:phuclong_product.field_product_custom_material_qty__custom_type
+msgid "Custom Type"
+msgstr ""
+
+#. module: phuclong_product
+#: model:ir.model.fields.selection,name:phuclong_product.selection__product_category__fnb_type__customizable_material
+msgid "Customizable Material"
+msgstr ""
+
+#. module: phuclong_product
+#: model:ir.model.fields,help:phuclong_product.field_product_custom_material__product_uom_id
+#: model:ir.model.fields,help:phuclong_product.field_product_custom_material_qty__product_uom_id
+#: model:ir.model.fields,help:phuclong_product.field_product_material_line__product_uom_id
+msgid "Default Unit of Measure used for storage."
+msgstr ""
+
+#. module: phuclong_product
+#: model:ir.model.fields,field_description:phuclong_product.field_product_size__description
+msgid "Description"
+msgstr ""
+
+#. module: phuclong_product
+#: model:ir.model.fields,field_description:phuclong_product.field_product_custom_material__display_name
+#: model:ir.model.fields,field_description:phuclong_product.field_product_custom_material_qty__display_name
+#: model:ir.model.fields,field_description:phuclong_product.field_product_material__display_name
+#: model:ir.model.fields,field_description:phuclong_product.field_product_material_line__display_name
+#: model:ir.model.fields,field_description:phuclong_product.field_product_material_option__display_name
+#: model:ir.model.fields,field_description:phuclong_product.field_product_product__display_name
+#: model:ir.model.fields,field_description:phuclong_product.field_product_size__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: phuclong_product
+#: model:ir.model.fields.selection,name:phuclong_product.selection__product_category__fnb_type__drink
+msgid "Drink"
+msgstr ""
+
+#. module: phuclong_product
+#: model:ir.model.fields,field_description:phuclong_product.field_product_product__effective_day
+#: model:ir.model.fields,field_description:phuclong_product.field_product_template__effective_day
+msgid "Effective Day"
+msgstr ""
+
+#. module: phuclong_product
+#: code:addons/phuclong_product/models/product_template.py:0
+#, python-format
+msgid "Effective Day must >= 0"
+msgstr ""
+
+#. module: phuclong_product
+#: model:ir.model.fields,field_description:phuclong_product.field_product_product__eng_name
+#: model:ir.model.fields,field_description:phuclong_product.field_product_template__eng_name
+msgid "English Name"
+msgstr ""
+
+#. module: phuclong_product
+#: model_terms:ir.ui.view,arch_db:phuclong_product.template_only_form_inherit_phuclong
+msgid "Fixed Materials"
+msgstr ""
+
+#. module: phuclong_product
+#: model:ir.model.fields,field_description:phuclong_product.field_product_category__fnb_type
+#: model:ir.model.fields,field_description:phuclong_product.field_product_product__fnb_type
+#: model:ir.model.fields,field_description:phuclong_product.field_product_template__fnb_type
+msgid "FnB Type"
+msgstr ""
+
+#. module: phuclong_product
+#: model:ir.model.fields.selection,name:phuclong_product.selection__product_category__fnb_type__food
+msgid "Food"
+msgstr ""
+
+#. module: phuclong_product
+#: model:ir.model.fields,field_description:phuclong_product.field_product_custom_material__id
+#: model:ir.model.fields,field_description:phuclong_product.field_product_custom_material_qty__id
+#: model:ir.model.fields,field_description:phuclong_product.field_product_material__id
+#: model:ir.model.fields,field_description:phuclong_product.field_product_material_line__id
+#: model:ir.model.fields,field_description:phuclong_product.field_product_material_option__id
+#: model:ir.model.fields,field_description:phuclong_product.field_product_size__id
+msgid "ID"
+msgstr ""
+
+#. module: phuclong_product
+#: model:ir.model.fields,field_description:phuclong_product.field_product_product__is_cashless
+#: model:ir.model.fields,field_description:phuclong_product.field_product_template__is_cashless
+msgid "Is Cashless"
+msgstr ""
+
+#. module: phuclong_product
+#: model:ir.model.fields,field_description:phuclong_product.field_product_custom_material____last_update
+#: model:ir.model.fields,field_description:phuclong_product.field_product_custom_material_qty____last_update
+#: model:ir.model.fields,field_description:phuclong_product.field_product_material____last_update
+#: model:ir.model.fields,field_description:phuclong_product.field_product_material_line____last_update
+#: model:ir.model.fields,field_description:phuclong_product.field_product_material_option____last_update
+#: model:ir.model.fields,field_description:phuclong_product.field_product_size____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: phuclong_product
+#: model:ir.model.fields,field_description:phuclong_product.field_product_custom_material__write_uid
+#: model:ir.model.fields,field_description:phuclong_product.field_product_custom_material_qty__write_uid
+#: model:ir.model.fields,field_description:phuclong_product.field_product_material__write_uid
+#: model:ir.model.fields,field_description:phuclong_product.field_product_material_line__write_uid
+#: model:ir.model.fields,field_description:phuclong_product.field_product_material_option__write_uid
+#: model:ir.model.fields,field_description:phuclong_product.field_product_size__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: phuclong_product
+#: model:ir.model.fields,field_description:phuclong_product.field_product_custom_material__write_date
+#: model:ir.model.fields,field_description:phuclong_product.field_product_custom_material_qty__write_date
+#: model:ir.model.fields,field_description:phuclong_product.field_product_material__write_date
+#: model:ir.model.fields,field_description:phuclong_product.field_product_material_line__write_date
+#: model:ir.model.fields,field_description:phuclong_product.field_product_material_option__write_date
+#: model:ir.model.fields,field_description:phuclong_product.field_product_size__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: phuclong_product
+#: model:ir.model.fields,field_description:phuclong_product.field_product_product__lid_id
+#: model:ir.model.fields,field_description:phuclong_product.field_product_template__lid_id
+#: model:ir.model.fields.selection,name:phuclong_product.selection__product_category__fnb_type__lid
+msgid "Lid"
+msgstr ""
+
+#. module: phuclong_product
+#: model:ir.model.fields,field_description:phuclong_product.field_product_product__lock_item_method
+#: model:ir.model.fields,field_description:phuclong_product.field_product_template__lock_item_method
+msgid "Lock Item Method"
+msgstr ""
+
+#. module: phuclong_product
+#: model:ir.model.fields.selection,name:phuclong_product.selection__product_template__lock_item_method__manual
+msgid "Manual"
+msgstr ""
+
+#. module: phuclong_product
+#: model:ir.model.fields,field_description:phuclong_product.field_product_custom_material__material_id
+#: model:ir.model.fields,field_description:phuclong_product.field_product_custom_material_qty__material_id
+#: model:ir.model.fields,field_description:phuclong_product.field_product_material_line__product_id
+#: model:ir.model.fields.selection,name:phuclong_product.selection__product_category__fnb_type__material
+msgid "Material"
+msgstr ""
+
+#. module: phuclong_product
+#: model:ir.model.fields,field_description:phuclong_product.field_product_material__material_line_ids
+#: model_terms:ir.ui.view,arch_db:phuclong_product.product_material_view_form
+msgid "Material Line"
+msgstr ""
+
+#. module: phuclong_product
+#: model_terms:ir.ui.view,arch_db:phuclong_product.product_material_view_form
+msgid "Material List Name"
+msgstr ""
+
+#. module: phuclong_product
+#: model_terms:ir.ui.view,arch_db:phuclong_product.template_only_form_inherit_phuclong
+msgid "Material list"
+msgstr ""
+
+#. module: phuclong_product
+#: model_terms:ir.ui.view,arch_db:phuclong_product.product_material_view_form
+#: model_terms:ir.ui.view,arch_db:phuclong_product.template_only_form_inherit_phuclong
+msgid "Materials"
+msgstr ""
+
+#. module: phuclong_product
+#: model:ir.model.fields,field_description:phuclong_product.field_product_material__name
+#: model:ir.model.fields,field_description:phuclong_product.field_product_product__name
+#: model:ir.model.fields,field_description:phuclong_product.field_product_size__name
+#: model:ir.model.fields,field_description:phuclong_product.field_product_template__name
+msgid "Name"
+msgstr ""
+
+#. module: phuclong_product
+#: model:ir.model.fields.selection,name:phuclong_product.selection__product_material_option__type__none
+msgid "None"
+msgstr ""
+
+#. module: phuclong_product
+#: model:ir.model.fields.selection,name:phuclong_product.selection__product_material_option__type__normal
+msgid "Normal"
+msgstr ""
+
+#. module: phuclong_product
+#: model:ir.model.fields,field_description:phuclong_product.field_product_material__option_unavailable_dom
+msgid "Option Unavailable Dom"
+msgstr ""
+
+#. module: phuclong_product
+#: model:ir.model.fields.selection,name:phuclong_product.selection__product_custom_material_qty__custom_type__over
+#: model:ir.model.fields.selection,name:phuclong_product.selection__product_material_option__type__over
+msgid "Over"
+msgstr ""
+
+#. module: phuclong_product
+#: model:ir.model.fields,field_description:phuclong_product.field_pos_category__product_ids
+msgid "POS Products"
+msgstr ""
+
+#. module: phuclong_product
+#: model:ir.model.fields.selection,name:phuclong_product.selection__product_category__fnb_type__packaged_product
+msgid "Packaged Product"
+msgstr ""
+
+#. module: phuclong_product
+#: model:ir.model.fields.selection,name:phuclong_product.selection__product_template__cup_type__paper
+msgid "Paper"
+msgstr ""
+
+#. module: phuclong_product
+#: model:ir.model.fields,field_description:phuclong_product.field_product_product__parent_code
+#: model:ir.model.fields,field_description:phuclong_product.field_product_template__parent_code
+msgid "Parent Code"
+msgstr ""
+
+#. module: phuclong_product
+#: model:ir.model.fields.selection,name:phuclong_product.selection__product_template__cup_type__plastic
+msgid "Plastic"
+msgstr ""
+
+#. module: phuclong_product
+#: model:ir.model,name:phuclong_product.model_pos_category
+msgid "Point of Sale Category"
+msgstr ""
+
+#. module: phuclong_product
+#: model:ir.model.fields,field_description:phuclong_product.field_product_product__pos_sequence
+#: model:ir.model.fields,field_description:phuclong_product.field_product_template__pos_sequence
+msgid "Pos Sequence"
+msgstr ""
+
+#. module: phuclong_product
+#: model:ir.model.fields,help:phuclong_product.field_product_product__list_price
+#: model:ir.model.fields,help:phuclong_product.field_product_template__list_price
+#: model:ir.model.fields,help:phuclong_product.field_product_template__lst_price
+msgid "Price at which the product is sold to customers."
+msgstr ""
+
+#. module: phuclong_product
+#: model:ir.model,name:phuclong_product.model_product_product
+#: model:ir.model.fields,field_description:phuclong_product.field_product_custom_material__product_id
+#: model:ir.model.fields,field_description:phuclong_product.field_product_material__product_custom_id
+#: model:ir.model.fields,field_description:phuclong_product.field_product_material__product_id
+msgid "Product"
+msgstr ""
+
+#. module: phuclong_product
+#: model:ir.model,name:phuclong_product.model_product_category
+#: model:ir.model.fields,field_description:phuclong_product.field_res_users__category_allow_ids
+msgid "Product Category"
+msgstr ""
+
+#. module: phuclong_product
+#: model:ir.model.fields,field_description:phuclong_product.field_res_users__product_category_dom
+msgid "Product Category Dom"
+msgstr ""
+
+#. module: phuclong_product
+#: model_terms:ir.ui.view,arch_db:phuclong_product.product_custom_material_qty_tree_view
+msgid "Product Custom Material"
+msgstr ""
+
+#. module: phuclong_product
+#: model:ir.model,name:phuclong_product.model_product_material
+#: model:ir.model.fields,field_description:phuclong_product.field_product_product__product_material_ids
+#: model:ir.model.fields,field_description:phuclong_product.field_product_template__product_material_ids
+msgid "Product Material"
+msgstr ""
+
+#. module: phuclong_product
+#: model:ir.model,name:phuclong_product.model_product_material_line
+msgid "Product Material Line"
+msgstr ""
+
+#. module: phuclong_product
+#: model:ir.model,name:phuclong_product.model_product_material_option
+msgid "Product Material Option"
+msgstr ""
+
+#. module: phuclong_product
+#: model:ir.actions.act_window,name:phuclong_product.action_product_size
+#: model:ir.ui.menu,name:phuclong_product.menu_product_size_action
+#: model_terms:ir.ui.view,arch_db:phuclong_product.product_size_tree_view
+msgid "Product Size"
+msgstr ""
+
+#. module: phuclong_product
+#: model:ir.model,name:phuclong_product.model_product_template
+msgid "Product Template"
+msgstr ""
+
+#. module: phuclong_product
+#: model:ir.model.fields,field_description:phuclong_product.field_product_product__type
+#: model:ir.model.fields,field_description:phuclong_product.field_product_template__type
+msgid "Product Type"
+msgstr ""
+
+#. module: phuclong_product
+#: model_terms:ir.ui.view,arch_db:phuclong_product.product_material_view_form
+msgid "Product material"
+msgstr ""
+
+#. module: phuclong_product
+#: model_terms:ir.ui.view,arch_db:phuclong_product.besco_product_product_form_inherit_phuclong_product
+#: model_terms:ir.ui.view,arch_db:phuclong_product.template_only_form_inherit_phuclong
+msgid "Property"
+msgstr ""
+
+#. module: phuclong_product
+#: model:ir.model.fields,field_description:phuclong_product.field_product_product__provided_by
+#: model:ir.model.fields,field_description:phuclong_product.field_product_template__provided_by
+msgid "Provided By"
+msgstr ""
+
+#. module: phuclong_product
+#: model:ir.model.fields,field_description:phuclong_product.field_product_template__lst_price
+msgid "Public Price"
+msgstr ""
+
+#. module: phuclong_product
+#: model:ir.model.fields,field_description:phuclong_product.field_product_custom_material__custom_qty
+#: model:ir.model.fields,field_description:phuclong_product.field_product_custom_material_qty__custom_qty
+#: model:ir.model.fields,field_description:phuclong_product.field_product_material_line__product_qty
+msgid "Quantity"
+msgstr ""
+
+#. module: phuclong_product
+#: model:ir.actions.act_window,name:phuclong_product.action_product_custom_material_qty
+#: model:ir.ui.menu,name:phuclong_product.menu_product_custom_material_qty_action
+msgid "Quantity Custom Config"
+msgstr ""
+
+#. module: phuclong_product
+#: model:ir.model.fields,field_description:phuclong_product.field_product_product__ref_code
+#: model:ir.model.fields,field_description:phuclong_product.field_product_template__ref_code
+msgid "Reference Code"
+msgstr ""
+
+#. module: phuclong_product
+#: model:ir.model.fields,field_description:phuclong_product.field_product_product__list_price
+#: model:ir.model.fields,field_description:phuclong_product.field_product_template__list_price
+msgid "Sales Price"
+msgstr ""
+
+#. module: phuclong_product
+#: model:ir.model.fields,field_description:phuclong_product.field_product_material_line__sequence
+#: model:ir.model.fields,field_description:phuclong_product.field_product_size__sequence
+msgid "Sequence"
+msgstr ""
+
+#. module: phuclong_product
+#: model:ir.model.fields.selection,name:phuclong_product.selection__product_template__type__service
+msgid "Service"
+msgstr ""
+
+#. module: phuclong_product
+#: model:ir.model.fields,field_description:phuclong_product.field_product_product__short_name
+#: model:ir.model.fields,field_description:phuclong_product.field_product_template__short_name
+msgid "Short Name"
+msgstr ""
+
+#. module: phuclong_product
+#: model:ir.model.fields,field_description:phuclong_product.field_pos_category__allow_show_original_price
+msgid "Show Original Price"
+msgstr ""
+
+#. module: phuclong_product
+#: model:ir.model.fields,field_description:phuclong_product.field_product_product__size_id
+#: model:ir.model.fields,field_description:phuclong_product.field_product_template__size_id
+msgid "Size"
+msgstr ""
+
+#. module: phuclong_product
+#: model:ir.model.fields,field_description:phuclong_product.field_product_product__spoon_id
+#: model:ir.model.fields,field_description:phuclong_product.field_product_template__spoon_id
+msgid "Spoon"
+msgstr ""
+
+#. module: phuclong_product
+#: model:ir.model.fields.selection,name:phuclong_product.selection__product_template__type__product
+msgid "Storable Product"
+msgstr ""
+
+#. module: phuclong_product
+#: code:addons/phuclong_product/models/product_material_line.py:0
+#: code:addons/phuclong_product/models/product_size.py:0
+#, python-format
+msgid "The sequence is must be positive numbers!"
+msgstr ""
+
+#. module: phuclong_product
+#: model:ir.model.constraint,message:phuclong_product.constraint_product_material_line_sequence_material_line_uniq
+msgid ""
+"The sequence of the product material line must be unique per product "
+"material list!"
+msgstr ""
+
+#. module: phuclong_product
+#: model:ir.model.fields,field_description:phuclong_product.field_product_product__suitable_topping_ids
+#: model:ir.model.fields,field_description:phuclong_product.field_product_template__suitable_topping_ids
+#: model:ir.model.fields.selection,name:phuclong_product.selection__product_category__fnb_type__topping
+msgid "Topping"
+msgstr ""
+
+#. module: phuclong_product
+#: model:ir.model.fields,field_description:phuclong_product.field_product_material_option__name
+#: model:ir.model.fields,field_description:phuclong_product.field_product_material_option__type
+msgid "Type"
+msgstr ""
+
+#. module: phuclong_product
+#: model:ir.model.fields,field_description:phuclong_product.field_product_material__option_unavailable_ids
+msgid "Unavailable Options"
+msgstr ""
+
+#. module: phuclong_product
+#: model:ir.model.fields,field_description:phuclong_product.field_product_custom_material__product_uom_id
+#: model:ir.model.fields,field_description:phuclong_product.field_product_custom_material_qty__product_uom_id
+#: model:ir.model.fields,field_description:phuclong_product.field_product_material_line__product_uom_id
+msgid "Unit of Measure"
+msgstr ""
+
+#. module: phuclong_product
+#: model:ir.model.fields,field_description:phuclong_product.field_product_product__update_coupon_expiration
+#: model:ir.model.fields,field_description:phuclong_product.field_product_template__update_coupon_expiration
+msgid "Update Coupon Expiration"
+msgstr ""
+
+#. module: phuclong_product
+#: model:ir.model,name:phuclong_product.model_res_users
+msgid "Users"
+msgstr ""
+
+#. module: phuclong_product
+#: model:ir.model,name:phuclong_product.model_product_custom_material
+msgid "product.custom.material"
+msgstr ""
+
+#. module: phuclong_product
+#: model:ir.model,name:phuclong_product.model_product_custom_material_qty
+msgid "product.custom.material.qty"
+msgstr ""
+
+#. module: phuclong_product
+#: model:ir.model,name:phuclong_product.model_product_size
+msgid "product.size"
+msgstr ""

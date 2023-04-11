@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="inherit_product_template_mobile" model="ir.ui.view">
+            <field name="name">inherit_product_template_mobile</field>
+            <field name="model">product.template</field>
+            <field name="priority">1</field>
+            <field name="inherit_id" ref="phuclong_product.template_only_form_inherit_phuclong"/>
+            <field name="arch" type="xml">
+                <xpath expr="//page[@name='pos']/group[last()]" position="replace">
+                </xpath>
+                <xpath expr="//page[@name='property']" position="inside">
+                    <group name="pos">
+                        <field name="spoon_id" attrs="{'invisible': ['|', ('type', '!=', 'product'), ('fnb_type', '!=', 'packaged_product')]}" options='{"no_create": True, "no_write": True}' domain="[('type', '=', 'product'), ('categ_id.fnb_type', '=', 'material')]"/>
+						<field name="suitable_topping_ids" options='{"no_create": True, "no_write": True, "no_open": True}'/>
+                    </group>
+                </xpath>
+                <xpath expr="//page[@name='pos']" position="after">
+                    <page name="mobile" string="Mobile">
+                        <group>
+                            <field name="app_description"/>
+                            <field name="available_in_mobile"/>
+                            <field name="mobile_category_id" options='{"no_create": True, "no_write": True, "no_open": True}'/>
+                            <field name="use_for_topup"/>
+                            <field name="is_new_product"/>
+                            <field name="name_mobile" attrs="{'required': [('available_in_mobile', '=', True)]}"/>
+                        </group>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+        <record id="inherit_product_template_mobile_search" model="ir.ui.view">
+            <field name="name">inherit_product_template_mobile_search</field>
+            <field name="model">product.template</field>
+            <field name="priority">1</field>
+            <field name="inherit_id" ref="point_of_sale.product_template_search_view_pos"/>
+            <field name="arch" type="xml">
+                <xpath expr="//filter[@name='filter_to_availabe_pos']" position="after">
+                    <filter name="filter_to_availabe_mobile" string="Available in Mobile" domain="[('available_in_mobile', '=', True)]"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

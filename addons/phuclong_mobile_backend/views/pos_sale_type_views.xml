@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="pos_sale_type_inherit_mobile" model="ir.ui.view">
+            <field name="name">pos_sale_type_inherit_mobile</field>
+            <field name="model">pos.sale.type</field>
+            <field name="inherit_id" ref="phuclong_pos_base.pos_sale_type_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//div[@name='options']" position="after">
+                    <div>
+                        <field name="use_for_app"/>
+                        <label for="use_for_app"/>
+                    </div>
+                    <field name="type_for_app" attrs="{'invisible': [('use_for_app', '=', False)], 'required': [('use_for_app', '=', True)]}"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

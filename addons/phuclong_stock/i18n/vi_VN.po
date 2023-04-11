@@ -1,0 +1,1201 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-04-08 08:08+0000\n"
+"PO-Revision-Date: 2021-04-05 08:33+0000\n"
+"Last-Translator: Nguyễn Thanh Tùng <tung.nt@besco.vn>\n"
+"Language-Team: Vietnamese <http://weblate.besco.vn/projects/besco-phuc-long/"
+"phuclong_stock/vi_VN/>\n"
+"Language: vi_VN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 3.8\n"
+
+#. module: phuclong_stock
+#: code:addons/phuclong_stock/models/stock_location.py:0
+#, python-format
+msgid "%s / %s"
+msgstr "%s / %s"
+
+#. module: phuclong_stock
+#: model:ir.actions.report,print_report_name:phuclong_stock.report_stock_balance_product
+msgid "'Báo cáo xuất nhập tồn theo mặt hàng' + '.ods'"
+msgstr "'Báo cáo xuất nhập tồn theo mặt hàng' + '.ods'"
+
+#. module: phuclong_stock
+#: model:ir.actions.report,print_report_name:phuclong_stock.report_move_delivery_to_customer
+msgid "'Report Delivery To Customer' + '.ods'"
+msgstr "'Báo cáo xuất kho hàng bán' + '.ods'"
+
+#. module: phuclong_stock
+#: model:ir.actions.report,print_report_name:phuclong_stock.report_stock_inventory_template
+msgid "'Report Stock Inventory Template' + '.ods'"
+msgstr ""
+
+#. module: phuclong_stock
+#: model:ir.actions.report,print_report_name:phuclong_stock.report_move_supplier_xlsx
+msgid "(object.get_report_name())"
+msgstr ""
+
+#. module: phuclong_stock
+#: model_terms:ir.ui.view,arch_db:phuclong_stock.stock_warehouse_orderpoint_form_inherit_phuclong_stock
+msgid "<span class=\"o_stat_text\">On Hand</span>"
+msgstr "<span class=\"o_stat_text\">Tồn kho</span>"
+
+#. module: phuclong_stock
+#: model_terms:ir.ui.view,arch_db:phuclong_stock.stock_warehouse_orderpoint_form_inherit_phuclong_stock
+msgid "<span class=\"o_stat_text\">Operations</span>"
+msgstr "<span class=\"o_stat_text\">Hoạt động</span>"
+
+#. module: phuclong_stock
+#: model_terms:ir.ui.view,arch_db:phuclong_stock.stock_warehouse_orderpoint_form_inherit_phuclong_stock
+msgid "<span class=\"o_stat_text\">Purchase Order Lines</span>"
+msgstr "<span class=\"o_stat_text\">Dòng PO</span>"
+
+#. module: phuclong_stock
+#: code:addons/phuclong_stock/models/stock_region.py:0
+#: model:ir.model.constraint,message:phuclong_stock.constraint_stock_region_stock_region_code_uniq
+#, python-format
+msgid "A stock region with the same code already exists."
+msgstr "Mã khu vực đã tồn tại."
+
+#. module: phuclong_stock
+#: model:ir.model.fields,field_description:phuclong_stock.field_res_calendar_weekday__abbr_name
+msgid "Abbreviated weekday name"
+msgstr "Tên viết tắt"
+
+#. module: phuclong_stock
+#: model_terms:ir.ui.view,arch_db:phuclong_stock.picking_form_inherit_phuclong_stock
+msgid "Are you sure you want to cancel?"
+msgstr "Bạn có chắc bạn muốn huỷ?"
+
+#. module: phuclong_stock
+#: model:ir.model.fields,field_description:phuclong_stock.field_stock_current_inventory__virtual_available
+#: model:ir.model.fields,field_description:phuclong_stock.field_stock_quant__virtual_available
+msgid "Available Quantity"
+msgstr "Tồn kho dự kiến"
+
+#. module: phuclong_stock
+#: model:ir.model.fields,help:phuclong_stock.field_stock_quant__virtual_available
+msgid "Available Quantity = Quantity - Reserved Quantity"
+msgstr "SL khả dụng = SL hiện tại - SL đã giữ hàng"
+
+#. module: phuclong_stock
+#: model:ir.model.fields,help:phuclong_stock.field_stock_warehouse_orderpoint__product_weekly_average_uom_sales_qty
+msgid "Average Sales Quantity for the last 7 days"
+msgstr "SL bán ra trung bình trong 7 ngày gần nhất"
+
+#. module: phuclong_stock
+#: model:ir.model.fields,field_description:phuclong_stock.field_stock_current_inventory__barcode
+#: model:ir.model.fields,field_description:phuclong_stock.field_stock_move__barcode_id
+msgid "Barcode"
+msgstr "Mã vạch"
+
+#. module: phuclong_stock
+#: model:ir.model,name:phuclong_stock.model_res_calendar_daymonth
+msgid "Calendar Daymonth"
+msgstr "Ngày trong tháng"
+
+#. module: phuclong_stock
+#: model:ir.model,name:phuclong_stock.model_res_calendar_weekday
+msgid "Calendar Weekday"
+msgstr "Ngày trong tuần"
+
+#. module: phuclong_stock
+#: model_terms:ir.ui.view,arch_db:phuclong_stock.picking_form_inherit_phuclong_stock
+#: model_terms:ir.ui.view,arch_db:phuclong_stock.view_stock_location_change
+#: model_terms:ir.ui.view,arch_db:phuclong_stock.view_wizard_stock_balance_product_form
+#: model_terms:ir.ui.view,arch_db:phuclong_stock.wizard_report_move_line_form
+msgid "Cancel"
+msgstr "Huỷ"
+
+#. module: phuclong_stock
+#: model_terms:ir.ui.view,arch_db:phuclong_stock.picking_form_inherit_phuclong_stock
+msgid "Change Location"
+msgstr "Thay đổi vị trí"
+
+#. module: phuclong_stock
+#: model:ir.model.fields,help:phuclong_stock.field_stock_move_line__move_id
+msgid "Change to a better name"
+msgstr "Đổi sang tên tốt hơn"
+
+#. module: phuclong_stock
+#: model:ir.model.fields,field_description:phuclong_stock.field_stock_current_inventory__company_id
+#: model_terms:ir.ui.view,arch_db:phuclong_stock.stock_current_inventory_search_view
+msgid "Company"
+msgstr "Công ty"
+
+#. module: phuclong_stock
+#: model:ir.model.fields,field_description:phuclong_stock.field_stock_current_inventory__company_account_analytic_id
+msgid "Company Account Analytic"
+msgstr "Tài khoản phân tích công ty"
+
+#. module: phuclong_stock
+#: model_terms:ir.ui.view,arch_db:phuclong_stock.view_stock_location_change
+#: model_terms:ir.ui.view,arch_db:phuclong_stock.view_wizard_stock_balance_product_form
+msgid "Confirm"
+msgstr "Xác nhận"
+
+#. module: phuclong_stock
+#: model_terms:ir.ui.view,arch_db:phuclong_stock.picking_form_inherit_phuclong_stock
+msgid "Contact"
+msgstr "Liên hệ"
+
+#. module: phuclong_stock
+#: model:ir.model.fields,field_description:phuclong_stock.field_stock_move__created_purchase_line_id
+#, fuzzy
+#| msgid "Purchase Order Lines"
+msgid "Created Purchase Order Line"
+msgstr "Chi tiết đơn đặt hàng"
+
+#. module: phuclong_stock
+#: model:ir.model.fields,field_description:phuclong_stock.field_res_calendar_daymonth__create_uid
+#: model:ir.model.fields,field_description:phuclong_stock.field_res_calendar_weekday__create_uid
+#: model:ir.model.fields,field_description:phuclong_stock.field_stock_location_change__create_uid
+#: model:ir.model.fields,field_description:phuclong_stock.field_stock_region__create_uid
+#: model:ir.model.fields,field_description:phuclong_stock.field_wizard_report_move_line__create_uid
+#: model:ir.model.fields,field_description:phuclong_stock.field_wizard_stock_balance_product__create_uid
+msgid "Created by"
+msgstr "Được tạo bởi"
+
+#. module: phuclong_stock
+#: model:ir.model.fields,field_description:phuclong_stock.field_res_calendar_daymonth__create_date
+#: model:ir.model.fields,field_description:phuclong_stock.field_res_calendar_weekday__create_date
+#: model:ir.model.fields,field_description:phuclong_stock.field_stock_location_change__create_date
+#: model:ir.model.fields,field_description:phuclong_stock.field_stock_region__create_date
+#: model:ir.model.fields,field_description:phuclong_stock.field_wizard_report_move_line__create_date
+#: model:ir.model.fields,field_description:phuclong_stock.field_wizard_stock_balance_product__create_date
+msgid "Created on"
+msgstr "Được tạo vào"
+
+#. module: phuclong_stock
+#: model:ir.actions.act_window,name:phuclong_stock.stock_current_inventory_act
+#: model:ir.ui.menu,name:phuclong_stock.stock_current_inventory_menu
+msgid "Current Inventory"
+msgstr "Tồn kho hiện tại"
+
+#. module: phuclong_stock
+#. openerp-web
+#: code:addons/phuclong_stock/static/src/xml/inventory_report.xml:0
+#, python-format
+msgid "CẬP NHẬT TỒN KHO HIỆN TẠI"
+msgstr ""
+
+#. module: phuclong_stock
+#: model_terms:ir.ui.view,arch_db:phuclong_stock.wizard_report_move_line_form
+msgid "Date"
+msgstr "Ngày"
+
+#. module: phuclong_stock
+#: model:ir.model.fields,field_description:phuclong_stock.field_stock_warehouse_orderpoint__day_of_month_ids
+#: model:ir.model.fields.selection,name:phuclong_stock.selection__stock_warehouse_orderpoint__week_month_toggle__day_of_month
+msgid "Day of the Month"
+msgstr "Ngày trong tháng"
+
+#. module: phuclong_stock
+#: model:ir.model.fields,field_description:phuclong_stock.field_res_calendar_daymonth__day_of_month
+msgid "Day of the month"
+msgstr "Ngày trong tháng"
+
+#. module: phuclong_stock
+#: model:ir.model.fields,field_description:phuclong_stock.field_stock_warehouse_orderpoint__safety_cycle_days
+msgid "Days in Safety Cycle"
+msgstr "Ngày ra hàng"
+
+#. module: phuclong_stock
+#: model:ir.model.fields.selection,name:phuclong_stock.selection__stock_warehouse_orderpoint__lead_type__net
+msgid "Days to get the products"
+msgstr "ngày để nhận hàng"
+
+#. module: phuclong_stock
+#: model:ir.model.fields.selection,name:phuclong_stock.selection__stock_warehouse_orderpoint__lead_type__supplier
+msgid "Days to purchase"
+msgstr "ngày để tạo dòng PO"
+
+#. module: phuclong_stock
+#: model:ir.model.fields.selection,name:phuclong_stock.selection__wizard_report_move_line__report_type__delivery_to_customer
+msgid "Delivery To Customer"
+msgstr "Xuất hàng bán"
+
+#. module: phuclong_stock
+#: model:ir.actions.act_window,name:phuclong_stock.action_wizard_move_delivery_to_customer
+#: model:ir.ui.menu,name:phuclong_stock.wizard_report_move_delivery_to_customer
+msgid "Delivery to Customer"
+msgstr "Xuất hàng bán"
+
+#. module: phuclong_stock
+#: model:ir.model.fields,field_description:phuclong_stock.field_stock_region__description
+msgid "Description"
+msgstr "Mô tả"
+
+#. module: phuclong_stock
+#: model:ir.model.fields,field_description:phuclong_stock.field_report_phuclong_stock_report_move_supplier_xlsx__display_name
+#: model:ir.model.fields,field_description:phuclong_stock.field_res_calendar_daymonth__display_name
+#: model:ir.model.fields,field_description:phuclong_stock.field_res_calendar_weekday__display_name
+#: model:ir.model.fields,field_description:phuclong_stock.field_stock_current_inventory__display_name
+#: model:ir.model.fields,field_description:phuclong_stock.field_stock_location_change__display_name
+#: model:ir.model.fields,field_description:phuclong_stock.field_stock_region__display_name
+#: model:ir.model.fields,field_description:phuclong_stock.field_wizard_report_move_line__display_name
+#: model:ir.model.fields,field_description:phuclong_stock.field_wizard_stock_balance_product__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: phuclong_stock
+#: model:ir.model.fields.selection,name:phuclong_stock.selection__wizard_report_move_line__type__drink_food
+msgid "Drink Food"
+msgstr "Thức uống"
+
+#. module: phuclong_stock
+#: model_terms:ir.ui.view,arch_db:phuclong_stock.stock_current_inventory_search_view
+msgid "Filters"
+msgstr "Bộ lọc"
+
+#. module: phuclong_stock
+#: model:ir.model.fields,field_description:phuclong_stock.field_stock_warehouse_orderpoint__virtual_available
+msgid "Forecast Quantity"
+msgstr "Số lượng dự kiến"
+
+#. module: phuclong_stock
+#: model:res.calendar.weekday,abbr_name:phuclong_stock.calendar_weekday_friday
+msgid "Fri"
+msgstr "T6"
+
+#. module: phuclong_stock
+#: model:res.calendar.weekday,name:phuclong_stock.calendar_weekday_friday
+msgid "Friday"
+msgstr "Thứ Sáu"
+
+#. module: phuclong_stock
+#: model:ir.model.fields,field_description:phuclong_stock.field_wizard_report_move_line__date_from
+#: model:ir.model.fields,field_description:phuclong_stock.field_wizard_stock_balance_product__date_from
+msgid "From Date"
+msgstr "Từ Ngày"
+
+#. module: phuclong_stock
+#: code:addons/phuclong_stock/wizard/wizard_report_move_line.py:0
+#: code:addons/phuclong_stock/wizard/wizard_stock_balance_product.py:0
+#, python-format
+msgid "From Date must be before To Date"
+msgstr "Ngày bắt đầu phải trước ngày kết thúc"
+
+#. module: phuclong_stock
+#: model:ir.model.fields,field_description:phuclong_stock.field_res_calendar_weekday__name
+msgid "Full weekday name"
+msgstr "Thứ"
+
+#. module: phuclong_stock
+#: model_terms:ir.ui.view,arch_db:phuclong_stock.stock_current_inventory_search_view
+msgid "Group by..."
+msgstr "Nhóm theo..."
+
+#. module: phuclong_stock
+#: model:ir.model.fields,field_description:phuclong_stock.field_report_phuclong_stock_report_move_supplier_xlsx__id
+#: model:ir.model.fields,field_description:phuclong_stock.field_res_calendar_daymonth__id
+#: model:ir.model.fields,field_description:phuclong_stock.field_res_calendar_weekday__id
+#: model:ir.model.fields,field_description:phuclong_stock.field_stock_current_inventory__id
+#: model:ir.model.fields,field_description:phuclong_stock.field_stock_location_change__id
+#: model:ir.model.fields,field_description:phuclong_stock.field_stock_region__id
+#: model:ir.model.fields,field_description:phuclong_stock.field_wizard_report_move_line__id
+#: model:ir.model.fields,field_description:phuclong_stock.field_wizard_stock_balance_product__id
+msgid "ID"
+msgstr "ID"
+
+#. module: phuclong_stock
+#: model:ir.model.fields,field_description:phuclong_stock.field_stock_warehouse_orderpoint__incoming_qty
+msgid "Incoming"
+msgstr "SL sắp nhập"
+
+#. module: phuclong_stock
+#: model:ir.model.fields,field_description:phuclong_stock.field_stock_current_inventory__incoming_qty
+msgid "Incoming Quantity"
+msgstr "Dự kiến nhập"
+
+#. module: phuclong_stock
+#: model_terms:ir.ui.view,arch_db:phuclong_stock.stock_current_inventory_search_view
+msgid "Internal Locations"
+msgstr "Vị trí nội bộ"
+
+#. module: phuclong_stock
+#: code:addons/phuclong_stock/models/ir_sequence.py:0
+#, python-format
+msgid "Invalid prefix or suffix for sequence '%s'"
+msgstr ""
+
+#. module: phuclong_stock
+#: model:ir.model,name:phuclong_stock.model_stock_inventory
+#: model:ir.model.fields,field_description:phuclong_stock.field_stock_move__inventory_id
+#: model_terms:ir.ui.view,arch_db:phuclong_stock.view_stock_current_inventory_pivot
+msgid "Inventory"
+msgstr "Kiểm kê"
+
+#. module: phuclong_stock
+#: model:ir.model,name:phuclong_stock.model_stock_inventory_line
+msgid "Inventory Line"
+msgstr "Dòng kiểm kê"
+
+#. module: phuclong_stock
+#: code:addons/phuclong_stock/models/stock_inventory.py:0
+#, python-format
+msgid "Inventory Lines"
+msgstr "Dòng kiểm kê"
+
+#. module: phuclong_stock
+#: model:ir.model,name:phuclong_stock.model_stock_location
+msgid "Inventory Locations"
+msgstr "Vị trí kiểm kê"
+
+#. module: phuclong_stock
+#: model_terms:ir.ui.view,arch_db:phuclong_stock.view_stock_current_inventory_form
+#: model_terms:ir.ui.view,arch_db:phuclong_stock.view_stock_current_inventory_tree
+msgid "Inventory Valuation"
+msgstr "Xác nhận kiểm kê"
+
+#. module: phuclong_stock
+#: model:ir.model.fields,field_description:phuclong_stock.field_stock_inventory_line__is_editable
+msgid "Is Editable"
+msgstr "Có thể sửa"
+
+#. module: phuclong_stock
+#: model:ir.model.fields,field_description:phuclong_stock.field_purchase_order__is_reordered_po
+msgid "Is Reordered PO"
+msgstr "Là PO tái cung ứng"
+
+#. module: phuclong_stock
+#: model:ir.model.fields,field_description:phuclong_stock.field_stock_warehouse_orderpoint__product_weekly_average_uom_sales_qty
+msgid "Last 7 days Average Sales Quantity"
+msgstr "SL bán trung bình của 7 ngày gần nhất"
+
+#. module: phuclong_stock
+#: model:ir.model.fields,field_description:phuclong_stock.field_stock_warehouse_orderpoint__product_weekly_outgoing_qty
+msgid "Last 7 days Outgoing Quantity"
+msgstr "SL bán ra trong 7 ngày gần nhất"
+
+#. module: phuclong_stock
+#: model:ir.model.fields,field_description:phuclong_stock.field_report_phuclong_stock_report_move_supplier_xlsx____last_update
+#: model:ir.model.fields,field_description:phuclong_stock.field_res_calendar_daymonth____last_update
+#: model:ir.model.fields,field_description:phuclong_stock.field_res_calendar_weekday____last_update
+#: model:ir.model.fields,field_description:phuclong_stock.field_stock_current_inventory____last_update
+#: model:ir.model.fields,field_description:phuclong_stock.field_stock_location_change____last_update
+#: model:ir.model.fields,field_description:phuclong_stock.field_stock_region____last_update
+#: model:ir.model.fields,field_description:phuclong_stock.field_wizard_report_move_line____last_update
+#: model:ir.model.fields,field_description:phuclong_stock.field_wizard_stock_balance_product____last_update
+msgid "Last Modified on"
+msgstr "Sửa đổi lần cuối vào"
+
+#. module: phuclong_stock
+#: model:ir.model.fields,field_description:phuclong_stock.field_res_calendar_daymonth__write_uid
+#: model:ir.model.fields,field_description:phuclong_stock.field_res_calendar_weekday__write_uid
+#: model:ir.model.fields,field_description:phuclong_stock.field_stock_location_change__write_uid
+#: model:ir.model.fields,field_description:phuclong_stock.field_stock_region__write_uid
+#: model:ir.model.fields,field_description:phuclong_stock.field_wizard_report_move_line__write_uid
+#: model:ir.model.fields,field_description:phuclong_stock.field_wizard_stock_balance_product__write_uid
+msgid "Last Updated by"
+msgstr "Cập nhật lần cuối bởi"
+
+#. module: phuclong_stock
+#: model:ir.model.fields,field_description:phuclong_stock.field_res_calendar_daymonth__write_date
+#: model:ir.model.fields,field_description:phuclong_stock.field_res_calendar_weekday__write_date
+#: model:ir.model.fields,field_description:phuclong_stock.field_stock_location_change__write_date
+#: model:ir.model.fields,field_description:phuclong_stock.field_stock_region__write_date
+#: model:ir.model.fields,field_description:phuclong_stock.field_wizard_report_move_line__write_date
+#: model:ir.model.fields,field_description:phuclong_stock.field_wizard_stock_balance_product__write_date
+msgid "Last Updated on"
+msgstr "Cập nhật lần cuối vào"
+
+#. module: phuclong_stock
+#: model:ir.model.fields,field_description:phuclong_stock.field_stock_warehouse_orderpoint__lead_days
+msgid "Lead Time"
+msgstr "Thời gian chờ hàng"
+
+#. module: phuclong_stock
+#: model:ir.model.fields,field_description:phuclong_stock.field_stock_warehouse_orderpoint__lead_type
+msgid "Lead Type"
+msgstr "Cách tính thời gian chờ hàng"
+
+#. module: phuclong_stock
+#: model:ir.model.fields,field_description:phuclong_stock.field_stock_location_change__location_id
+msgid "Location"
+msgstr "Vị trí"
+
+#. module: phuclong_stock
+#: model:ir.actions.act_window,name:phuclong_stock.action_stock_location_change
+msgid "Location Change"
+msgstr "Đổi vị trí"
+
+#. module: phuclong_stock
+#: model:ir.model,name:phuclong_stock.model_stock_warehouse_orderpoint
+msgid "Minimum Inventory Rule"
+msgstr "Quy tắc tái cung ứng"
+
+#. module: phuclong_stock
+#: model:res.calendar.weekday,abbr_name:phuclong_stock.calendar_weekday_monday
+msgid "Mon"
+msgstr "T2"
+
+#. module: phuclong_stock
+#: model:res.calendar.weekday,name:phuclong_stock.calendar_weekday_monday
+msgid "Monday"
+msgstr "Thứ Hai"
+
+#. module: phuclong_stock
+#: model:ir.model.fields,field_description:phuclong_stock.field_stock_region__name
+msgid "Name"
+msgstr "Tên"
+
+#. module: phuclong_stock
+#: model_terms:ir.ui.view,arch_db:phuclong_stock.stock_current_inventory_search_view
+msgid "Negative Stock"
+msgstr "Tồn kho âm"
+
+#. module: phuclong_stock
+#: model:ir.model.constraint,message:phuclong_stock.constraint_stock_warehouse_orderpoint_product_warehouse_orderpoint_uniq
+msgid "No error"
+msgstr "Không có lỗi"
+
+#. module: phuclong_stock
+#: code:addons/phuclong_stock/models/procurement_group.py:0
+#, python-format
+msgid ""
+"No rule has been found to replenish \"%s\" in \"%s\".\n"
+"Verify the routes configuration on the product."
+msgstr ""
+
+#. module: phuclong_stock
+#: code:addons/phuclong_stock/models/stock_warehouse_orderpoint.py:0
+#: model:ir.model.fields,help:phuclong_stock.field_stock_warehouse_orderpoint__lead_days
+#, python-format
+msgid ""
+"Number of days after the orderpoint is triggered to receive the products or "
+"to order to the vendor"
+msgstr ""
+"Số ngày sau khi đặt hàng được kích hoạt để nhận sản phẩm hoặc đặt hàng cho "
+"nhà cung cấp"
+
+#. module: phuclong_stock
+#: model_terms:ir.ui.view,arch_db:phuclong_stock.phuclong_stock_move_filter_inherit_stock
+msgid "Operation Type"
+msgstr "Kiểu hoạt dộng"
+
+#. module: phuclong_stock
+#: model:ir.model.fields,field_description:phuclong_stock.field_stock_picking__move_line_ids
+msgid "Operations"
+msgstr "Kiểu hoạt dộng"
+
+#. module: phuclong_stock
+#: model:ir.model.fields,field_description:phuclong_stock.field_stock_warehouse_orderpoint__outgoing_qty
+msgid "Outgoing"
+msgstr "SL sắp xuất"
+
+#. module: phuclong_stock
+#: model:ir.model.fields.selection,name:phuclong_stock.selection__wizard_report_move_line__type__packaged_product
+msgid "Packaged Product"
+msgstr "Sản phẩm đóng gói"
+
+#. module: phuclong_stock
+#: model:ir.model.fields,field_description:phuclong_stock.field_stock_location_change__pick_loc_id
+msgid "Pick Location"
+msgstr "Vị trí lấy hàng"
+
+#. module: phuclong_stock
+#: model:ir.model.fields,field_description:phuclong_stock.field_stock_location_change__picking_id
+msgid "Picking"
+msgstr "Phiếu kho"
+
+#. module: phuclong_stock
+#: model:ir.model,name:phuclong_stock.model_stock_picking_type
+msgid "Picking Type"
+msgstr "Loại phiếu"
+
+#. module: phuclong_stock
+#: model_terms:ir.ui.view,arch_db:phuclong_stock.stock_current_inventory_search_view
+msgid "Pivot: Available Quantity internal location"
+msgstr ""
+
+#. module: phuclong_stock
+#: model:ir.filters,name:phuclong_stock.filter_pivot_onhand_internal_loc
+#: model_terms:ir.ui.view,arch_db:phuclong_stock.stock_current_inventory_search_view
+msgid "Pivot: On hand internal location"
+msgstr ""
+
+#. module: phuclong_stock
+#: model:ir.filters,name:phuclong_stock.filter_pivot_onhand_loc
+msgid "Pivot: On hand location"
+msgstr ""
+
+#. module: phuclong_stock
+#: model:ir.filters,name:phuclong_stock.filter_pivot_onhand_transit_loc
+msgid "Pivot: On hand transit location"
+msgstr ""
+
+#. module: phuclong_stock
+#: code:addons/phuclong_stock/models/stock_picking.py:0
+#, python-format
+msgid "Please add some items to move."
+msgstr "Thêm sản phẩm để thực hiện dịch chuyển."
+
+#. module: phuclong_stock
+#: code:addons/phuclong_stock/models/stock_picking.py:0
+#, python-format
+msgid "Please input vendor document."
+msgstr "Vui lòng nhập số chứng từ nhà cung cấp."
+
+#. module: phuclong_stock
+#: model_terms:ir.ui.view,arch_db:phuclong_stock.stock_current_inventory_search_view
+msgid "Positive Stock"
+msgstr "Tồn kho >0"
+
+#. module: phuclong_stock
+#: model_terms:ir.ui.view,arch_db:phuclong_stock.wizard_report_move_line_form
+msgid "Print"
+msgstr "In"
+
+#. module: phuclong_stock
+#: model:ir.model.fields,field_description:phuclong_stock.field_wizard_report_move_line__report_type
+msgid "Print Report Type"
+msgstr "In loại báo cáo"
+
+#. module: phuclong_stock
+#: code:addons/phuclong_stock/models/stock_picking.py:0
+#, python-format
+msgid "Processed different from initial demand!"
+msgstr "Xử lý khác với kế hoạch ban đầu!"
+
+#. module: phuclong_stock
+#: model:ir.model,name:phuclong_stock.model_procurement_group
+msgid "Procurement Request"
+msgstr "Yêu cầu cung ứng"
+
+#. module: phuclong_stock
+#: model:ir.actions.server,name:phuclong_stock.ir_cron_run_procurement_act_ir_actions_server
+#: model:ir.actions.server,name:phuclong_stock.ir_cron_stock_warehouse_orderpoint_action_ir_actions_server
+#: model:ir.cron,cron_name:phuclong_stock.ir_cron_run_procurement_act
+#: model:ir.cron,cron_name:phuclong_stock.ir_cron_stock_warehouse_orderpoint_action
+#: model:ir.cron,name:phuclong_stock.ir_cron_run_procurement_act
+#: model:ir.cron,name:phuclong_stock.ir_cron_stock_warehouse_orderpoint_action
+msgid "Procurement: run Reordering Rules"
+msgstr "Cung ứng: chạy Quy tắc tái cung ứng"
+
+#. module: phuclong_stock
+#: model:ir.model,name:phuclong_stock.model_product_product
+#: model:ir.model.fields,field_description:phuclong_stock.field_stock_current_inventory__product_id
+#: model:ir.model.fields,field_description:phuclong_stock.field_wizard_stock_balance_product__product_tmpl_id
+msgid "Product"
+msgstr "Sản phẩm"
+
+#. module: phuclong_stock
+#: model:ir.model,name:phuclong_stock.model_stock_move_line
+msgid "Product Moves (Stock Move Line)"
+msgstr "Chi tiết dịch chuyển kho"
+
+#. module: phuclong_stock
+#: model:ir.model,name:phuclong_stock.model_product_template
+msgid "Product Template"
+msgstr "Sản phẩm"
+
+#. module: phuclong_stock
+#: model:ir.model,name:phuclong_stock.model_purchase_order
+msgid "Purchase Order"
+msgstr "Đơn đặt hàng"
+
+#. module: phuclong_stock
+#: code:addons/phuclong_stock/models/stock_warehouse_orderpoint.py:0
+#, python-format
+msgid "Purchase Order Lines"
+msgstr "Chi tiết đơn đặt hàng"
+
+#. module: phuclong_stock
+#: model:ir.model,name:phuclong_stock.model_purchase_type_config
+msgid "Purchase Type Config"
+msgstr "Loại đơn đặt hàng"
+
+#. module: phuclong_stock
+#: model:ir.model.fields,field_description:phuclong_stock.field_stock_current_inventory__quantity
+#: model:ir.model.fields,field_description:phuclong_stock.field_stock_quant__quantity
+msgid "Quantity"
+msgstr "Tồn kho hiện tại"
+
+#. module: phuclong_stock
+#: model:ir.model.fields,field_description:phuclong_stock.field_stock_warehouse_orderpoint__qty_available
+#: model_terms:ir.ui.view,arch_db:phuclong_stock.view_stock_current_inventory_form
+msgid "Quantity On Hand"
+msgstr "Tồn kho hiện tại"
+
+#. module: phuclong_stock
+#: model_terms:ir.ui.view,arch_db:phuclong_stock.view_stock_current_inventory_form
+msgid "Quantity Reserved"
+msgstr "SL giữ"
+
+#. module: phuclong_stock
+#: model:ir.model.fields,help:phuclong_stock.field_stock_quant__quantity
+msgid ""
+"Quantity of products in this quant, in the default unit of measure of the "
+"product"
+msgstr ""
+"Số lượng sản phẩm trong định lượng này, theo đơn vị đo lường mặc định của "
+"sản phẩm"
+
+#. module: phuclong_stock
+#: model:ir.model.fields,help:phuclong_stock.field_stock_quant__reserved_quantity
+msgid ""
+"Quantity of reserved products in this quant, in the default unit of measure "
+"of the product"
+msgstr ""
+"Số lượng sản phẩm đặt trước trong định lượng này, theo đơn vị đo lường mặc "
+"định của sản phẩm"
+
+#. module: phuclong_stock
+#: model:ir.model,name:phuclong_stock.model_stock_quant
+#: model_terms:ir.ui.view,arch_db:phuclong_stock.stock_current_inventory_search_view
+msgid "Quants"
+msgstr "Số lượng"
+
+#. module: phuclong_stock
+#: model:ir.model.fields.selection,name:phuclong_stock.selection__wizard_report_move_line__report_type__receipt_from_supplier
+msgid "Receipt From Supplier"
+msgstr "Nhập kho hàng đặt"
+
+#. module: phuclong_stock
+#: model:ir.actions.act_window,name:phuclong_stock.action_wizard_move_receipt_from_supplier
+#: model:ir.ui.menu,name:phuclong_stock.wizard_report_move_receipt_from_supplier
+msgid "Receipt from Supplier"
+msgstr "Nhập kho hàng đặt"
+
+#. module: phuclong_stock
+#: model:ir.model.fields,field_description:phuclong_stock.field_stock_current_inventory__ref_code
+#: model:ir.model.fields,field_description:phuclong_stock.field_stock_move__ref_code
+#: model:ir.model.fields,field_description:phuclong_stock.field_stock_quant__ref_code
+msgid "Reference Code"
+msgstr "Tham chiếu"
+
+#. module: phuclong_stock
+#: model:ir.model.fields,field_description:phuclong_stock.field_stock_warehouse__region_stock_id
+#: model:ir.ui.menu,name:phuclong_stock.menu_stock_region_action
+msgid "Region"
+msgstr "Khu vực"
+
+#. module: phuclong_stock
+#: model:ir.model.fields,field_description:phuclong_stock.field_stock_region__code
+msgid "Region code"
+msgstr "Mã khu vực"
+
+#. module: phuclong_stock
+#: model:res.groups,name:phuclong_stock.group_reodering_manager
+msgid "Reodering Manager"
+msgstr ""
+
+#. module: phuclong_stock
+#: model:res.groups,name:phuclong_stock.group_reopen_inventory_adjustment
+#, fuzzy
+#| msgid "Please input vendor document."
+msgid "Reopen inventory adjustment"
+msgstr "Vui lòng nhập số chứng từ nhà cung cấp."
+
+#. module: phuclong_stock
+#: model:ir.model.fields,field_description:phuclong_stock.field_stock_warehouse_orderpoint__week_month_toggle
+msgid "Reordering point option"
+msgstr "Loại thời điểm tính tái cung ứng"
+
+#. module: phuclong_stock
+#: code:addons/phuclong_stock/models/stock_warehouse_orderpoint.py:0
+#, python-format
+msgid ""
+"Reordering rule for %s - %s at warehouse %s already exists: rule number %s"
+msgstr "Quy tắc tái cung ứng cho %s - %s tại kho %s đã tồn tại: quy tắc số %s"
+
+#. module: phuclong_stock
+#: model:ir.actions.report,name:phuclong_stock.report_move_supplier_xlsx
+msgid "Report Moves Supplier"
+msgstr "Báo cáo chi tiết dịch chuyển kho"
+
+#. module: phuclong_stock
+#: code:addons/phuclong_stock/wizard/wizard_report_move_line.py:0
+#, python-format
+msgid "Report Receipt From Supplier"
+msgstr "Báo cáo nhập hàng"
+
+#. module: phuclong_stock
+#: code:addons/phuclong_stock/wizard/wizard_report_move_line.py:0
+#, python-format
+msgid "Report Return To Supplier"
+msgstr "Trả hàng đặt"
+
+#. module: phuclong_stock
+#: model:ir.model.fields,field_description:phuclong_stock.field_wizard_report_move_line__type
+msgid "Report Type"
+msgstr "Loại báo cáo"
+
+#. module: phuclong_stock
+#: model_terms:ir.ui.view,arch_db:phuclong_stock.stock_current_inventory_search_view
+msgid "Reservations"
+msgstr "Giữ hàng"
+
+#. module: phuclong_stock
+#: model_terms:ir.ui.view,arch_db:phuclong_stock.view_stock_current_inventory_tree
+msgid "Reserved"
+msgstr "Dự kiến xuất"
+
+#. module: phuclong_stock
+#: model:ir.model.fields,field_description:phuclong_stock.field_stock_current_inventory__reserved_quantity
+#: model:ir.model.fields,field_description:phuclong_stock.field_stock_quant__reserved_quantity
+msgid "Reserved Quantity"
+msgstr "Dự kiến xuất"
+
+#. module: phuclong_stock
+#: model:ir.model.fields.selection,name:phuclong_stock.selection__wizard_report_move_line__report_type__return_to_supplier
+#: model_terms:ir.ui.view,arch_db:phuclong_stock.phuclong_stock_move_filter_inherit_stock
+msgid "Return To Supplier"
+msgstr "Trả hàng đặt"
+
+#. module: phuclong_stock
+#: model:ir.actions.act_window,name:phuclong_stock.action_wizard_move_return_to_supplier
+#: model:ir.ui.menu,name:phuclong_stock.wizard_report_move_return_to_supplier
+msgid "Return to Supplier"
+msgstr "Trả hàng đặt"
+
+#. module: phuclong_stock
+#: model_terms:ir.ui.view,arch_db:phuclong_stock.view_procurement_compute_wizard_inherit_phuc_long_stock
+msgid "Run Scheduler"
+msgstr "Chạy lệnh tái cung ứng"
+
+#. module: phuclong_stock
+#: model:ir.actions.act_window,name:phuclong_stock.action_procurement_compute_manually
+#: model:ir.model,name:phuclong_stock.model_stock_scheduler_compute
+#: model_terms:ir.ui.view,arch_db:phuclong_stock.view_procurement_compute_wizard_inherit_phuc_long_stock
+msgid "Run Scheduler Manually"
+msgstr "Chạy thủ công lệnh tái cung ứng"
+
+#. module: phuclong_stock
+#: model_terms:ir.ui.view,arch_db:phuclong_stock.stock_warehouse_orderpoint_form_inherit_phuclong_stock
+msgid "Run the scheduler manually"
+msgstr "Chạy thủ công lệnh tái cung ứng"
+
+#. module: phuclong_stock
+#: model:ir.model.fields,field_description:phuclong_stock.field_stock_current_inventory__default_code
+msgid "SKU"
+msgstr "SKU"
+
+#. module: phuclong_stock
+#: model:res.calendar.weekday,abbr_name:phuclong_stock.calendar_weekday_saturday
+msgid "Sat"
+msgstr "T7"
+
+#. module: phuclong_stock
+#: model:res.calendar.weekday,name:phuclong_stock.calendar_weekday_saturday
+msgid "Saturday"
+msgstr "Thứ Bảy"
+
+#. module: phuclong_stock
+#: model:ir.model.fields,field_description:phuclong_stock.field_stock_picking__scheduled_date
+msgid "Scheduled Date"
+msgstr ""
+
+#. module: phuclong_stock
+#: code:addons/phuclong_stock/models/stock_picking.py:0
+#, python-format
+msgid "Scheduled Date must be equal or later than Creation Date"
+msgstr "Ngày giao hàng dự kiến phải lớn hơn hoặc bằng Ngày tạo"
+
+#. module: phuclong_stock
+#: code:addons/phuclong_stock/models/warehouse_transfer.py:0
+#, python-format
+msgid "Scheduled Date must be equal or later than Order Date"
+msgstr "Ngày dự kiến phải lớn hơn hoặc bằng Ngày yêu cầu"
+
+#. module: phuclong_stock
+#: model:ir.model.fields,help:phuclong_stock.field_stock_picking__scheduled_date
+msgid ""
+"Scheduled time for the first part of the shipment to be processed. Setting "
+"manually a value here would set it as expected date for all the stock moves."
+msgstr ""
+
+#. module: phuclong_stock
+#: model_terms:ir.ui.view,arch_db:phuclong_stock.view_stock_location_change
+msgid "Select new location"
+msgstr "Chọn vị trí mới"
+
+#. module: phuclong_stock
+#: model:ir.model.fields,help:phuclong_stock.field_stock_warehouse_orderpoint__week_month_toggle
+msgid "Select reordering point option: Weekday or Day of the Month"
+msgstr ""
+"Chọn loại thời điểm tái cung ứng: theo ngày trong tuần hoặc ngày trong tháng"
+
+#. module: phuclong_stock
+#: model:ir.model,name:phuclong_stock.model_ir_sequence
+msgid "Sequence"
+msgstr ""
+
+#. module: phuclong_stock
+#: model:ir.model.fields,field_description:phuclong_stock.field_stock_current_inventory__wh_lot_id
+#: model_terms:ir.ui.view,arch_db:phuclong_stock.stock_current_inventory_search_view
+msgid "Source location"
+msgstr "Vị trí nguồn"
+
+#. module: phuclong_stock
+#: model:ir.actions.act_window,name:phuclong_stock.action_wizard_stock_balance_product
+#: model:ir.ui.menu,name:phuclong_stock.menu_wizard_stock_balance_product
+msgid "Stock Balance Product"
+msgstr "Xuất nhập tồn mặt hàng"
+
+#. module: phuclong_stock
+#: model:ir.model,name:phuclong_stock.model_stock_balance_sheet
+#, fuzzy
+#| msgid "Stock Balance Product"
+msgid "Stock Balance Sheet"
+msgstr "Xuất nhập tồn mặt hàng"
+
+#. module: phuclong_stock
+#: model:res.groups,name:phuclong_stock.group_stock_configuration
+#, fuzzy
+#| msgid "Stock Region"
+msgid "Stock Configuration"
+msgstr "Khu vực"
+
+#. module: phuclong_stock
+#: model:ir.model,name:phuclong_stock.model_stock_location_change
+msgid "Stock Location Change"
+msgstr "Thay đổi vị trí kho"
+
+#. module: phuclong_stock
+#: model:ir.model,name:phuclong_stock.model_stock_move
+#: model:ir.model.fields,field_description:phuclong_stock.field_stock_move_line__move_id
+msgid "Stock Move"
+msgstr "Dịch chuyển kho"
+
+#. module: phuclong_stock
+#: model:ir.model.fields,field_description:phuclong_stock.field_stock_picking__move_lines
+msgid "Stock Moves"
+msgstr "Dịch chuyển kho"
+
+#. module: phuclong_stock
+#: model:ir.actions.act_window,name:phuclong_stock.action_stock_region
+#: model:ir.model,name:phuclong_stock.model_stock_region
+#: model_terms:ir.ui.view,arch_db:phuclong_stock.stock_region_view_tree
+msgid "Stock Region"
+msgstr "Khu vực"
+
+#. module: phuclong_stock
+#: model:ir.model,name:phuclong_stock.model_stock_rule
+msgid "Stock Rule"
+msgstr "Quy tắc tồn kho"
+
+#. module: phuclong_stock
+#: model:ir.model.fields,field_description:phuclong_stock.field_stock_current_inventory__location_id
+msgid "Storage Location"
+msgstr "Vị trí lưu trữ"
+
+#. module: phuclong_stock
+#: model_terms:ir.ui.view,arch_db:phuclong_stock.stock_current_inventory_search_view
+msgid "Storage location"
+msgstr "Vị trí lưu trữ"
+
+#. module: phuclong_stock
+#: model_terms:ir.ui.view,arch_db:phuclong_stock.stock_current_inventory_search_view
+msgid "Storage warehouse"
+msgstr "Kho hàng"
+
+#. module: phuclong_stock
+#: model:ir.model.fields,field_description:phuclong_stock.field_wizard_report_move_line__warehouse_ids
+msgid "Stores"
+msgstr "Cửa hàng"
+
+#. module: phuclong_stock
+#: model:res.calendar.weekday,abbr_name:phuclong_stock.calendar_weekday_sunday
+msgid "Sun"
+msgstr "CN"
+
+#. module: phuclong_stock
+#: model:res.calendar.weekday,name:phuclong_stock.calendar_weekday_sunday
+msgid "Sunday"
+msgstr "Chủ nhật"
+
+#. module: phuclong_stock
+#. openerp-web
+#: code:addons/phuclong_stock/static/src/xml/inventory_report.xml:0
+#, python-format
+msgid "TEMPLATE"
+msgstr "MẪU"
+
+#. module: phuclong_stock
+#: model:ir.model.fields,help:phuclong_stock.field_stock_inventory_line__is_editable
+msgid "Technical field to restrict the edition."
+msgstr ""
+
+#. module: phuclong_stock
+#: code:addons/phuclong_stock/models/stock_warehouse_orderpoint.py:0
+#, python-format
+msgid ""
+"The Minimum Quantity must be less than or equal to the Maximum Quantity."
+msgstr ""
+"Số lượng tồn kho tối thiểu phải nhỏ hơn hoặc bằng số lượng tồn kho tối đa."
+
+#. module: phuclong_stock
+#: code:addons/phuclong_stock/models/stock_warehouse_orderpoint.py:0
+#, python-format
+msgid "The number of days in safety cycle must be greater or equal to 0."
+msgstr "Số ngày ra hàng phải lớn hơn hoặc bằng 0."
+
+#. module: phuclong_stock
+#: model:ir.model.fields,help:phuclong_stock.field_stock_warehouse_orderpoint__safety_cycle_days
+msgid ""
+"The number of days in the Safety Cycle is required to calculate the amount "
+"of replenished stock."
+msgstr ""
+"Số ngày ra hàng bắt buộc phải có để tính số lượng sản phẩm cần cung ứng."
+
+#. module: phuclong_stock
+#: code:addons/phuclong_stock/models/product.py:0
+#, python-format
+msgid ""
+"The product quantity / Incoming quantity / Reserved quantity is not 0, "
+"please adjust the product quantity to 0 or cancel the related picking before "
+"archived the product"
+msgstr ""
+"Số lượng Tồn kho hiện tại / Dự kiến nhập / Dự kiến xuất của sản phẩm này "
+"đang khác 0. Hãy điều chỉnh tồn kho về 0 hoặc huỷ các phiếu nhập xuất/nhập "
+"trước khi thực hiện lưu trữ"
+
+#. module: phuclong_stock
+#: model_terms:ir.actions.act_window,help:phuclong_stock.stock_current_inventory_act
+msgid ""
+"This analysis gives you a fast overview on the current stock level of your "
+"products and their current Available Quantity."
+msgstr ""
+
+#. module: phuclong_stock
+#: code:addons/phuclong_stock/models/product.py:0
+#, python-format
+msgid ""
+"This product has a warehouse transaction, you can not change the product "
+"type."
+msgstr ""
+
+#. module: phuclong_stock
+#: model:res.calendar.weekday,abbr_name:phuclong_stock.calendar_weekday_thursday
+msgid "Thu"
+msgstr "T5"
+
+#. module: phuclong_stock
+#: model:res.calendar.weekday,name:phuclong_stock.calendar_weekday_thursday
+msgid "Thursday"
+msgstr "Thứ Năm"
+
+#. module: phuclong_stock
+#: model:ir.model.fields,field_description:phuclong_stock.field_wizard_report_move_line__date_to
+#: model:ir.model.fields,field_description:phuclong_stock.field_wizard_stock_balance_product__date_to
+msgid "To Date"
+msgstr "Đến ngày"
+
+#. module: phuclong_stock
+#: code:addons/phuclong_stock/models/stock_picking.py:0
+#, python-format
+msgid "To Location"
+msgstr "Đến"
+
+#. module: phuclong_stock
+#: model:ir.model,name:phuclong_stock.model_stock_picking
+msgid "Transfer"
+msgstr "Điều chuyển kho"
+
+#. module: phuclong_stock
+#: model:ir.model,name:phuclong_stock.model_stock_overprocessed_transfer
+msgid "Transfer Over Processed Stock"
+msgstr ""
+
+#. module: phuclong_stock
+#: model_terms:ir.ui.view,arch_db:phuclong_stock.stock_current_inventory_search_view
+msgid "Transit Locations"
+msgstr "Trung chuyển"
+
+#. module: phuclong_stock
+#: model:res.calendar.weekday,abbr_name:phuclong_stock.calendar_weekday_tuesday
+msgid "Tue"
+msgstr "T3"
+
+#. module: phuclong_stock
+#: model:res.calendar.weekday,name:phuclong_stock.calendar_weekday_tuesday
+msgid "Tuesday"
+msgstr "Thứ Ba"
+
+#. module: phuclong_stock
+#: model:ir.model.fields,field_description:phuclong_stock.field_stock_current_inventory__product_uom_id
+msgid "UoM"
+msgstr "Đơn vị"
+
+#. module: phuclong_stock
+#: model:ir.model.fields,field_description:phuclong_stock.field_stock_warehouse_orderpoint__date_update
+msgid "Update date"
+msgstr "Chạy thành công lần cuối vào"
+
+#. module: phuclong_stock
+#: model:ir.model.fields,field_description:phuclong_stock.field_purchase_type_config__is_used_for_orderpoint
+msgid "Used for PO created from reordering rules"
+msgstr "Dùng cho PO tái cung ứng"
+
+#. module: phuclong_stock
+#: model:ir.model,name:phuclong_stock.model_res_users
+msgid "Users"
+msgstr ""
+
+#. module: phuclong_stock
+#: model:ir.model.fields,field_description:phuclong_stock.field_stock_move__vendor_document
+msgid "Vendor Document"
+msgstr "Chứng từ NCC"
+
+#. module: phuclong_stock
+#: model:ir.model,name:phuclong_stock.model_stock_warehouse
+#: model:ir.model.fields,field_description:phuclong_stock.field_stock_current_inventory__warehouse_id
+#: model:ir.model.fields,field_description:phuclong_stock.field_stock_location_change__warehouse_id
+#: model:ir.model.fields,field_description:phuclong_stock.field_stock_scheduler_compute__warehouse_ids
+#: model_terms:ir.ui.view,arch_db:phuclong_stock.phuclong_stock_move_filter_inherit_stock
+msgid "Warehouse"
+msgstr "Kho hàng"
+
+#. module: phuclong_stock
+#: model:ir.model,name:phuclong_stock.model_warehouse_transfer
+msgid "Warehouse Transfer"
+msgstr "Điều chuyển kho"
+
+#. module: phuclong_stock
+#: model:res.calendar.weekday,abbr_name:phuclong_stock.calendar_weekday_wednesday
+msgid "Wed"
+msgstr "T4"
+
+#. module: phuclong_stock
+#: model:res.calendar.weekday,name:phuclong_stock.calendar_weekday_wednesday
+msgid "Wednesday"
+msgstr "Thứ Tư"
+
+#. module: phuclong_stock
+#: model:ir.model.fields,field_description:phuclong_stock.field_stock_warehouse_orderpoint__weekday_ids
+#: model:ir.model.fields,help:phuclong_stock.field_stock_warehouse_orderpoint__weekday_ids
+#: model:ir.model.fields.selection,name:phuclong_stock.selection__stock_warehouse_orderpoint__week_month_toggle__weekday
+msgid "Weekday"
+msgstr "Thứ"
+
+#. module: phuclong_stock
+#: model:ir.model.fields,field_description:phuclong_stock.field_res_calendar_weekday__sequence
+msgid "Weekday number"
+msgstr "Số thứ tự thứ trong tuần"
+
+#. module: phuclong_stock
+#: model:ir.model,name:phuclong_stock.model_wizard_report_move_line
+msgid "Wizard Report Move Line"
+msgstr "Báo cáo dịch chuyển kho"
+
+#. module: phuclong_stock
+#: code:addons/phuclong_stock/models/stock_picking.py:0
+#, python-format
+msgid "You can not copy this kind of document (Picking from origin document)"
+msgstr ""
+"Bạn không thể sao chép loại chứng từ này (phiếu kho sinh ra từ chứng từ gốc)"
+
+#. module: phuclong_stock
+#: code:addons/phuclong_stock/models/purchase_type_config.py:0
+#, python-format
+msgid ""
+"You can only have one purchase type used for reordering rules at any point "
+"in time."
+msgstr ""
+"Tại một thời điểm bạn chỉ có thể có một Loại đơn hàng dùng cho PO tái cung "
+"ứng."
+
+#. module: phuclong_stock
+#: code:addons/phuclong_stock/models/stock_move_line.py:0
+#, python-format
+msgid ""
+"You cannot reopen operation of product %s on location destination %s. It "
+"will affect inventory."
+msgstr ""
+
+#. module: phuclong_stock
+#: code:addons/phuclong_stock/models/stock_picking.py:0
+#, python-format
+msgid ""
+"You cannot validate a transfer if no quantites are reserved nor done. To "
+"force the transfer, switch in edit more and encode the done quantities."
+msgstr ""
+
+#. module: phuclong_stock
+#: code:addons/phuclong_stock/wizard/stock_overprocessed_transfer.py:0
+#, python-format
+msgid ""
+"You have processed different from what was initially planned for the "
+"product(s) %s."
+msgstr ""
+"Bạn đã xử lý khác những gì đã được lên kế hoạch ban đầu của sản phẩm %s."
+
+#. module: phuclong_stock
+#: code:addons/phuclong_stock/models/stock_picking.py:0
+#, fuzzy, python-format
+#| msgid ""
+#| "You have processed different from what was initially planned for the "
+#| "product(s) %s."
+msgid ""
+"You have processed more than what was initially planned for the product(s): "
+"%s."
+msgstr ""
+"Bạn đã xử lý khác những gì đã được lên kế hoạch ban đầu của sản phẩm %s."
+
+#. module: phuclong_stock
+#: code:addons/phuclong_stock/models/stock_location.py:0
+#, python-format
+msgid "You have to set a name for this location."
+msgstr "Bạn phải đặt tên cho vị trí này."
+
+#. module: phuclong_stock
+#: code:addons/phuclong_stock/models/stock_picking.py:0
+#, python-format
+msgid ""
+"You need to supply a Lot/Serial number and End of Life Date for %s "
+"product(s): %s"
+msgstr ""
+
+#. module: phuclong_stock
+#: code:addons/phuclong_stock/models/stock_picking.py:0
+#, python-format
+msgid "You need to supply a Lot/Serial number for %s product(s): %s\n"
+msgstr ""
+
+#. module: phuclong_stock
+#: code:addons/phuclong_stock/models/stock_picking.py:0
+#, python-format
+msgid "[%s] %s - You plan to issue %.2f %s but you only have not available!\n"
+msgstr ""
+"[%s] %s - Bạn muốn dịch chuyển %.2f %s nhưng bạn không có đủ tồn kho khả "
+"dụng!\n"
+
+#. module: phuclong_stock
+#: model:ir.model,name:phuclong_stock.model_report_phuclong_stock_report_move_supplier_xlsx
+msgid "report.phuclong_stock.report_move_supplier_xlsx"
+msgstr ""
+
+#. module: phuclong_stock
+#: model:ir.actions.report,name:phuclong_stock.report_move_delivery_to_customer
+msgid "report_move_delivery_to_customer"
+msgstr ""
+
+#. module: phuclong_stock
+#: model:ir.actions.report,name:phuclong_stock.report_stock_balance_product
+msgid "report_stock_balance_product"
+msgstr ""
+
+#. module: phuclong_stock
+#: model:ir.actions.report,name:phuclong_stock.report_stock_inventory_template
+msgid "report_stock_inventory_template"
+msgstr ""
+
+#. module: phuclong_stock
+#: model:ir.model,name:phuclong_stock.model_stock_current_inventory
+msgid "stock.current.inventory"
+msgstr ""
+
+#. module: phuclong_stock
+#: model:ir.model,name:phuclong_stock.model_wizard_stock_balance_product
+msgid "wizard.stock.balance.product"
+msgstr ""
+
+#~ msgid "Stock Forecast Report"
+#~ msgstr "Báo cáo tồn kho dự kiến"

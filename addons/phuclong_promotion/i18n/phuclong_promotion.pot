@@ -1,0 +1,326 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* phuclong_promotion
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0+e-20200401\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: phuclong_promotion
+#: model:ir.model.fields,field_description:phuclong_promotion.field_sale_promo_lines_benefit__additional_price
+msgid "Additional Price"
+msgstr ""
+
+#. module: phuclong_promotion
+#: model:ir.model.fields.selection,name:phuclong_promotion.selection__sale_promo_header__order_type__all
+msgid "All"
+msgstr ""
+
+#. module: phuclong_promotion
+#: model:ir.model.fields,field_description:phuclong_promotion.field_sale_promo_lines_benefit__allow_additional_price
+msgid "Allow Additional Price"
+msgstr ""
+
+#. module: phuclong_promotion
+#: model:ir.model.fields,field_description:phuclong_promotion.field_sale_promo_lines__amount_discount_limit
+msgid "Amount Discount Limit"
+msgstr ""
+
+#. module: phuclong_promotion
+#: model:ir.model.fields,field_description:phuclong_promotion.field_sale_promo_lines__product_attribute
+msgid "Apply On"
+msgstr ""
+
+#. module: phuclong_promotion
+#: model:ir.model.fields,field_description:phuclong_promotion.field_sale_promo_header__order_type
+msgid "Apply To"
+msgstr ""
+
+#. module: phuclong_promotion
+#: model_terms:ir.ui.view,arch_db:phuclong_promotion.view_sale_promo_lines_form_phuclong
+msgid "Apply on"
+msgstr ""
+
+#. module: phuclong_promotion
+#: model:ir.model.fields,field_description:phuclong_promotion.field_sale_promo_lines__check_orgin_price
+msgid "Apply on Origin Product Price"
+msgstr ""
+
+#. module: phuclong_promotion
+#: model_terms:ir.ui.view,arch_db:phuclong_promotion.view_sale_promo_lines_form_phuclong
+msgid "Base"
+msgstr ""
+
+#. module: phuclong_promotion
+#: model_terms:ir.ui.view,arch_db:phuclong_promotion.view_sale_promo_header_form_phuclong
+msgid "Cancel"
+msgstr ""
+
+#. module: phuclong_promotion
+#: code:addons/phuclong_promotion/models/promotion.py:0
+#: code:addons/phuclong_promotion/models/promotion.py:0
+#, python-format
+msgid "Category"
+msgstr ""
+
+#. module: phuclong_promotion
+#: code:addons/phuclong_promotion/models/promotion.py:0
+#: model:ir.model.fields,field_description:phuclong_promotion.field_sale_promo_lines__product_benefit_ids
+#, python-format
+msgid "Combo Product"
+msgstr ""
+
+#. module: phuclong_promotion
+#: model:ir.model.fields,field_description:phuclong_promotion.field_product_pricelist_item__compute_price
+msgid "Compute Type"
+msgstr ""
+
+#. module: phuclong_promotion
+#: model_terms:ir.ui.view,arch_db:phuclong_promotion.view_sale_promo_lines_form_phuclong
+msgid "Condition"
+msgstr ""
+
+#. module: phuclong_promotion
+#: model:ir.model.fields,field_description:phuclong_promotion.field_sale_promo_lines__count_discount_limit
+msgid "Count Discount Limit"
+msgstr ""
+
+#. module: phuclong_promotion
+#: model:ir.model.fields,field_description:phuclong_promotion.field_sale_promo_lines_benefit__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: phuclong_promotion
+#: model:ir.model.fields,field_description:phuclong_promotion.field_sale_promo_lines_benefit__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: phuclong_promotion
+#: model:ir.model.fields,field_description:phuclong_promotion.field_sale_promo_header__day_of_week
+msgid "Day of Week"
+msgstr ""
+
+#. module: phuclong_promotion
+#: model_terms:ir.ui.view,arch_db:phuclong_promotion.view_sale_promo_lines_form_phuclong
+msgid "Details"
+msgstr ""
+
+#. module: phuclong_promotion
+#: model:ir.model.fields,field_description:phuclong_promotion.field_sale_promo_lines_benefit__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: phuclong_promotion
+#: model:ir.model.fields,field_description:phuclong_promotion.field_product_pricelist__dollar_currency_id
+#: model:ir.model.fields,field_description:phuclong_promotion.field_product_pricelist_item__dollar_currency_id
+msgid "Dollar Currency"
+msgstr ""
+
+#. module: phuclong_promotion
+#: code:addons/phuclong_promotion/models/pricelist.py:0
+#, python-format
+msgid "Dollar currency (USD) is not active"
+msgstr ""
+
+#. module: phuclong_promotion
+#: model:ir.model.fields.selection,name:phuclong_promotion.selection__product_pricelist_item__compute_price__fixed
+msgid "Fix Price"
+msgstr ""
+
+#. module: phuclong_promotion
+#: model:ir.model.fields,field_description:phuclong_promotion.field_sale_promo_lines_benefit__id
+msgid "ID"
+msgstr ""
+
+#. module: phuclong_promotion
+#: model:ir.model.fields,field_description:phuclong_promotion.field_sale_promo_lines__product_default_code
+msgid "Internal Reference"
+msgstr ""
+
+#. module: phuclong_promotion
+#: model:ir.model.fields,field_description:phuclong_promotion.field_product_pricelist__is_dollar_pos
+msgid "Is Dollar Pricelist"
+msgstr ""
+
+#. module: phuclong_promotion
+#: model:ir.model.fields,field_description:phuclong_promotion.field_sale_promo_lines_benefit____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: phuclong_promotion
+#: model:ir.model.fields,field_description:phuclong_promotion.field_sale_promo_lines_benefit__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: phuclong_promotion
+#: model:ir.model.fields,field_description:phuclong_promotion.field_sale_promo_lines_benefit__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: phuclong_promotion
+#: code:addons/phuclong_promotion/models/promotion.py:0
+#: code:addons/phuclong_promotion/models/promotion.py:0
+#: model_terms:ir.ui.view,arch_db:phuclong_promotion.view_sale_promo_lines_form_phuclong
+#, python-format
+msgid "List Categories"
+msgstr ""
+
+#. module: phuclong_promotion
+#: code:addons/phuclong_promotion/models/promotion.py:0
+#, python-format
+msgid "List Product Template"
+msgstr ""
+
+#. module: phuclong_promotion
+#: model_terms:ir.ui.view,arch_db:phuclong_promotion.view_sale_promo_lines_form_phuclong
+msgid "Modify Type"
+msgstr ""
+
+#. module: phuclong_promotion
+#: code:addons/phuclong_promotion/models/promotion.py:0
+#, python-format
+msgid "Order Amount"
+msgstr ""
+
+#. module: phuclong_promotion
+#: model:ir.model.fields,field_description:phuclong_promotion.field_sale_promo_header__pos_payment_method_id
+msgid "Payment Method"
+msgstr ""
+
+#. module: phuclong_promotion
+#: model:ir.model.fields.selection,name:phuclong_promotion.selection__product_pricelist_item__compute_price__percentage
+msgid "Percentage (discount)"
+msgstr ""
+
+#. module: phuclong_promotion
+#: code:addons/phuclong_promotion/models/promotion.py:0
+#, python-format
+msgid "Please input benefit of promotion !"
+msgstr ""
+
+#. module: phuclong_promotion
+#: model:ir.model,name:phuclong_promotion.model_product_pricelist
+msgid "Pricelist"
+msgstr ""
+
+#. module: phuclong_promotion
+#: model:ir.model,name:phuclong_promotion.model_product_pricelist_item
+msgid "Pricelist Rule"
+msgstr ""
+
+#. module: phuclong_promotion
+#: code:addons/phuclong_promotion/models/promotion.py:0
+#: code:addons/phuclong_promotion/models/promotion.py:0
+#, python-format
+msgid "Product"
+msgstr ""
+
+#. module: phuclong_promotion
+#: code:addons/phuclong_promotion/models/promotion.py:0
+#: model_terms:ir.ui.view,arch_db:phuclong_promotion.view_sale_promo_lines_form_phuclong
+#, python-format
+msgid "Product List"
+msgstr ""
+
+#. module: phuclong_promotion
+#: code:addons/phuclong_promotion/models/promotion.py:0
+#: code:addons/phuclong_promotion/models/promotion.py:0
+#, python-format
+msgid "Product Template"
+msgstr ""
+
+#. module: phuclong_promotion
+#: model:ir.model.fields,field_description:phuclong_promotion.field_sale_promo_lines_benefit__product_ids
+msgid "Products"
+msgstr ""
+
+#. module: phuclong_promotion
+#: model:ir.model.fields,field_description:phuclong_promotion.field_sale_promo_lines_benefit__promo_line_id
+msgid "Promo Line"
+msgstr ""
+
+#. module: phuclong_promotion
+#: model:ir.model.fields,field_description:phuclong_promotion.field_reward_code_publish__promotion_ids
+msgid "Promotion"
+msgstr ""
+
+#. module: phuclong_promotion
+#: model:ir.model,name:phuclong_promotion.model_sale_promo_header
+msgid "Promotion Header"
+msgstr ""
+
+#. module: phuclong_promotion
+#: model:ir.model,name:phuclong_promotion.model_sale_promo_lines
+msgid "Promotion Lines"
+msgstr ""
+
+#. module: phuclong_promotion
+#: model_terms:ir.ui.view,arch_db:phuclong_promotion.view_sale_promo_lines_form_phuclong
+msgid "Promotion/Discount Information"
+msgstr ""
+
+#. module: phuclong_promotion
+#: model:ir.model.fields,field_description:phuclong_promotion.field_sale_promo_lines_benefit__product_qty
+msgid "Quantity"
+msgstr ""
+
+#. module: phuclong_promotion
+#: model:ir.model.fields,field_description:phuclong_promotion.field_sale_promo_lines__reward_code_ids
+msgid "Reward Codes"
+msgstr ""
+
+#. module: phuclong_promotion
+#: model:ir.model.fields.selection,name:phuclong_promotion.selection__sale_promo_header__order_type__sale
+msgid "Sale B2B"
+msgstr ""
+
+#. module: phuclong_promotion
+#: model:ir.model.fields.selection,name:phuclong_promotion.selection__sale_promo_header__order_type__pos
+msgid "Sale B2C"
+msgstr ""
+
+#. module: phuclong_promotion
+#: model_terms:ir.ui.view,arch_db:phuclong_promotion.view_sale_promo_lines_form_phuclong
+msgid "Sale Promotion Line"
+msgstr ""
+
+#. module: phuclong_promotion
+#: model:ir.model.fields,field_description:phuclong_promotion.field_product_pricelist__sale_type_ids
+#: model:ir.model.fields,field_description:phuclong_promotion.field_sale_promo_header__sale_type_ids
+msgid "Sale Type"
+msgstr ""
+
+#. module: phuclong_promotion
+#: model:ir.model,name:phuclong_promotion.model_sale_promo_lines_benefit
+msgid "SalePromoLinesBenefit"
+msgstr ""
+
+#. module: phuclong_promotion
+#: model:ir.model.fields,field_description:phuclong_promotion.field_sale_promo_lines__same_price
+msgid "Same and lower price products"
+msgstr ""
+
+#. module: phuclong_promotion
+#. openerp-web
+#: code:addons/phuclong_promotion/static/src/js/models.js:0
+#, python-format
+msgid "Vui lòng chọn mã quà tặng !"
+msgstr ""
+
+#. module: phuclong_promotion
+#: code:addons/phuclong_promotion/models/pricelist.py:0
+#, python-format
+msgid "Warning"
+msgstr ""
+
+#. module: phuclong_promotion
+#: model:ir.model,name:phuclong_promotion.model_reward_code_publish
+msgid "reward.code.publish"
+msgstr ""

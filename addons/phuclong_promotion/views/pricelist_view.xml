@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="product_pricelist_view_inherit_phuclong" model="ir.ui.view">
+            <field name="model">product.pricelist</field>
+            <field name="inherit_id" ref="besco_pricelist.product_pricelist_view_inherit_besco_pos_pricelist"/>
+            <field name="arch" type="xml">
+            	<xpath expr="//field[@name='warehouse_ids']" position="after">
+	                <field name="sale_type_ids" widget="many2many_tags" options="{'no_create_edit': True}"/>
+	            </xpath>
+	            
+	            <xpath expr="//field[@name='currency_id']" position="replace">
+	                <field name="is_dollar_pos"/>
+	                <field name="currency_id" invisible="1" readonly="1"/> 
+	                <field name="dollar_currency_id" readonly="1" attrs="{'invisible':[('is_dollar_pos','!=',True)]}"/>
+	            </xpath>
+	            
+            </field>
+        </record>
+        
+        <record id="product_pricelist_item_form_inherit_besco_pos_pricelist_phuclong" model="ir.ui.view">
+            <field name="model">product.pricelist.item</field>
+            <field name="inherit_id" ref="besco_pricelist.product_pricelist_item_form_inherit_besco_pos_pricelist"/>
+            <field name="arch" type="xml">
+	            
+	            <xpath expr="//field[@name='fixed_price']" position="attributes">
+	                <attribute name="widget">monetary</attribute>
+	                <attribute name="options">{'currency_field': 'dollar_currency_id'}</attribute>
+	            </xpath>
+	            
+	            <xpath expr="//field[@name='fixed_price']" position="after">
+	                <field name="dollar_currency_id" invisible="1"/>
+	            </xpath>
+	            
+            </field>
+        </record>
+        
+    </data>
+</odoo>

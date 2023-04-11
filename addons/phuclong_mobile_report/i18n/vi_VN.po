@@ -1,0 +1,335 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* phuclong_mobile_report
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0+e-20200401\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: phuclong_mobile_report
+#: model_terms:ir.ui.view,arch_db:phuclong_mobile_report.report_mobile_order_view_graph
+msgid "Analysis"
+msgstr ""
+
+#. module: phuclong_mobile_report
+#: model:ir.model.fields,field_description:phuclong_mobile_report.field_report_mobile_order__average_price
+msgid "Average Price"
+msgstr ""
+
+#. module: phuclong_mobile_report
+#: model:ir.model.fields.selection,name:phuclong_mobile_report.selection__report_mobile_order__order_status_app__cancel
+msgid "Cancel"
+msgstr ""
+
+#. module: phuclong_mobile_report
+#: model:ir.model.fields.selection,name:phuclong_mobile_report.selection__report_mobile_order__state__cancel
+msgid "Cancelled"
+msgstr ""
+
+#. module: phuclong_mobile_report
+#: model:ir.model.fields,field_description:phuclong_mobile_report.field_report_mobile_order__cashier_id
+#: model_terms:ir.ui.view,arch_db:phuclong_mobile_report.report_mobile_order_view_search
+msgid "Cashier"
+msgstr ""
+
+#. module: phuclong_mobile_report
+#: model:ir.model.fields,field_description:phuclong_mobile_report.field_report_mobile_order__company_id
+msgid "Company"
+msgstr ""
+
+#. module: phuclong_mobile_report
+#: model:ir.model.fields,field_description:phuclong_mobile_report.field_report_mobile_order__partner_id
+#: model_terms:ir.ui.view,arch_db:phuclong_mobile_report.report_mobile_order_view_search
+msgid "Customer"
+msgstr ""
+
+#. module: phuclong_mobile_report
+#: model:ir.model.fields,field_description:phuclong_mobile_report.field_report_mobile_order__delay_validation
+msgid "Delay Validation"
+msgstr ""
+
+#. module: phuclong_mobile_report
+#: model:ir.model.fields,field_description:phuclong_mobile_report.field_report_mobile_order__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: phuclong_mobile_report
+#: model:ir.model.fields.selection,name:phuclong_mobile_report.selection__report_mobile_order__order_status_app__done
+msgid "Done"
+msgstr ""
+
+#. module: phuclong_mobile_report
+#: model_terms:ir.ui.view,arch_db:phuclong_mobile_report.report_mobile_order_view_search
+msgid "Group By"
+msgstr ""
+
+#. module: phuclong_mobile_report
+#: model:ir.model.fields,field_description:phuclong_mobile_report.field_report_mobile_order__id
+msgid "ID"
+msgstr ""
+
+#. module: phuclong_mobile_report
+#: model:ir.model.fields,field_description:phuclong_mobile_report.field_report_mobile_order__invoiced
+#: model:ir.model.fields.selection,name:phuclong_mobile_report.selection__report_mobile_order__state__invoiced
+#: model_terms:ir.ui.view,arch_db:phuclong_mobile_report.report_mobile_order_view_search
+msgid "Invoiced"
+msgstr ""
+
+#. module: phuclong_mobile_report
+#: model:ir.model.fields,field_description:phuclong_mobile_report.field_report_mobile_order__journal_id
+msgid "Journal"
+msgstr ""
+
+#. module: phuclong_mobile_report
+#: model:ir.model.fields,field_description:phuclong_mobile_report.field_report_mobile_order____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: phuclong_mobile_report
+#: model_terms:ir.ui.view,arch_db:phuclong_mobile_report.view_pos_payment_search
+msgid "Local Card"
+msgstr ""
+
+#. module: phuclong_mobile_report
+#: model:ir.model.fields,field_description:phuclong_mobile_report.field_report_mobile_order__location_id
+msgid "Location"
+msgstr ""
+
+#. module: phuclong_mobile_report
+#: model:ir.model.fields,field_description:phuclong_mobile_report.field_report_mobile_order__loyalty_discount_amount
+msgid "Loyalty Discount Amount"
+msgstr ""
+
+#. module: phuclong_mobile_report
+#: model_terms:ir.ui.view,arch_db:phuclong_mobile_report.report_mobile_order_view_search
+msgid "Mobile Category"
+msgstr ""
+
+#. module: phuclong_mobile_report
+#: model:ir.model,name:phuclong_mobile_report.model_report_mobile_order
+msgid "Mobile Orders Report"
+msgstr ""
+
+#. module: phuclong_mobile_report
+#: model:ir.actions.act_window,name:phuclong_mobile_report.pos_payment_action
+#: model:ir.ui.menu,name:phuclong_mobile_report.pos_payment_menu_act
+#: model_terms:ir.ui.view,arch_db:phuclong_mobile_report.pos_payment_view_tree
+msgid "Mobile Payment"
+msgstr ""
+
+#. module: phuclong_mobile_report
+#: model_terms:ir.ui.view,arch_db:phuclong_mobile_report.report_mobile_order_view_search
+msgid "Mobile orders created during the current year"
+msgstr ""
+
+#. module: phuclong_mobile_report
+#: model_terms:ir.ui.view,arch_db:phuclong_mobile_report.report_mobile_order_view_search
+msgid "Month of order date"
+msgstr ""
+
+#. module: phuclong_mobile_report
+#: model_terms:ir.ui.view,arch_db:phuclong_mobile_report.report_mobile_order_view_search
+msgid "My Sales"
+msgstr ""
+
+#. module: phuclong_mobile_report
+#: model:ir.model.fields.selection,name:phuclong_mobile_report.selection__report_mobile_order__order_status_app__new
+#: model:ir.model.fields.selection,name:phuclong_mobile_report.selection__report_mobile_order__state__draft
+msgid "New"
+msgstr ""
+
+#. module: phuclong_mobile_report
+#: model_terms:ir.actions.act_window,help:phuclong_mobile_report.pos_payment_action
+msgid "No orders found"
+msgstr ""
+
+#. module: phuclong_mobile_report
+#: model_terms:ir.ui.view,arch_db:phuclong_mobile_report.report_mobile_order_view_search
+msgid "Not Invoiced"
+msgstr ""
+
+#. module: phuclong_mobile_report
+#: model:ir.model.fields,field_description:phuclong_mobile_report.field_report_mobile_order__order_id
+msgid "Order"
+msgstr ""
+
+#. module: phuclong_mobile_report
+#: model:ir.model.fields,field_description:phuclong_mobile_report.field_report_mobile_order__date
+msgid "Order Date"
+msgstr ""
+
+#. module: phuclong_mobile_report
+#: model_terms:ir.ui.view,arch_db:phuclong_mobile_report.report_mobile_order_view_search
+msgid "Order Month"
+msgstr ""
+
+#. module: phuclong_mobile_report
+#: model:ir.actions.act_window,name:phuclong_mobile_report.report_mobile_order_action
+#: model:ir.ui.menu,name:phuclong_mobile_report.report_mobile_order_menu_act
+msgid "Orders"
+msgstr ""
+
+#. module: phuclong_mobile_report
+#: model:ir.model.fields.selection,name:phuclong_mobile_report.selection__report_mobile_order__state__paid
+msgid "Paid"
+msgstr ""
+
+#. module: phuclong_mobile_report
+#: model:ir.model.fields,field_description:phuclong_mobile_report.field_report_mobile_order__mobile_category_id
+msgid "PoS Category Mobile"
+msgstr ""
+
+#. module: phuclong_mobile_report
+#: model:ir.model.fields,field_description:phuclong_mobile_report.field_report_mobile_order__config_id
+msgid "Point of Sale"
+msgstr ""
+
+#. module: phuclong_mobile_report
+#: model_terms:ir.ui.view,arch_db:phuclong_mobile_report.report_mobile_order_view_search
+msgid "Point of sale"
+msgstr ""
+
+#. module: phuclong_mobile_report
+#: model:ir.model.fields.selection,name:phuclong_mobile_report.selection__report_mobile_order__state__done
+msgid "Posted"
+msgstr ""
+
+#. module: phuclong_mobile_report
+#: model:ir.model.fields,field_description:phuclong_mobile_report.field_report_mobile_order__pricelist_id
+msgid "Pricelist"
+msgstr ""
+
+#. module: phuclong_mobile_report
+#: model:ir.model.fields,field_description:phuclong_mobile_report.field_report_mobile_order__product_id
+#: model_terms:ir.ui.view,arch_db:phuclong_mobile_report.report_mobile_order_view_search
+msgid "Product"
+msgstr ""
+
+#. module: phuclong_mobile_report
+#: model:ir.model.fields,field_description:phuclong_mobile_report.field_report_mobile_order__product_categ_id
+msgid "Product Category"
+msgstr ""
+
+#. module: phuclong_mobile_report
+#: model:ir.model.fields,field_description:phuclong_mobile_report.field_report_mobile_order__product_qty
+msgid "Product Quantity"
+msgstr ""
+
+#. module: phuclong_mobile_report
+#: model:ir.model.fields,field_description:phuclong_mobile_report.field_report_mobile_order__product_tmpl_id
+msgid "Product Template"
+msgstr ""
+
+#. module: phuclong_mobile_report
+#: model:ir.ui.menu,name:phuclong_mobile_report.report_menu_categ
+msgid "Reporting"
+msgstr ""
+
+#. module: phuclong_mobile_report
+#: model:ir.model.fields,field_description:phuclong_mobile_report.field_report_mobile_order__nbr_lines
+msgid "Sale Line Count"
+msgstr ""
+
+#. module: phuclong_mobile_report
+#: model:ir.model.fields,field_description:phuclong_mobile_report.field_report_mobile_order__sale_type_id
+msgid "Sale Type"
+msgstr ""
+
+#. module: phuclong_mobile_report
+#: model:ir.model.fields,field_description:phuclong_mobile_report.field_report_mobile_order__saleman_id
+msgid "Salesman"
+msgstr ""
+
+#. module: phuclong_mobile_report
+#: model_terms:ir.ui.view,arch_db:phuclong_mobile_report.report_mobile_order_view_search
+msgid "Salesperson"
+msgstr ""
+
+#. module: phuclong_mobile_report
+#: model:ir.model.fields,field_description:phuclong_mobile_report.field_report_mobile_order__session_id
+#: model_terms:ir.ui.view,arch_db:phuclong_mobile_report.report_mobile_order_view_search
+msgid "Session"
+msgstr ""
+
+#. module: phuclong_mobile_report
+#: model:ir.model.fields,field_description:phuclong_mobile_report.field_report_mobile_order__state
+msgid "Status"
+msgstr ""
+
+#. module: phuclong_mobile_report
+#: model:ir.model.fields,field_description:phuclong_mobile_report.field_report_mobile_order__order_status_app
+msgid "Status Mobile"
+msgstr ""
+
+#. module: phuclong_mobile_report
+#: model:ir.model.fields,field_description:phuclong_mobile_report.field_report_mobile_order__stock_location_id
+msgid "Stock Location"
+msgstr ""
+
+#. module: phuclong_mobile_report
+#: model_terms:ir.ui.view,arch_db:phuclong_mobile_report.report_mobile_order_view_search
+msgid "Store"
+msgstr ""
+
+#. module: phuclong_mobile_report
+#: model:ir.model.fields,field_description:phuclong_mobile_report.field_report_mobile_order__price_sub_total
+msgid "Subtotal w/o discount"
+msgstr ""
+
+#. module: phuclong_mobile_report
+#: model_terms:ir.actions.act_window,help:phuclong_mobile_report.pos_payment_action
+msgid "To record new orders, start a new session."
+msgstr ""
+
+#. module: phuclong_mobile_report
+#: model:ir.model.fields,field_description:phuclong_mobile_report.field_report_mobile_order__total_discount
+msgid "Total Discount"
+msgstr ""
+
+#. module: phuclong_mobile_report
+#: model:ir.model.fields,field_description:phuclong_mobile_report.field_report_mobile_order__price_total
+msgid "Total Price"
+msgstr ""
+
+#. module: phuclong_mobile_report
+#: model:ir.model.fields,field_description:phuclong_mobile_report.field_report_mobile_order__user_id
+msgid "User"
+msgstr ""
+
+#. module: phuclong_mobile_report
+#: model_terms:ir.ui.view,arch_db:phuclong_mobile_report.report_mobile_order_view_search
+msgid "User Login"
+msgstr ""
+
+#. module: phuclong_mobile_report
+#: model_terms:ir.ui.view,arch_db:phuclong_mobile_report.view_pos_payment_search
+msgid "Visa card (Abroad)"
+msgstr ""
+
+#. module: phuclong_mobile_report
+#: model_terms:ir.ui.view,arch_db:phuclong_mobile_report.view_pos_payment_search
+msgid "Visa card (Viet Nam)"
+msgstr ""
+
+#. module: phuclong_mobile_report
+#: model:ir.model.fields,field_description:phuclong_mobile_report.field_report_mobile_order__warehouse_id
+msgid "Warehouse"
+msgstr ""
+
+#. module: phuclong_mobile_report
+#: model_terms:ir.ui.view,arch_db:phuclong_mobile_report.report_mobile_order_view_search
+msgid "Year"
+msgstr ""
+
+#. module: phuclong_mobile_report
+#: model_terms:ir.ui.view,arch_db:phuclong_mobile_report.pos_payment_view_tree
+msgid "amount"
+msgstr ""

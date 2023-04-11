@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <!-- warehouse.transfer inherit tree view -->
+        <record id="view_warehouse_transfer_tree_inherit_stock_account_tree_inherit" model="ir.ui.view">
+            <field name="name">view_warehouse_transfer_tree_inherit_stock_account_tree_inherit</field>
+            <field name="model">warehouse.transfer</field>
+            <field name="inherit_id" ref="besco_stock_account.view_warehouse_transfer_tree_inherit_stock_account_tree"/>
+            <field name="arch" type="xml">
+                <!-- Add your xpath here -->
+                <xpath expr="//field[@name='is_return_transfer']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+            </field>
+        </record>
+        <!-- warehouse.transfer inherit tree view -->
+        <record id="view_warehouse_transfer_tree_inherit" model="ir.ui.view">
+            <field name="name">view_warehouse_transfer_tree_inherit</field>
+            <field name="model">warehouse.transfer</field>
+            <field name="inherit_id" ref="besco_warehouse_transfer.view_warehouse_transfer_tree"/>
+            <field name="arch" type="xml">
+                <!-- Add your xpath here -->
+                <xpath expr="//field[@name='from_company_account_analytic_id']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//field[@name='to_company_account_analytic_id']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//field[@name='total_qty']" position="after">
+                    <!-- Add your fields here -->
+                    <field name="notes"/>
+                </xpath>
+            </field>
+        </record>
+        <record id="view_warehouse_transfer_form_phuclong" model="ir.ui.view">
+            <field name="name">"view_warehouse_transfer_form_phuclong"</field>
+            <field name="model">warehouse.transfer</field>
+            <field name="inherit_id" ref="besco_warehouse_transfer.view_warehouse_transfer_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='notes']" position="after">
+                    <field name="invisible_approve" invisible="1"/>
+                    <field name="invisible_reverse" invisible="1"/>
+                    <field name="invisible_refuse" invisible="1"/>
+                    <field name="invisible_cancel" invisible="1"/>
+                </xpath>
+                <xpath expr="//button[@name='action_quantsact']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//button[@name='%(besco_stock.action_check_current_inventory)d']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//label[@for='date_planned']" position="before">
+                    <field name="date_request" required="1"/>
+                </xpath>
+                <xpath expr="//field[@name='origin']" position="attributes">
+                    <attribute name="attrs">{'readonly': [('state', 'in', ['transfer', 'done'])]}</attribute>
+                </xpath>
+                <xpath expr="//field[@name='notes']" position="attributes">
+                    <attribute name="attrs">{'readonly': [('state', '=', 'done')]}</attribute>
+                </xpath>
+                <xpath expr="//button[@name='button_refuse']" position="attributes">
+                    <attribute name="groups">phuclong_warehouse_transfer.group_warehouse_transfer_coordinator,besco_warehouse_transfer.group_warehouse_transfer_manager</attribute>
+                    <attribute name="attrs">{'invisible': ['|', ('invisible_refuse', '=', True)]}</attribute>
+                </xpath>
+                <xpath expr="//button[@name='button_cancel']" position="attributes">
+                    <attribute name="states">draft,to approve</attribute>
+                    <attribute name="attrs">{'invisible': ['|', ('invisible_cancel', '=', True)]}</attribute>
+                </xpath>
+                <xpath expr="//button[@name='button_approve']" position="attributes">
+                    <attribute name="states">to approve</attribute>
+                    <attribute name="attrs">{'invisible':['|', ('invisible_approve', '=', True)]}</attribute>
+                    <attribute name="groups">phuclong_warehouse_transfer.group_warehouse_transfer_coordinator,besco_warehouse_transfer.group_warehouse_transfer_manager</attribute>
+                </xpath>
+                <xpath expr="//button[@name='button_draft']" position="attributes">
+                    <attribute name="groups">besco_warehouse_transfer.group_warehouse_transfer_manager</attribute>
+                </xpath>
+                <xpath expr="//button[@name='%(besco_warehouse_transfer.action_make_warehouse_transfer)d']" position="attributes">
+                    <attribute name="groups">phuclong_warehouse_transfer.group_warehouse_transfer_coordinator,besco_warehouse_transfer.group_warehouse_transfer_manager</attribute>
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//button[@name='%(besco_warehouse_transfer.action_make_warehouse_transfer)d']" position="after">
+                    <button name="button_cancel" states="transfer" string="Cancel" groups="phuclong_pos_base.group_store_accounting" type="object" confirm="Are you sure want to cancel warehouse transfer?"/>
+                    <button name="reverse_transfer" string="Reverse Transfer" type="object" class="oe_highlight" groups="phuclong_warehouse_transfer.group_warehouse_transfer_coordinator,besco_warehouse_transfer.group_warehouse_transfer_manager" attrs="{'invisible':[
+                            '|', '|', ('state', '=', 'transfer'),
+                            ('picking_status', 'in', ('received','no','waiting')),
+                            ('invisible_reverse', '=', True)]}"/>
+                </xpath>
+                <xpath expr="//button[@name='button_set_to_transfer']" position="attributes">
+                    <attribute name="groups">besco_warehouse_transfer.group_warehouse_transfer_manager</attribute>
+                </xpath>
+                <xpath expr="//button[@name='print_report']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//field[@name='from_company_account_analytic_id']" position="attributes">
+                    <attribute name='invisible'>1</attribute>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

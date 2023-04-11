@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data noupdate="0">
+        <!-- Add you code here -->
+        <!-- res.partner inherit form view -->
+        <record id="res_partner_form_inherit_authorize_inherit" model="ir.ui.view">
+            <field name="name">res_partner_form_inherit_authorize_inherit</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="phuclong_mobile_backend.res_partner_form_inherit_authorize"/>
+            <field name="arch" type="xml">
+                <!-- Add your xpath here -->
+                <xpath expr="//field[@name='authorized']" position="replace">
+                    <!-- Add your fields here -->
+                    <label for="authorized"/>
+                    <div class="o_row">
+                        <field name="authorized" class="oe_inline" readonly="1"/>
+                        <button name="action_push_messaging_mobile" type="object" icon="fa-envelope" attrs="{'invisible': ['|', ('authorized', '!=', True), ('token_device', '=', False)]}" groups="phuclong_mobile_notification.group_mobile_notification"/>
+                    </div>
+                </xpath>
+            </field>
+        </record>
+        <record id="action_push_messaging_mobile" model="ir.actions.server">
+            <field name="name">Push Messaging Mobile</field>
+            <field name="type">ir.actions.server</field>
+            <field name="state">code</field>
+            <field name="model_id" ref="base.model_res_partner"/>
+            <field name="binding_model_id" ref="base.model_res_partner"/>
+            <field name="code">action = records.action_push_messaging_mobile()</field>
+            <field name="groups_id" eval="[(4, ref('phuclong_mobile_notification.group_mobile_notification'))]"/>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,106 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data noupdate="0">
+        <!-- Add you code here -->
+        <!-- update.loyalty.expired.date tree view -->
+        <record id="update_loyalty_expired_date_view_tree" model="ir.ui.view">
+            <field name="name">update.loyalty.expired.date.view.tree</field>
+            <field name="model">update.loyalty.expired.date</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <!-- Add your fields here -->
+                    <field name="name"/>
+                    <field name="date_done"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+        <!-- update.loyalty.expired.date form view -->
+        <record id="update_loyalty_expired_date_view_form" model="ir.ui.view">
+            <field name="name">update.loyalty.expired.date.view.form</field>
+            <field name="model">update.loyalty.expired.date</field>
+            <field name="arch" type="xml">
+                <form string="">
+                    <header>
+                        <button name="button_draft" states="done" type="object" string="Set Draft" groups="base.group_no_one"/>
+                        <button name="button_done" states="checked" type="object" string="Validate Import" class="btn-primary"/>
+                        <field name="state" widget="statusbar"/>
+                    </header>
+                    <sheet>
+                        <div class="oe_title">
+                            <label class="oe_edit_only" for="name"/>
+                            <h1>
+                                <field name="name" class="oe_inline" required="1" attrs="{'readonly': [('state', '!=','draft')]}"/>
+                            </h1>
+                        </div>
+                        <group>
+                            <group>
+                                <!-- Add your fields here -->
+                                <field name="reason" required="1" attrs="{'readonly': [('state', '!=','draft')]}"/>
+                                <field name="date_done" readonly="1" states="done"/>
+                            </group>
+                            <group>
+                                <label for="file_data" string="File Excel to import"/>
+                                <div class="o_row">
+                                    <field name="file_data" filename="file_name" attrs="{'readonly': [('state','not in',['draft'])]}"/>
+                                    <button name="print_template" string="Template" type="object" class="oe_inline" attrs="{'invisible': ['|', ('state','not in',['draft']),('file_data','!=',False)]}"/>
+                                    <button name="action_read_file" string="Read File" type="object" class="oe_inline oe_highlight" attrs="{'invisible': ['|', ('file_data', '=', False), ('state','not in',['draft'])]}"/>
+                                    <button name="action_log_failed" string="Logs" type="object" class="oe_inline btn-link" attrs="{'invisible': [('failed','=',0)]}">
+                                        <field string="Error(s)" name="failed" widget="statinfo"/>
+                                    </button>
+                                </div>
+                                <field name="file_name" invisible="1"/>
+                                <field name="log_failed" invisible="1"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Lines" name="line_page">
+                                <field name="line_ids" readonly="1">
+                                    <tree editable="top" create="false">
+                                        <field name="partner_id" readonly="1"/>
+                                        <field name="appear_code_id"/>
+                                        <field name="mobile"/>
+                                        <field name="expired_date" required="1"/>
+                                        <field name="birthday"/>
+                                        <field name="note"/>
+                                        <field name="log"/>
+                                    </tree>
+                                    <form>
+                                        <sheet>
+                                            <group>
+                                                <group>
+                                                    <field name="partner_id" readonly="1"/>
+                                                    <field name="appear_code_id"/>
+                                                    <field name="mobile"/>
+                                                    <field name="expired_date" required="1"/>
+                                                    <field name="birthday"/>
+                                                    <field name="note"/>
+                                                    <field name="log"/>
+                                                </group>
+                                            </group>
+                                        </sheet>
+                                    </form>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <!-- update.loyalty.expired.date action window -->
+        <record id="update_loyalty_expired_date_action" model="ir.actions.act_window">
+            <field name="name">Update Loyalty Expired Date</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">update.loyalty.expired.date</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    <!-- Add Text Here -->
+                </p>
+                <p>
+                    <!-- More details about what a user can do with this object will be OK -->
+                </p>
+            </field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        
+    	<record id="view_report_loyalty_gift_search" model="ir.ui.view">
+            <field name="name">view_report_loyalty_gift_search</field>
+            <field name="model">pos.order.line</field>
+            <field name="arch" type="xml">
+                <search string="Loyalty Gifts">
+                    <field name="partner_id"/>
+                    <field name="order_id"/>
+                   	<field name="product_id"/> 
+                   	<filter string="Point Exchange" name="point_exchange" domain="[('loyalty_gift_type','=','point_exchange')]"/>
+                   	<filter string="Birthday Gift" name="birthday_gift" domain="[('loyalty_gift_type','=','birthday_gift')]"/>
+                   	<group expand="1" string="Group By...">
+                      	<filter string="Customer" name="customer" domain="[]" context="{'group_by' : 'partner_id'}" />
+     				  	<filter string="Gift Type" name="gift_type" domain="[]" context="{'group_by' : 'loyalty_gift_type'}" />
+     				  	<filter string="Store" name="warehouse" domain="[]" context="{'group_by' : 'warehouse_id'}" />
+                   	</group>
+                </search>
+                
+            </field>
+        </record>
+        
+		<record id="view_report_loyalty_gift_tree" model="ir.ui.view">
+            <field name="name">view_report_loyalty_gift_tree</field>
+            <field name="model">pos.order.line</field>
+            <field name="arch" type="xml">
+                <tree delete="0" create="0" default_order='date_order desc'>
+                	<field name="warehouse_id"/>
+                	<field name="order_id" string="Order Ref"/>
+                	<field name="date_order"/>
+                	<field name="partner_id" string="Customer Name"/>
+                    <field name="appear_code_id" />
+                    <field name="product_id" string="Gift Name"/>
+                    <field name="loyalty_point_cost" />
+                    <field name="loyalty_gift_type"/>
+                    <field name="qty"/>
+                    <field name="old_price" string="Original Sale Price"/>
+                    <field name="old_price_total" string="Amount"/>
+                </tree>
+            </field>
+        </record>
+        
+        <record id="action_view_report_loyalty_gift" model="ir.actions.act_window">
+            <field name="name">Loyalty Gifts</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">pos.order.line</field>
+            <field name="domain">[('is_loyalty_line','=',True), ('price_unit','=',0), ('loyalty_discount_percent','=',0)]</field>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="view_report_loyalty_gift_tree"/>
+            <field name="search_view_id" ref="view_report_loyalty_gift_search"/>
+        </record>
+        
+        <menuitem id="menu_action_view_report_loyalty_gift" 
+					name="Loyalty Gifts" 
+					parent="besco_loyalty.menu_loyalty_report" 
+					action="action_view_report_loyalty_gift" sequence="1000"/>	
+        
+    </data>
+</odoo>

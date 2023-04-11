@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="stock_backorder_confirmation_inherit_phuclong_stock" model="ir.ui.view">
+        <field name="name">stock_backorder_confirmation_inherit_phuclong_stock</field>
+        <field name="model">stock.backorder.confirmation</field>
+        <field name="inherit_id" ref="besco_stock.stock_backorder_confirmation_inherit_besco_stock"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='responsible']" position="attributes">
+                <attribute name="readonly">1</attribute>
+                <attribute name="force_save">1</attribute>
+            </xpath>
+        </field>
+    </record>
+</odoo>

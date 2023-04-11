@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding='UTF-8'?>
+<odoo>
+    <data noupdate="0">
+    
+    	<record model="ir.cron" id="ir_cron_downgrade_loyalty_level_action">
+            <field name="name">Loyalty: Cron Downgrade Partner Loyalty Level</field>
+            <field name="model_id" ref="model_loyalty_point_history"/>
+            <field name="state">code</field>
+            <field name="code">model.cron_downgrade_loyalty_level()</field>
+            <field name="active" eval="True"/>
+            <field name="interval_number">1</field>
+            <field name="interval_type">days</field>
+            <field name="numbercall">-1</field>
+            <field name="doall" eval="False"/>
+            <field name="priority">15</field>            
+        </record>
+        
+        <record model="ir.cron" id="besco_loyalty.ir_cron_point_history_action">
+            <field name="name">Loyalty: Cron Point History</field>
+            <field name="model_id" ref="model_loyalty_point_history"/>
+            <field name="state">code</field>
+            <field name="code">model.cron_point_history()</field>
+            <field name="active" eval="True"/>
+            <field name="interval_number">5</field>
+            <field name="interval_type">minutes</field>
+            <field name="numbercall">-1</field>
+            <field name="doall" eval="False"/>
+            <field name="priority">15</field> 
+            <field name="nextcall" eval="(DateTime.now()).strftime('%Y-%m-%d 17:00:00')"/>           
+        </record>
+        
+        <record model="ir.cron" id="auto_import_partner_point_history">
+            <field name="name">Loyalty: Auto Import Partner Point History</field>
+            <field name="model_id" ref="model_loyalty_point_history_import"/>
+            <field name="state">code</field>
+            <field name="code">model.auto_import_partner_point_history(log=log)</field>
+            <field name="active" eval="True"/>
+            <field name="interval_number">1</field>
+            <field name="interval_type">minutes</field>
+            <field name="numbercall">-1</field>
+            <field name="doall" eval="False"/>
+        </record>
+        
+    </data>
+</odoo>

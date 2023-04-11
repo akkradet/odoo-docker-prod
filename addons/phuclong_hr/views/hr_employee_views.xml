@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data noupdate="0">
+        <!-- Add you code here -->
+        <record id="hr.open_view_employee_list_my" model="ir.actions.act_window">
+            <field name="context">{'hide_main_user': True}</field>
+        </record>
+        <record id="hr.hr_employee_public_action" model="ir.actions.act_window">
+            <field name="context">{'hide_main_user': True}</field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+    	<record model="ir.ui.view" id="phuclong_pos_config">
+            <field name="name">phuclong_pos_config</field>
+            <field name="model">pos.config</field>
+            <field name="inherit_id" ref="besco_pos_base.pos_config_view_form_base" />
+            <field name="arch" type="xml">
+            	<xpath expr="//div[@id='order_interface']" position="inside">
+            		<div class="col-xs-12 col-md-6 o_setting_box">
+                        <div class="o_setting_left_pane">
+                            <field name="update_cashier_to_session"/>
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <label for="update_cashier_to_session"/>
+                            <div class="text-muted">
+                                Update Cashier To Session
+                            </div>
+                        </div>
+                    </div>
+            	</xpath>
+            	
+            	 <xpath expr="//field[@name='stock_location_id']" position="attributes">
+            		<attribute name="attrs">{
+                        'invisible': [('is_callcenter_pos', '=', True)],
+                        'required': [('is_callcenter_pos', '!=', True)]
+                    }</attribute>
+                </xpath>
+            	
+                <xpath expr="//div[@id='receipt']" position="inside">
+                    <div class="col-xs-12 col-md-6 o_setting_box">
+                        <div class="o_setting_right_pane">
+                            <span class="o_form_label">Sale types</span>
+                            <div class="text-muted">
+                                Sale type available
+                            </div>
+                            <div class="content-group mt16">
+                                <field name="sale_type_ids" colspan="4" nolabel="1" widget="many2many_tags" required="1"
+                                options='{"no_create": True, "no_write": True, "no_open": True}'/>
+                            </div>
+                        </div>
+                        <div class="o_setting_right_pane" attrs="{'invisible': [('sale_type_ids','=',[])]}">
+                            <span class="o_form_label">Sale type default</span>
+                            <div class="text-muted">
+                                Sale type default when start order
+                            </div>
+                            <div class="content-group mt16">
+                                <field name="sale_type_default_id" colspan="4" nolabel="1" required="1"
+                                options='{"no_create": True, "no_write": True, "no_open": True}'
+                                domain="[('id', 'in', sale_type_ids)]"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-6 o_setting_box">
+                        <div class="o_setting_left_pane">
+                            <field name="is_dollar_pos"/>
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <label for="is_dollar_pos"/>
+                            <div class="text-muted">
+                                Currency default is Dollar
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-6 o_setting_box">
+                        <div class="o_setting_left_pane">
+                            <field name="is_callcenter_pos"/>
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <label for="is_callcenter_pos"/>
+                            <div class="text-muted">
+                                Use for Call Center
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-6 o_setting_box">
+                        <div class="o_setting_left_pane">
+                            <field name="use_for_mobile"/>
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <label for="use_for_mobile"/>
+                            <div class="text-muted">
+                                Use to get order from Mobile App
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-6 o_setting_box">
+                        <div class="o_setting_right_pane">
+                            <span class="o_form_label">Logo</span>
+                            <div class="content-group mt16">
+                                <field name="logo" widget='image' class="oe_avatar"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-6 o_setting_box">
+                        <div class="o_setting_left_pane">
+                            <field name="use_barcode_scanner_to_open_session"/>
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <label for="use_barcode_scanner_to_open_session"/>
+                            <div class="text-muted">
+                                Use Barcode Scanner or Card Scanner to Open Session
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-6 o_setting_box">
+                        <div class="o_setting_left_pane">
+                            <field name="use_multi_printer"/>
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <label for="use_multi_printer"/>
+                            <div class="text-muted">
+                                Use multiple printers to print Receipt and Label
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-6 o_setting_box" >
+                        <div class="o_setting_left_pane">
+                            <field name="use_replacement_printer"/>
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <label for="use_replacement_printer"/>
+                            <div class="text-muted">
+                                Use to config IP to replacement printer
+                            </div>
+                            <div class="content-group mt16" attrs="{'invisible': [('use_replacement_printer', '=', False)], 'required': [('use_replacement_printer', '=', True)]}">
+                            	<group>
+                            		<field name="printer_ip"/>
+                            	</group>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-6 o_setting_box">
+                        <div class="o_setting_left_pane">
+                            <field name="is_sandbox_env"/>
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <label for="is_sandbox_env"/>
+                            <div class="text-muted">
+                                If this option is enebled, This Point Of Sale will be set to Sandbox Enviroment in order to test performance.
+                            </div>
+                        </div>
+                        <div class="o_setting_right_pane" attrs="{'invisible': [('is_sandbox_env','=',False)]}">
+                            <span class="o_form_label">Number of orders</span>
+                            <div class="text-muted">
+                                Number of orders will be duplicated and saved to DB on POS at the same time after each POS Order
+                            </div>
+                            <div class="content-group mt16">
+                                <field name="max_order_to_create"/>
+                            </div>
+                        </div>
+                    </div>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

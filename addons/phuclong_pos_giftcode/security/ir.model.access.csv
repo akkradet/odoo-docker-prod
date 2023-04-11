@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_giftcode_api_config_method,access_giftcode_api_config_method,model_giftcode_api_config_method,,1,1,1,1
+access_giftcode_api_config,access_giftcode_api_config,model_giftcode_api_config,,1,1,1,1
+access_giftcode_api_store,access_giftcode_api_store,model_giftcode_api_store,,1,1,1,1
+access_giftcode_api_response,access_giftcode_api_response,model_giftcode_api_response,,1,1,1,1

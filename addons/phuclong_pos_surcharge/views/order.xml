@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="phuclong_surcharge_pos_order">
+            <field name="name">phuclong_surcharge_pos_order</field>
+            <field name="model">pos.order</field>
+            <field name="inherit_id" ref="point_of_sale.view_pos_pos_form" />
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='lines']/tree/field[@name='price_subtotal']" position="attributes">
+            		<attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//field[@name='lines']/tree/field[@name='price_subtotal_incl']" position="after">
+            		<field name="amount_surcharge"/>
+                </xpath>
+                <field name="amount_tax" position="after">
+                    <field name="total_surcharge" readonly="1" force_save="1" widget="monetary"/>
+                </field>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="phuclong_hidden_sale_man_pos_order">
+            <field name="name">phuclong_hidden_sale_man_pos_order</field>
+            <field name="model">pos.order</field>
+            <field name="inherit_id" ref="fe_pos_base.view_pos_pos_form_add_saleman" />
+            <field name="arch" type="xml">
+            	<xpath expr="//field[@name='lines']/tree/field[@name='saleman_id']" position="attributes">
+            		<attribute name="invisible">1</attribute>
+                </xpath>
+                <field name="user_id" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </field>
+                <field name="saleman_id" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </field>
+            </field>
+        </record>
+        <record id="view_report_pos_order_pivot_surcharge" model="ir.ui.view">
+            <field name="name">view_report_pos_order_pivot_surcharge</field>
+            <field name="model">report.pos.order</field>
+            <field name="inherit_id" ref="point_of_sale.view_report_pos_order_pivot" />
+            <field name="arch" type="xml">
+                <field name="price_total" position="after">
+                    <field name="amount_surcharge" type="measure"/>
+                </field>
+            </field>
+        </record>
+    </data>
+</odoo>

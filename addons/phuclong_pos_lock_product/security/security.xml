@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+	<data noupdate="0">
+		<record id="pos_product_lock_rule" model="ir.rule">
+			<field name="name">POS Product Lock rule</field>
+			<field name="model_id" ref="model_pos_product_lock" />
+			<field name="domain_force">[('warehouse_id', 'in', user._warehouses_worker_domain()),]</field>
+		</record>
+	</data>
+
+
+</odoo>

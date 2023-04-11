@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+    
+    	<record model="ir.ui.view" id="report_coupon_voucher_form_inherit_phuclong">
+            <field name="name">report_coupon_voucher_form_inherit_phuclong</field>
+            <field name="model">report.coupon.voucher</field>
+            <field name="inherit_id" ref="besco_voucher_coupon.report_coupon_voucher_form" />
+            <field name="arch" type="xml">
+            	<xpath expr="//field[@name='warehouse_ids']" position="attributes">
+	            	<attribute name="attrs">{'invisible':[('type','=','coupon_for_employee')]}</attribute>
+	            </xpath>
+            </field>
+        </record>	
+                
+    </data>
+</odoo>
+

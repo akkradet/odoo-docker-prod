@@ -1,0 +1,4 @@
+"id","name","model_id:id","group_id:id","perm_read","perm_write","perm_create","perm_unlink"
+"access_pos_banner_config_user","access_pos_banner_config_user","model_pos_banner_config",base.group_user,1,0,0,0
+"access_pos_banner_config_manager","access_pos_banner_config_manager","model_pos_banner_config","point_of_sale.group_pos_manager",1,1,1,1
+"access_pos_banner_config","access_pos_banner_config","model_pos_banner_config","group_pos_banner_config",1,1,1,1

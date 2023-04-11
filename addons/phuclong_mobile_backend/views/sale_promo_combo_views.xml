@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <record id="sale_promo_combo_form_inherit" model="ir.ui.view">
+            <field name="name">sale_promo_combo_form_inherit</field>
+            <field name="model">sale.promo.combo</field>
+            <field name="inherit_id" ref="phuclong_pos_promo_combo.view_sale_promo_combo_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='day_of_week']" position="after">
+                    <field name="image_mobile" widget="image" options="{'preview_image': 'image_mobile'}"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

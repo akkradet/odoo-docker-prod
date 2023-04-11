@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<record id="group_mobile_notification" model="res.groups">
+			<field name="name">Mobile Notification</field>
+			<field name="users" eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]"/>
+			<field name="category_id" ref="phuclong_mobile_backend.category_app"/>
+			<field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+		</record>
+		<record id="profile_mobile_notification" model="profile">
+			<field name="name">Mobile Notification</field>
+			<field name="category_id" ref="phuclong_mobile_backend.category_app"/>
+			<field name="groups_ids" eval="[(4, ref('group_mobile_notification'))]"/>
+		</record>
+		<record id="group_mobile_notification_send_now" model="res.groups">
+			<field name="name">Mobile Notification Send Now</field>
+			<field name="users" eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]"/>
+			<field name="category_id" ref="phuclong_mobile_backend.category_app"/>
+			<field name="implied_ids" eval="[(4, ref('group_mobile_notification'))]"/>
+		</record>
+		<record id="profile_mobile_notification_send_now" model="profile">
+			<field name="name">Mobile Notification Send Now</field>
+			<field name="category_id" ref="phuclong_mobile_backend.category_app"/>
+			<field name="groups_ids" eval="[(4, ref('group_mobile_notification_send_now'))]"/>
+		</record>
+		<record id="group_mobile_notification_auto" model="res.groups">
+			<field name="name">Mobile Notification Auto</field>
+			<field name="users" eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]"/>
+			<field name="category_id" ref="phuclong_mobile_backend.category_app"/>
+			<field name="implied_ids" eval="[(4, ref('group_mobile_notification'))]"/>
+		</record>
+		<record id="profile_mobile_notification_auto" model="profile">
+			<field name="name">Mobile Notification Auto</field>
+			<field name="category_id" ref="phuclong_mobile_backend.category_app"/>
+			<field name="groups_ids" eval="[(4, ref('group_mobile_notification_auto'))]"/>
+		</record>
+	</data>
+</odoo>

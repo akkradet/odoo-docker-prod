@@ -1,0 +1,270 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-04-08 04:56+0000\n"
+"PO-Revision-Date: 2021-06-15 09:28+0000\n"
+"Last-Translator: Nguyễn Thanh Tùng <tung.nt@besco.vn>\n"
+"Language-Team: Vietnamese <http://weblate.besco.vn/projects/besco-phuc-long/"
+"phuclong_pos_config/vi_VN/>\n"
+"Language: vi_VN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 3.8\n"
+
+#. module: phuclong_pos_config
+#: model_terms:ir.ui.view,arch_db:phuclong_pos_config.phuclong_pos_config
+msgid "<span class=\"o_form_label\">Logo</span>"
+msgstr "<span class=\"o_form_label\">Ảnh</span>"
+
+#. module: phuclong_pos_config
+#: model_terms:ir.ui.view,arch_db:phuclong_pos_config.phuclong_pos_config
+msgid "<span class=\"o_form_label\">Number of orders</span>"
+msgstr "<span class=\"o_form_label\">Số lượng đơn hàng</span>"
+
+#. module: phuclong_pos_config
+#: model_terms:ir.ui.view,arch_db:phuclong_pos_config.phuclong_pos_config
+msgid "<span class=\"o_form_label\">Sale type default</span>"
+msgstr "<span class=\"o_form_label\">Sale type mặc định</span>"
+
+#. module: phuclong_pos_config
+#: model_terms:ir.ui.view,arch_db:phuclong_pos_config.phuclong_pos_config
+msgid "<span class=\"o_form_label\">Sale types</span>"
+msgstr "<span class=\"o_form_label\">Sale type</span>"
+
+#. module: phuclong_pos_config
+#: model:ir.model.fields,field_description:phuclong_pos_config.field_pos_banner_config__active
+#: model_terms:ir.ui.view,arch_db:phuclong_pos_config.pos_banner_tree_form
+msgid "Active"
+msgstr "Có hiệu lực"
+
+#. module: phuclong_pos_config
+#: model_terms:ir.ui.view,arch_db:phuclong_pos_config.pos_banner_tree_form
+msgid "Archived"
+msgstr "Đã lưu trữ"
+
+#. module: phuclong_pos_config
+#: model:ir.model.fields,field_description:phuclong_pos_config.field_pos_banner_config__name
+msgid "Banner Name"
+msgstr "Tên bảng quảng cáo"
+
+#. module: phuclong_pos_config
+#: model:ir.model.fields,field_description:phuclong_pos_config.field_pos_banner_config__create_uid
+msgid "Created by"
+msgstr "Được tạo bởi"
+
+#. module: phuclong_pos_config
+#: model:ir.model.fields,field_description:phuclong_pos_config.field_pos_banner_config__create_date
+msgid "Created on"
+msgstr "Được tạo vào"
+
+#. module: phuclong_pos_config
+#: model_terms:ir.ui.view,arch_db:phuclong_pos_config.phuclong_pos_config
+msgid "Currency default is Dollar"
+msgstr "Tiền tệ mặc định là dollar"
+
+#. module: phuclong_pos_config
+#: model:ir.model.fields,field_description:phuclong_pos_config.field_pos_banner_config__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: phuclong_pos_config
+#: model:ir.model.fields,field_description:phuclong_pos_config.field_pos_banner_config__end_date
+msgid "End Date"
+msgstr "Ngày kết thúc"
+
+#. module: phuclong_pos_config
+#: model:ir.model.fields,field_description:phuclong_pos_config.field_pos_banner_config__id
+msgid "ID"
+msgstr "Mã ID"
+
+#. module: phuclong_pos_config
+#: model:ir.model.fields,field_description:phuclong_pos_config.field_pos_config__printer_ip
+msgid "IP Address"
+msgstr "Địa chỉ IP"
+
+#. module: phuclong_pos_config
+#: model_terms:ir.ui.view,arch_db:phuclong_pos_config.phuclong_pos_config
+msgid ""
+"If this option is enebled, This Point Of Sale will be set to Sandbox "
+"Enviroment in order to test performance."
+msgstr ""
+"Nếu lưa chọn này được bật, POS này sẽ được thiết lập  Môi trường kiểm thử để "
+"làm kiểm thử hiệu suất."
+
+#. module: phuclong_pos_config
+#: model:ir.model.fields,field_description:phuclong_pos_config.field_pos_config__is_callcenter_pos
+msgid "Is Call Center POS"
+msgstr "Là POS Call Center"
+
+#. module: phuclong_pos_config
+#: model:ir.model.fields,field_description:phuclong_pos_config.field_pos_config__is_sandbox_env
+msgid "Is Sanbox enviroment"
+msgstr "Là Môi trường kiểm thử"
+
+#. module: phuclong_pos_config
+#: model:ir.model.fields,field_description:phuclong_pos_config.field_pos_banner_config____last_update
+msgid "Last Modified on"
+msgstr "Chỉnh sửa lần cuối vào"
+
+#. module: phuclong_pos_config
+#: model:ir.model.fields,field_description:phuclong_pos_config.field_pos_banner_config__write_uid
+msgid "Last Updated by"
+msgstr "Cập nhật lần cuối bởi"
+
+#. module: phuclong_pos_config
+#: model:ir.model.fields,field_description:phuclong_pos_config.field_pos_banner_config__write_date
+msgid "Last Updated on"
+msgstr "Cập nhật lần cuối vào"
+
+#. module: phuclong_pos_config
+#: model:ir.model.fields,field_description:phuclong_pos_config.field_pos_config__max_order_to_create
+msgid ""
+"Number of orders will be duplicated and saved            to DB on POS at the "
+"same time after each POS Order"
+msgstr ""
+
+#. module: phuclong_pos_config
+#: model_terms:ir.ui.view,arch_db:phuclong_pos_config.phuclong_pos_config
+msgid ""
+"Number of orders will be duplicated and saved to DB on POS at the same time "
+"after each POS Order"
+msgstr ""
+
+#. module: phuclong_pos_config
+#: model:ir.model.fields,field_description:phuclong_pos_config.field_pos_config__use_barcode_scanner_to_open_session
+msgid "Open Session via Card"
+msgstr "Quét thẻ NV để mở ca"
+
+#. module: phuclong_pos_config
+#: model:ir.actions.act_window,name:phuclong_pos_config.action_pos_banner
+#: model:ir.ui.menu,name:phuclong_pos_config.menu_pos_banner_action
+#: model:ir.ui.menu,name:phuclong_pos_config.menu_pos_banner_config
+#: model_terms:ir.ui.view,arch_db:phuclong_pos_config.pos_banner_tree_view
+msgid "POS Banner"
+msgstr "Quảng cáo POS"
+
+#. module: phuclong_pos_config
+#: model:res.groups,name:phuclong_pos_config.group_pos_banner_config
+#, fuzzy
+#| msgid "POS Banner"
+msgid "POS Banner Config"
+msgstr "Quảng cáo POS"
+
+#. module: phuclong_pos_config
+#: model:ir.actions.server,name:phuclong_pos_config.auto_auto_disable_banner_ir_actions_server
+msgid "POS Config: Auto Disable Banner"
+msgstr "Cấu hình pOS: Tự động khoá quảng cáo"
+
+#. module: phuclong_pos_config
+#: model:ir.model,name:phuclong_pos_config.model_pos_config
+msgid "Point of Sale Configuration"
+msgstr "Cấu hình điểm bán hàng"
+
+#. module: phuclong_pos_config
+#: model:ir.model.fields,field_description:phuclong_pos_config.field_pos_banner_config__logo
+#: model:ir.model.fields,field_description:phuclong_pos_config.field_pos_config__logo
+msgid "Receipt Logo"
+msgstr "Logo hoá đơn"
+
+#. module: phuclong_pos_config
+#: model:ir.model.fields,field_description:phuclong_pos_config.field_pos_config__sale_type_ids
+msgid "Sale type"
+msgstr "Sale type"
+
+#. module: phuclong_pos_config
+#: model_terms:ir.ui.view,arch_db:phuclong_pos_config.phuclong_pos_config
+msgid "Sale type available"
+msgstr "Sale type khả dụng"
+
+#. module: phuclong_pos_config
+#: model:ir.model.fields,field_description:phuclong_pos_config.field_pos_config__sale_type_default_id
+msgid "Sale type default"
+msgstr "Sale type mặc định"
+
+#. module: phuclong_pos_config
+#: model_terms:ir.ui.view,arch_db:phuclong_pos_config.phuclong_pos_config
+msgid "Sale type default when start order"
+msgstr "Sale type mặc định khi bắt đầu bán hàng"
+
+#. module: phuclong_pos_config
+#: model:ir.model.fields,field_description:phuclong_pos_config.field_pos_banner_config__start_date
+msgid "Start Date"
+msgstr "Ngày bắt đầu"
+
+#. module: phuclong_pos_config
+#: model:ir.model.fields,field_description:phuclong_pos_config.field_pos_config__stock_location_id
+msgid "Stock Location"
+msgstr ""
+
+#. module: phuclong_pos_config
+#: model:ir.model.fields,field_description:phuclong_pos_config.field_pos_banner_config__warehouse_ids
+msgid "Stores"
+msgstr "Cửa hàng"
+
+#. module: phuclong_pos_config
+#: model:ir.model.fields,field_description:phuclong_pos_config.field_pos_config__update_cashier_to_session
+#: model_terms:ir.ui.view,arch_db:phuclong_pos_config.phuclong_pos_config
+msgid "Update Cashier To Session"
+msgstr "Chỉnh sửa thông tin Thu ngân"
+
+#. module: phuclong_pos_config
+#: model_terms:ir.ui.view,arch_db:phuclong_pos_config.phuclong_pos_config
+msgid "Use Barcode Scanner or Card Scanner to Open Session"
+msgstr "Sử dụng máy quét mã vạch hoặc máy quét thẻ để mở ca bán hàng"
+
+#. module: phuclong_pos_config
+#: model:ir.model.fields,field_description:phuclong_pos_config.field_pos_config__use_replacement_printer
+msgid "Use Replacement Printer"
+msgstr "Dùng máy in bill thay thế"
+
+#. module: phuclong_pos_config
+#: model:ir.model.fields,field_description:phuclong_pos_config.field_pos_config__is_dollar_pos
+msgid "Use dollar"
+msgstr "Sử dụng dollar"
+
+#. module: phuclong_pos_config
+#: model_terms:ir.ui.view,arch_db:phuclong_pos_config.phuclong_pos_config
+msgid "Use for Call Center"
+msgstr ""
+
+#. module: phuclong_pos_config
+#: model:ir.model.fields,field_description:phuclong_pos_config.field_pos_config__use_for_mobile
+msgid "Use for Mobile App"
+msgstr "Nhận đơn Mobile App"
+
+#. module: phuclong_pos_config
+#: model:ir.model.fields,field_description:phuclong_pos_config.field_pos_config__use_multi_printer
+msgid "Use multiple printers"
+msgstr "Dùng nhiều máy in"
+
+#. module: phuclong_pos_config
+#: model_terms:ir.ui.view,arch_db:phuclong_pos_config.phuclong_pos_config
+msgid "Use multiple printers to print Receipt and Label"
+msgstr "Dùng nhiều máy in để in hóa đơn và label"
+
+#. module: phuclong_pos_config
+#: model_terms:ir.ui.view,arch_db:phuclong_pos_config.phuclong_pos_config
+msgid "Use to config IP to replacement printer"
+msgstr "Dùng để cấu hình địa chỉ IP máy in thay thế"
+
+#. module: phuclong_pos_config
+#: model_terms:ir.ui.view,arch_db:phuclong_pos_config.phuclong_pos_config
+msgid "Use to get order from Mobile App"
+msgstr "Nhận đơn hàng order từ Mobile App"
+
+#. module: phuclong_pos_config
+#: model:ir.model,name:phuclong_pos_config.model_pos_banner_config
+msgid "pos.banner.config"
+msgstr "Cấu hình quảng cáo"
+
+#~ msgid "Invalid"
+#~ msgstr "Hết hiệu lực"
+
+#~ msgid "State"
+#~ msgstr "Trạng thái"
+
+#~ msgid "Valid"
+#~ msgstr "Hiệu lực"

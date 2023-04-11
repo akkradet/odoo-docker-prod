@@ -1,0 +1,139 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data noupdate="0">
+        <!-- Add you code here -->
+        <!-- mobile.notification search view -->
+        <record id="mobile_notification_view_search" model="ir.ui.view">
+            <field name="name">mobile.notification.view.search</field>
+            <field name="model">mobile.notification</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="name"/>
+                    <field name="message"/>
+                    <field name="state"/>
+                    <field name="date_scheduled"/>
+                    <!-- Add your fields here -->
+                    <group expand="1" string="Group By...">
+                        <filter string="Type" name="groupby_noti_type" domain="[]" context="{'group_by':'noti_type'}"/>
+                        <filter string="Scheduled Date" name="groupby_date_scheduled" domain="[]" context="{'group_by':'date_scheduled:month'}"/>
+                        <filter string="State" name="groupby_state" domain="[]" context="{'group_by':'state'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+        <!-- mobile.notification tree view -->
+        <record id="mobile_notification_view_tree" model="ir.ui.view">
+            <field name="name">mobile.notification.view.tree</field>
+            <field name="model">mobile.notification</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <!-- Add your fields here -->
+                    <field name="name"/>
+                    <field name="noti_type"/>
+                    <field name="date_scheduled"/>
+                    <field name="create_date"/>
+                    <field name="create_uid"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+        <!-- mobile.notification form view -->
+        <record id="mobile_notification_view_form" model="ir.ui.view">
+            <field name="name">mobile.notification.view.form</field>
+            <field name="model">mobile.notification</field>
+            <field name="arch" type="xml">
+                <form string="">
+                    <header>
+                        <button name="action_confirm" type="object" string="Confirm" states='draft'/>
+                        <button name="action_send" type="object" string="Send Scheduled" states='confirm'/>
+                        <button name="action_done" type="object" string="Send Now" states='draft,confirm,in_progress' context="{'send_now': 1}" groups="phuclong_mobile_notification.group_mobile_notification_send_now"/>
+                        <button name="action_draft" type="object" string="Set Draft" states='in_progress,error'/>
+                        <field name="state" widget="statusbar"/>
+                    </header>
+                    <sheet>
+                        <widget name="web_ribbon" title="Done" bg_color="bg-success" states="done"/>
+                        <field name="image_thumbnail" widget="image" class="oe_avatar" options="{&quot;zoom&quot;: true, &quot;preview_image&quot;:&quot;image_thumbnail&quot;}" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                        <div class="oe_title">
+                            <label for="name"/>
+                            <h1>
+                                <field name="name" required="1" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                            </h1>
+                            <label for="message"/>
+                            <h4>
+                                <field name="message" required="1" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                            </h4>
+                        </div>
+                        <group>
+                            <group states="done">
+                                <field name="date_complete" readonly="1"/>
+                            </group>
+                            <group>
+                                <field name="cron_id" groups="base.group_no_one" readonly="1"/>
+                            </group>
+                        </group>
+                        <group>
+                            <group>
+                                <!-- Add your fields here -->
+                                <field name="display" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                                <field name="date_scheduled" attrs="{'readonly': [('state', '!=', 'draft')]}" required="1"/>
+                                <field name="noti_type" attrs="{'readonly': [('state', '!=', 'draft')]}" required="0"/>
+                                <field name="link_type" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                                <field name="show_case_id" attrs="{'readonly': [('state', '!=', 'draft')], 'required': [('link_type', '=', 'news')], 'invisible': [('link_type', '!=', 'news')]}" options="{'no_create': 1}" domain="[('is_published', '=', True)]"/>
+                                <field name="product_tmpl_id" attrs="{'readonly': [('state', '!=', 'draft')], 'required': [('link_type', '=', 'product')], 'invisible': [('link_type', '!=', 'product')]}" options="{'no_create': 1}" domain="[('available_in_mobile', '=', True)]"/>
+                                <field name="pos_order_id" attrs="{'readonly': [('state', '!=', 'draft')], 'required': [('link_type', '=', 'pos')], 'invisible': [('link_type', '!=', 'pos')]}" options="{'no_create': 1}" domain="[('order_in_app', '=', True), ('partner_id', 'in', partner_ids)]"/>
+                                <field name="coupon_app_id" attrs="{'readonly': [('state', '!=', 'draft')], 'invisible': [('link_type', '!=', 'reward')]}" options="{'no_create': 1}" domain="[('partner_id', 'in', partner_ids)]"/>
+                            </group>
+                            <group>
+                                <!-- Add your fields here -->
+                                <field name="image_1920" widget="image" options="{&quot;zoom&quot;: true, &quot;preview_image&quot;:&quot;image_128&quot;}" attrs="{'readonly': [('state', '!=', 'draft')], 'invisible': [('noti_type', '!=', 'popup')]}"/>
+                                <field name="all" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                                <field name="partner_ids" widget="many2many_tags" domain="[('authorized', '=', True), ('token_device', '!=', False)]" options="{'no_create': 1}" attrs="{'readonly': [('state', '!=', 'draft')], 'invisible': [('all', '=', True)], 'required': [('all', '!=', True)]}"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Read" name="notification_reads_page" attrs="{'invisible': [('date_complete', '=', False)]}">
+                                <field name="notification_read_ids" readonly="1">
+                                    <tree>
+                                        <field name="partner_id"/>
+                                        <field name="create_date"/>
+                                    </tree>
+                                </field>
+                            </page>
+                            <page string="Logs" name="logs_page">
+                                <field name="log_ids" readonly="1">
+                                    <tree>
+                                        <field name="type"/>
+                                        <field name="log"/>
+                                        <field name="create_date"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <!-- mobile.notification action window -->
+        <record id="mobile_notification_action" model="ir.actions.act_window">
+            <field name="name">Notifications</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">mobile.notification</field>
+            <field name="view_mode">tree,form</field>
+            <field name="context">{
+                'search_by_field_date': ['date_scheduled'],
+                'default_filter_array': 'month',
+                'search_default_groupby_state': 1,
+                'search_default_groupby_noti_type': 1,
+                'search_default_groupby_date_scheduled': 1,
+            }</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    <!-- Add Text Here -->
+                </p>
+                <p>
+                    <!-- More details about what a user can do with this object will be OK -->
+                </p>
+            </field>
+        </record>
+    </data>
+</odoo>

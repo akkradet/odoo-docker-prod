@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">>
+        <record id="monday" model="day.of.week.config">
+            <field name="name">Monday</field>
+            <field name="value">monday</field>
+        </record>
+        <record id="tuesday" model="day.of.week.config">
+            <field name="name">Tuesday</field>
+            <field name="value">tuesday</field>
+        </record>
+        <record id="wednesday" model="day.of.week.config">
+            <field name="name">Wednesday</field>
+            <field name="value">wednesday</field>
+        </record>
+        <record id="thursday" model="day.of.week.config">
+            <field name="name">Thursday</field>
+            <field name="value">thursday</field>
+        </record>
+        <record id="friday" model="day.of.week.config">
+            <field name="name">Friday</field>
+            <field name="value">friday</field>
+        </record>
+        <record id="saturday" model="day.of.week.config">
+            <field name="name">Saturday</field>
+            <field name="value">saturday</field>
+        </record>
+        <record id="sunday" model="day.of.week.config">
+            <field name="name">Sunday</field>
+            <field name="value">sunday</field>
+        </record>
+    </data>
+</odoo>

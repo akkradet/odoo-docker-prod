@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record model="ir.actions.act_window" id="action_product_surcharge_header">
+	        <field name="name">Product Surcharge</field>
+	        <field name="type">ir.actions.act_window</field>
+	        <field name="res_model">product.surcharge.header</field>
+	        <field name="view_mode">tree,form</field>	  
+	    </record>
+    </data>
+</odoo>
+    

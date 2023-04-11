@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+
+		<!-- Add you code here -->
+		<!-- res.partner inherit kanban view -->
+		<record id="res_partner_kanban_view" model="ir.ui.view">
+			<field name="name">res_partner_kanban_view_inherit</field>
+			<field name="model">res.partner</field>
+			<field name="inherit_id" ref="base.res_partner_kanban_view"/>
+			<field name="arch" type="xml">
+				<!-- Add you xpath here -->
+				<xpath expr="//field[@name='display_name']" position="after">
+					<!-- Add your fields here -->
+					<field name="customer"/>
+					<field name="mobile"/>
+					<field name="appear_code_id"/>
+					<field name="loyalty_level_id"/>
+					<field name="current_point_act"/>
+					<field name="total_point_act"/>
+				</xpath>
+				<xpath expr="//div[hasclass('oe_kanban_details')]/ul" position="replace">
+					<!-- Add your fields here -->
+					<ul>
+						<li t-if="record.parent_id.raw_value and !record.function.raw_value">
+							<field name="parent_id"/>
+						</li>
+						<li t-if="!record.parent_id.raw_value and record.function.raw_value">
+							<field name="function"/>
+						</li>
+						<li t-if="record.parent_id.raw_value and record.function.raw_value">
+							<field name="function"/>
+							<span>at</span>
+							<field name="parent_id"/>
+						</li>
+						<li t-if="record.mobile.raw_value">
+							<span>Mobile:</span>
+							<field name="mobile"/>
+						</li>
+						<t t-if="record.customer.raw_value">
+							<li t-if="record.appear_code_id.raw_value">
+								<span>Appear Code:</span>
+								<field name="appear_code_id"/>
+							</li>
+							<li>
+								<span>Total Point:</span>
+								<t t-esc="record.current_point_act.raw_value"/>
+								<t t-if="record.loyalty_level_id.raw_value">
+									<span>-</span>
+									<field name="loyalty_level_id"/>
+								</t>
+							</li>
+							<li>
+								<span>Available Point:</span>
+								<t t-esc="record.total_point_act.raw_value"/>
+							</li>
+						</t>
+					</ul>
+				</xpath>
+			</field>
+		</record>
+		<!-- res.partner inherit kanban view -->
+		<record id="view_partner_pos_kanban" model="ir.ui.view">
+			<field name="name">view_partner_pos_kanban_inherit</field>
+			<field name="model">res.partner</field>
+			<field name="inherit_id" ref="point_of_sale.view_partner_pos_kanban"/>
+			<field name="arch" type="xml">
+				<!-- Add you xpath here -->
+				<xpath expr="//span[hasclass('badge-pill')]/i[hasclass('fa-shopping-bag')]/.." position="attributes">
+					<attribute name="invisible">1</attribute>
+				</xpath>
+			</field>
+		</record>
+
+		<!-- res.partner inherit search view -->
+		<record id="view_res_partner_filter" model="ir.ui.view">
+			<field name="name">view_res_partner_filter_inherit</field>
+			<field name="model">res.partner</field>
+			<field name="inherit_id" ref="base.view_res_partner_filter"/>
+			<field name="arch" type="xml">
+				<!-- Add your xpath here -->
+				<xpath expr="//field[@name='user_id']" position="after">
+					<!-- Add your fields here -->
+					<field name="appear_code_id" context="{'search_appear_code': 1}"/>
+				</xpath>
+			</field>
+		</record>
+		<!-- res.partner inherit tree view -->
+		<record id="view_customer_tree_add_loyalty" model="ir.ui.view">
+			<field name="name">view_customer_tree_add_loyalty_inherit</field>
+			<field name="model">res.partner</field>
+			<field name="inherit_id" ref="besco_loyalty.view_customer_tree_add_loyalty"/>
+			<field name="arch" type="xml">
+				<!-- Add your xpath here -->
+				<xpath expr="//field[@name='loyalty_level_id']" position="attributes">
+					<attribute name="invisible">0</attribute>
+					<attribute name="optional">show</attribute>
+				</xpath>
+				<xpath expr="//field[@name='current_point_act']" position="attributes">
+					<attribute name="invisible">0</attribute>
+					<attribute name="optional">show</attribute>
+				</xpath>
+				<xpath expr="//field[@name='total_point_act']" position="attributes">
+					<attribute name="invisible">0</attribute>
+					<attribute name="optional">show</attribute>
+				</xpath>
+				<xpath expr="//field[@name='loyalty_level_id']" position="before">
+					<!-- Add your fields here -->
+					<field name="appear_code_id" optional="show"/>
+				</xpath>
+			</field>
+		</record>
+		<record id="res_partner_form_inherit_phuclong_cardcode" model="ir.ui.view">
+			<field name="name">res_partner_form_inherit_phuclong_cardcode</field>
+			<field name="model">res.partner</field>
+			<field name="inherit_id" ref="phuclong_partner.pl_view_customer_form_add_loyalty" />
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='expired_date']" position="after">
+					<label for="appear_code_id" attrs="{'invisible':[('customer','=',False)]}" />
+					<div class="o_row" attrs="{'invisible':[('customer','=',False)]}">
+						<field name="appear_code_id" readonly="True" options="{'no_open': True,'no_create': True,'no_create_edit': True}" />
+						<button name="action_update_cardcode" string="Update Cardcode" type="object" class="oe_highlight" attrs="{'invisible':[('active','=',False)]}"/>
+						<button name="button_unused_appear_code" string="Remove Cardcode" context="{'remove_appear_code':True}" type="object" attrs="{'invisible':[('appear_code_id','=',False)]}" confirm="Cardcode will be removed from customer and cardcode status will be updated into `CREATE`, are you sure you want to continue?"/>
+					</div>
+				</xpath>
+				<notebook position="inside">
+					<page string="Card Code History" attrs="{'invisible':[('customer','=',False)]}">
+						<field name="cardcode_histoy_ids">
+							<tree name="cardcode_histoy_tree" string="Cardcode Histoy">
+								<field name="old_cardcode" />
+								<field name="new_cardcode" />
+								<field name="user_id" />
+								<!-- <field name="reason" /> -->
+								<!-- <field name="payment_status" /> -->
+								<field name="date" />
+							</tree>
+						</field>
+					</page>
+				</notebook>
+			</field>
+		</record>
+	</data>
+</odoo>

@@ -1,0 +1,89 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* phuclong_restful_api
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0+e-20200401\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: phuclong_restful_api
+#: model:ir.model.fields,help:phuclong_restful_api.field_ir_model__rest_api
+msgid "Allow this model to be fetched through REST API"
+msgstr ""
+
+#. module: phuclong_restful_api
+#: model:ir.model.fields,field_description:phuclong_restful_api.field_api_history__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: phuclong_restful_api
+#: model:ir.model.fields,field_description:phuclong_restful_api.field_api_history__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: phuclong_restful_api
+#: model:ir.model.fields,field_description:phuclong_restful_api.field_api_history__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: phuclong_restful_api
+#: model:ir.model.fields,field_description:phuclong_restful_api.field_api_history__message_err
+msgid "Error"
+msgstr ""
+
+#. module: phuclong_restful_api
+#: model:ir.model.fields,field_description:phuclong_restful_api.field_api_history__name
+msgid "Function"
+msgstr ""
+
+#. module: phuclong_restful_api
+#: model:ir.model,name:phuclong_restful_api.model_api_history
+msgid "History API call"
+msgstr ""
+
+#. module: phuclong_restful_api
+#: model:ir.model.fields,field_description:phuclong_restful_api.field_api_history__id
+msgid "ID"
+msgstr ""
+
+#. module: phuclong_restful_api
+#: model:ir.model.fields,field_description:phuclong_restful_api.field_api_history____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: phuclong_restful_api
+#: model:ir.model.fields,field_description:phuclong_restful_api.field_api_history__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: phuclong_restful_api
+#: model:ir.model.fields,field_description:phuclong_restful_api.field_api_history__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: phuclong_restful_api
+#: model:ir.model,name:phuclong_restful_api.model_ir_model
+msgid "Models"
+msgstr ""
+
+#. module: phuclong_restful_api
+#: model:ir.model.fields,field_description:phuclong_restful_api.field_ir_model__rest_api
+msgid "REST API"
+msgstr ""
+
+#. module: phuclong_restful_api
+#: model:ir.model.fields,field_description:phuclong_restful_api.field_api_history__request_params
+msgid "Request Parameters"
+msgstr ""
+
+#. module: phuclong_restful_api
+#: model:ir.model.fields,field_description:phuclong_restful_api.field_api_history__time_call
+msgid "Time"
+msgstr ""

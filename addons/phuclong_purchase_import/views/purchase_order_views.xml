@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data noupdate="0">
+        <!-- Add you code here -->
+        <!-- purchase.order inherit form view -->
+        <record id="purchase_order_form_inherit" model="ir.ui.view">
+            <field name="name">purchase_order_form_inherit</field>
+            <field name="model">purchase.order</field>
+            <field name="inherit_id" ref="purchase.purchase_order_form"/>
+            <field name="arch" type="xml">
+                <!-- Add your xpath here -->
+                <xpath expr="//field[@name='order_line']" position="before">
+                    <group class="hidden-xs" col="6">
+                        <field name="file_data" filename="file_name" string="File Excel to import" attrs="{'readonly': [('state','not in',['draft'])]}"/>
+                        <div class="o_row">
+                            <button name="print_template" string="Template" type="object" class="oe_inline" attrs="{'invisible': ['|', ('state','not in',['draft']),('file_data','!=',False)]}"/>
+                            <button name="action_read_file" string="Read File" type="object" class="oe_inline oe_highlight" attrs="{'invisible': [('state','not in',['draft'])]}"/>
+                            <button name="action_log_failed" string="Logs" type="object" class="oe_inline btn-link" attrs="{'invisible': [('failed','=',0)]}">
+                                <field string="Error(s)" name="failed" widget="statinfo"/>
+                            </button>
+                        </div>
+                        <field name="file_name" invisible="1"/>
+                        <field name="log_failed" invisible="1"/>
+                    </group>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

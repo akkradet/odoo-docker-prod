@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<record id="wizard_update_cardcode_publish_form" model="ir.ui.view">
+			<field name="name">wizard_update_cardcode_publish_form</field>
+			<field name="model">wizard.update.cardcode.publish</field>
+			<field name="arch" type="xml">
+				<form string="Update Date">
+					<group>
+						<group>
+							<field name="cardcode_publish_id" required="1" readonly="1" force_save="1"/>
+						</group>
+						<group>
+							<field name="date_created"/>
+							<field name="date_expired"/>
+						</group>
+					</group>
+					<footer>
+						<button string="Update" type="object" name="update_date" class="oe_highlight" />
+						<button string="Cancel" special="cancel" />
+					</footer>
+				</form>
+			</field>
+		</record>
+
+		<record id="action_cardcode_publish_update_date" model="ir.actions.act_window">
+			<field name="name">Update Cardcode Publish Date</field>
+			<field name="res_model">wizard.update.cardcode.publish</field>
+			<field name="view_mode">form</field>
+			<field name="view_id" ref="wizard_update_cardcode_publish_form" />
+			<field name="target">new</field>
+		</record>
+
+	</data>
+</odoo>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<template id="phuclong_stock_assets_backend" name="phuclong_stock assets" inherit_id="web.assets_backend">
+        <xpath expr="." position="inside">
+        	<script type="text/javascript" src="/phuclong_stock/static/src/js/inventory_update_button_controller.js"></script>
+            <script type="text/javascript" src="/phuclong_stock/static/src/js/inventory_template_button_controller.js"></script>
+            <script type="text/javascript" src="/phuclong_stock/static/src/js/inventory_template_button_view.js"></script>
+        </xpath>
+   </template>
+</odoo>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+    	
+    	<record id="product_cup_default_form_view" model="ir.ui.view">
+	        <field name="name">product_cup_default_form_view</field>
+	        <field name="model">product.cup.default</field>
+	        <field name="arch" type="xml">
+	            <form>
+	                <sheet>
+                        <group>
+                        	<field name="sale_type_id" options="{'no_create': True, 'no_create_edit': True}"/>
+                        	<field name="cup_type_load_pos" invisible="1" />
+                        </group>
+                        <group>
+                        	<field name="cup_line_ids">
+	                        	<tree editable="top" default_order="sequence">
+		                    		<field name="cup_id" options="{'no_create': True, 'no_create_edit': True}" />
+		                    		<field name="lid_id" options="{'no_create': True, 'no_create_edit': True}" readonly="1"/>
+		                    		<field name="cup_type" readonly="1"/>
+		                    		<field name="sequence" />
+		                    	</tree>
+		                   	</field>
+                        </group>
+                  </sheet>
+	            </form>
+	        </field>
+	    </record>
+    
+        <record id="template_only_form_inherit_phuclong_pos" model="ir.ui.view">
+        	<field name="name">template_only_form_inherit_phuclong_pos</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id" ref="phuclong_product.template_only_form_inherit_phuclong"/>
+            <field name="arch" type="xml">
+            	<xpath expr="//field[@name='suitable_topping_ids']" position="after">
+                    <field name="cup_ids">
+                    	<tree>
+                    		<field name="sale_type_id" options="{'no_create': True, 'no_create_edit': True}" />
+                    	</tree>
+                    </field>
+                </xpath>
+            </field>
+        </record>
+        
+    </data>
+</odoo>

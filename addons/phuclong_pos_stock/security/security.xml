@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data noupdate="0">
+	    
+	    <record id="group_config_support_warehouse" model="res.groups">
+	        <field name="name">Config Support Warehouses</field>
+	        <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+	    </record>
+
+	    <record model="res.users" id="base.user_root">
+	        <field eval="[(4,ref('group_config_support_warehouse'))]" name="groups_id"/>
+	    </record>
+	
+	    <record model="res.users" id="base.user_admin">
+	        <field eval="[(4,ref('group_config_support_warehouse'))]" name="groups_id"/>
+	    </record>
+	    
+	    <!-- Profile -->
+		<record id="profile_config_support_warehouse" model="profile">
+        	<field name="name">Config Support Warehouses</field>
+	        <field name="groups_ids" eval="[
+				(6, 0, [ref('group_config_support_warehouse')]),
+			]"/>
+	        <field name="description">- Có quyền tạo và chỉnh sửa các phiếu bổ sung thêm kho cho user</field>
+	    </record>
+	</data>
+	
+</odoo>

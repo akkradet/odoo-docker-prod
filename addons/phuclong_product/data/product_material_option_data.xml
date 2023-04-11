@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="0">
+    
+  	   	<record id="product_material_option_none" model='product.material.option'>
+            <field name="type">none</field>
+            <field name="name">None</field>
+        </record>
+        <record id="product_material_option_below" model='product.material.option'>
+            <field name="type">below</field>
+            <field name="name">Below</field>
+        </record>
+        <record id="product_material_option_normal" model='product.material.option'>
+            <field name="type">normal</field>
+            <field name="name">Normal</field>
+        </record>
+        <record id="product_material_option_over" model='product.material.option'>
+            <field name="type">over</field>
+            <field name="name">Over</field>
+        </record>
+
+    </data>
+</odoo>

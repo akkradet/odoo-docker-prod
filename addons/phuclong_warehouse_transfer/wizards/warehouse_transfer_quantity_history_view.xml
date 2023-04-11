@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+	<record id="view_warehouse_transfer_quantity_history_form_inherit_phuclong_warehouse_transfer" model="ir.ui.view">
+		<field name="name">view.warehouse.transfer.quantity.history.form.inherit.phuclong.warehouse.transfer</field>
+		<field name="model">warehouse.transfer.quantity.history</field>
+		<field name="inherit_id" ref="besco_warehouse_transfer.view_warehouse_transfer_quantity_history_form"/>
+		<field name="arch" type="xml">
+			<xpath expr="//field[@name='warehouse_ids']" position="before">
+				<label for="date_request_from" />
+        		<div name="date_request_from">
+        			<field name="date_request_from" placeholder="Start Date" class="oe_inline" required="1"/>
+        			<strong> - </strong>
+        			<field name="date_request_to" placeholder="End Date" class="oe_inline" required="1"/>
+        		</div>
+            </xpath>
+            
+            <xpath expr="//button[@name='open_table']" position="before">
+				<button name="print_transfer_details" string="Print Transfer Details" type="object" class="btn-primary"/>
+            </xpath>
+		</field>
+	</record>
+
+</odoo>

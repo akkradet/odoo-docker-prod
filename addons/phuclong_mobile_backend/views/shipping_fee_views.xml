@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <record id="shipping_fee_tree" model="ir.ui.view">
+            <field name="name">shipping_fee_tree</field>
+            <field name="model">shipping.fee</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="distance_from"/>
+                    <field name="distance_to"/>
+                </tree>
+            </field>
+        </record>
+        <record id="shipping_fee_form" model="ir.ui.view">
+            <field name="name">shipping_fee_form</field>
+            <field name="model">shipping.fee</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name" required="1"/>
+                                <field name="distance_from" required="1"/>
+                                <field name="distance_to" required="1"/>
+                            </group>
+                            <group>
+                                <field name="quantity_product_min" required="1"/>
+                                <field name="quantity_product_max" required="1"/>
+                                <field name="delivery_cost" required="1"/>
+                                <field name="active" required="1"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record id="shipping_fee_act" model="ir.actions.act_window">
+            <field name="name">Shipping Fee</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">shipping.fee</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+    </data>
+</odoo>

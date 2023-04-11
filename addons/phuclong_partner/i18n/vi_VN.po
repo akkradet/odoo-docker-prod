@@ -1,0 +1,176 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-04-07 15:52+0000\n"
+"PO-Revision-Date: 2021-04-24 15:28+0000\n"
+"Last-Translator: Nguyễn Thanh Tùng <tung.nt@besco.vn>\n"
+"Language-Team: Vietnamese <http://weblate.besco.vn/projects/besco-phuc-long/"
+"phuclong_partner/vi_VN/>\n"
+"Language: vi_VN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 3.8\n"
+
+#. module: phuclong_partner
+#: model:ir.model.fields,field_description:phuclong_partner.field_res_partner__total_point_act
+#: model:ir.model.fields,field_description:phuclong_partner.field_res_users__total_point_act
+msgid "Available Point"
+msgstr "Điểm khả dụng"
+
+#. module: phuclong_partner
+#: model:ir.model.fields,field_description:phuclong_partner.field_res_partner__change_date_level
+#: model:ir.model.fields,field_description:phuclong_partner.field_res_users__change_date_level
+msgid "Card level change date"
+msgstr "Ngày thay đổi hạng thẻ"
+
+#. module: phuclong_partner
+#: model:ir.model.fields,field_description:phuclong_partner.field_res_partner__expired_date
+#: model:ir.model.fields,field_description:phuclong_partner.field_res_users__expired_date
+msgid "Card level expiration date"
+msgstr "Ngày hết hạng thẻ"
+
+#. module: phuclong_partner
+#: model:ir.model,name:phuclong_partner.model_res_partner
+msgid "Contact"
+msgstr "Liên lạc"
+
+#. module: phuclong_partner
+#: model_terms:ir.actions.act_window,help:phuclong_partner.act_res_partner_2_pos_order
+msgid "Create a new quotation, the first step of a new sale!"
+msgstr "Tạo bảng báo giá mới, bước đầu tiên của bán hàng !"
+
+#. module: phuclong_partner
+#: model:ir.model.fields,field_description:phuclong_partner.field_res_partner__is_default_vendor
+#: model:ir.model.fields,field_description:phuclong_partner.field_res_users__is_default_vendor
+msgid "Default Vendor"
+msgstr "Nhà cung cấp mặc định"
+
+#. module: phuclong_partner
+#: code:addons/phuclong_partner/models/partner.py:0
+#, python-format
+msgid "Default vendor have already %s-%s"
+msgstr "Nhà cung cấp mặc định đã có %s-%s"
+
+#. module: phuclong_partner
+#: model:ir.model.fields,field_description:phuclong_partner.field_res_partner__payment_pos_order_ref
+#: model:ir.model.fields,field_description:phuclong_partner.field_res_users__payment_pos_order_ref
+msgid "Lasted Payment Ref"
+msgstr ""
+
+#. module: phuclong_partner
+#: model:ir.model.fields,field_description:phuclong_partner.field_res_partner__mobile
+#: model:ir.model.fields,field_description:phuclong_partner.field_res_users__mobile
+msgid "Mobile"
+msgstr "Số di động"
+
+#. module: phuclong_partner
+#: code:addons/phuclong_partner/models/partner.py:0
+#, python-format
+msgid "Mobile must be unique!"
+msgstr "Số di động phải là duy nhất!"
+
+#. module: phuclong_partner
+#: model:ir.model.fields,field_description:phuclong_partner.field_res_partner__nearest_order_date
+#: model:ir.model.fields,field_description:phuclong_partner.field_res_users__nearest_order_date
+msgid "Nearest Order Date"
+msgstr "Giao dịch gần nhất"
+
+#. module: phuclong_partner
+#: model_terms:ir.ui.view,arch_db:phuclong_partner.partner_filter_inherit_phuclong_partner
+msgid "Need to assign loyalty card"
+msgstr "Cần gán mã thẻ loyalty"
+
+#. module: phuclong_partner
+#: model:ir.model.fields,field_description:phuclong_partner.field_res_partner__wallet_on_account
+#: model:ir.model.fields,field_description:phuclong_partner.field_res_users__wallet_on_account
+msgid "On account"
+msgstr "Số tiền On account"
+
+#. module: phuclong_partner
+#: model_terms:ir.actions.act_window,help:phuclong_partner.act_res_partner_2_pos_order
+#, fuzzy
+#| msgid ""
+#| "Once the quotation is confirmed by the customer, it becomes a sales order."
+#| "<br> You will be able to create an invoice and collect the payment."
+msgid ""
+"Once the quotation is confirmed by the customer, it becomes a sales order."
+"<br>\n"
+" You will be able to create an invoice and collect the payment."
+msgstr ""
+"Sau khi báo giá được xác nhận bởi khách hàng, nó sẽ trở thành một đơn đặt "
+"hàng. Bạn sẽ có thể tạo hóa đơn và thu thanh toán."
+
+#. module: phuclong_partner
+#: model:ir.model.fields,field_description:phuclong_partner.field_res_partner__pos_note
+#: model:ir.model.fields,field_description:phuclong_partner.field_res_users__pos_note
+msgid "POS Note"
+msgstr ""
+
+#. module: phuclong_partner
+#: model:ir.model.fields,field_description:phuclong_partner.field_res_partner__pos_order_ids
+#: model:ir.model.fields,field_description:phuclong_partner.field_res_users__pos_order_ids
+#: model_terms:ir.ui.view,arch_db:phuclong_partner.pl_view_customer_form_add_wallet
+msgid "POS Order"
+msgstr "Đơn đặt món POS"
+
+#. module: phuclong_partner
+#: model:ir.model.fields,field_description:phuclong_partner.field_res_partner__pos_order_count
+#: model:ir.model.fields,field_description:phuclong_partner.field_res_users__pos_order_count
+msgid "POS Order Count"
+msgstr "Số lượng đặt món POS"
+
+#. module: phuclong_partner
+#: model:ir.actions.act_window,name:phuclong_partner.act_res_partner_2_pos_order
+msgid "POS Orders"
+msgstr "Đơn đặt món POS"
+
+#. module: phuclong_partner
+#: model:ir.model.fields,field_description:phuclong_partner.field_res_partner__phone
+#: model:ir.model.fields,field_description:phuclong_partner.field_res_users__phone
+msgid "Phone"
+msgstr "Số điện thoại"
+
+#. module: phuclong_partner
+#: code:addons/phuclong_partner/models/partner.py:0
+#, python-format
+msgid "Phone must be unique!"
+msgstr "Số điện thoại phải là duy nhất!"
+
+#. module: phuclong_partner
+#: code:addons/phuclong_partner/models/partner.py:0
+#, python-format
+msgid "The Mobile number is already exist in system. Please check again !!"
+msgstr "Số di động đã tồn tại trên hệ thống. Vui lòng kiểm tra lại !!"
+
+#. module: phuclong_partner
+#: code:addons/phuclong_partner/models/partner.py:0
+#, python-format
+msgid "The Phone number is already exist in system. Please check again !!"
+msgstr "Số điện thoại đã tồn tại trên hệ thống. Vui lòng kiểm tra lại !!"
+
+#. module: phuclong_partner
+#: model:ir.model.fields,help:phuclong_partner.field_res_partner__pos_order_count
+#: model:ir.model.fields,help:phuclong_partner.field_res_users__pos_order_count
+msgid "The number of point of sales orders related to this customer"
+msgstr "Số điểm của đơn đặt hàng liên quan đến khách hàng này"
+
+#. module: phuclong_partner
+#: code:addons/phuclong_partner/models/partner.py:0
+#, python-format
+msgid "The value input cannot be less than 0!"
+msgstr "Giá trị nhập vào không được bé hơn 0 !"
+
+#. module: phuclong_partner
+#: model:ir.model.fields,field_description:phuclong_partner.field_res_partner__current_point_act
+#: model:ir.model.fields,field_description:phuclong_partner.field_res_users__current_point_act
+msgid "Total Point"
+msgstr "Tổng điểm"
+
+#. module: phuclong_partner
+#: model:ir.model.fields,field_description:phuclong_partner.field_res_partner__use_for_on_account
+#: model:ir.model.fields,field_description:phuclong_partner.field_res_users__use_for_on_account
+msgid "Use For On Account Partner"
+msgstr "Không tích điểm"

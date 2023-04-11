@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+	<!-- SEARCH VIEW -->
+	<record id="reason_config_view_search" model="ir.ui.view">
+		<field name="name">reason_config_view_search</field>
+		<field name="model">reason.config</field>
+		<field name="arch" type="xml">
+			<search string="Reason Config">
+				<field name="name" />
+				<field name="sequence" />
+			</search>
+		</field>
+	</record>
+
+	<!-- TREE VIEW -->
+	<record model="ir.ui.view" id="reason_config_view_tree">
+		<field name="name">reason_config_view_tree</field>
+		<field name="model">reason.config</field>
+		<field name="arch" type="xml">
+			<tree string="Reason Config" editable="bottom">
+				<field name="name" />
+				<field name="sequence" />
+				<field name="description" />
+			</tree>
+		</field>
+	</record>
+
+	<record model="ir.actions.act_window" id="reason_config_action">
+		<field name="name">Reason Config</field>
+		<field name="type">ir.actions.act_window</field>
+		<field name="res_model">reason.config</field>
+		<field name="view_mode">tree,form</field>
+		<field name="domain">[]</field>
+		<field name="context">{}</field>
+		<field name="search_view_id" ref="reason_config_view_search" />
+	</record>
+	
+	<menuitem
+            id="reason_config_menu"
+            name="Return Reason"
+            parent="purchase.menu_purchase_config"
+            action="reason_config_action"
+            sequence="1"
+            groups="base.group_erp_manager,purchase.group_purchase_manager"/>
+	
+</odoo>

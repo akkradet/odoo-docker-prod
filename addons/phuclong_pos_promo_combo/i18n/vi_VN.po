@@ -1,0 +1,689 @@
+msgid ""
+msgstr ""
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2021-05-23 05:05+0000\n"
+"Last-Translator: Nguyễn Thanh Tùng <tung.nt@besco.vn>\n"
+"Language-Team: Vietnamese <http://weblate.besco.vn/projects/besco-phuc-long/"
+"phuclong_pos_promo_combo/vi_VN/>\n"
+"Language: vi_VN\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 3.8\n"
+
+#. module: phuclong_pos_promo_combo
+#: code:addons/phuclong_pos_promo_combo/models/coupon_combo.py:0
+#, python-format
+msgid ""
+"\n"
+"- Error in Line "
+msgstr ""
+"\n"
+"- Lỗi trên dòng "
+
+#. module: phuclong_pos_promo_combo
+#: code:addons/phuclong_pos_promo_combo/models/combo.py:0
+#, python-format
+msgid " + Line %s:"
+msgstr ""
+
+#. module: phuclong_pos_promo_combo
+#: code:addons/phuclong_pos_promo_combo/models/combo.py:0
+#, python-format
+msgid " + Line %s: "
+msgstr ""
+
+#. module: phuclong_pos_promo_combo
+#: code:addons/phuclong_pos_promo_combo/models/combo.py:0
+#, python-format
+msgid "%s: Unit price must be smaller than Sub price"
+msgstr "%s: Đơn giá trong combo phải nhỏ hơn hoặc bằng Đơn giá tạm tính"
+
+#. module: phuclong_pos_promo_combo
+#: model:ir.actions.report,print_report_name:phuclong_pos_promo_combo.report_coupon_employee
+msgid "'Báo cáo Coupon Nhân viên' + '.ods'"
+msgstr "'Báo cáo Coupon Nhân viên' + '.ods'"
+
+#. module: phuclong_pos_promo_combo
+#: model:ir.actions.report,print_report_name:phuclong_pos_promo_combo.report_import_coupon_employee
+msgid "'Temmplate Import Nhân viên' + '.ods'"
+msgstr "'Temmplate Import Nhanvien' + '.ods'"
+
+#. module: phuclong_pos_promo_combo
+#: model:ir.actions.report,print_report_name:phuclong_pos_promo_combo.report_import_product_combo
+msgid "'Template Import Product Combo' + '.ods'"
+msgstr "'Template Import Product Combo' + '.ods'"
+
+#. module: phuclong_pos_promo_combo
+#: model:ir.model.fields,field_description:phuclong_pos_promo_combo.field_sale_promo_combo__message_needaction
+msgid "Action Needed"
+msgstr "Hành động cần thiết"
+
+#. module: phuclong_pos_promo_combo
+#: model:ir.model.fields,field_description:phuclong_pos_promo_combo.field_sale_promo_combo__active
+msgid "Active"
+msgstr "Hiệu lực"
+
+#. module: phuclong_pos_promo_combo
+#: model:ir.model.fields,field_description:phuclong_pos_promo_combo.field_crm_voucher_info__appear_code_id
+msgid "Appear Card Code"
+msgstr "Mã thẻ nổi"
+
+#. module: phuclong_pos_promo_combo
+#: model:ir.model.fields,field_description:phuclong_pos_promo_combo.field_sale_promo_combo_line__apply_on
+msgid "Apply On"
+msgstr "Áp dụng"
+
+#. module: phuclong_pos_promo_combo
+#: model:ir.model.fields,field_description:phuclong_pos_promo_combo.field_crm_voucher_info__apply_for_employee
+#: model:ir.model.fields,field_description:phuclong_pos_promo_combo.field_crm_voucher_publish__apply_for_employee
+msgid "Apply for Employee"
+msgstr "Áp dụng cho nhân viên"
+
+#. module: phuclong_pos_promo_combo
+#: model:ir.model.fields,field_description:phuclong_pos_promo_combo.field_crm_voucher_publish__apply_for_themos_cup_promo
+msgid "Apply for Thermos Cup Promotion"
+msgstr "Áp dụng cho CTKM ly giữ nhiệt"
+
+#. module: phuclong_pos_promo_combo
+#: model_terms:ir.ui.view,arch_db:phuclong_pos_promo_combo.sale_promo_combo_line_form
+#: model_terms:ir.ui.view,arch_db:phuclong_pos_promo_combo.view_sale_promo_combo_form
+msgid "Apply on"
+msgstr "Áp dụng"
+
+#. module: phuclong_pos_promo_combo
+#: model:ir.model.fields,field_description:phuclong_pos_promo_combo.field_crm_voucher_publish__apply_on_combo
+msgid "Apply on Combo"
+msgstr "Áp dụng cho combo"
+
+#. module: phuclong_pos_promo_combo
+#: model_terms:ir.ui.view,arch_db:phuclong_pos_promo_combo.view_sale_promo_combo_form
+msgid "Approve"
+msgstr "Duyệt"
+
+#. module: phuclong_pos_promo_combo
+#: model:ir.model.fields.selection,name:phuclong_pos_promo_combo.selection__sale_promo_combo__state__approved
+msgid "Approved"
+msgstr "Đã duyệt"
+
+#. module: phuclong_pos_promo_combo
+#: model:ir.model.fields,field_description:phuclong_pos_promo_combo.field_sale_promo_combo__message_attachment_count
+msgid "Attachment Count"
+msgstr "Tệp đính kèm"
+
+#. module: phuclong_pos_promo_combo
+#: model:ir.model.fields.selection,name:phuclong_pos_promo_combo.selection__sale_promo_combo__state__cancel
+#: model_terms:ir.ui.view,arch_db:phuclong_pos_promo_combo.view_sale_promo_combo_form
+msgid "Cancel"
+msgstr "Huỷ"
+
+#. module: phuclong_pos_promo_combo
+#: model:ir.model.fields,field_description:phuclong_pos_promo_combo.field_sale_promo_combo_line__categories_dom
+msgid "Categories Dom"
+msgstr "Danh mục Dom"
+
+#. module: phuclong_pos_promo_combo
+#: model:ir.model.fields.selection,name:phuclong_pos_promo_combo.selection__sale_promo_combo_line__apply_on__categ
+msgid "Category"
+msgstr "Ngành hàng"
+
+#. module: phuclong_pos_promo_combo
+#: model:ir.model.fields,field_description:phuclong_pos_promo_combo.field_sale_promo_combo_line__categ_ids
+#, fuzzy
+#| msgid "Category"
+msgid "Category List"
+msgstr "Ngành hàng"
+
+#. module: phuclong_pos_promo_combo
+#: model:ir.model.fields,help:phuclong_pos_promo_combo.field_sale_promo_combo_line__file
+msgid "Choose file Excel"
+msgstr "Chọn tệp Excel"
+
+#. module: phuclong_pos_promo_combo
+#: model:ir.model,name:phuclong_pos_promo_combo.model_sale_promo_combo
+#: model:ir.model.fields,field_description:phuclong_pos_promo_combo.field_crm_voucher_publish__promo_combo_id
+#: model:ir.model.fields,field_description:phuclong_pos_promo_combo.field_pos_order_line__combo_id
+msgid "Combo"
+msgstr "Combo"
+
+#. module: phuclong_pos_promo_combo
+#: model:ir.model,name:phuclong_pos_promo_combo.model_sale_promo_combo_line
+msgid "Combo Line"
+msgstr "Dòng Combo"
+
+#. module: phuclong_pos_promo_combo
+#: model:ir.model,name:phuclong_pos_promo_combo.model_sale_promo_combo_line_detail
+msgid "Combo Line Detail"
+msgstr "Chi tiết Combo"
+
+#. module: phuclong_pos_promo_combo
+#: model:ir.model.fields,field_description:phuclong_pos_promo_combo.field_sale_promo_combo_line__combo_line_detail_ids
+msgid "Combo Line Details"
+msgstr "Chi tiết Combo"
+
+#. module: phuclong_pos_promo_combo
+#: model:ir.model.fields,field_description:phuclong_pos_promo_combo.field_sale_promo_combo_line__name
+msgid "Combo Line Name"
+msgstr "Tên dòng Combo"
+
+#. module: phuclong_pos_promo_combo
+#: model:ir.model.fields,field_description:phuclong_pos_promo_combo.field_sale_promo_combo__combo_line_ids
+msgid "Combo Lines"
+msgstr "Dòng Combo"
+
+#. module: phuclong_pos_promo_combo
+#: model:ir.model.fields,field_description:phuclong_pos_promo_combo.field_sale_promo_combo__combo_price
+#: model_terms:ir.ui.view,arch_db:phuclong_pos_promo_combo.view_sale_promo_combo_form
+msgid "Combo Price"
+msgstr "Giá Combo"
+
+#. module: phuclong_pos_promo_combo
+#: model:ir.actions.act_window,name:phuclong_pos_promo_combo.action_sale_promotion_combo
+#: model:ir.ui.menu,name:phuclong_pos_promo_combo.menu_action_sale_promotion_combo
+msgid "Combo Promotions"
+msgstr "Khuyến mãi Combo"
+
+#. module: phuclong_pos_promo_combo
+#: model:ir.model.fields,field_description:phuclong_pos_promo_combo.field_pos_order_line__combo_qty
+msgid "Combo Qty"
+msgstr "Số lượng"
+
+#. module: phuclong_pos_promo_combo
+#: model:ir.model.fields,field_description:phuclong_pos_promo_combo.field_pos_order_line__combo_seq
+msgid "Combo sequence"
+msgstr "Số thứ tự Combo"
+
+#. module: phuclong_pos_promo_combo
+#: model_terms:ir.ui.view,arch_db:phuclong_pos_promo_combo.view_sale_promo_combo_form
+msgid "Condition"
+msgstr "Điều kiện"
+
+#. module: phuclong_pos_promo_combo
+#. openerp-web
+#: code:addons/phuclong_pos_promo_combo/static/src/js/models.js:0
+#, python-format
+msgid "Coupon Combo"
+msgstr "Coupon Combo"
+
+#. module: phuclong_pos_promo_combo
+#: model:ir.model.fields.selection,name:phuclong_pos_promo_combo.selection__report_coupon_voucher__type__coupon_for_employee
+msgid "Coupon For Employee"
+msgstr "Coupon cho nhân viên"
+
+#. module: phuclong_pos_promo_combo
+#: model:ir.model,name:phuclong_pos_promo_combo.model_crm_voucher_info
+msgid "Coupon Information"
+msgstr "Thông tin Coupon"
+
+#. module: phuclong_pos_promo_combo
+#: model:ir.model,name:phuclong_pos_promo_combo.model_crm_voucher_publish
+msgid "Coupon Publish"
+msgstr "Phát hành Coupon"
+
+#. module: phuclong_pos_promo_combo
+#. openerp-web
+#: code:addons/phuclong_pos_promo_combo/static/src/js/models.js:0
+#, python-format
+msgid "Coupon đã được nhập !!"
+msgstr ""
+
+#. module: phuclong_pos_promo_combo
+#: model:ir.model.fields,field_description:phuclong_pos_promo_combo.field_day_of_week_config__create_uid
+#: model:ir.model.fields,field_description:phuclong_pos_promo_combo.field_sale_promo_combo__create_uid
+#: model:ir.model.fields,field_description:phuclong_pos_promo_combo.field_sale_promo_combo_line__create_uid
+#: model:ir.model.fields,field_description:phuclong_pos_promo_combo.field_sale_promo_combo_line_detail__create_uid
+msgid "Created by"
+msgstr "Được tạo bởi"
+
+#. module: phuclong_pos_promo_combo
+#: model:ir.model.fields,field_description:phuclong_pos_promo_combo.field_day_of_week_config__create_date
+#: model:ir.model.fields,field_description:phuclong_pos_promo_combo.field_sale_promo_combo__create_date
+#: model:ir.model.fields,field_description:phuclong_pos_promo_combo.field_sale_promo_combo_line__create_date
+#: model:ir.model.fields,field_description:phuclong_pos_promo_combo.field_sale_promo_combo_line_detail__create_date
+msgid "Created on"
+msgstr "Được tạo vào"
+
+#. module: phuclong_pos_promo_combo
+#: model:ir.model.fields,field_description:phuclong_pos_promo_combo.field_sale_promo_combo__day_of_week
+#: model_terms:ir.ui.view,arch_db:phuclong_pos_promo_combo.day_of_week_tree_view
+msgid "Day of Week"
+msgstr "Thứ trong tuần"
+
+#. module: phuclong_pos_promo_combo
+#: model:ir.actions.act_window,name:phuclong_pos_promo_combo.action_day_of_week_config
+#: model:ir.ui.menu,name:phuclong_pos_promo_combo.menu_action_day_of_week_config
+msgid "Day of Week Configuration"
+msgstr "Cấu hình thứ trong tuần"
+
+#. module: phuclong_pos_promo_combo
+#: model:ir.model.fields,help:phuclong_pos_promo_combo.field_sale_promo_combo_line_detail__uom_id
+msgid "Default Unit of Measure used for storage."
+msgstr "Đơn vị đo lường mặc định được sử dụng để lưu trữ."
+
+#. module: phuclong_pos_promo_combo
+#: model:ir.model.fields,field_description:phuclong_pos_promo_combo.field_day_of_week_config__display_name
+#: model:ir.model.fields,field_description:phuclong_pos_promo_combo.field_sale_promo_combo__display_name
+#: model:ir.model.fields,field_description:phuclong_pos_promo_combo.field_sale_promo_combo_line__display_name
+#: model:ir.model.fields,field_description:phuclong_pos_promo_combo.field_sale_promo_combo_line_detail__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: phuclong_pos_promo_combo
+#: model:ir.model.fields.selection,name:phuclong_pos_promo_combo.selection__sale_promo_combo__state__draft
+msgid "Draft"
+msgstr "Nháp"
+
+#. module: phuclong_pos_promo_combo
+#: model:ir.model.fields,field_description:phuclong_pos_promo_combo.field_crm_voucher_info__employee_id
+msgid "Employee"
+msgstr "Nhân viên"
+
+#. module: phuclong_pos_promo_combo
+#: code:addons/phuclong_pos_promo_combo/models/coupon_combo.py:0
+#, python-format
+msgid "Employee code is not available "
+msgstr "Mã nhân viên không khả dụng "
+
+#. module: phuclong_pos_promo_combo
+#: model:ir.model.fields,field_description:phuclong_pos_promo_combo.field_sale_promo_combo__end_date
+msgid "End Date"
+msgstr "Ngày kết thúc"
+
+#. module: phuclong_pos_promo_combo
+#: model:ir.model.fields,field_description:phuclong_pos_promo_combo.field_sale_promo_combo__end_hour
+msgid "End Hour"
+msgstr "Giờ kết thúc"
+
+#. module: phuclong_pos_promo_combo
+#. openerp-web
+#: code:addons/phuclong_pos_promo_combo/static/src/js/models.js:0
+#, python-format
+msgid "Error: Could not Save Changes"
+msgstr "Lỗi: không thể lưu thay đổi"
+
+#. module: phuclong_pos_promo_combo
+#: model:ir.model.fields,field_description:phuclong_pos_promo_combo.field_sale_promo_combo_line__file
+msgid "File"
+msgstr "File"
+
+#. module: phuclong_pos_promo_combo
+#: model:ir.model.fields,field_description:phuclong_pos_promo_combo.field_sale_promo_combo_line__file_name
+msgid "Filename"
+msgstr "Tên file"
+
+#. module: phuclong_pos_promo_combo
+#: model:ir.model.fields,field_description:phuclong_pos_promo_combo.field_sale_promo_combo__message_follower_ids
+msgid "Followers"
+msgstr "Theo dõi"
+
+#. module: phuclong_pos_promo_combo
+#: model:ir.model.fields,field_description:phuclong_pos_promo_combo.field_sale_promo_combo__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "Theo dõi (Kênh)"
+
+#. module: phuclong_pos_promo_combo
+#: model:ir.model.fields,field_description:phuclong_pos_promo_combo.field_sale_promo_combo__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Theo dõi (Đối tác)"
+
+#. module: phuclong_pos_promo_combo
+#: model:ir.model.fields,field_description:phuclong_pos_promo_combo.field_day_of_week_config__id
+#: model:ir.model.fields,field_description:phuclong_pos_promo_combo.field_sale_promo_combo__id
+#: model:ir.model.fields,field_description:phuclong_pos_promo_combo.field_sale_promo_combo_line__id
+#: model:ir.model.fields,field_description:phuclong_pos_promo_combo.field_sale_promo_combo_line_detail__id
+msgid "ID"
+msgstr "ID"
+
+#. module: phuclong_pos_promo_combo
+#: model:ir.model.fields,help:phuclong_pos_promo_combo.field_sale_promo_combo__message_needaction
+#: model:ir.model.fields,help:phuclong_pos_promo_combo.field_sale_promo_combo__message_unread
+msgid "If checked, new messages require your attention."
+msgstr "Nếu được đánh dấu, hãy lưu ý các tin nhắn mới."
+
+#. module: phuclong_pos_promo_combo
+#: model:ir.model.fields,help:phuclong_pos_promo_combo.field_sale_promo_combo__message_has_error
+#: model:ir.model.fields,help:phuclong_pos_promo_combo.field_sale_promo_combo__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "Nếu được đánh dấu, một số tin nhắn gửi lỗi."
+
+#. module: phuclong_pos_promo_combo
+#: model_terms:ir.ui.view,arch_db:phuclong_pos_promo_combo.sale_promo_combo_line_form
+msgid "Import"
+msgstr "Import"
+
+#. module: phuclong_pos_promo_combo
+#: model:ir.model.fields,field_description:phuclong_pos_promo_combo.field_sale_promo_combo__message_is_follower
+msgid "Is Follower"
+msgstr "Là người theo dõi"
+
+#. module: phuclong_pos_promo_combo
+#: model:ir.model.fields,field_description:phuclong_pos_promo_combo.field_pos_order_line__is_done_combo
+msgid "Is done combo"
+msgstr "Hoàn thành Combo"
+
+#. module: phuclong_pos_promo_combo
+#: model:ir.model.fields,field_description:phuclong_pos_promo_combo.field_day_of_week_config____last_update
+#: model:ir.model.fields,field_description:phuclong_pos_promo_combo.field_sale_promo_combo____last_update
+#: model:ir.model.fields,field_description:phuclong_pos_promo_combo.field_sale_promo_combo_line____last_update
+#: model:ir.model.fields,field_description:phuclong_pos_promo_combo.field_sale_promo_combo_line_detail____last_update
+msgid "Last Modified on"
+msgstr "Chỉnh sửa lần cuối vào"
+
+#. module: phuclong_pos_promo_combo
+#: model:ir.model.fields,field_description:phuclong_pos_promo_combo.field_day_of_week_config__write_uid
+#: model:ir.model.fields,field_description:phuclong_pos_promo_combo.field_sale_promo_combo__write_uid
+#: model:ir.model.fields,field_description:phuclong_pos_promo_combo.field_sale_promo_combo_line__write_uid
+#: model:ir.model.fields,field_description:phuclong_pos_promo_combo.field_sale_promo_combo_line_detail__write_uid
+msgid "Last Updated by"
+msgstr "Cập nhật lần cuối bởi"
+
+#. module: phuclong_pos_promo_combo
+#: model:ir.model.fields,field_description:phuclong_pos_promo_combo.field_day_of_week_config__write_date
+#: model:ir.model.fields,field_description:phuclong_pos_promo_combo.field_sale_promo_combo__write_date
+#: model:ir.model.fields,field_description:phuclong_pos_promo_combo.field_sale_promo_combo_line__write_date
+#: model:ir.model.fields,field_description:phuclong_pos_promo_combo.field_sale_promo_combo_line_detail__write_date
+msgid "Last Updated on"
+msgstr "Cập nhật lần cuối vào"
+
+#. module: phuclong_pos_promo_combo
+#: code:addons/phuclong_pos_promo_combo/models/coupon_combo.py:0
+#, python-format
+msgid "List of employees have issued a coupon code:"
+msgstr ""
+
+#. module: phuclong_pos_promo_combo
+#: model:ir.model.fields,field_description:phuclong_pos_promo_combo.field_sale_promo_combo__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "Đính kèm chính"
+
+#. module: phuclong_pos_promo_combo
+#: model:ir.model.fields,field_description:phuclong_pos_promo_combo.field_sale_promo_combo__message_has_error
+msgid "Message Delivery error"
+msgstr "Tin nhắn báo lỗi"
+
+#. module: phuclong_pos_promo_combo
+#: model:ir.model.fields,field_description:phuclong_pos_promo_combo.field_sale_promo_combo__message_ids
+msgid "Messages"
+msgstr "Tin nhắn"
+
+#. module: phuclong_pos_promo_combo
+#: model:ir.model.fields,field_description:phuclong_pos_promo_combo.field_day_of_week_config__name
+#: model:ir.model.fields,field_description:phuclong_pos_promo_combo.field_day_of_week_config__value
+#: model:ir.model.fields,field_description:phuclong_pos_promo_combo.field_sale_promo_combo__name
+msgid "Name"
+msgstr "Tên"
+
+#. module: phuclong_pos_promo_combo
+#: model:ir.model.fields,field_description:phuclong_pos_promo_combo.field_sale_promo_combo__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Số lượng hành động"
+
+#. module: phuclong_pos_promo_combo
+#: model:ir.model.fields,field_description:phuclong_pos_promo_combo.field_sale_promo_combo__message_has_error_counter
+msgid "Number of errors"
+msgstr "Số lượng lỗi"
+
+#. module: phuclong_pos_promo_combo
+#: model:ir.model.fields,help:phuclong_pos_promo_combo.field_sale_promo_combo__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "Số lượng tin nhắn yêu cầu hành động"
+
+#. module: phuclong_pos_promo_combo
+#: model:ir.model.fields,help:phuclong_pos_promo_combo.field_sale_promo_combo__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "Số lượng tin nhắn báo lỗi"
+
+#. module: phuclong_pos_promo_combo
+#: model:ir.model.fields,help:phuclong_pos_promo_combo.field_sale_promo_combo__message_unread_counter
+msgid "Number of unread messages"
+msgstr "Số lượng tin nhắn chưa đọc"
+
+#. module: phuclong_pos_promo_combo
+#: model:ir.model.fields,field_description:phuclong_pos_promo_combo.field_sale_promo_combo__member_category
+msgid "Partner Category"
+msgstr "Ngành hàng cha"
+
+#. module: phuclong_pos_promo_combo
+#: model:ir.model,name:phuclong_pos_promo_combo.model_pos_order_line
+msgid "Point of Sale Order Lines"
+msgstr "Dòng đơn hàng POS"
+
+#. module: phuclong_pos_promo_combo
+#: model:ir.model.fields,field_description:phuclong_pos_promo_combo.field_sale_promo_combo_line_detail__unit_price_combo
+msgid "Price Unit in Combo"
+msgstr "Đơn giá trong Combo"
+
+#. module: phuclong_pos_promo_combo
+#: model:ir.model.fields,field_description:phuclong_pos_promo_combo.field_sale_promo_combo_line_detail__product_id
+msgid "Product"
+msgstr "Danh sách sản phẩm"
+
+#. module: phuclong_pos_promo_combo
+#: model:ir.model.fields,field_description:phuclong_pos_promo_combo.field_sale_promo_combo_line__product_list_ids
+#: model:ir.model.fields.selection,name:phuclong_pos_promo_combo.selection__sale_promo_combo_line__apply_on__product_list
+msgid "Product List"
+msgstr "Danh sách sản phẩm"
+
+#. module: phuclong_pos_promo_combo
+#: model:res.groups,name:phuclong_pos_promo_combo.group_promotion_approval
+msgid "Promotion Approval"
+msgstr "Duyệt chương trình khuyến mãi"
+
+#. module: phuclong_pos_promo_combo
+#: model:ir.model,name:phuclong_pos_promo_combo.model_sale_promo_header
+#, fuzzy
+#| msgid "Sale Promotion Header"
+msgid "Promotion Header"
+msgstr "Tiều đề khuyến mãi"
+
+#. module: phuclong_pos_promo_combo
+#: model_terms:ir.ui.view,arch_db:phuclong_pos_promo_combo.view_sale_promo_combo_form
+msgid "Promotion Name"
+msgstr "Tên chương trình khuyến mãi"
+
+#. module: phuclong_pos_promo_combo
+#: model:ir.model.fields,field_description:phuclong_pos_promo_combo.field_sale_promo_combo_line__qty_combo
+msgid "Qty in Combo"
+msgstr "SL trong Combo"
+
+#. module: phuclong_pos_promo_combo
+#: model:ir.model.fields,field_description:phuclong_pos_promo_combo.field_report_coupon_voucher__type
+msgid "Report Type"
+msgstr "Loại báo cáo"
+
+#. module: phuclong_pos_promo_combo
+#: model:ir.model.fields,field_description:phuclong_pos_promo_combo.field_sale_promo_combo_line__required_different
+msgid "Required Different Product "
+msgstr "Yêu cầu mua khác sản phẩm "
+
+#. module: phuclong_pos_promo_combo
+#: model:ir.model.fields,field_description:phuclong_pos_promo_combo.field_sale_promo_combo__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "SMS báo lỗi"
+
+#. module: phuclong_pos_promo_combo
+#: model:ir.model.fields,field_description:phuclong_pos_promo_combo.field_sale_promo_combo_line__sale_promo_combo_id
+msgid "Sale Promo Combo"
+msgstr "Khuyến mãi Combo"
+
+#. module: phuclong_pos_promo_combo
+#: model:ir.model.fields,field_description:phuclong_pos_promo_combo.field_sale_promo_combo_line_detail__sale_promo_combo_line_id
+#, fuzzy
+#| msgid "Sale Promo Combo"
+msgid "Sale Promo Combo Line"
+msgstr "Khuyến mãi Combo"
+
+#. module: phuclong_pos_promo_combo
+#: model_terms:ir.ui.view,arch_db:phuclong_pos_promo_combo.view_sale_promo_combo_form
+#: model_terms:ir.ui.view,arch_db:phuclong_pos_promo_combo.view_sale_promo_combo_tree
+msgid "Sale Promotion Header"
+msgstr "Tiều đề khuyến mãi"
+
+#. module: phuclong_pos_promo_combo
+#: model_terms:ir.ui.view,arch_db:phuclong_pos_promo_combo.sale_promo_combo_line_form
+msgid "Sale Promotion Line"
+msgstr "Dòng khuyến mãi"
+
+#. module: phuclong_pos_promo_combo
+#: model:ir.model.fields,field_description:phuclong_pos_promo_combo.field_sale_promo_combo__sale_type_ids
+msgid "Sale Type"
+msgstr "Sale type"
+
+#. module: phuclong_pos_promo_combo
+#: model_terms:ir.ui.view,arch_db:phuclong_pos_promo_combo.view_sale_promo_combo_form
+msgid "Set to Draft"
+msgstr "Chuyển về Nháp"
+
+#. module: phuclong_pos_promo_combo
+#: model:ir.model.fields,field_description:phuclong_pos_promo_combo.field_sale_promo_combo__start_date
+msgid "Start Date"
+msgstr "Ngày bắt đầu"
+
+#. module: phuclong_pos_promo_combo
+#: model:ir.model.fields,field_description:phuclong_pos_promo_combo.field_sale_promo_combo__start_hour
+msgid "Start Hour"
+msgstr "Giờ bắt đầu"
+
+#. module: phuclong_pos_promo_combo
+#: model:ir.model.fields,field_description:phuclong_pos_promo_combo.field_sale_promo_combo__state
+msgid "State"
+msgstr "Trạng thái"
+
+#. module: phuclong_pos_promo_combo
+#: model:ir.model.fields,field_description:phuclong_pos_promo_combo.field_sale_promo_combo__warehouse_ids
+#: model_terms:ir.ui.view,arch_db:phuclong_pos_promo_combo.view_sale_promo_combo_form
+msgid "Stores"
+msgstr "Cửa hàng"
+
+#. module: phuclong_pos_promo_combo
+#: model:ir.model.fields,field_description:phuclong_pos_promo_combo.field_sale_promo_combo_line_detail__sub_price
+msgid "Sub Price"
+msgstr "Đơn giá tạm tính"
+
+#. module: phuclong_pos_promo_combo
+#: model:ir.model.fields,field_description:phuclong_pos_promo_combo.field_sale_promo_combo_line__sub_total
+msgid "Subtotal"
+msgstr "Thành tiền"
+
+#. module: phuclong_pos_promo_combo
+#: model:ir.model.fields,field_description:phuclong_pos_promo_combo.field_sale_promo_combo__sum_of_qty
+msgid "Sum of quantity"
+msgstr "Tổng SL"
+
+#. module: phuclong_pos_promo_combo
+#: model_terms:ir.ui.view,arch_db:phuclong_pos_promo_combo.sale_promo_combo_line_form
+msgid "Template"
+msgstr "Bản mẫu"
+
+#. module: phuclong_pos_promo_combo
+#: code:addons/phuclong_pos_promo_combo/models/combo.py:0
+#, python-format
+msgid ""
+"The Combo <b><em>%s</em></b> has been <b>Canceled</b> by <b><b><em>%s</em></"
+"b></b>."
+msgstr ""
+"Combo <b><em>%s</em></b> đã bị <b>Huỷ</b> bởi <b><b><em>%s</em></b></b>."
+
+#. module: phuclong_pos_promo_combo
+#: code:addons/phuclong_pos_promo_combo/models/combo.py:0
+#, python-format
+msgid ""
+"The Combo <b><em>%s</em></b> has been <b>Confirmed</b> by <b><b><em>%s</em></"
+"b></b>."
+msgstr ""
+"Combo <b><em>%s</em></b> đã được<b>Xác nhận</b> bởi <b><b><em>%s</em></b></"
+"b>."
+
+#. module: phuclong_pos_promo_combo
+#: model_terms:ir.ui.view,arch_db:phuclong_pos_promo_combo.view_sale_promo_combo_form
+msgid "Total Qty"
+msgstr "Tổng SL"
+
+#. module: phuclong_pos_promo_combo
+#: model:ir.model.fields,field_description:phuclong_pos_promo_combo.field_sale_promo_combo_line__unit_price_combo
+msgid "Unit Price in Combo"
+msgstr "Đơn giá trong Combo"
+
+#. module: phuclong_pos_promo_combo
+#: model:ir.model.fields,field_description:phuclong_pos_promo_combo.field_sale_promo_combo__message_unread
+msgid "Unread Messages"
+msgstr "Tin nhắn chưa đọc"
+
+#. module: phuclong_pos_promo_combo
+#: model:ir.model.fields,field_description:phuclong_pos_promo_combo.field_sale_promo_combo__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "Số Tin nhắn chưa đọc"
+
+#. module: phuclong_pos_promo_combo
+#: model:ir.model.fields,field_description:phuclong_pos_promo_combo.field_sale_promo_combo_line_detail__uom_id
+msgid "Uom"
+msgstr "Uom"
+
+#. module: phuclong_pos_promo_combo
+#: model:ir.model.fields,field_description:phuclong_pos_promo_combo.field_sale_promo_combo__use_for_coupon
+msgid "Use For Coupon"
+msgstr "Sử dụng cho Coupon"
+
+#. module: phuclong_pos_promo_combo
+#: model:ir.model.fields,field_description:phuclong_pos_promo_combo.field_sale_promo_combo_line__use_pricelist
+msgid "Use Pricelist"
+msgstr "Sử dụng bảng giá"
+
+#. module: phuclong_pos_promo_combo
+#: model:ir.model.fields,field_description:phuclong_pos_promo_combo.field_crm_voucher_info__used_count
+#, fuzzy
+#| msgid "Use For Coupon"
+msgid "Used Count"
+msgstr "Sử dụng cho Coupon"
+
+#. module: phuclong_pos_promo_combo
+#: model:ir.model.fields,field_description:phuclong_pos_promo_combo.field_sale_promo_combo__website_message_ids
+msgid "Website Messages"
+msgstr "Tin nhắn website"
+
+#. module: phuclong_pos_promo_combo
+#: model:ir.model.fields,help:phuclong_pos_promo_combo.field_sale_promo_combo__website_message_ids
+msgid "Website communication history"
+msgstr "Lịch sử giao tiếp website"
+
+#. module: phuclong_pos_promo_combo
+#. openerp-web
+#: code:addons/phuclong_pos_promo_combo/static/src/js/models.js:0
+#, python-format
+msgid "Your Internet connection is probably down."
+msgstr "Kết nối internet bị gián đoạn."
+
+#. module: phuclong_pos_promo_combo
+#: model:ir.model,name:phuclong_pos_promo_combo.model_day_of_week_config
+msgid "day.of.week.config"
+msgstr "day.of.week.config"
+
+#. module: phuclong_pos_promo_combo
+#: model:ir.model,name:phuclong_pos_promo_combo.model_report_coupon_voucher
+msgid "report.coupon.voucher"
+msgstr "report.coupon.voucher"
+
+#. module: phuclong_pos_promo_combo
+#: model:ir.actions.report,name:phuclong_pos_promo_combo.report_coupon_employee
+#, fuzzy
+#| msgid "report_import_coupon_employee"
+msgid "report_coupon_employee"
+msgstr "report_import_coupon_employee"
+
+#. module: phuclong_pos_promo_combo
+#: model:ir.actions.report,name:phuclong_pos_promo_combo.report_import_coupon_employee
+msgid "report_import_coupon_employee"
+msgstr "report_import_coupon_employee"
+
+#. module: phuclong_pos_promo_combo
+#: model:ir.actions.report,name:phuclong_pos_promo_combo.report_import_product_combo
+#, fuzzy
+#| msgid "report_import_coupon_employee"
+msgid "report_import_product_combo"
+msgstr "report_import_coupon_employee"
+
+#~ msgid "sale.promo.combo"
+#~ msgstr "sale.promo.combo"
+
+#~ msgid "sale.promo.combo.line"
+#~ msgstr "sale.promo.combo.line"

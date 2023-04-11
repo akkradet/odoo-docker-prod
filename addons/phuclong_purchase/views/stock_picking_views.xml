@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<record id="picking_form_inherit_phuclong_purchase" model="ir.ui.view">
+		<field name="name">picking.form.inherit.phuclong.purchase</field>
+		<field name="model">stock.picking</field>
+		<field name="inherit_id" ref="besco_stock.picking_form_inherit_besco_stock"/>
+		<field name="arch" type="xml">
+			<xpath expr="//field[@name='origin']" position="attributes">
+            	<attribute name="attrs">{'readonly':[('group_id','!=',False)],
+            	'invisible': [('picking_type_id','in',[%(besco_stock.picking_type_good_receipt)d,
+            										   %(besco_stock.picking_type_return_supplier)d,
+            										   %(besco_stock.picking_type_internal_move)d])]}</attribute>
+            </xpath>
+            <xpath expr="//field[@name='origin']" position="after">
+            	<field name="purchase_id" readonly="1" string="Source Document"
+            		attrs="{'invisible': [('picking_type_id','not in',[%(besco_stock.picking_type_good_receipt)d,%(besco_stock.picking_type_return_supplier)d])]}"/>
+            	<field name="vendor_document" attrs="{'readonly': [('state', 'in', ['done','cancel'])],
+            					'invisible': [('picking_type_id','not in',[%(besco_stock.picking_type_good_receipt)d,%(besco_stock.picking_type_return_supplier)d])]}"/>
+            </xpath>
+		</field>
+	</record>
+</odoo>

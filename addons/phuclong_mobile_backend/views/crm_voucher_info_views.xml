@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data noupdate="0">
+        <!-- Add you code here -->
+        <!-- crm.voucher.info inherit form view -->
+        <record id="view_crm_voucher_info_form_inherit" model="ir.ui.view">
+            <field name="name">view_crm_voucher_info_form_inherit</field>
+            <field name="model">crm.voucher.info</field>
+            <field name="inherit_id" ref="besco_voucher_coupon.view_crm_voucher_info_form"/>
+            <field name="arch" type="xml">
+                <!-- Add your xpath here -->
+                <xpath expr="//field[@name='usage_limits']" position="after">
+                    <!-- Add your fields here -->
+                    <field name="used_on"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

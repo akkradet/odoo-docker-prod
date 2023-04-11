@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <record id="config_qanda_form" model="ir.ui.view">
+            <field name="name">config_qanda_form</field>
+            <field name="model">config.qanda</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name" required="1"/>
+                                <field name="url" required="1"/>
+                            </group>
+                            <group>
+                                <field name="hide"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record id="config_qanda_tree" model="ir.ui.view">
+            <field name="name">config_qanda_tree</field>
+            <field name="model">config.qanda</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name" required="1"/>
+                    <field name="url" required="1"/>
+                    <field name="hide"/>
+                </tree>
+            </field>
+        </record>
+        <record id="config_qanda_act" model="ir.actions.act_window">
+            <field name="name">Config Q&amp;A</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">config.qanda</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,40 @@
+from odoo import fields, models, api
+from odoo import http
+from datetime import datetime
+from odoo.http import request
+from odoo.addons.phuclong_restful_api.controllers.main import APIController, _routes
+from odoo.addons.phuclong_restful_api.common import invalid_response, valid_response
+from datetime import date, datetime
+import json
+
+class inheritAPIMain(APIController):
+    # =========== POST
+    @http.route(_routes, type="http", auth="none", methods=["POST"], csrf=False, cors="*")
+    def post(self, model=None, id=None, **payload):
+        model_fields = request.env[model]._fields
+        if 'session_id' in model_fields:
+            if 'session' in payload:
+                payload.update({
+                    'session_id': int(payload['session'])
+                })
+                payload.pop("session", None)
+            else:
+                return invalid_response(model, 'session is required', 402)
+
+        if model == 'pos.order':
+            payload.update({
+                'state': 'paid'
+            })
+
+        return super(inheritAPIMain, self).post(model=model, id=id, **payload)
+
+    # =========== PUT
+    @http.route(_routes, type="http", auth="none", methods=["PUT"], csrf=False, cors="*")
+    def put(self, model=None, id=None, **payload):
+        self.detective_password(payload)
+
+        return super(inheritAPIMain, self).put(model=model, id=id, **payload)
+
+    def detective_password(self, payload):
+        if 'password' in payload:
+            payload.pop("password", None)

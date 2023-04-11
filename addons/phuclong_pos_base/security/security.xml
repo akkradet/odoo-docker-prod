@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data noupdate="0">
+
+		<record id="group_store_accounting" model="res.groups">
+			<field name="name">Store Accounting</field>
+			<field name="category_id" ref="besco_pos_base.module_category_point_of_sale"/>
+			<field name="implied_ids" eval="[
+	        								(4, ref('base.group_user')),
+	        								(4, ref('point_of_sale.group_pos_manager')),
+	        								]"/>
+			<field name="users" eval="[
+				(4, ref('base.user_root')),
+				(4, ref('base.user_admin'))
+			]"/>
+			<field name="warehouse_access">True</field>
+		</record>
+
+		<record id="group_pos_config" model="res.groups">
+			<field name="name">POS Config</field>
+			<field name="category_id" ref="besco_pos_base.module_category_point_of_sale"/>
+			<field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+			<field name="users" eval="[
+                (4, ref('base.user_root')),
+                (4, ref('base.user_admin'))]"/>
+			<field name="menu_access" eval="[
+                (4,ref('point_of_sale.menu_point_root')),
+				(4,ref('point_of_sale.menu_point_config_product')),
+            ]"/>
+		</record>
+
+		<record id="group_pos_store_audit" model="res.groups">
+			<field name="name">Store Audit</field>
+			<field name="category_id" ref="besco_pos_base.module_category_point_of_sale"/>
+			<field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+			<field name="users" eval="[
+                (4, ref('base.user_root')),
+                (4, ref('base.user_admin'))]"/>
+			<field name="menu_access" eval="[
+                (4,ref('point_of_sale.menu_point_root')),
+                (4,ref('point_of_sale.menu_point_rep')),
+            ]"/>
+		</record>
+
+		<record model="res.users" id="base.user_root">
+			<field eval="[(4,ref('group_store_accounting'))]" name="groups_id"/>
+		</record>
+
+		<record model="res.users" id="base.user_admin">
+			<field eval="[(4,ref('group_store_accounting'))]" name="groups_id"/>
+		</record>
+
+		<record id="point_of_sale.group_pos_manager" model="res.groups">
+			<field name="implied_ids" eval="[(6, 0, [ref('point_of_sale.group_pos_user')])]"/>
+		</record>
+		<!-- Profile -->
+		<record id="profile_store_accounting" model="profile">
+			<field name="name">Other/ Store Accounting</field>
+			<field name="groups_ids" eval="[
+				(6, 0, [ref('group_store_accounting')]),
+			]"/>
+			<field name="description">- Nhóm quyền Kế toán cửa hàng</field>
+			<field name="category_id" ref="besco_pos_base.module_category_point_of_sale"/>
+		</record>
+
+		<record id="profile_pos_config" model="profile">
+			<field name="name">POS/ POS Config</field>
+			<field name="groups_ids" eval="[
+                (6, 0, [ref('group_pos_config')])]"/>
+			<field name="description">- Nhóm quyền cấu hình POS</field>
+			<field name="category_id" ref="besco_pos_base.module_category_point_of_sale"/>
+		</record>
+
+		<record id="profile_pos_store_audit" model="profile">
+			<field name="name">POS/ Store Audit</field>
+			<field name="groups_ids" eval="[
+                (6, 0, [ref('group_pos_store_audit')])]"/>
+			<field name="description">- Nhóm quyền được xem Lịch sử vận hành và Chi tiết huỷ bill </field>
+			<field name="category_id" ref="besco_pos_base.module_category_point_of_sale"/>
+		</record>
+
+		<record id="group_clear_session_user" model="res.groups">
+			<field name="name">Clear Session Login</field>
+			<field name="category_id" ref="besco_pos_base.module_category_point_of_sale"/>
+			<field name="users" eval="[
+                (4, ref('base.user_root')),
+                (4, ref('base.user_admin')),
+            ]"/>
+		</record>
+
+		<record id="group_view_payment_analysis" model="res.groups">
+			<field name="name">View Payment Analysis</field>
+			<field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+			<field name="category_id" ref="besco_pos_base.module_category_point_of_sale"/>
+			<field name="users" eval="[
+                (4, ref('base.user_root')),
+                (4, ref('base.user_admin')),
+            ]"/>
+		</record>
+
+		<record model="res.users" id="base.user_root">
+			<field eval="[(4,ref('group_clear_session_user'))]" name="groups_id"/>
+		</record>
+
+		<record model="res.users" id="base.user_admin">
+			<field eval="[(4,ref('group_clear_session_user'))]" name="groups_id"/>
+		</record>
+		<!-- Profile -->
+		<record id="profile_clear_session_user" model="profile">
+			<field name="name">Clear Session Login</field>
+			<field name="groups_ids" eval="[(6, 0, [ref('group_clear_session_user')])]"/>
+			<field name="description">- Có quyền được thấy và thao tác trên chức năng xóa session đăng nhập cho user POS </field>
+			<field name="category_id" ref="besco_pos_base.module_category_point_of_sale"/>
+		</record>
+
+		<record id="profile_view_payment_analysis" model="profile">
+			<field name="name">View Payment Analysis</field>
+			<field name="groups_ids" eval="[(6, 0, [ref('group_view_payment_analysis')])]"/>
+			<field name="description">- User được phép xem menu POS / Reporting / Payment Analysis</field>
+			<field name="category_id" ref="besco_pos_base.module_category_point_of_sale"/>
+		</record>
+
+	</data>
+
+</odoo>

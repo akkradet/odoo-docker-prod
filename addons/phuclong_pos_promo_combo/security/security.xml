@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data noupdate="0">
+	    
+	    <record id="group_promotion_approval" model="res.groups">
+	        <field name="name">Promotion Approval</field>
+	        <field name="users" eval="[(4, ref('base.user_root'))]"/>
+	    </record>
+
+	    <record model="res.users" id="base.user_root">
+	        <field eval="[(4,ref('group_promotion_approval'))]" name="groups_id"/>
+	    </record>
+	
+	    <record model="res.users" id="base.user_admin">
+	        <field eval="[(4,ref('group_promotion_approval'))]" name="groups_id"/>
+	    </record>
+	    <!-- Profile -->
+		<record id="profile_promotion_approval" model="profile">
+        	<field name="name">Other/ Promotion Approval</field>
+	        <field name="groups_ids" eval="[(6, 0, [ref('group_promotion_approval')])]"/>
+	        <field name="description">- Quản lý chính xách khuyến mãi trong menu Master Data</field>
+	    </record>
+	</data>
+	
+</odoo>

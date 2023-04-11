@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+
+		<record id="product_material_view_form" model="ir.ui.view">
+			<field name="name">product_material_form_inherit_phuclong</field>
+			<field name="model">product.material</field>
+			<field name="arch" type="xml">
+				<form string="Product material">
+					<sheet>
+						<group>
+							<field name="name" string="Material List Name"/>
+						</group>
+						<group>
+							<field name="product_id" invisible="1" />
+							<field name="option_unavailable_ids" widget="many2many_tags" options="{'no_create': True,'no_create_edit': True}" 
+								invisible="not context.get('custom_material')"/>
+						</group>
+						<separator name="tmpl_material" string="Materials" />
+						<field name="material_line_ids" nolabel="1">
+							<tree name="tree_material_line_ids" string="Material Line" editable="top">
+								<field name="product_material_id" invisible="1"/>
+								<field name="product_id" options="{'no_create': True,'no_create_edit': True}"/>
+								<field name="product_uom_id" options="{'no_create': True, 'no_create_edit': True}"/>
+								<field name="product_qty" />
+								<field name="sequence" />
+							</tree>
+						</field>
+					</sheet>
+				</form>
+			</field>
+		</record>
+
+	</data>
+</odoo>

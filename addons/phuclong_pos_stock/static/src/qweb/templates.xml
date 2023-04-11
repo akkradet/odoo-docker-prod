@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+    <!-- Báo Cáo Bill kết ca -->
+    <t t-name="PickingReceipt">
+		<div class="print-bill-session" style="font-family:Roboto;padding-right:10%;">
+			<div class="top-header">
+                <h2 class="bill-title"> PHIẾU ĐIỀU CHUYỂN</h2>
+            </div>
+            <div class="bill-general-info" style="margin-top:10px;">
+                <table>
+                    <colgroup>
+                        <col width="40%"/>
+                        <col width="60%"/>
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <td>Cửa hàng:</td>
+                            <td>
+                                <t t-esc="warehouse_name"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Từ:</td>
+                            <td>
+                                <t t-esc="location_from"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Đến:</td>
+                            <td>
+                                <t t-esc="location_to"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Ngày in:</td>
+                            <td>
+                                <t t-esc="moment().format('L LT')"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Người in:</td>
+                            <td>
+                                <t t-if="user">
+                                    <t t-esc="user"/>
+                                </t>
+                                <t t-else="1">
+                                    Thu ngân
+                                </t>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Mã phiếu:</td>
+                            <td>
+                                <t t-esc="picking_name"/>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="bill-product-info">
+                <table>
+                    <colgroup>
+                        <col width="75%"/>
+                        <col width="25%"/>
+                    </colgroup>
+                    <tbody>
+                        <t t-foreach="lines" t-as="line">
+                            <tr>
+                                <td><t t-esc="line.product"/></td>
+                                <td class="price-right">
+                                    <t t-esc="line.qty"/>
+                                </td>
+                            </tr>
+                        </t>
+                    </tbody>
+                </table>
+            </div>
+		</div>
+	</t>
+</templates>

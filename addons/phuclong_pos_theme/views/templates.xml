@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="phuclong_layout_assets" inherit_id="point_of_sale.assets">
+            <xpath expr="." position="inside">
+                <link rel="stylesheet" href="/phuclong_pos_theme/static/src/lib/bootstrap_4/css/bootstrap.min.css" />
+                <link rel="stylesheet" href="/phuclong_pos_theme/static/src/lib/owlCarousel2/css/owl.carousel.min.css" />
+                <link rel="stylesheet" href="/phuclong_pos_theme/static/src/lib/owlCarousel2/css/owl.theme.default.min.css" />
+                <link rel="stylesheet" type="text/css" href="/phuclong_pos_theme/static/src/css/assets.css" />
+                <script src="/phuclong_pos_theme/static/src/js/popup.js"></script>
+                <script src="/phuclong_pos_theme/static/src/js/main.js"></script>
+                <script src="/phuclong_pos_theme/static/src/js/db.js"></script>
+                <script src="/phuclong_pos_theme/static/src/js/models.js"></script>
+            </xpath>
+        </template>
+        <template id="phuclong_web_asset_backend" inherit_id="web.assets_backend">
+            <xpath expr="." position="inside">
+                <!-- QZ Tray Printer-->
+                <script type="text/javascript" src="/phuclong_pos_theme/static/src/lib/qztray/jspdf.min.js"></script>
+                <script type="text/javascript" src="/phuclong_pos_theme/static/src/lib/qztray/rsvp-3.1.0.min.js"></script>
+                <script type="text/javascript" src="/phuclong_pos_theme/static/src/lib/qztray/sha-256.min.js"></script>
+                <script type="text/javascript" src="/phuclong_pos_theme/static/src/lib/qztray/qz-tray.js"></script>
+                <script type="text/javascript" src="/phuclong_pos_theme/static/src/lib/qztray/jsrsasign-all-min.js"></script>
+                <script type="text/javascript" src="/phuclong_pos_theme/static/src/lib/print/jQuery.print.js"></script>
+                <script type="text/javascript" src="/phuclong_pos_theme/static/src/lib/qr/jquery.classyqr.js"></script>
+                <script type="text/javascript" src="/phuclong_pos_theme/static/src/lib/owlCarousel2/js/owl.carousel.min.js"></script>
+                <script type="text/javascript" src="/phuclong_pos_theme/static/src/js/form_renderer.js"></script>
+                <script type="text/javascript" src="/phuclong_pos_theme/static/src/js/barcode_scanner.js"></script>
+                <script type="text/javascript" src="/phuclong_pos_theme/static/src/lib/date.js"></script>
+                <script type="text/javascript" src="/phuclong_pos_theme/static/src/js/notification.js"></script>
+                <script src="https://cdn.rawgit.com/kjur/jsrsasign/c057d3447b194fa0a3fdcea110579454898e093d/jsrsasign-all-min.js"></script>
+                <link rel="stylesheet" href="/phuclong_pos_theme/static/src/css/session_bill_style.css"/>
+            </xpath>
+        </template>
+        <template id="login_clear_session" name="Clear User Sessions" inherit_id="web.login">
+	        <xpath expr="//input[@name='redirect']" position="after">
+	        	<script type="text/javascript" src="/phuclong_pos_theme/static/src/lib/qztray/qz-tray.js"></script>
+	            <input type="hidden" name="mac_address" id="mac_address"/>
+	            <script>
+	              document.addEventListener('DOMContentLoaded', function() {
+	                  if(!qz.websocket.isActive()){
+          					 	qz.websocket.connect().then(function() {
+          						    qz.websocket.getNetworkInfo().then(function(data) {
+          						        document.getElementById("mac_address").value = data.macAddress;
+          						        qz.websocket.disconnect();
+          							}).catch(function() {
+          								return;
+          			          		});
+          						}).catch(function() {
+          							return;
+          			          });
+          					}else{
+            					 qz.websocket.disconnect().then(function() {
+  												qz.websocket.connect().then(function() {
+          						    qz.websocket.getNetworkInfo().then(function(data) {
+            						        document.getElementById("mac_address").value = data.macAddress;
+            						        qz.websocket.disconnect();
+            							}).catch(function() {
+            								return;
+            			          		});
+            						}).catch(function() {
+            							return;
+            			       });
+  										}).catch(function() {
+            							return;
+            			     });
+          				  }
+	              });
+	          </script>
+	        </xpath>
+	        
+	    </template>
+    </data>
+</odoo>

@@ -1,0 +1,303 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-04-08 04:56+0000\n"
+"PO-Revision-Date: 2021-05-10 14:23+0000\n"
+"Last-Translator: Nguyễn Thanh Tùng <tung.nt@besco.vn>\n"
+"Language-Team: Vietnamese <http://weblate.besco.vn/projects/besco-phuc-long/"
+"phuclong_pos_reward_code/vi_VN/>\n"
+"Language: vi_VN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 3.8\n"
+
+#. module: phuclong_pos_reward_code
+#: model:ir.actions.report,print_report_name:phuclong_pos_reward_code.template_reward_code_publish
+msgid "'Reward_template' + '.ods'"
+msgstr "'Biểu mẫu mã dự thưởng' + '.ods'"
+
+#. module: phuclong_pos_reward_code
+#: model_terms:ir.ui.view,arch_db:phuclong_pos_reward_code.creward_code_publish_view_form
+#: model_terms:ir.ui.view,arch_db:phuclong_pos_reward_code.wizard_update_reward_publise_effective_date
+msgid "Cancel"
+msgstr "Huỷ"
+
+#. module: phuclong_pos_reward_code
+#: model:ir.model.fields.selection,name:phuclong_pos_reward_code.selection__reward_code_info__state__cancel
+msgid "Canceled"
+msgstr "Đã huỷ"
+
+#. module: phuclong_pos_reward_code
+#: model:ir.model.fields,help:phuclong_pos_reward_code.field_reward_code_publish__file
+msgid "Choose file Excel"
+msgstr "Chọn tệp Excel"
+
+#. module: phuclong_pos_reward_code
+#: model:ir.model.fields.selection,name:phuclong_pos_reward_code.selection__reward_code_info__state__close
+msgid "Closed"
+msgstr "Đã đóng"
+
+#. module: phuclong_pos_reward_code
+#: model_terms:ir.ui.view,arch_db:phuclong_pos_reward_code.wizard_update_reward_publise_effective_date
+msgid "Confirm"
+msgstr "Xác nhận"
+
+#. module: phuclong_pos_reward_code
+#: model:ir.model.fields.selection,name:phuclong_pos_reward_code.selection__reward_code_info__state__create
+msgid "Created"
+msgstr "Đã tạo"
+
+#. module: phuclong_pos_reward_code
+#: model:ir.model.fields,field_description:phuclong_pos_reward_code.field_reward_code_info__create_uid
+#: model:ir.model.fields,field_description:phuclong_pos_reward_code.field_reward_code_publish__create_uid
+#: model:ir.model.fields,field_description:phuclong_pos_reward_code.field_wizard_update_reward_publish__create_uid
+msgid "Created by"
+msgstr "Được tạo bởi"
+
+#. module: phuclong_pos_reward_code
+#: model:ir.model.fields,field_description:phuclong_pos_reward_code.field_reward_code_info__create_date
+#: model:ir.model.fields,field_description:phuclong_pos_reward_code.field_reward_code_publish__create_date
+#: model:ir.model.fields,field_description:phuclong_pos_reward_code.field_wizard_update_reward_publish__create_date
+msgid "Created on"
+msgstr "Được tạo vào"
+
+#. module: phuclong_pos_reward_code
+#: model:ir.model.fields,field_description:phuclong_pos_reward_code.field_reward_code_publish__description
+msgid "Description"
+msgstr "Mô tả"
+
+#. module: phuclong_pos_reward_code
+#: model:ir.model.fields,field_description:phuclong_pos_reward_code.field_reward_code_info__display_name
+#: model:ir.model.fields,field_description:phuclong_pos_reward_code.field_reward_code_publish__display_name
+#: model:ir.model.fields,field_description:phuclong_pos_reward_code.field_wizard_update_reward_publish__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: phuclong_pos_reward_code
+#: model:ir.model.fields,field_description:phuclong_pos_reward_code.field_reward_code_publish__file
+msgid "File"
+msgstr "Tệp"
+
+#. module: phuclong_pos_reward_code
+#: model:ir.model.fields,field_description:phuclong_pos_reward_code.field_reward_code_publish__file_name
+msgid "Filename"
+msgstr "Tên tệp"
+
+#. module: phuclong_pos_reward_code
+#: model:ir.model.fields,field_description:phuclong_pos_reward_code.field_reward_code_info__effective_date_from
+#: model:ir.model.fields,field_description:phuclong_pos_reward_code.field_reward_code_publish__effective_date_from
+#: model:ir.model.fields,field_description:phuclong_pos_reward_code.field_wizard_update_reward_publish__effective_date_from
+msgid "From Date"
+msgstr "Từ ngày"
+
+#. module: phuclong_pos_reward_code
+#: code:addons/phuclong_pos_reward_code/models/reward.py:0
+#, python-format
+msgid "From Date and To Date can not be empty"
+msgstr "Từ ngày và đến ngày không được để trống"
+
+#. module: phuclong_pos_reward_code
+#: code:addons/phuclong_pos_reward_code/models/reward.py:0
+#, python-format
+msgid "From Date must smaller than To Date"
+msgstr "Ngày bắt đầu phải nhỏ hơn ngày kết thúc"
+
+#. module: phuclong_pos_reward_code
+#: model:ir.model.fields,field_description:phuclong_pos_reward_code.field_reward_code_info__id
+#: model:ir.model.fields,field_description:phuclong_pos_reward_code.field_reward_code_publish__id
+#: model:ir.model.fields,field_description:phuclong_pos_reward_code.field_wizard_update_reward_publish__id
+msgid "ID"
+msgstr "Mã ID"
+
+#. module: phuclong_pos_reward_code
+#: model_terms:ir.ui.view,arch_db:phuclong_pos_reward_code.creward_code_publish_view_form
+msgid "Import"
+msgstr "Nhập file"
+
+#. module: phuclong_pos_reward_code
+#: model:ir.model.fields,field_description:phuclong_pos_reward_code.field_reward_code_info____last_update
+#: model:ir.model.fields,field_description:phuclong_pos_reward_code.field_reward_code_publish____last_update
+#: model:ir.model.fields,field_description:phuclong_pos_reward_code.field_wizard_update_reward_publish____last_update
+msgid "Last Modified on"
+msgstr "Sửa đổi lần cuối vào"
+
+#. module: phuclong_pos_reward_code
+#: model:ir.model.fields,field_description:phuclong_pos_reward_code.field_reward_code_info__write_uid
+#: model:ir.model.fields,field_description:phuclong_pos_reward_code.field_reward_code_publish__write_uid
+#: model:ir.model.fields,field_description:phuclong_pos_reward_code.field_wizard_update_reward_publish__write_uid
+msgid "Last Updated by"
+msgstr "Cập nhật lần cuối bởi"
+
+#. module: phuclong_pos_reward_code
+#: model:ir.model.fields,field_description:phuclong_pos_reward_code.field_reward_code_info__write_date
+#: model:ir.model.fields,field_description:phuclong_pos_reward_code.field_reward_code_publish__write_date
+#: model:ir.model.fields,field_description:phuclong_pos_reward_code.field_wizard_update_reward_publish__write_date
+msgid "Last Updated on"
+msgstr "Cập nhật lần cuối vào"
+
+#. module: phuclong_pos_reward_code
+#: model:ir.model.fields,field_description:phuclong_pos_reward_code.field_reward_code_info__pos_order_id
+msgid "Order Reference"
+msgstr "Đơn hàng tham khảo"
+
+#. module: phuclong_pos_reward_code
+#: model:ir.model.fields,field_description:phuclong_pos_reward_code.field_reward_code_publish__prefix
+msgid "Prefix"
+msgstr "Tiền tố"
+
+#. module: phuclong_pos_reward_code
+#: model:ir.model.fields,field_description:phuclong_pos_reward_code.field_reward_code_info__name
+#: model:ir.model.fields,field_description:phuclong_pos_reward_code.field_reward_code_publish__name
+msgid "Publish Code"
+msgstr "Mã phát hành"
+
+#. module: phuclong_pos_reward_code
+#: model:ir.model.fields,field_description:phuclong_pos_reward_code.field_reward_code_info__publish_date
+#: model:ir.model.fields,field_description:phuclong_pos_reward_code.field_reward_code_publish__publish_date
+msgid "Publish Date"
+msgstr "Ngày phát hành"
+
+#. module: phuclong_pos_reward_code
+#: model_terms:ir.ui.view,arch_db:phuclong_pos_reward_code.creward_code_publish_view_form
+msgid "Publish Reward Code"
+msgstr "Mã dự thưởng phát hành"
+
+#. module: phuclong_pos_reward_code
+#: model:ir.model.fields,field_description:phuclong_pos_reward_code.field_reward_code_publish__product_related_id
+msgid "Related Product"
+msgstr "Sản phẩm liên kết"
+
+#. module: phuclong_pos_reward_code
+#: model:ir.module.category,name:phuclong_pos_reward_code.module_category_reward
+#: model:ir.ui.menu,name:phuclong_pos_reward_code.menu_reward_code
+msgid "Reward Code"
+msgstr "Mã dự thưởng"
+
+#. module: phuclong_pos_reward_code
+#: model:ir.actions.act_window,name:phuclong_pos_reward_code.action_reward_info
+#: model:ir.model.fields,field_description:phuclong_pos_reward_code.field_reward_code_publish__reward_code_info_ids
+#: model:ir.ui.menu,name:phuclong_pos_reward_code.menu_action_menu_reward_info
+msgid "Reward Code Info"
+msgstr "Thông tin mã dự thưởng"
+
+#. module: phuclong_pos_reward_code
+#: model:res.groups,name:phuclong_pos_reward_code.group_reward_code_manager
+msgid "Reward Code Manager"
+msgstr "Người quản lý mã dự thưởng"
+
+#. module: phuclong_pos_reward_code
+#: model:ir.actions.act_window,name:phuclong_pos_reward_code.action_reward_publish
+#: model:ir.model.fields,field_description:phuclong_pos_reward_code.field_reward_code_info__reward_code_publish_id
+#: model:ir.model.fields,field_description:phuclong_pos_reward_code.field_wizard_update_reward_publish__reward_publish_id
+#: model:ir.ui.menu,name:phuclong_pos_reward_code.menu_action_menu_reward_code_publish
+#: model_terms:ir.ui.view,arch_db:phuclong_pos_reward_code.creward_code_infoview_tree
+#: model_terms:ir.ui.view,arch_db:phuclong_pos_reward_code.creward_code_publish_view_form
+#: model_terms:ir.ui.view,arch_db:phuclong_pos_reward_code.creward_code_publish_view_tree
+msgid "Reward Code Publish"
+msgstr "Phát hành mã dự thưởng"
+
+#. module: phuclong_pos_reward_code
+#: model:res.groups,name:phuclong_pos_reward_code.group_reward_code_user
+msgid "Reward Code User"
+msgstr "Người dùng mã dự thưởng"
+
+#. module: phuclong_pos_reward_code
+#: model:ir.model.fields,field_description:phuclong_pos_reward_code.field_reward_code_publish__reward_link
+msgid "Reward Link"
+msgstr "Link quay thưởng"
+
+#. module: phuclong_pos_reward_code
+#: model:ir.model.fields,field_description:phuclong_pos_reward_code.field_reward_code_info__state
+msgid "State"
+msgstr "Trạng thái"
+
+#. module: phuclong_pos_reward_code
+#: model_terms:ir.ui.view,arch_db:phuclong_pos_reward_code.creward_code_publish_view_form
+msgid "Template"
+msgstr "Biểu mẫu"
+
+#. module: phuclong_pos_reward_code
+#: code:addons/phuclong_pos_reward_code/wizards/update_reward_effective_date.py:0
+#, python-format
+msgid "The new effective date must be greater than the current one"
+msgstr "Ngày hiệu lực phải lớn hơn ngày hiện tại"
+
+#. module: phuclong_pos_reward_code
+#: model_terms:ir.ui.view,arch_db:phuclong_pos_reward_code.creward_code_publish_view_form
+msgid "Title"
+msgstr "Tiêu đề"
+
+#. module: phuclong_pos_reward_code
+#: model:ir.model.fields,field_description:phuclong_pos_reward_code.field_reward_code_info__effective_date_to
+#: model:ir.model.fields,field_description:phuclong_pos_reward_code.field_reward_code_publish__effective_date_to
+#: model:ir.model.fields,field_description:phuclong_pos_reward_code.field_wizard_update_reward_publish__effective_date_to
+msgid "To Date"
+msgstr "Đến ngày"
+
+#. module: phuclong_pos_reward_code
+#: model_terms:ir.ui.view,arch_db:phuclong_pos_reward_code.creward_code_publish_view_form
+#: model_terms:ir.ui.view,arch_db:phuclong_pos_reward_code.wizard_update_reward_publise_effective_date
+msgid "Update Effective Date"
+msgstr "Cập nhật ngày hiệu lực"
+
+#. module: phuclong_pos_reward_code
+#: model:ir.actions.act_window,name:phuclong_pos_reward_code.action_update_effective_date
+msgid "Update Reward Publish Effective Date"
+msgstr "Cập nhật ngày hiệu lực phát hành mã dự thưởng"
+
+#. module: phuclong_pos_reward_code
+#: model:ir.model.fields,field_description:phuclong_pos_reward_code.field_wizard_update_reward_publish__update_for_publish
+msgid "Update for this Reward Code Publish"
+msgstr "Cập nhật mã dự thưởng phát hành này"
+
+#. module: phuclong_pos_reward_code
+#: code:addons/phuclong_pos_reward_code/wizards/update_reward_effective_date.py:0
+#, python-format
+msgid "Warning!"
+msgstr "Cảnh báo!"
+
+#. module: phuclong_pos_reward_code
+#: model:ir.model,name:phuclong_pos_reward_code.model_reward_code_info
+msgid "reward.code.info"
+msgstr "Thông tin mã dự thưởng"
+
+#. module: phuclong_pos_reward_code
+#: model:ir.model,name:phuclong_pos_reward_code.model_reward_code_publish
+msgid "reward.code.publish"
+msgstr "Phát hành dự thưởng"
+
+#. module: phuclong_pos_reward_code
+#: model:ir.actions.report,name:phuclong_pos_reward_code.template_reward_code_publish
+msgid "template_reward_code_publish"
+msgstr "Biểu mẫu phát hành mã dự thưởng"
+
+#. module: phuclong_pos_reward_code
+#: model:ir.model,name:phuclong_pos_reward_code.model_wizard_update_reward_publish
+msgid "wizard.update.reward.publish"
+msgstr "Cập nhật phát hành mã dự thưởng"
+
+#, fuzzy
+#~| msgid ""
+#~| "%s is in progress. Do you want to continue creating new reward code "
+#~| "publish?"
+#~ msgid ""
+#~ "%s is in progress.You can't continue creating new reward code publish !"
+#~ msgstr ""
+#~ "%s đang diễn ra. Bạn có muốn tiếp tục tạo phát hành mã dự thưởng mới "
+#~ "không ?"
+
+#~ msgid "Mã dự thưởng"
+#~ msgstr "mã dự thưởng"
+
+#~ msgid "Prefix can not be empty"
+#~ msgstr "Tiền tố không được để trống"
+
+#~ msgid ""
+#~ "Effective date coincides with %s. Choose another effective date please !"
+#~ msgstr "Ngày hiệu lực trùng với %s. Vui lòng chọn ngày khác !"
+
+#~ msgid "M d thng"
+#~ msgstr "Mã dự thưởng"

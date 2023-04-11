@@ -1,0 +1,1391 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* phuclong_pos_theme
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0+e-20200401\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: phuclong_pos_theme
+#: model:ir.actions.report,print_report_name:phuclong_pos_theme.report_pos_revenue_store
+msgid "'Báo cáo chi tiết giao dịch theo bill' + '.ods'"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: model:ir.actions.report,print_report_name:phuclong_pos_theme.report_pos_cancel
+msgid "'Báo cáo chi tiết hủy bill' + '.ods'"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: model:ir.actions.report,print_report_name:phuclong_pos_theme.report_pos_payment_method_bill
+msgid "'Báo cáo chi tiết theo phương thức thanh toán' + '.ods'"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: model:ir.actions.report,print_report_name:phuclong_pos_theme.report_pos_combo
+msgid "'Báo cáo combo' + '.ods'"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: model:ir.actions.report,print_report_name:phuclong_pos_theme.report_pos_discount
+msgid "'Báo cáo discount' + '.ods'"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: model:ir.actions.report,print_report_name:phuclong_pos_theme.report_pos_hourly
+msgid "'Báo cáo doanh thu theo khung giờ' + '.ods'"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: model:ir.actions.report,print_report_name:phuclong_pos_theme.report_pos_revenue
+msgid "'Báo cáo doanh thu theo ngày' + '.ods'"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: model:ir.actions.report,print_report_name:phuclong_pos_theme.report_pos_revenue_product
+msgid "'Báo cáo doanh thu theo sản phẩm' + '.ods'"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: model:ir.actions.report,print_report_name:phuclong_pos_theme.report_pos_payment_by_day
+msgid "'Báo cáo tổng hợp theo phương thức thanh toán' + '.ods'"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: model:ir.actions.report,print_report_name:phuclong_pos_theme.report_pos_revenue_product_vat
+msgid "'Báo cáo xuất hàng bán theo ngày' + '.ods'"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: code:addons/phuclong_pos_theme/reports/reports.py:0
+#, python-format
+msgid "<p>There are some pending order:<p>"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: model:ir.model.fields,field_description:phuclong_pos_theme.field_pos_order__invoice_address
+msgid "Address"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: model:ir.model.fields.selection,name:phuclong_pos_theme.selection__wizard_report_pos_revenue__apply_type__all_warehouse
+msgid "All Warehouse"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: model:ir.model.fields,field_description:phuclong_pos_theme.field_pos_order_duplicate_log__amount_total
+msgid "Amount Total"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: model:ir.model.fields,field_description:phuclong_pos_theme.field_wizard_report_pos_revenue__apply_type
+msgid "Apply Type"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: model_terms:ir.ui.view,arch_db:phuclong_pos_theme.pos_order_duplicate_log_view_form
+msgid "Are you sure to recreate this order?"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: model:ir.model.fields,field_description:phuclong_pos_theme.field_pos_report_queue_output__report_data
+msgid "Attachment"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: model:ir.model.fields,field_description:phuclong_pos_theme.field_login_scanner_wizard___barcode_scanned
+#: model:ir.model.fields,field_description:phuclong_pos_theme.field_wizard_pos_cashier_scanner___barcode_scanned
+msgid "Barcode Scanned"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: model:ir.model,name:phuclong_pos_theme.model_base
+msgid "Base"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: model:ir.actions.act_window,name:phuclong_pos_theme.action_report_pos_cancel
+#: model:ir.ui.menu,name:phuclong_pos_theme.menu_action_report_pos_cancel
+msgid "Bill Cancellation Details"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: model_terms:ir.ui.view,arch_db:phuclong_pos_theme.phuclong_view_pos_session_form_add_print
+#: model_terms:ir.ui.view,arch_db:phuclong_pos_theme.phuclong_view_pos_session_form_add_print_manager
+msgid "Báo cáo ca bán hàng"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: model:ir.actions.report,name:phuclong_pos_theme.report_pos_payment_method
+msgid "Báo cáo tổng hợp doanh thu theo phương thức thanh toán"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#. openerp-web
+#: code:addons/phuclong_pos_theme/static/src/js/main.js:0
+#, python-format
+msgid "Bạn còn COMBO chưa hoàn thành.Bạn muốn thoát chứ?"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#. openerp-web
+#: code:addons/phuclong_pos_theme/static/src/js/main.js:0
+#, python-format
+msgid "COMBO:  không khả dụng cho . Xác nhận để xóa COMBO này khỏi đơn hàng."
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: code:addons/phuclong_pos_theme/models/pos_report_queue.py:0
+#, python-format
+msgid "Can not create cron."
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: model_terms:ir.ui.view,arch_db:phuclong_pos_theme.wizard_pos_cashier_scanner
+#: model_terms:ir.ui.view,arch_db:phuclong_pos_theme.wizard_pos_report_date_revenue
+#: model_terms:ir.ui.view,arch_db:phuclong_pos_theme.wizard_pos_report_revenue
+#: model_terms:ir.ui.view,arch_db:phuclong_pos_theme.wizard_report_pos_cancel
+msgid "Cancel"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: model:ir.model.fields,field_description:phuclong_pos_theme.field_pos_order__cancel_reason
+msgid "Cancel Reason"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: model:ir.model.fields,field_description:phuclong_pos_theme.field_wizard_pos_cashier_scanner__cashier_barcode
+msgid "Cashier Code"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: code:addons/phuclong_pos_theme/models/pos_session.py:0
+#: code:addons/phuclong_pos_theme/wizards/pos_cashier_scanner.py:0
+#, python-format
+msgid ""
+"Cashier has an opening session: %s, please close it before change session"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: model:ir.model.fields,field_description:phuclong_pos_theme.field_pos_payment__amount_change
+msgid "Change Amount"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#. openerp-web
+#: code:addons/phuclong_pos_theme/static/src/js/models.js:0
+#: code:addons/phuclong_pos_theme/static/src/js/models.js:0
+#, python-format
+msgid "Chương trình khuyến mãi của Coupon không khả dụng."
+msgstr ""
+
+#. module: phuclong_pos_theme
+#. openerp-web
+#: code:addons/phuclong_pos_theme/static/src/js/main.js:0
+#: code:addons/phuclong_pos_theme/static/src/js/main.js:0
+#: code:addons/phuclong_pos_theme/static/src/js/main.js:0
+#: code:addons/phuclong_pos_theme/static/src/js/main.js:0
+#: code:addons/phuclong_pos_theme/static/src/js/main.js:0
+#, python-format
+msgid "Chọn người có quyền ?"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: model:ir.model.fields,field_description:phuclong_pos_theme.field_pos_report_queue_output__combo_id
+#: model:ir.model.fields,field_description:phuclong_pos_theme.field_wizard_report_pos_revenue__combo_id
+msgid "Combo"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#. openerp-web
+#: code:addons/phuclong_pos_theme/static/src/js/main.js:0
+#, python-format
+msgid "Combo chưa hoàn thành! Bạn muốn đổi thành combo khác chứ?"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#. openerp-web
+#: code:addons/phuclong_pos_theme/static/src/js/main.js:0
+#, python-format
+msgid ""
+"Combo chưa hoàn thành, nếu thoát Coupon sẽ bị gỡ khỏi đơn hàng này. Bạn muốn"
+" thoát chứ?"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: model:ir.model.fields,field_description:phuclong_pos_theme.field_pos_order__invoice_name
+msgid "Company/Person Name"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: model:ir.model.fields,field_description:phuclong_pos_theme.field_pos_report_queue_output__date_complete
+msgid "Completion Date"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: model_terms:ir.ui.view,arch_db:phuclong_pos_theme.wizard_pos_cashier_scanner
+#: model_terms:ir.ui.view,arch_db:phuclong_pos_theme.wizard_pos_report_revenue
+#: model_terms:ir.ui.view,arch_db:phuclong_pos_theme.wizard_report_pos_cancel
+msgid "Confirm"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: model:ir.model,name:phuclong_pos_theme.model_res_partner
+msgid "Contact"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: model:ir.model.fields,field_description:phuclong_pos_theme.field_pos_order__invoice_contact
+msgid "Contact Info"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: model_terms:ir.ui.view,arch_db:phuclong_pos_theme.wizard_pos_report_date_revenue
+msgid "Continue"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#. openerp-web
+#: code:addons/phuclong_pos_theme/static/src/js/models.js:0
+#: code:addons/phuclong_pos_theme/static/src/js/popup.js:0
+#, python-format
+msgid "Coupon "
+msgstr ""
+
+#. module: phuclong_pos_theme
+#. openerp-web
+#: code:addons/phuclong_pos_theme/static/src/js/models.js:0
+#, python-format
+msgid "Coupon đã được nhập !!"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: model:ir.model.fields,field_description:phuclong_pos_theme.field_login_scanner_wizard__create_uid
+#: model:ir.model.fields,field_description:phuclong_pos_theme.field_pos_order_duplicate_log__create_uid
+#: model:ir.model.fields,field_description:phuclong_pos_theme.field_pos_report_queue_config__create_uid
+#: model:ir.model.fields,field_description:phuclong_pos_theme.field_pos_report_queue_output__create_uid
+#: model:ir.model.fields,field_description:phuclong_pos_theme.field_wizard_pos_cashier_scanner__create_uid
+#: model:ir.model.fields,field_description:phuclong_pos_theme.field_wizard_report_pos_cancel__create_uid
+#: model:ir.model.fields,field_description:phuclong_pos_theme.field_wizard_report_pos_date_revenue__create_uid
+#: model:ir.model.fields,field_description:phuclong_pos_theme.field_wizard_report_pos_revenue__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: model:ir.model.fields,field_description:phuclong_pos_theme.field_login_scanner_wizard__create_date
+#: model:ir.model.fields,field_description:phuclong_pos_theme.field_pos_order_duplicate_log__create_date
+#: model:ir.model.fields,field_description:phuclong_pos_theme.field_pos_report_queue_config__create_date
+#: model:ir.model.fields,field_description:phuclong_pos_theme.field_pos_report_queue_output__create_date
+#: model:ir.model.fields,field_description:phuclong_pos_theme.field_wizard_pos_cashier_scanner__create_date
+#: model:ir.model.fields,field_description:phuclong_pos_theme.field_wizard_report_pos_cancel__create_date
+#: model:ir.model.fields,field_description:phuclong_pos_theme.field_wizard_report_pos_date_revenue__create_date
+#: model:ir.model.fields,field_description:phuclong_pos_theme.field_wizard_report_pos_revenue__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: model:ir.model.fields,field_description:phuclong_pos_theme.field_pos_report_queue_output__cron_id
+msgid "Cron"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: model:ir.model.fields,field_description:phuclong_pos_theme.field_pos_payment__currency_name
+msgid "Currency Name"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: model:ir.model.fields,field_description:phuclong_pos_theme.field_pos_payment__currency_origin_value
+msgid "Currency Origin Value"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#. openerp-web
+#: code:addons/phuclong_pos_theme/models/pos_session.py:0
+#: code:addons/phuclong_pos_theme/static/src/js/main.js:0
+#: code:addons/phuclong_pos_theme/static/src/js/main.js:0
+#: code:addons/phuclong_pos_theme/static/src/js/main.js:0
+#: code:addons/phuclong_pos_theme/static/src/js/main.js:0
+#: code:addons/phuclong_pos_theme/static/src/js/main.js:0
+#: code:addons/phuclong_pos_theme/static/src/js/models.js:0
+#: code:addons/phuclong_pos_theme/static/src/js/models.js:0
+#, python-format
+msgid "Cảnh báo"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: model:ir.model.fields.selection,name:phuclong_pos_theme.selection__pos_report_queue_config__type__daily
+#: model:ir.model.fields.selection,name:phuclong_pos_theme.selection__pos_report_queue_output__type__daily
+#: model:ir.model.fields.selection,name:phuclong_pos_theme.selection__wizard_report_pos_revenue__type__daily
+msgid "Daily"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: model:ir.model.fields,field_description:phuclong_pos_theme.field_wizard_report_pos_date_revenue__date
+msgid "Date"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: model:ir.model.fields,field_description:phuclong_pos_theme.field_pos_order__date_first_order
+msgid "Date First Order"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: model:ir.model.fields,field_description:phuclong_pos_theme.field_wizard_report_pos_cancel__date_from
+msgid "Date From"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: model:ir.model.fields,field_description:phuclong_pos_theme.field_pos_order__date_last_order
+msgid "Date Last Order"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: model:ir.model.fields,field_description:phuclong_pos_theme.field_pos_order_duplicate_log__date_order
+msgid "Date Order"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: model:ir.model.fields,field_description:phuclong_pos_theme.field_pos_report_queue_output__date_from
+#: model:ir.model.fields,field_description:phuclong_pos_theme.field_wizard_report_pos_revenue__date_from
+msgid "Date Time From"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: model:ir.model.fields,field_description:phuclong_pos_theme.field_pos_report_queue_output__date_to
+#: model:ir.model.fields,field_description:phuclong_pos_theme.field_wizard_report_pos_revenue__date_to
+msgid "Date Time To"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: model:ir.model.fields,field_description:phuclong_pos_theme.field_wizard_report_pos_cancel__date_to
+msgid "Date To"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: model:ir.actions.server,name:phuclong_pos_theme.pos_report_queue_output_ir_cron_ir_actions_server
+#: model:ir.cron,cron_name:phuclong_pos_theme.pos_report_queue_output_ir_cron
+#: model:ir.cron,name:phuclong_pos_theme.pos_report_queue_output_ir_cron
+msgid "Delete POS report asynchronously"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: model:ir.model.fields.selection,name:phuclong_pos_theme.selection__pos_report_queue_config__type__discount
+#: model:ir.model.fields.selection,name:phuclong_pos_theme.selection__pos_report_queue_output__type__discount
+#: model:ir.model.fields.selection,name:phuclong_pos_theme.selection__wizard_report_pos_revenue__type__discount
+msgid "Discount"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: model:ir.model.fields,field_description:phuclong_pos_theme.field_login_scanner_wizard__display_name
+#: model:ir.model.fields,field_description:phuclong_pos_theme.field_pos_order_duplicate_log__display_name
+#: model:ir.model.fields,field_description:phuclong_pos_theme.field_pos_report_queue_config__display_name
+#: model:ir.model.fields,field_description:phuclong_pos_theme.field_pos_report_queue_output__display_name
+#: model:ir.model.fields,field_description:phuclong_pos_theme.field_report_phuclong_pos_theme_report_pos_payment_method__display_name
+#: model:ir.model.fields,field_description:phuclong_pos_theme.field_wizard_pos_cashier_scanner__display_name
+#: model:ir.model.fields,field_description:phuclong_pos_theme.field_wizard_report_pos_cancel__display_name
+#: model:ir.model.fields,field_description:phuclong_pos_theme.field_wizard_report_pos_date_revenue__display_name
+#: model:ir.model.fields,field_description:phuclong_pos_theme.field_wizard_report_pos_revenue__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#. openerp-web
+#: code:addons/phuclong_pos_theme/static/src/js/main.js:0
+#, python-format
+msgid "Don't leave yet,<br />it's still loading..."
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: model:ir.model.fields.selection,name:phuclong_pos_theme.selection__pos_report_queue_output__state__done
+msgid "Done"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: model:ir.model.fields,field_description:phuclong_pos_theme.field_pos_report_queue_config__duration
+msgid "Duration (days)"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: code:addons/phuclong_pos_theme/models/pos_report_queue.py:0
+#, python-format
+msgid "Duration and Number of Shop must be greater than 0."
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: model:ir.model.fields,field_description:phuclong_pos_theme.field_pos_order__invoice_email
+msgid "Email"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: model:ir.actions.act_window,name:phuclong_pos_theme.action_wizard_login_scanner_wizard
+#: model_terms:ir.ui.view,arch_db:phuclong_pos_theme.wizard_login_scanner_wizard
+msgid "Employee Login Scanner"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: code:addons/phuclong_pos_theme/wizards/login_scanner_wizard.py:0
+#, python-format
+msgid "Employee: "
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: model:ir.model.fields,field_description:phuclong_pos_theme.field_pos_report_queue_output__end_hour
+#: model:ir.model.fields,field_description:phuclong_pos_theme.field_wizard_report_pos_revenue__end_hour
+msgid "End Hour"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#. openerp-web
+#: code:addons/phuclong_pos_theme/static/src/js/main.js:0
+#: code:addons/phuclong_pos_theme/static/src/js/models.js:0
+#: code:addons/phuclong_pos_theme/static/src/js/models.js:0
+#: model:ir.model.fields,field_description:phuclong_pos_theme.field_wizard_report_pos_date_revenue__error
+#: model:ir.model.fields.selection,name:phuclong_pos_theme.selection__pos_report_queue_output__state__error
+#, python-format
+msgid "Error"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: model:ir.model.fields,field_description:phuclong_pos_theme.field_wizard_report_pos_date_revenue__error_html
+msgid "Error Html"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#. openerp-web
+#: code:addons/phuclong_pos_theme/static/src/js/main.js:0
+#: code:addons/phuclong_pos_theme/static/src/js/main.js:0
+#: code:addons/phuclong_pos_theme/static/src/js/models.js:0
+#: code:addons/phuclong_pos_theme/static/src/js/models.js:0
+#: code:addons/phuclong_pos_theme/static/src/js/models.js:0
+#: code:addons/phuclong_pos_theme/static/src/js/popup.js:0
+#: code:addons/phuclong_pos_theme/static/src/js/popup.js:0
+#: code:addons/phuclong_pos_theme/static/src/js/popup.js:0
+#: code:addons/phuclong_pos_theme/static/src/js/popup.js:0
+#, python-format
+msgid "Error: Could not Save Changes"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: model:ir.model.fields,field_description:phuclong_pos_theme.field_pos_payment__exchange_rate
+msgid "Exchange Rate"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: code:addons/phuclong_pos_theme/models/pos_report_queue.py:0
+#, python-format
+msgid "Failure"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: code:addons/phuclong_pos_theme/models/pos_report_queue.py:0
+#, python-format
+msgid "Generate Report Queue"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: model_terms:ir.ui.view,arch_db:phuclong_pos_theme.pos_order_duplicate_log_view_search
+msgid "Group By..."
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: model:ir.model.fields,field_description:phuclong_pos_theme.field_pos_order__hanging_time
+msgid "Hanging Time"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: model:ir.model.fields.selection,name:phuclong_pos_theme.selection__wizard_report_pos_date_revenue__warning_state__warning
+msgid "Has Warning"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: model:ir.model.fields.selection,name:phuclong_pos_theme.selection__pos_report_queue_config__type__hourly
+#: model:ir.model.fields.selection,name:phuclong_pos_theme.selection__pos_report_queue_output__type__hourly
+#: model:ir.model.fields.selection,name:phuclong_pos_theme.selection__wizard_report_pos_revenue__type__hourly
+msgid "Hourly"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: model:ir.model.fields,field_description:phuclong_pos_theme.field_login_scanner_wizard__id
+#: model:ir.model.fields,field_description:phuclong_pos_theme.field_pos_order_duplicate_log__id
+#: model:ir.model.fields,field_description:phuclong_pos_theme.field_pos_report_queue_config__id
+#: model:ir.model.fields,field_description:phuclong_pos_theme.field_pos_report_queue_output__id
+#: model:ir.model.fields,field_description:phuclong_pos_theme.field_report_phuclong_pos_theme_report_pos_payment_method__id
+#: model:ir.model.fields,field_description:phuclong_pos_theme.field_wizard_pos_cashier_scanner__id
+#: model:ir.model.fields,field_description:phuclong_pos_theme.field_wizard_report_pos_cancel__id
+#: model:ir.model.fields,field_description:phuclong_pos_theme.field_wizard_report_pos_date_revenue__id
+#: model:ir.model.fields,field_description:phuclong_pos_theme.field_wizard_report_pos_revenue__id
+msgid "ID"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: code:addons/phuclong_pos_theme/reports/reports.py:0
+#, python-format
+msgid ""
+"If you do not process your pending bill at the end of the day, you will have"
+" 1 report. Continue ?"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: model:ir.model.fields.selection,name:phuclong_pos_theme.selection__pos_report_queue_output__state__in_progress
+msgid "In Progress"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: model_terms:ir.ui.view,arch_db:phuclong_pos_theme.phuclong_count_of_print_bill_pos_order
+msgid "In bill"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#. openerp-web
+#: code:addons/phuclong_pos_theme/static/src/js/main.js:0
+#: code:addons/phuclong_pos_theme/static/src/js/models.js:0
+#: code:addons/phuclong_pos_theme/static/src/js/models.js:0
+#, python-format
+msgid "Không tìm thấy hoá đơn trong hệ thống !!"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: model:ir.model.fields,field_description:phuclong_pos_theme.field_login_scanner_wizard____last_update
+#: model:ir.model.fields,field_description:phuclong_pos_theme.field_pos_order_duplicate_log____last_update
+#: model:ir.model.fields,field_description:phuclong_pos_theme.field_pos_report_queue_config____last_update
+#: model:ir.model.fields,field_description:phuclong_pos_theme.field_pos_report_queue_output____last_update
+#: model:ir.model.fields,field_description:phuclong_pos_theme.field_report_phuclong_pos_theme_report_pos_payment_method____last_update
+#: model:ir.model.fields,field_description:phuclong_pos_theme.field_wizard_pos_cashier_scanner____last_update
+#: model:ir.model.fields,field_description:phuclong_pos_theme.field_wizard_report_pos_cancel____last_update
+#: model:ir.model.fields,field_description:phuclong_pos_theme.field_wizard_report_pos_date_revenue____last_update
+#: model:ir.model.fields,field_description:phuclong_pos_theme.field_wizard_report_pos_revenue____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: model:ir.model.fields,field_description:phuclong_pos_theme.field_login_scanner_wizard__write_uid
+#: model:ir.model.fields,field_description:phuclong_pos_theme.field_pos_order_duplicate_log__write_uid
+#: model:ir.model.fields,field_description:phuclong_pos_theme.field_pos_report_queue_config__write_uid
+#: model:ir.model.fields,field_description:phuclong_pos_theme.field_pos_report_queue_output__write_uid
+#: model:ir.model.fields,field_description:phuclong_pos_theme.field_wizard_pos_cashier_scanner__write_uid
+#: model:ir.model.fields,field_description:phuclong_pos_theme.field_wizard_report_pos_cancel__write_uid
+#: model:ir.model.fields,field_description:phuclong_pos_theme.field_wizard_report_pos_date_revenue__write_uid
+#: model:ir.model.fields,field_description:phuclong_pos_theme.field_wizard_report_pos_revenue__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: model:ir.model.fields,field_description:phuclong_pos_theme.field_login_scanner_wizard__write_date
+#: model:ir.model.fields,field_description:phuclong_pos_theme.field_pos_order_duplicate_log__write_date
+#: model:ir.model.fields,field_description:phuclong_pos_theme.field_pos_report_queue_config__write_date
+#: model:ir.model.fields,field_description:phuclong_pos_theme.field_pos_report_queue_output__write_date
+#: model:ir.model.fields,field_description:phuclong_pos_theme.field_wizard_pos_cashier_scanner__write_date
+#: model:ir.model.fields,field_description:phuclong_pos_theme.field_wizard_report_pos_cancel__write_date
+#: model:ir.model.fields,field_description:phuclong_pos_theme.field_wizard_report_pos_date_revenue__write_date
+#: model:ir.model.fields,field_description:phuclong_pos_theme.field_wizard_report_pos_revenue__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#. openerp-web
+#: code:addons/phuclong_pos_theme/static/src/js/main.js:0
+#, python-format
+msgid "Loading..."
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: model:ir.model.fields,field_description:phuclong_pos_theme.field_pos_order_duplicate_log__log_data
+msgid "Log Data"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: model:ir.model.fields,field_description:phuclong_pos_theme.field_pos_report_queue_output__log_error
+msgid "Log Error"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#. openerp-web
+#: code:addons/phuclong_pos_theme/static/src/js/barcode_scanner.js:0
+#, python-format
+msgid "Login Error"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: code:addons/phuclong_pos_theme/wizards/login_scanner_wizard.py:0
+#, python-format
+msgid "Login Successful"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: model_terms:ir.ui.view,arch_db:phuclong_pos_theme.wizard_login_scanner_wizard
+msgid "Logout"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: model:ir.model.fields,field_description:phuclong_pos_theme.field_res_partner__loyalty_level_id
+#: model:ir.model.fields,field_description:phuclong_pos_theme.field_res_users__loyalty_level_id
+msgid "Loyalty Level"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: model_terms:ir.ui.view,arch_db:phuclong_pos_theme.view_pos_pos_form_loyalty_phuclong_inherit
+msgid "Loyalty Programs"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#. openerp-web
+#: code:addons/phuclong_pos_theme/static/src/js/main.js:0
+#, python-format
+msgid "Maybe you should consider reloading the application by pressing F5..."
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: model:ir.model.fields,field_description:phuclong_pos_theme.field_pos_report_queue_output__report_name
+msgid "Name"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#. openerp-web
+#: code:addons/phuclong_pos_theme/static/src/js/main.js:0
+#: code:addons/phuclong_pos_theme/static/src/js/main.js:0
+#: code:addons/phuclong_pos_theme/static/src/js/popup.js:0
+#, python-format
+msgid "Nhập mã Coupon"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#. openerp-web
+#: code:addons/phuclong_pos_theme/static/src/js/main.js:0
+#: code:addons/phuclong_pos_theme/static/src/js/main.js:0
+#, python-format
+msgid "Nhập mã Voucher để thanh toán"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: model:ir.model.fields,field_description:phuclong_pos_theme.field_pos_report_queue_output__no_vat
+#: model:ir.model.fields,field_description:phuclong_pos_theme.field_wizard_report_pos_revenue__no_vat
+msgid "No VAT"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: code:addons/phuclong_pos_theme/models/pos_model.py:0
+#: code:addons/phuclong_pos_theme/models/pos_model.py:0
+#, python-format
+msgid ""
+"No cash statement found for this session. Unable to record returned cash."
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: model:ir.model.fields.selection,name:phuclong_pos_theme.selection__wizard_report_pos_date_revenue__warning_state__none
+msgid "None"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: model:ir.model.fields,field_description:phuclong_pos_theme.field_pos_order__invoice_note
+msgid "Note"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: model:ir.model.fields,field_description:phuclong_pos_theme.field_pos_order__number_of_printed_bill
+msgid "Number of Printed Bill"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: model:ir.model.fields,field_description:phuclong_pos_theme.field_pos_report_queue_config__number_of_shops
+msgid "Number of Shops"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#. openerp-web
+#: code:addons/phuclong_pos_theme/static/src/js/main.js:0
+#: code:addons/phuclong_pos_theme/static/src/js/main.js:0
+#, python-format
+msgid ""
+"Nếu xác nhận sử dụng Coupon trên đơn hàng này, hệ thống sẽ tự động xóa toàn "
+"bộ chương trình khuyến mãi trước đó"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#. openerp-web
+#: code:addons/phuclong_pos_theme/static/src/js/main.js:0
+#, python-format
+msgid ""
+"Nếu xác nhận sử dụng On Account trên đơn hàng này, hệ thống sẽ tự động xóa "
+"toàn bộ chương trình khuyến mãi trước đó"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#. openerp-web
+#: code:addons/phuclong_pos_theme/static/src/js/main.js:0
+#, python-format
+msgid ""
+"Nếu xác nhận sử dụng Thẻ trả trước trên đơn hàng này, hệ thống sẽ tự động "
+"xóa toàn bộ chương trình khuyến mãi trước đó"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#. openerp-web
+#: code:addons/phuclong_pos_theme/static/src/js/main.js:0
+#, python-format
+msgid ""
+"Nếu xác nhận sử dụng Voucher trên đơn hàng này, hệ thống sẽ tự động xóa toàn"
+" bộ chương trình khuyến mãi trước đó"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#. openerp-web
+#: code:addons/phuclong_pos_theme/static/src/js/main.js:0
+#, python-format
+msgid ""
+"Nếu xác nhận sử dụng khuyến mãi Visa trên đơn hàng này, hệ thống sẽ tự động "
+"xóa toàn bộ chương trình khuyến mãi trước đó"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#. openerp-web
+#: code:addons/phuclong_pos_theme/static/src/js/main.js:0
+#, python-format
+msgid ""
+"Nếu xác nhận đổi thành combo khác, hệ thống sẽ tự động xóa những sản phẩm "
+"thuộc các combo chưa hoàn thành"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: code:addons/phuclong_pos_theme/models/pos_order_duplicate_log.py:0
+#, python-format
+msgid "Only Administrator can do this function"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: model:ir.model.fields,field_description:phuclong_pos_theme.field_pos_session__use_barcode_scanner_to_open_session
+msgid "Open Session via Card"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: model:ir.actions.act_window,name:phuclong_pos_theme.pos_order_duplicate_log_action
+#: model:ir.ui.menu,name:phuclong_pos_theme.menu_pos_order_duplicate_log_action
+msgid "Order Duplicate Logs"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: model:ir.model.fields,field_description:phuclong_pos_theme.field_pos_order__order_in_call_center
+msgid "Order in Call Center"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: model_terms:ir.ui.view,arch_db:phuclong_pos_theme.wizard_pos_cashier_scanner
+msgid "POS Cashier Scanner"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: model:ir.actions.server,name:phuclong_pos_theme.ir_cron_delete_pos_order_duplicate_log_ir_actions_server
+#: model:ir.cron,cron_name:phuclong_pos_theme.ir_cron_delete_pos_order_duplicate_log
+#: model:ir.cron,name:phuclong_pos_theme.ir_cron_delete_pos_order_duplicate_log
+msgid "POS: Cron Delete POS Order Duplicate Log"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#. openerp-web
+#: code:addons/phuclong_pos_theme/static/src/js/main.js:0
+#: code:addons/phuclong_pos_theme/static/src/js/main.js:0
+#: code:addons/phuclong_pos_theme/static/src/js/main.js:0
+#: code:addons/phuclong_pos_theme/static/src/js/main.js:0
+#: code:addons/phuclong_pos_theme/static/src/js/main.js:0
+#, python-format
+msgid "Password ?"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: model:ir.model.fields,field_description:phuclong_pos_theme.field_pos_order__pay_draft_order
+msgid "Pay Draft Order"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: model:ir.model.fields.selection,name:phuclong_pos_theme.selection__pos_report_queue_config__type__payment_method_day
+#: model:ir.model.fields.selection,name:phuclong_pos_theme.selection__pos_report_queue_output__type__payment_method_day
+#: model:ir.model.fields.selection,name:phuclong_pos_theme.selection__wizard_report_pos_revenue__type__payment_method_day
+msgid "Payment By Day"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: model:ir.model.fields.selection,name:phuclong_pos_theme.selection__pos_report_queue_config__type__payment_method
+#: model:ir.model.fields.selection,name:phuclong_pos_theme.selection__pos_report_queue_output__type__payment_method
+#: model:ir.model.fields.selection,name:phuclong_pos_theme.selection__wizard_report_pos_revenue__type__payment_method
+msgid "Payment Method"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: model:ir.model.fields.selection,name:phuclong_pos_theme.selection__pos_report_queue_config__type__payment_method_bill
+#: model:ir.model.fields.selection,name:phuclong_pos_theme.selection__pos_report_queue_output__type__payment_method_bill
+#: model:ir.model.fields.selection,name:phuclong_pos_theme.selection__wizard_report_pos_revenue__type__payment_method_bill
+msgid "Payment Method By Bill"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: code:addons/phuclong_pos_theme/models/res_users.py:0
+#, python-format
+msgid "Please create Employee related with this User"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: model_terms:ir.ui.view,arch_db:phuclong_pos_theme.wizard_login_scanner_wizard
+msgid "Please swipe the employee card into the scanner"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: model:ir.model,name:phuclong_pos_theme.model_pos_config
+msgid "Point of Sale Configuration"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: model:ir.model,name:phuclong_pos_theme.model_pos_order
+msgid "Point of Sale Orders"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: model:ir.model,name:phuclong_pos_theme.model_pos_payment
+msgid "Point of Sale Payments"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: model:ir.model,name:phuclong_pos_theme.model_pos_session
+msgid "Point of Sale Session"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: model:ir.model.fields,field_description:phuclong_pos_theme.field_pos_order_duplicate_log__name
+#: model_terms:ir.ui.view,arch_db:phuclong_pos_theme.pos_order_duplicate_log_view_search
+msgid "Pos Reference"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: model:ir.model,name:phuclong_pos_theme.model_pos_report_queue_config
+msgid "Pos Report Queue Config"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: model:ir.model,name:phuclong_pos_theme.model_pos_report_queue_output
+msgid "Pos Report Queue Output"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: model_terms:ir.ui.view,arch_db:phuclong_pos_theme.wizard_pos_report_date_revenue
+msgid "Print"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: model:ir.actions.act_window,name:phuclong_pos_theme.action_pos_report_date_revenue
+#: model:ir.ui.menu,name:phuclong_pos_theme.menu_action_pos_report_date_revenue
+msgid "Print date bill"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: model:ir.model.fields.selection,name:phuclong_pos_theme.selection__pos_report_queue_config__type__revenue_product
+#: model:ir.model.fields.selection,name:phuclong_pos_theme.selection__pos_report_queue_output__type__revenue_product
+#: model:ir.model.fields.selection,name:phuclong_pos_theme.selection__wizard_report_pos_revenue__type__revenue_product
+msgid "Product"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: model:ir.model.fields.selection,name:phuclong_pos_theme.selection__pos_report_queue_config__type__revenue_product_vat
+#: model:ir.model.fields.selection,name:phuclong_pos_theme.selection__pos_report_queue_output__type__revenue_product_vat
+#: model:ir.model.fields.selection,name:phuclong_pos_theme.selection__wizard_report_pos_revenue__type__revenue_product_vat
+msgid "Product VAT"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: model_terms:ir.ui.view,arch_db:phuclong_pos_theme.pos_order_duplicate_log_view_form
+msgid "Recreate Order"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: model:ir.model.fields,field_description:phuclong_pos_theme.field_pos_order_duplicate_log__recreated
+msgid "Recreated"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: model:ir.model.fields,field_description:phuclong_pos_theme.field_pos_report_queue_output__ir_actions_report_id
+msgid "Report"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: model_terms:ir.ui.view,arch_db:phuclong_pos_theme.wizard_report_pos_cancel
+msgid "Report Bill Cancellation Details"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: model:ir.model.fields,field_description:phuclong_pos_theme.field_pos_report_queue_config__type
+msgid "Report Name"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: model_terms:ir.ui.view,arch_db:phuclong_pos_theme.wizard_pos_report_date_revenue
+msgid "Report POS Date Revenue"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: model:ir.actions.act_window,name:phuclong_pos_theme.action_pos_report_revenue
+#: model:ir.ui.menu,name:phuclong_pos_theme.menu_action_pos_report_revenue
+#: model_terms:ir.ui.view,arch_db:phuclong_pos_theme.wizard_pos_report_revenue
+msgid "Report POS Revenue"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: model:ir.model.fields,field_description:phuclong_pos_theme.field_pos_report_queue_output__type
+#: model:ir.model.fields,field_description:phuclong_pos_theme.field_wizard_report_pos_revenue__type
+msgid "Report Type"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: model:ir.actions.act_window,name:phuclong_pos_theme.pos_report_queue_config_action
+#: model:ir.ui.menu,name:phuclong_pos_theme.menu_pos_report_queue_config
+msgid "Report in Queue Config"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: model:ir.actions.act_window,name:phuclong_pos_theme.pos_report_queue_output_action
+#: model:ir.ui.menu,name:phuclong_pos_theme.menu_pos_report_queue_output
+msgid "Reports In Queue"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: model_terms:ir.ui.view,arch_db:phuclong_pos_theme.view_pos_order_filter_inherit_phuclong_add_invoice_info
+msgid "Request fo VAT"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: model:ir.model.fields,field_description:phuclong_pos_theme.field_pos_order__invoice_request
+msgid "Request for VAT"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: model:ir.model.fields,field_description:phuclong_pos_theme.field_res_users__required_emp_card
+msgid "Required Employee Card"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: model:ir.model.fields.selection,name:phuclong_pos_theme.selection__pos_report_queue_config__type__combo
+#: model:ir.model.fields.selection,name:phuclong_pos_theme.selection__pos_report_queue_output__type__combo
+#: model:ir.model.fields.selection,name:phuclong_pos_theme.selection__wizard_report_pos_revenue__type__combo
+msgid "Revenue Combo"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: model:ir.model.fields.selection,name:phuclong_pos_theme.selection__pos_report_queue_config__type__revenue_stores
+#: model:ir.model.fields.selection,name:phuclong_pos_theme.selection__pos_report_queue_output__type__revenue_stores
+#: model:ir.model.fields.selection,name:phuclong_pos_theme.selection__wizard_report_pos_revenue__type__revenue_stores
+msgid "Revenue Stores"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: model:ir.model.fields,field_description:phuclong_pos_theme.field_pos_order__reward_code
+msgid "Reward Code"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: model_terms:ir.ui.view,arch_db:phuclong_pos_theme.pos_report_queue_output_view_form
+msgid "Run Again"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#. openerp-web
+#: code:addons/phuclong_pos_theme/static/src/js/main.js:0
+#: code:addons/phuclong_pos_theme/static/src/js/main.js:0
+#: code:addons/phuclong_pos_theme/static/src/js/main.js:0
+#: code:addons/phuclong_pos_theme/static/src/js/main.js:0
+#: code:addons/phuclong_pos_theme/static/src/js/main.js:0
+#, python-format
+msgid "Sai mật khẩu !"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: model:ir.model.fields,field_description:phuclong_pos_theme.field_login_scanner_wizard__scanner_code
+msgid "Scanner Code"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: model:ir.model.fields.selection,name:phuclong_pos_theme.selection__wizard_report_pos_revenue__apply_type__select_warehouse
+msgid "Select Warehouse"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: model:ir.model.fields,field_description:phuclong_pos_theme.field_wizard_pos_cashier_scanner__session_id
+msgid "Session"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: model:ir.model.fields,field_description:phuclong_pos_theme.field_pos_order__session_callcenter_id
+msgid "Session Call Center"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: code:addons/phuclong_pos_theme/reports/reports.py:0
+#, python-format
+msgid ""
+"Some Delivery Orders are not done yet. Please wait for a while so that the "
+"system can process these delivery orders."
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: model:ir.model.fields,field_description:phuclong_pos_theme.field_pos_report_queue_output__start_hour
+#: model:ir.model.fields,field_description:phuclong_pos_theme.field_wizard_report_pos_revenue__start_hour
+msgid "Start Hour"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: model_terms:ir.ui.view,arch_db:phuclong_pos_theme.view_pos_session_form_card_scanner
+msgid "Start Session"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: model:ir.model.fields,field_description:phuclong_pos_theme.field_pos_report_queue_output__state
+msgid "Status"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#. openerp-web
+#: code:addons/phuclong_pos_theme/static/src/js/main.js:0
+#, python-format
+msgid "Still loading..."
+msgstr ""
+
+#. module: phuclong_pos_theme
+#. openerp-web
+#: code:addons/phuclong_pos_theme/static/src/js/main.js:0
+#, python-format
+msgid "Still loading...<br />Please be patient."
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: model:ir.model.fields,field_description:phuclong_pos_theme.field_pos_order_duplicate_log__warehouse_id
+#: model_terms:ir.ui.view,arch_db:phuclong_pos_theme.pos_order_duplicate_log_view_search
+msgid "Store"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: model:ir.model.fields,field_description:phuclong_pos_theme.field_pos_report_queue_output__warehouse_ids
+#: model:ir.model.fields,field_description:phuclong_pos_theme.field_wizard_report_pos_cancel__warehouse_ids
+#: model:ir.model.fields,field_description:phuclong_pos_theme.field_wizard_report_pos_date_revenue__warehouse_id
+#: model:ir.model.fields,field_description:phuclong_pos_theme.field_wizard_report_pos_revenue__warehouse_ids
+msgid "Stores"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#. openerp-web
+#: code:addons/phuclong_pos_theme/static/src/js/main.js:0
+#, python-format
+msgid "Sử dụng Coupon Nhân viên trên đơn hàng nguyên giá"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#. openerp-web
+#: code:addons/phuclong_pos_theme/static/src/js/main.js:0
+#, python-format
+msgid "Sử dụng Coupon trên đơn hàng nguyên giá"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#. openerp-web
+#: code:addons/phuclong_pos_theme/static/src/js/main.js:0
+#, python-format
+msgid "Sử dụng On Account trên đơn hàng nguyên giá"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#. openerp-web
+#: code:addons/phuclong_pos_theme/static/src/js/main.js:0
+#, python-format
+msgid "Sử dụng Thẻ trả trước trên đơn hàng nguyên giá"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#. openerp-web
+#: code:addons/phuclong_pos_theme/static/src/js/main.js:0
+#, python-format
+msgid "Sử dụng Voucher trên đơn hàng nguyên giá"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#. openerp-web
+#: code:addons/phuclong_pos_theme/static/src/js/main.js:0
+#, python-format
+msgid "Sử dụng khuyến mãi Visa trên đơn hàng nguyên giá"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#. openerp-web
+#: code:addons/phuclong_pos_theme/static/src/js/main.js:0
+#, python-format
+msgid "Take a minute to get a coffee,<br />because it's loading..."
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: code:addons/phuclong_pos_theme/wizards/pos_cashier_scanner.py:0
+#, python-format
+msgid "The employee card code does not exist"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: code:addons/phuclong_pos_theme/models/res_users.py:0
+#, python-format
+msgid "The employee card code does not exist, please set card first"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: code:addons/phuclong_pos_theme/models/pos_order_duplicate_log.py:0
+#, python-format
+msgid "The order is existing in system"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: code:addons/phuclong_pos_theme/models/pos_report_queue.py:0
+#, python-format
+msgid ""
+"The report %s of %s has been failed completed. Please access the menu "
+"<button %s>Report in Queue</button> to run the report again."
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: code:addons/phuclong_pos_theme/models/pos_report_queue.py:0
+#, python-format
+msgid ""
+"The report %s of %s has been successfully completed. Please access the menu "
+"<button %s>Report in Queue</button> to check the result."
+msgstr ""
+
+#. module: phuclong_pos_theme
+#. openerp-web
+#: code:addons/phuclong_pos_theme/static/src/js/main.js:0
+#: code:addons/phuclong_pos_theme/static/src/js/main.js:0
+#, python-format
+msgid "Toàn bộ Combo này sẽ bị xoá. Bạn có muốn tiếp tục xoá?"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: model:ir.model,name:phuclong_pos_theme.model_res_users
+msgid "Users"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: model_terms:ir.ui.view,arch_db:phuclong_pos_theme.view_pos_pos_form_loyalty_phuclong_inherit
+msgid "VAT Info"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: model:ir.model.fields,field_description:phuclong_pos_theme.field_pos_order__invoice_vat
+msgid "VAT No."
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: model:ir.model.fields,field_description:phuclong_pos_theme.field_pos_payment__voucher_max_value
+msgid "Value of Voucher"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: model:ir.model.fields,help:phuclong_pos_theme.field_login_scanner_wizard___barcode_scanned
+#: model:ir.model.fields,help:phuclong_pos_theme.field_wizard_pos_cashier_scanner___barcode_scanned
+msgid "Value of the last barcode scanned."
+msgstr ""
+
+#. module: phuclong_pos_theme
+#. openerp-web
+#: code:addons/phuclong_pos_theme/static/src/js/main.js:0
+#, python-format
+msgid "Vui lòng chọn sản phẩm"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#. openerp-web
+#: code:addons/phuclong_pos_theme/static/src/js/main.js:0
+#, python-format
+msgid "Vui lòng chọn sản phẩm !"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#. openerp-web
+#: code:addons/phuclong_pos_theme/static/src/js/models.js:0
+#, python-format
+msgid "Vui lòng kiểm tra lại Coupon"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#. openerp-web
+#: code:addons/phuclong_pos_theme/static/src/js/main.js:0
+#, python-format
+msgid "Vui lòng nhập đúng giá trị"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#. openerp-web
+#: code:addons/phuclong_pos_theme/static/src/js/main.js:0
+#, python-format
+msgid "Vui lòng nhập đúng số tiền"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: code:addons/phuclong_pos_theme/models/res_users.py:0
+#: code:addons/phuclong_pos_theme/models/res_users.py:0
+#: model:ir.model.fields,field_description:phuclong_pos_theme.field_wizard_report_pos_date_revenue__warning
+#, python-format
+msgid "Warning"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: model:ir.model.fields,field_description:phuclong_pos_theme.field_wizard_report_pos_date_revenue__warning_html
+msgid "Warning Html"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: model:ir.model.fields.selection,name:phuclong_pos_theme.selection__wizard_report_pos_date_revenue__warning_state__warning_1
+msgid "Warning Level 1"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: model:ir.model.fields.selection,name:phuclong_pos_theme.selection__wizard_report_pos_date_revenue__warning_state__warning_2
+msgid "Warning Level 2"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: model:ir.model.fields,field_description:phuclong_pos_theme.field_wizard_report_pos_date_revenue__warning_state
+msgid "Warning State"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: model_terms:ir.ui.view,arch_db:phuclong_pos_theme.wizard_pos_cashier_scanner
+msgid "Xin hãy quẹt thẻ nhân viên để mở ca bán hàng"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: code:addons/phuclong_pos_theme/models/pos_model.py:0
+#, python-format
+msgid ""
+"You can not delete this order because the label of this one was printed."
+msgstr ""
+
+#. module: phuclong_pos_theme
+#. openerp-web
+#: code:addons/phuclong_pos_theme/static/src/js/main.js:0
+#, python-format
+msgid ""
+"You may not believe it,<br />but the application is actually loading..."
+msgstr ""
+
+#. module: phuclong_pos_theme
+#. openerp-web
+#: code:addons/phuclong_pos_theme/static/src/js/main.js:0
+#: code:addons/phuclong_pos_theme/static/src/js/main.js:0
+#: code:addons/phuclong_pos_theme/static/src/js/models.js:0
+#: code:addons/phuclong_pos_theme/static/src/js/models.js:0
+#: code:addons/phuclong_pos_theme/static/src/js/models.js:0
+#: code:addons/phuclong_pos_theme/static/src/js/popup.js:0
+#: code:addons/phuclong_pos_theme/static/src/js/popup.js:0
+#: code:addons/phuclong_pos_theme/static/src/js/popup.js:0
+#: code:addons/phuclong_pos_theme/static/src/js/popup.js:0
+#, python-format
+msgid "Your Internet connection is probably down."
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: code:addons/phuclong_pos_theme/models/pos_model.py:0
+#, python-format
+msgid "Zero Payment"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: model_terms:ir.ui.view,arch_db:phuclong_pos_theme.wizard_login_scanner_wizard
+#: model_terms:ir.ui.view,arch_db:phuclong_pos_theme.wizard_pos_cashier_scanner
+msgid "barcode scanner"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: model:ir.model,name:phuclong_pos_theme.model_login_scanner_wizard
+msgid "login.scanner.wizard"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: model:ir.model,name:phuclong_pos_theme.model_pos_order_duplicate_log
+msgid "pos.order.duplicate.log"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: model:ir.model,name:phuclong_pos_theme.model_report_phuclong_pos_theme_report_pos_payment_method
+msgid "report.phuclong_pos_theme.report_pos_payment_method"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: model:ir.actions.report,name:phuclong_pos_theme.report_pos_cancel
+msgid "report_pos_cancel"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: model:ir.actions.report,name:phuclong_pos_theme.report_pos_combo
+msgid "report_pos_combo"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: model:ir.actions.report,name:phuclong_pos_theme.report_pos_discount
+msgid "report_pos_discount"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: model:ir.actions.report,name:phuclong_pos_theme.report_pos_hourly
+msgid "report_pos_hourly"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: model:ir.actions.report,name:phuclong_pos_theme.report_pos_payment_by_day
+msgid "report_pos_payment_by_day"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: model:ir.actions.report,name:phuclong_pos_theme.report_pos_payment_method_bill
+msgid "report_pos_payment_method_bill"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: model:ir.actions.report,name:phuclong_pos_theme.report_pos_revenue
+msgid "report_pos_revenue"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: model:ir.actions.report,name:phuclong_pos_theme.report_pos_revenue_product
+msgid "report_pos_revenue_product"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: model:ir.actions.report,name:phuclong_pos_theme.report_pos_revenue_product_vat
+msgid "report_pos_revenue_product_vat"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: model:ir.actions.report,name:phuclong_pos_theme.report_pos_revenue_store
+msgid "report_pos_revenue_store"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: code:addons/phuclong_pos_theme/models/pos_model.py:0
+#, python-format
+msgid "return"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: model:ir.model,name:phuclong_pos_theme.model_wizard_pos_cashier_scanner
+msgid "wizard.pos.cashier.scanner"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: model:ir.model,name:phuclong_pos_theme.model_wizard_report_pos_cancel
+msgid "wizard.report.pos.cancel"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: model:ir.model,name:phuclong_pos_theme.model_wizard_report_pos_date_revenue
+msgid "wizard.report.pos.date.revenue"
+msgstr ""
+
+#. module: phuclong_pos_theme
+#: model:ir.model,name:phuclong_pos_theme.model_wizard_report_pos_revenue
+msgid "wizard.report.pos.revenue"
+msgstr ""

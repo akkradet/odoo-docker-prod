@@ -1,0 +1,116 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* web_boolean_button
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0+e-20200401\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2021-05-04 05:03+0000\n"
+"Last-Translator: Nguyễn Thanh Tùng <tung.nt@besco.vn>\n"
+"Language-Team: Vietnamese <http://weblate.besco.vn/projects/besco-phuc-long/"
+"web_boolean_button/vi_VN/>\n"
+"Language: vi_VN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 3.8\n"
+
+#. module: web_boolean_button
+#. openerp-web
+#: code:addons/web_boolean_button/static/src/js/boolean_button.js:0
+#, python-format
+msgid "Activate"
+msgstr ""
+
+#. module: web_boolean_button
+#. openerp-web
+#: code:addons/web_boolean_button/static/src/js/boolean_button.js:0
+#, python-format
+msgid "Active"
+msgstr ""
+
+#. module: web_boolean_button
+#. openerp-web
+#: code:addons/web_boolean_button/static/src/js/boolean_button.js:0
+#, python-format
+msgid "Archive"
+msgstr ""
+
+#. module: web_boolean_button
+#. openerp-web
+#: code:addons/web_boolean_button/static/src/js/boolean_button.js:0
+#, python-format
+msgid "Archived"
+msgstr "Đã lưu trữ"
+
+#. module: web_boolean_button
+#. openerp-web
+#: code:addons/web_boolean_button/static/src/js/boolean_button.js:0
+#, python-format
+msgid "Close"
+msgstr ""
+
+#. module: web_boolean_button
+#. openerp-web
+#: code:addons/web_boolean_button/static/src/js/boolean_button.js:0
+#, python-format
+msgid "Closed"
+msgstr ""
+
+#. module: web_boolean_button
+#. openerp-web
+#: code:addons/web_boolean_button/static/src/js/boolean_button.js:0
+#, python-format
+msgid "Deactivate"
+msgstr ""
+
+#. module: web_boolean_button
+#. openerp-web
+#: code:addons/web_boolean_button/static/src/js/boolean_button.js:0
+#, python-format
+msgid "Inactive"
+msgstr ""
+
+#. module: web_boolean_button
+#. openerp-web
+#: code:addons/web_boolean_button/static/src/js/boolean_button.js:0
+#, python-format
+msgid "Off"
+msgstr ""
+
+#. module: web_boolean_button
+#. openerp-web
+#: code:addons/web_boolean_button/static/src/js/boolean_button.js:0
+#, python-format
+msgid "On"
+msgstr ""
+
+#. module: web_boolean_button
+#. openerp-web
+#: code:addons/web_boolean_button/static/src/js/boolean_button.js:0
+#, python-format
+msgid "Open"
+msgstr ""
+
+#. module: web_boolean_button
+#. openerp-web
+#: code:addons/web_boolean_button/static/src/js/boolean_button.js:0
+#, python-format
+msgid "Restore"
+msgstr ""
+
+#. module: web_boolean_button
+#. openerp-web
+#: code:addons/web_boolean_button/static/src/js/boolean_button.js:0
+#, python-format
+msgid "Switch Off"
+msgstr ""
+
+#. module: web_boolean_button
+#. openerp-web
+#: code:addons/web_boolean_button/static/src/js/boolean_button.js:0
+#, python-format
+msgid "Switch On"
+msgstr ""

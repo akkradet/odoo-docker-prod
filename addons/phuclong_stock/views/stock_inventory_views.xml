@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<record id="stock_inventory_line_tree3_inherit_besco_stock" model="ir.ui.view">
+		<field name="name">stock_inventory_line_tree3_inherit_besco_stock</field>
+		<field name="model">stock.inventory.line</field>
+		<field name="inherit_id" ref="besco_stock.stock_inventory_line_tree2_inherit_besco_stock" />
+		<field name="arch" type="xml">
+			<xpath expr="//tree" position="attributes">
+				<attribute name="js_class">inventory_template_button</attribute>
+			</xpath>
+			
+		</field>
+	</record>
+	
+	<record id="phuclong_stock_inventory_inherit_besco_stock" model="ir.ui.view">
+		<field name="name">phuclong_stock_inventory_inherit_besco_stock</field>
+		<field name="model">stock.inventory</field>
+		<field name="inherit_id" ref="besco_stock.inventory_form_inherit_besco_stock" />
+		<field name="arch" type="xml">
+			<xpath expr="//button[@name='action_reopen_inventory']" position="attributes">
+				<attribute name="groups">phuclong_stock.group_reopen_inventory_adjustment</attribute>
+			</xpath>
+			<xpath expr="//button[@name='action_inventory_count']" position="attributes">
+				<attribute name="invisible">1</attribute>
+			</xpath>
+			<xpath expr="//button[@name='action_create_inventory_count']" position="attributes">
+				<attribute name="invisible">1</attribute>
+			</xpath>
+			<xpath expr="//button[@name='action_update_inventory_count']" position="attributes">
+				<attribute name="invisible">1</attribute>
+			</xpath>
+		</field>
+	</record>
+	
+</odoo>

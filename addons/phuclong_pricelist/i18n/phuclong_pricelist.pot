@@ -1,0 +1,161 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* phuclong_pricelist
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0+e-20200401\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: phuclong_pricelist
+#: code:addons/phuclong_pricelist/models/product_pricelist.py:0
+#: code:addons/phuclong_pricelist/models/product_pricelist.py:0
+#: code:addons/phuclong_pricelist/models/product_pricelist.py:0
+#: code:addons/phuclong_pricelist/models/product_pricelist.py:0
+#: code:addons/phuclong_pricelist/models/product_pricelist.py:0
+#: code:addons/phuclong_pricelist/models/product_pricelist.py:0
+#, python-format
+msgid " + Line %s:"
+msgstr ""
+
+#. module: phuclong_pricelist
+#: code:addons/phuclong_pricelist/models/product_pricelist.py:0
+#, python-format
+msgid " + Line %s: Product not found"
+msgstr ""
+
+#. module: phuclong_pricelist
+#: code:addons/phuclong_pricelist/models/product_pricelist.py:0
+#, python-format
+msgid " + Line %s: Ref code in multi product: %s"
+msgstr ""
+
+#. module: phuclong_pricelist
+#: code:addons/phuclong_pricelist/models/product_pricelist.py:0
+#, python-format
+msgid " Please check format of Date Start: dd/mm/yyyy.\n"
+msgstr ""
+
+#. module: phuclong_pricelist
+#: code:addons/phuclong_pricelist/models/product_pricelist.py:0
+#, python-format
+msgid " The discount only supports numeric.\n"
+msgstr ""
+
+#. module: phuclong_pricelist
+#: code:addons/phuclong_pricelist/models/product_pricelist.py:0
+#, python-format
+msgid " The discount value must be between 1% to 100% .\n"
+msgstr ""
+
+#. module: phuclong_pricelist
+#: code:addons/phuclong_pricelist/models/product_pricelist.py:0
+#, python-format
+msgid " The fixed price must be greater than 0.\n"
+msgstr ""
+
+#. module: phuclong_pricelist
+#: code:addons/phuclong_pricelist/models/product_pricelist.py:0
+#, python-format
+msgid " The fixed price only supports numeric.\n"
+msgstr ""
+
+#. module: phuclong_pricelist
+#: code:addons/phuclong_pricelist/models/product_pricelist.py:0
+#, python-format
+msgid " The min quantity only supports numeric.\n"
+msgstr ""
+
+#. module: phuclong_pricelist
+#: code:addons/phuclong_pricelist/models/product_pricelist.py:0
+#, python-format
+msgid "Base Price"
+msgstr ""
+
+#. module: phuclong_pricelist
+#: code:addons/phuclong_pricelist/models/product_pricelist.py:0
+#: model:ir.model.fields.selection,name:phuclong_pricelist.selection__product_pricelist__price_type__card_code
+#, python-format
+msgid "Card Code"
+msgstr ""
+
+#. module: phuclong_pricelist
+#: model:ir.model.fields,field_description:phuclong_pricelist.field_product_pricelist__card_code_partner_count
+msgid "Card Code Partner Count"
+msgstr ""
+
+#. module: phuclong_pricelist
+#: model:ir.model,name:phuclong_pricelist.model_res_partner
+msgid "Contact"
+msgstr ""
+
+#. module: phuclong_pricelist
+#: code:addons/phuclong_pricelist/models/product_pricelist.py:0
+#, python-format
+msgid "Failed to read file %s:\n"
+msgstr ""
+
+#. module: phuclong_pricelist
+#: model:ir.model.fields,field_description:phuclong_pricelist.field_product_pricelist__card_code_pricelist
+msgid "Is Pricelist By Card Code"
+msgstr ""
+
+#. module: phuclong_pricelist
+#: model:ir.model.fields,field_description:phuclong_pricelist.field_product_pricelist__card_code_partner_ids
+#: model_terms:ir.ui.view,arch_db:phuclong_pricelist.product_pricelist_view_inherit_besco_pos_pricelist_inherit
+msgid "Partners"
+msgstr ""
+
+#. module: phuclong_pricelist
+#: code:addons/phuclong_pricelist/models/product_pricelist.py:0
+#, python-format
+msgid "Price Event"
+msgstr ""
+
+#. module: phuclong_pricelist
+#: model:ir.model.fields,field_description:phuclong_pricelist.field_product_pricelist__price_type
+msgid "Price Type"
+msgstr ""
+
+#. module: phuclong_pricelist
+#: model:ir.model,name:phuclong_pricelist.model_product_pricelist
+#: model:ir.model.fields,field_description:phuclong_pricelist.field_res_partner__card_code_pricelist_id
+#: model:ir.model.fields,field_description:phuclong_pricelist.field_res_users__card_code_pricelist_id
+msgid "Pricelist"
+msgstr ""
+
+#. module: phuclong_pricelist
+#: model:ir.actions.act_window,name:phuclong_pricelist.product_pricelist_card_code_action
+#: model:ir.ui.menu,name:phuclong_pricelist.menu_product_pricelist_card_code
+msgid "Pricelist By Card Code"
+msgstr ""
+
+#. module: phuclong_pricelist
+#: code:addons/phuclong_pricelist/models/product_pricelist.py:0
+#, python-format
+msgid "Retail"
+msgstr ""
+
+#. module: phuclong_pricelist
+#: code:addons/phuclong_pricelist/models/product_pricelist.py:0
+#, python-format
+msgid "The file data do not exits."
+msgstr ""
+
+#. module: phuclong_pricelist
+#: code:addons/phuclong_pricelist/models/product_pricelist.py:0
+#, python-format
+msgid "The file must be of extension .xls."
+msgstr ""
+
+#. module: phuclong_pricelist
+#: code:addons/phuclong_pricelist/models/product_pricelist.py:0
+#, python-format
+msgid "Wholesale"
+msgstr ""

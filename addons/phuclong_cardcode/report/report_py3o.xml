@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        
+        <record id="report_import_cardcode_publish" model="ir.actions.report">
+            <field name="name">report_import_cardcode_publish</field>
+            <field name="type">ir.actions.report</field>
+            <field name="model">cardcode.publish</field>
+            <field name="report_name">report_import_cardcode_publish</field>
+            <field name="report_type">py3o</field>
+            <field name="py3o_filetype">ods</field>
+            <field name="module">phuclong_cardcode</field>
+            <field name="print_report_name">'Report Import Cardcode' + '.ods'</field>
+            <field name="binding_type">report</field>
+            <field name="py3o_template_fallback">report/import_cardcode_publish.ods</field>
+        </record>
+        
+    </data>
+</odoo>

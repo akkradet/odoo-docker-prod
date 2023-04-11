@@ -1,0 +1,26 @@
+.o_list_view {
+  .o_list_table {
+    .o_data_row {
+      &:not(.o_selected_row) {
+        & .o_list_many2one, & .o_list_char, & .o_list_number {
+          white-space: normal;
+        }
+      }
+    }
+
+    thead {
+      > tr > th:not(.o_list_record_selector) {
+        white-space: normal;
+        text-overflow: clip;
+      }
+    }
+
+    tbody > tr > td:not(.o_list_record_selector) {
+      &:not(.o_handle_cell) {
+        white-space: normal;
+        text-overflow: clip;
+      }
+    }
+  }
+}
+

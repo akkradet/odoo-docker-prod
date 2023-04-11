@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+
+	<t t-name='RenderConfigLogo'>
+         <t t-set="image_url" t-value="logo"/>
+         <img t-att-src='image_url' alt="" style="width: 68px;max-height: 68px;"/>
+         <t t-raw='footer_xml' />
+    </t>
+    <t t-name='PosOrderBillBackend'>
+         <t t-set="is_dollar_pos" t-value="order.is_dollar_pos"/>
+         <t t-set="image_url" t-value="receipt_return.logo"/>
+         <t t-set="on_account_info_string" t-value="0"/>
+         <t t-set="discount_all" t-value="0"/>
+         <t t-set="amount_total" t-value="widget.format_currency_no_symbol(order.amount_total)" />
+         <div label="POS Order" class="pos-sale-ticket-be" style="font-family: Roboto;">
+             <div class="pos-center-align" style="line-height:17px;font-family:sans-serif;margin-top:0px;display:inline-flex;margin-bottom: 8px;">
+                 <div style="padding-right: 15px;padding-top: 10px;">
+                     <img alt="" style="width: 68px;max-height: 68px;" src="https://i.postimg.cc/Px5150N3/logo-pl.png"/>
+                 </div>
+                 <div style="font-size: 10px; text-align: left; padding-top: 5px; padding-right: 5px;">
+                     <t t-raw='receipt_return.header_xml' />
+                 </div>
+             </div>
+             
+             <div class="pos-center-align" style="line-height:17px;font-family:sans-serif;font-weight:bold;text-align: center;">
+                 <span class="printed" style="font-weight:bold;font-size: 12px; text-transform: uppercase;">Bill không có giá trị nhận nước</span>
+                 <br/>
+                 <span class="printed" style="font-weight:bold;font-size: 12px;font-style: italic;">(Lần in: <span><t t-esc="order.number_of_printed_bill+1" /></span>)</span>
+                 <br/>
+             </div>
+             <div style="line-height:17px;font-family:sans-serif;margin:8px 0;border-bottom: 2px dashed black; padding-bottom: 8px;font-size:11px">
+                 Thu ngân: <t t-esc="receipt_return.cashier_name"/><br />
+                 Thời gian: <t t-esc="receipt_return.date_order_fm"/> <br/>
+                 Số HĐ: <t t-esc="order.pos_reference"/> | #PG: <t t-esc="order.note_label"/><br/>
+             </div>
+             <t t-set="orderline_group" t-value="orderlines"></t>
+             <t t-foreach="orderline_group" t-as="line">
+                 <t t-if="!line.combo_seq">
+                     <t t-set="orderline" t-value="line.lines"></t>
+                     <t t-if="!orderline.is_topping_line and orderline.default_code != 'reward_code'">
+                     
+                         <table style="line-height:15px;font-family:sans-serif;width: 100%; border: 0; table-layout: fixed;">
+                             <tbody>
+                                 <tr style="font-weight:bold;vertical-align: middle;">
+                                     <td class="pos-left-align" style="font-size: 12px;width: 55%;">
+                                         <t t-esc="orderline.product_name"/>
+                                     </td>
+                                     <td class="pos-left-align" colspan="3" style="font-size: 12px;width: 10%;text-overflow: clip;overflow-wrap: normal;overflow: hidden;text-align: center;">
+                                         <t t-esc="orderline.qty"/>
+                                     </td>
+                                     <td class="pos-left-align" style="font-size: 12px;text-align: right;width: 25%;">
+                                         <t t-if="is_dollar_pos">$</t>
+                                         <!-- <t t-esc="widget.format_currency_no_symbol(orderline.price_subtotal_incl)"/> -->
+                                         <t t-esc="widget.format_currency_no_symbol(orderline.price_subtotal_no_discount)"/>
+                                         <t t-set="discount_all" t-value="discount_all + (orderline.qty*orderline.price_unit - orderline.price_subtotal_incl)"/>
+                                     </td>
+                                 </tr>
+                             </tbody>
+                         </table>
+                         <t t-if="orderline.promotion_id">
+                             <span style="line-height:15px;font-style:italic;font-family:sans-serif;font-size: 12px;">KM: <t t-esc="orderline.promotion_name" /></span>
+                         </t>
+                         <t t-if="orderline.promotion_condition_id and !orderline.promotion_id">
+                             <span style="line-height:15px;font-style:italic;font-family:sans-serif;font-size: 12px;">KM: <t t-esc="orderline.promotion_condition_name" /></span>
+                         </t>
+                         <!-- <t t-if="orderline.promotion_all_order_id">
+                             <span style="line-height:15px;font-style:italic;font-family:sans-serif;font-size: 12px;">KM: <t t-esc="widget.pos.get_order().get_promo_header_by_id(orderline.promotion_all_order_id).name" /></span>
+                         </t> -->
+                         <t t-if="orderline.loyalty_discount_percent">
+                             <span style="line-height:15px;font-style:italic;font-family:sans-serif;font-size: 12px;">Giảm giá loyalty: <t t-esc="orderline.loyalty_discount_percent" />%</span>
+                         </t>
+                         
+                         <t t-if="orderline.reward_id">
+                             <span style="line-height:15px;font-style:italic;font-family:sans-serif;font-size: 12px;"><t t-esc="orderline.reward_name" /></span>
+                         </t>
+                         
+                         <t t-if="orderline.is_birthday_promotion">
+                             <span style="line-height:15px;font-style:italic;font-family:sans-serif;font-size: 12px;">Quà tặng sinh nhật</span>
+                         </t>
+                     </t>
+                     <!-- <t t-if="orderline.note">
+                         <p style="line-height:15px;font-weight:bold;font-size: 12px;width: 100%;">
+                             * Ghi chú: <t t-esc="orderline.note"/>
+                         </p>
+                     </t> -->
+                     <t t-foreach="orderlines_single" t-as="l">
+                         <table style="line-height:15px;font-family:sans-serif;font-size: 12px;width: 100%; border: 0; table-layout: fixed;" t-if="l.is_topping_line and orderline.fe_uid == l.related_line_id">
+                             <tbody>
+                                 <tr style="vertical-align: middle;">
+                                     <td class="pos-left-align" style="width: 55%;padding-left: 8pt;font-size: 12px;">
+                                         + <t t-esc="l.product_name"/>
+                                     </td>
+                                     <td class="pos-left-align" colspan="3" style="width: 10%;text-overflow: clip;overflow-wrap: normal;overflow: hidden;text-align: center;font-size: 12px;">
+                                          <t t-esc="l.qty"/>
+                                      </td>
+                                     <td style="width: 25%;text-align: right;font-size: 12px;">
+                                         <t t-if="is_dollar_pos">$</t>
+                                         <!-- <t t-esc="widget.format_currency_no_symbol(l.price_subtotal_incl)"/> -->
+                                         <t t-esc="widget.format_currency_no_symbol(l.qty*l.price_unit)"/>
+                                         <t t-set="discount_all" t-value="discount_all + (l.qty*l.price_unit - l.price_subtotal_incl)"/>
+                                     </td>
+                                 </tr>
+                             </tbody>
+                         </table>
+                     </t>
+                 </t>
+                 <t t-else="1">
+                     <table style="line-height:15px;font-family:sans-serif;width: 100%; border: 0; table-layout: fixed;">
+                         <tbody>
+                             <tr style="font-weight:bold;vertical-align: middle;">
+                                 <td class="pos-left-align" style="font-size: 12px;;width: 55%;">
+                                     <t t-esc="line.combo_name"/>
+                                 </td>
+                                 <td class="pos-left-align" colspan="3" style="font-size: 12px;width: 10%;text-overflow: clip;overflow-wrap: normal;overflow: hidden;text-align: center;">
+                                     <t t-esc="widget.format_currency_no_symbol(line.total_combo_qty)"/>
+                                 </td>
+                                 <td class="pos-left-align" style="font-size: 12px;text-align: right;width: 25%;">
+                                     <t t-if="is_dollar_pos">$</t>
+                                     <t t-esc="widget.format_currency_no_symbol(line.total_combo_amount)"/>
+                                 </td>
+                             </tr>
+                         </tbody>
+                     </table>
+                     <t t-foreach="line.lines" t-as="orderline">
+                         <table style="line-height:15px;font-family:sans-serif;width: 100%; border: 0; table-layout: fixed;" t-if="!orderline.is_topping_line and orderline.default_code != 'reward_code'">
+                             <tbody>
+                                 <tr style="font-weight:bold;vertical-align: middle;">
+                                     <td class="pos-left-align" style="font-size: 12px;width: 55%;padding-left:15px;">
+                                         <t t-esc="orderline.product_name"/>
+                                     </td>
+                                     <td class="pos-left-align" colspan="3" style="font-size: 12px;width: 10%;text-overflow: clip;overflow-wrap: normal;overflow: hidden;text-align: center;">
+                                         <t t-esc="orderline.qty"/>
+                                     </td>
+                                     <td class="pos-left-align" style="text-align: right;width: 25%;vertical-align: text-top;">
+                                     </td>
+                                 </tr>
+                             </tbody>
+                         </table>
+                         <!-- <t t-if="orderline.note">
+                             <p style="line-height:15px;font-weight:bold;font-size: 12px;width: 100%;">
+                                 * Ghi chú: <t t-esc="orderline.note"/>
+                             </p>
+                         </t> -->
+                         <t t-foreach="orderlines_single" t-as="l">
+                             <table style="line-height:15px;font-family:sans-serif;font-size: 12px;width: 100%; border: 0; table-layout: fixed;" t-if="l.is_topping_line and orderline.fe_uid == l.related_line_id">
+                                 <tbody>
+                                     <tr style="vertical-align: middle;">
+                                         <td class="pos-left-align" style="width: 55%;padding-left:25px;font-size: 12px;">
+                                             + <t t-esc="l.product_name"/>
+                                         </td>
+                                         <td class="pos-left-align" colspan="3" style="width: 10%;text-overflow: clip;overflow-wrap: normal;overflow: hidden;text-align: center;font-size: 12px;">
+                                             <t t-esc="l.qty"/>
+                                         </td>
+                                         <td style="width: 25%;text-align: right;font-size: 12px;">
+                                             <t t-if="is_dollar_pos">$</t>
+                                             <!-- <t t-esc="widget.format_currency_no_symbol(l.price_subtotal_incl)"/> -->
+                                             <t t-esc="widget.format_currency_no_symbol(l.qty*l.price_unit)"/>
+                                             <t t-set="discount_all" t-value="discount_all + (l.qty*l.price_unit - l.price_subtotal_incl)"/>
+                                         </td>
+                                     </tr>
+                                 </tbody>
+                             </table>
+                         </t>
+                     </t>
+                 </t>
+             </t>
+             <div class="receipt-total-info" style="line-height:17px;font-family:sans-serif;padding-top: 5px;border-top: 2px dashed;margin-top: 8px;">
+                 <t t-if="order.promotion_id">
+                       <p style="font-size: 11px;margin: 0 0 5px 0;font-style: italic;">
+                           KM:<t t-esc="order.promotion_name"/>
+                       </p>
+                 </t>
+                 <table class="receipt-total" style="width: 100%; border: 0; table-layout: fixed;font-size: 13px;">
+                     <colgroup>
+                         <col width="50%"/>
+                         <col width="50%"/>
+                     </colgroup>
+                     <tbody>
+                         <tr>
+                             <td>Tổng tiền</td>
+                             <td class="pos-right-align" style="text-align:right;">
+                                 <t t-if="is_dollar_pos">$</t>
+                                 <t t-esc="widget.format_currency_no_symbol(receipt_return.amount_before_discount - order.total_surcharge + discount_all)"/>
+                             </td>
+                         </tr>
+                         <t t-set="discount_amount" t-value="order.discount_amount - widget.format_pr(discount_all)"/>
+                         <tr t-if="discount_amount != 0">
+                             <td>Giảm giá</td>
+                             <td class="pos-right-align" style="text-align: right;">
+                                 <t t-if="is_dollar_pos">$</t>
+                                 <t t-esc="widget.format_currency_no_symbol(discount_amount)"/>
+                             </td>
+                         </tr>
+                         <!-- <tr t-if="order.discount_amount != 0">
+                             <td>Giảm giá</td>
+                             <td class="pos-right-align" style="text-align:right;">
+                                 <t t-if="is_dollar_pos">$</t>
+                                 <t t-esc="widget.format_currency_no_symbol(order.discount_amount)"/>
+                             </td>
+                         </tr> -->
+                         <tr t-if="order.total_surcharge &gt; 0">
+                             <td>Phụ thu</td>
+                             <td class="pos-right-align" style="text-align:right;">
+                                 <t t-if="is_dollar_pos">$</t>
+                                 <t t-esc="widget.format_currency_no_symbol(order.total_surcharge)"/>
+                             </td>
+                         </tr>
+                         <tr class="emph" style="font-size: 16px;color:black;font-weight:bold;">
+                             <td class="pos-left-align" style="width:200px;">Thành tiền</td>
+                             <td class="pos-right-align" style="width:30%;text-align:right;">
+                                 <t t-if="is_dollar_pos">$</t>
+                                 <t t-esc="widget.format_currency_no_symbol(order.amount_total)"/>
+                             </td>
+                         </tr>
+                     </tbody>
+                 </table>
+                 <table class="receipt-paymentlines" style="font-family:sans-serif;width: 100%; border: 0; table-layout: fixed;font-size: 11px;">
+                     <tbody>
+                     	<t t-if="!paymentlines.length">
+                     		<tr>
+                                 <td style="width:60%;">
+                                     CASH
+                                 </td>
+                                 <td class="pos-right-align" style="text-align:right;">
+                                     0
+                                 </td>
+                             </tr>
+                     	</t>
+                         <t t-foreach="paymentlines" t-as="line">
+                             <t t-set="exchange_rate" t-value="line.exchange_rate or 1"></t>
+                             <tr>
+                                 <td style="width:60%;">
+                                     <t t-if="line.amount &lt; 0">
+                                         Tiền trả lại (
+                                             <t t-if="is_dollar_pos">USD</t>
+                                             <t t-else="1">VND</t>
+                                         )
+                                     </t>
+                                     <t t-else="1">
+                                         <t t-if="line.voucher_code and line.voucher_code.length &gt; 0">
+                                            <t t-if="line.use_for != 'gift_code'">
+                                        		VC<t t-esc="line.voucher_max_value/1000"/> (<t t-esc="line.voucher_code"/>)
+	                                        </t>
+	                                        <t t-else="1">
+	                                        	<t t-esc="line.method_name"/> (<t t-esc="line.voucher_code"/>)
+	                                        </t>
+                                         </t>
+                                         <t t-else="1">
+                                             <t t-if="line.use_for == 'cash' and line.currency_name">
+                                                 <t t-esc="line.method_name"/>(<t t-esc="line.currency_name"/>)
+                                             </t>
+                                             <t t-else="1">
+                                                 <t t-esc="line.method_name"/>
+                                             </t>
+                                         </t>
+                                     </t>
+                                 </td>
+                                 <td class="pos-right-align" style="text-align:right;">
+                                     <t t-if="line.use_for == 'cash' and line.currency_name">
+                                     	<t t-esc="widget.format_currency_no_symbol(line.amount+line.amount_change)"/>
+                                     </t>
+                                     <t t-else="1">
+                                         <t t-if="is_dollar_pos">$</t>
+                                         <t t-esc="widget.format_currency_no_symbol(Math.abs(line.amount))"/>
+                                     </t>
+                                 </td>
+                             </tr>
+                             <t t-if="line.amount_change">
+                                 <tr>
+                                     <td style="width:60%;">
+                                         Tiền trả lại (
+                                         <t t-if="is_dollar_pos">USD</t>
+                                         <t t-else="1">VND</t>)
+                                     </td>
+                                     <td class="pos-right-align" style="text-align:right;">
+                                         <t t-if="line.use_for == 'cash' and line.currency_name">
+                                             <!-- <t t-if="is_dollar_pos">$</t> -->
+                                             <t t-esc="widget.format_currency_no_symbol(line.amount_change)"/>
+                                         </t>
+                                         <t t-else="1">
+                                             <!-- <t t-if="is_dollar_pos">$</t> -->
+                                             <t t-esc="widget.format_currency_no_symbol(Math.abs(line.amount_change))"/>
+                                         </t>
+                                     </td>
+                                 </tr>
+                             </t>
+                             <t t-if="line.on_account_info">
+                                 <t t-set="on_account_info_string" t-value="line.on_account_info"/>
+                             </t>
+                         </t>
+                         <tr t-if="order.coupon_code">
+                         	<!-- <t t-if="order.check_employee_coupon_using()">
+                         		<td>Coupon NV</td>
+                         		<td></td>
+                         	</t>
+                         	<t t-else="1"> -->
+                             <td>Coupon:</td>
+                             <td class="pos-right-align" style="text-align: right;">
+                                 <t t-esc="order.coupon_code"/>
+                             </td>
+                         	<!-- </t> -->
+                         </tr>
+                     </tbody>
+                 </table>
+                 <table class="receipt-point" style="font-size: 11px;font-family:sans-serif;width: 100%; border: 0; table-layout: fixed;padding-top: 15px;border-collapse: separate;border-top: 2px dashed;" t-if="receipt_return.partner_name">
+                     <colgroup>
+                         <col width="40%"/>
+                         <col width="60%"/>
+                     </colgroup>
+                     <tbody>
+                         <t t-set="partner_return_id" t-value="order.partner_return_id"/>
+                         <tr>
+                             <td>Khách hàng:</td>
+                             <td class="pos-right-align" style="text-transform: uppercase;text-align:right;">
+                                 <t t-esc="receipt_return.partner_name"/>
+                             </td>
+                         </tr>
+                         <t t-if="partner_return_id">
+                         	 <t t-if="partner_return_id.card_code_pricelist_id or partner_return_id.use_for_on_account">
+                         	 	<tr class="loyalty-level-name">
+	                                 <td>Ngày hết hạn:</td>
+	                                 <td class="pos-right-align" style="text-align: right;">
+	                                     <t t-esc="partner_return_id.date_expired"/>
+	                                 </td>
+	                             </tr>
+                         	 </t>
+                         	 <t t-else="1">
+                         	 	<tr>
+                                 	<td>Điểm:</td>
+	                                 <td class="pos-right-align" style="text-align:right;">
+	                                     <t t-esc="widget.format_pr(order.point_won)"/>/<t t-esc="widget.format_pr(order.partner_total_point)"/>
+	                                 </td>
+	                             </tr>
+	                             <tr>
+	                                 <td>Điểm tích lũy:</td>
+	                                 <td class="pos-right-align" style="text-align:right;">
+	                                     <t t-esc="widget.format_pr(order.partner_current_point)"/>
+	                                 </td>
+	                             </tr>
+	                             <tr class="loyalty-level-name">
+	                                 <td>Hạng thẻ:</td>
+	                                 <td class="pos-right-align" style="text-align:right;">
+	                                 	<t t-if="order.loyalty_level_name">
+	                                 		<t t-esc="order.loyalty_level_name"/>
+	                                 	</t>
+	                                 </td>
+	                             </tr>
+	                             <tr class="loyalty-level-name">
+	                                 <td>Ngày hết hạn:</td>
+	                                 <td class="pos-right-align" style="text-align: right;">
+	                                     <t t-esc="order.partner_expired_date"/>
+	                                 </td>
+	                             </tr>
+                         	 </t>
+                         </t>
+                     </tbody>
+                 </table>
+                 <table t-if="on_account_info_string" class="receipt-point" style="font-family: sans-serif; width: 100%; border: 0; table-layout: fixed; padding: 10px 0; border-collapse: separate; padding-right: 4%; border-top: 2px dashed; border-bottom: 2px dashed; margin-bottom: 10px;">
+                     <colgroup>
+                         <col width="100%"/>
+                     </colgroup>
+                     <tbody>
+                         <tr>
+                             <td style="font-size: 14px;">
+                                 <t t-esc="on_account_info_string"/>
+                             </td>
+                         </tr>
+                     </tbody>
+                 </table>
+             </div>
+             <div class="line-height:17px;pos-center-align" style="font-family:sans-serif;text-align:center;font-weight:bold;font-size: 12px;margin-bottom: 5px;">
+                 <p style="margin-top:10px;text-align:left;font-size: 12px; margin-bottom: 10px; border-bottom: 2px dashed; padding-bottom: 10px; white-space:pre-line" t-if="order.note">Ghi chú: <t t-esc="order.note"/>
+                 </p>
+                 <p style="margin-top:10px;text-align:left;font-size: 12px; margin-bottom: 10px; border-bottom: 2px dashed; padding-bottom: 10px; white-space:pre-line; font-weight:normal;" 
+                 	t-if="order.delivery_address">Địa chỉ giao hàng: <t t-esc="order.delivery_address"/>
+                 </p>
+                 <p style="margin-top:10px;text-align:left;font-size: 12px; margin-bottom: 10px; border-bottom: 2px dashed; padding-bottom: 10px;font-weight:normal;" 
+                     t-if="order.mobile_receiver_info">
+                     <t t-esc="order.mobile_receiver_info"/>
+                  </p>
+                  <p style="margin-top:10px;text-align:left;font-size: 12px; margin-bottom: 10px; border-bottom: 2px dashed; padding-bottom: 10px;font-weight:normal;" 
+                       t-if="order.invoice_request">
+                       <t t-esc="order.invoice_name"/>-<t t-esc="order.invoice_vat"/>-<t t-esc="order.invoice_address || ''"/>-<t t-esc="order.invoice_email"/>-<t t-esc="order.invoice_contact"/>
+                   </p>
+                 <t t-raw='receipt_return.footer_xml' />
+                 <p id="lasted-print" style="font-size: 12px; text-align: right; margin-top: 10px;"><t t-esc="moment().format('L LT')" /></p>
+             </div>
+         </div>
+    </t>
+</templates>

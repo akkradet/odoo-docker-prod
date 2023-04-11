@@ -1,0 +1,9 @@
+"id","name","model_id:id","group_id:id","perm_read","perm_write","perm_create","perm_unlink"
+"access_stock_region_stock_user","access_stock_region_stock_user","model_stock_region","stock.group_stock_user",1,0,0,0
+"access_stock_region_stock_configuration","access_stock_region_stock_configuration","model_stock_region","group_stock_configuration",1,1,1,1
+"access_res_calendar_daymonth_user","access_res_calendar_daymonth_user","model_res_calendar_daymonth","base.group_user",1,0,0,0
+"access_res_calendar_daymonth_manager","access_res_calendar_daymonth_manager","model_res_calendar_daymonth","base.group_erp_manager",1,1,1,1
+"access_res_calendar_weekday_user","access_res_calendar_weekday_user","model_res_calendar_weekday","base.group_user",1,0,0,0
+"access_res_calendar_weekday_manager","access_res_calendar_weekday_manager","model_res_calendar_weekday","base.group_erp_manager",1,1,1,1
+"access_stock_current_inventory_user","access_stock_current_inventory_user","model_stock_current_inventory","base.group_user",1,1,1,1
+"access_stock_warehouse_orderpoint_reodering_manager","access_stock_warehouse_orderpoint_reodering_manager","model_stock_warehouse_orderpoint","group_reodering_manager",1,1,1,1

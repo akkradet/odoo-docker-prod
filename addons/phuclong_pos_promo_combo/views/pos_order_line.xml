@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="view_pos_pos_form_add_combo">
+            <field name="name">view_pos_pos_form_add_combo</field>
+            <field name="model">pos.order</field>
+            <field name="inherit_id" ref="point_of_sale.view_pos_pos_form" />
+            <field name="arch" type="xml">
+            	<xpath expr="//field[@name='lines']/tree/field[@name='discount']" position="before">
+	            	<field name="combo_id"/>
+	            </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

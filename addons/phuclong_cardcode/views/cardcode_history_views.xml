@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+	<!-- SEARCH VIEW -->
+	<record id="cardcode_history_view_search" model="ir.ui.view">
+		<field name="name">cardcode_history_view_search</field>
+		<field name="model">cardcode.history</field>
+		<field name="arch" type="xml">
+			<search string="Cardcode History">
+				<field name="partner_id" filter_domain="['|', '|', ('partner_id.name', 'ilike', self), ('partner_id.ref', 'ilike', self), ('partner_id.mobile', 'ilike', self)]"/>
+				<field name="old_cardcode" />
+				<field name="new_cardcode" />
+				<separator/>
+                <filter string="Paid" name="filter_paid" domain="[('payment_status', '=', 'paid')]"/>
+                <filter string="Not Pay" name="filter_no_paid" domain="[('payment_status', '=', 'not_paid_yet')]"/>
+			</search>
+		</field>
+	</record>
+
+	<!-- TREE VIEW -->
+	<record model="ir.ui.view" id="cardcode_history_view_tree">
+		<field name="name">cardcode_history_view_tree</field>
+		<field name="model">cardcode.history</field>
+		<field name="arch" type="xml">
+			<tree name="cardcode_histoy_tree" string="Cardcode Histoy" create="False">
+				<field name="partner_id" />
+				<field name="mobile" />
+				<field name="old_cardcode" />
+				<field name="new_cardcode" />
+				<field name="user_id" />
+				<field name="reason" />
+				<field name="payment_status" />
+				<field name="date" />
+			</tree>
+		</field>
+	</record>
+
+	<!-- FORM VIEW -->
+	<record model="ir.ui.view" id="cardcode_history_view_form">
+		<field name="name">cardcode_history_view_form</field>
+		<field name="model">cardcode.history</field>
+		<field name="arch" type="xml">
+			<form string="Cardcode Info">
+				<sheet>
+					<group>
+						<group>
+							<field name="old_cardcode" />
+							<field name="date" />
+							<field name="partner_id" readonly="1"
+								options="{'no_create': True,'no_create_edit': True}" />
+							<field name="note" />
+							<field name="reason" />
+						</group>
+						<group>
+							<field name="new_cardcode" />
+							<field name="user_id" options="{'no_create': True,'no_create_edit': True}"/>
+							<field name="payment_status" />
+						</group>
+					</group>
+				</sheet>
+			</form>
+		</field>
+	</record>
+
+	<record model="ir.actions.act_window" id="cardcode_history_action">
+		<field name="name">Change Card Code History</field>
+		<field name="type">ir.actions.act_window</field>
+		<field name="res_model">cardcode.history</field>
+		<field name="view_mode">tree,form</field>
+		<field name="domain">[]</field>
+		<field name="context">{'create': False, 'edit': False, 'delete': False,}</field>
+		<field name="search_view_id" ref="cardcode_history_view_search" />
+	</record>
+
+</odoo>

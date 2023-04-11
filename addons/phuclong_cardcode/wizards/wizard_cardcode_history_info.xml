@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+
+		<record id="wizard_cardcode_history_info_form" model="ir.ui.view">
+			<field name="name">wizard_cardcode_history_info_form</field>
+			<field name="model">wizard.cardcode.history.info</field>
+			<field name="arch" type="xml">
+				<form string="Cardcode History">
+					<group>
+						<group>
+							<field name="cardcode_id" options="{'no_create': True,'no_create_edit': True}"
+								domain="[('state', '=', 'create'),('card_type', '=', 'partner')]"
+								required="1" />
+							<!-- <field name="reason" />
+							<field name="payment_status"
+								attrs="{'invisible': [('reason', '!=','exchange_by_fee'),], 'required': [('reason', '=','exchange_by_fee'),]}" /> -->
+						</group>
+						<group>
+							<field name="partner_id" invisible="1" />
+							<field name="cardcode_old_id" invisible="1" />
+						</group>
+					</group>
+					<group>
+						<field name="note" />
+					</group>
+					<footer>
+						<button string="Validate" type="object"
+							name="action_create_cardcode_history" class="oe_highlight" />
+						<button string="Cancel" special="cancel" />
+					</footer>
+				</form>
+			</field>
+		</record>
+
+		<record id="action_wizard_cardcode_history_info" model="ir.actions.act_window">
+			<field name="name">Cardcode History</field>
+			<field name="res_model">wizard.cardcode.history.info</field>
+			<field name="view_mode">form</field>
+			<field name="view_id" ref="wizard_cardcode_history_info_form" />
+			<field name="target">new</field>
+		</record>
+
+	</data>
+</odoo>

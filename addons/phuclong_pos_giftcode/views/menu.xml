@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<menuitem
+            id="api_menuitem"
+            name="Gift Code API"
+            parent="base.menu_custom"
+            sequence="1001"
+            groups="base.group_no_one"
+            />
+	<menuitem id="menu_api_menuitem" name="Gift Code API Config" action="action_api" parent="api_menuitem" sequence="1"/>
+	<menuitem id="menu_giftcode_api_response" action="action_giftcode_api_response" parent="api_menuitem" sequence="5"/>
+	</data>
+</odoo>

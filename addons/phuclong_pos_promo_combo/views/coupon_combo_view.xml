@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+    
+    	<record model="ir.ui.view" id="view_crm_voucher_pubish_form_combo">
+            <field name="name">view_crm_voucher_pubish_form_combo</field>
+            <field name="model">crm.voucher.publish</field>
+            <field name="inherit_id" ref="besco_voucher_coupon.view_crm_voucher_pubish_form" />
+            <field name="arch" type="xml">
+            
+            	<xpath expr="//group[@name='publish_info']" position="before">
+	            	<div name="options" attrs="{'invisible':[('type','=','voucher')]}">
+                        <div>
+                            <field name="apply_on_combo"/>
+                            <label for="apply_on_combo"/>
+                        </div>
+                        <div>
+                            <field name="apply_for_employee"/>
+                            <label for="apply_for_employee"/>
+                        </div>
+                        <div>
+                            <field name="apply_for_themos_cup_promo"/>
+                            <label for="apply_for_themos_cup_promo"/>
+                        </div>
+                    </div>
+	            </xpath>
+	            
+	            <xpath expr="//field[@name='coupon_type']" position="attributes">
+	            	<attribute name="attrs">{'readonly':['|',('generate_flag','=',True),('apply_for_employee','=',True)]}
+	            	</attribute>
+	            </xpath>
+	            
+	            <xpath expr="//field[@name='usage_limits']" position="after">
+	            	<field name="usage_limits" attrs="{'invisible': [('apply_for_employee','!=',True)]}"/> 
+	            </xpath>
+	            
+	            <xpath expr="//field[@name='promotion_header_id']" position="before">
+	            	<field name="promo_combo_id" domain="[('use_for_coupon','=',True)]" options="{'no_create': True,'no_write':True}"
+	            		attrs="{'required':[('type','=','coupon'),('apply_on_combo','=',True)], 'invisible':['|',('type','=','voucher'),('apply_on_combo','!=',True)]}" />
+	            </xpath>
+	            <xpath expr="//field[@name='promotion_header_id']" position="attributes">
+	            	<attribute name="attrs">{'required':[('type','=','coupon'),('apply_on_combo','!=',True)],
+	            		 'invisible':['|',('type','=','voucher'),('apply_on_combo','=',True)]}
+	            	</attribute>
+	            </xpath>
+	            <xpath expr="//field[@name='promotion_line_id']" position="attributes">
+	            	<attribute name="attrs">{'required':[('type','=','coupon'),('apply_on_combo','!=',True),('apply_for_themos_cup_promo','!=',True)],
+	            		 'invisible':['|','|',('type','=','voucher'),('apply_on_combo','=',True),('apply_for_themos_cup_promo','=',True)]}
+	            	</attribute>
+	            </xpath>
+	            
+	            <xpath expr="//field[@name='voucher_line']/tree/field[@name='ean']" position="replace">
+	            	<field name="apply_for_employee" invisible="1" />
+                	<field name="ean"/>
+	                <field name="employee_id" attrs="{'column_invisible': [('parent.apply_for_employee','!=',True)]}"/>
+	                <field name="appear_code_id" attrs="{'column_invisible': [('parent.apply_for_employee','!=',True)]}"/>
+                </xpath>
+	            
+            </field>
+        </record>
+        
+        <record model="ir.actions.act_window" id="besco_voucher_coupon.action_coupon_info">
+	        <field name="domain">[('type','=','coupon'), ('apply_for_employee','!=',True)]</field>
+	   	</record> 
+	   	
+	   	<record model="ir.ui.view" id="view_crm_voucher_info_form_phuclong">
+            <field name="name">view_crm_voucher_info_form_phuclong</field>
+            <field name="model">crm.voucher.info</field>
+            <field name="inherit_id" ref="besco_voucher_coupon.view_crm_voucher_info_form" />
+            <field name="arch" type="xml">
+            
+            	<xpath expr="//field[@name='ean']" position="before">
+            		<field name="apply_for_employee" invisible="1" />
+            	</xpath>
+            	
+            	<xpath expr="//field[@name='ean']" position="attributes">
+            		<attribute name="attrs">{'invisible':[('apply_for_employee','=',True)]}</attribute>
+	            </xpath>
+	            
+	            <xpath expr="//field[@name='used_count']" position="attributes">
+            		<attribute name="readonly">1</attribute>
+	            </xpath>
+	            
+            </field>
+        </record>
+        
+        	<record model="ir.ui.view" id="view_crm_voucher_info_tree_phuclong">
+            <field name="name">view_crm_voucher_info_tree_phuclong</field>
+            <field name="model">crm.voucher.info</field>
+            <field name="inherit_id" ref="besco_voucher_coupon.view_crm_voucher_info_tree" />
+            <field name="arch" type="xml">
+            
+            	<xpath expr="//field[@name='order_reference']" position="after">
+            		<field name="warehouse_id" />
+	            </xpath>
+	            
+            </field>
+        </record>
+        
+    </data>
+</odoo>

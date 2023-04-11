@@ -1,0 +1,15 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_promotion_combo_user,access_promotion_combo_user,model_sale_promo_combo,,1,0,0,0
+access_promotion_combo_manager,access_promotion_combo_manager,model_sale_promo_combo,besco_promotion.group_promotion_manager,1,1,1,1
+access_promotion_combo_approval,access_promotion_combo_approval,model_sale_promo_combo,group_promotion_approval,1,1,1,1
+,,,,,,,
+access_promotion_combo_line_user,access_promotion_combo_line_user,model_sale_promo_combo_line,,1,0,0,0
+access_promotion_combo_line_manager,access_promotion_combo_line_manager,model_sale_promo_combo_line,besco_promotion.group_promotion_manager,1,1,1,1
+access_promotion_combo_line_approval,access_promotion_combo_line_approval,model_sale_promo_combo_line,group_promotion_approval,1,1,1,1
+,,,,,,,
+access_day_of_week_all_user,access_day_of_week_all_user,model_day_of_week_config,,1,1,1,0
+,,,,,,,
+access_sale_promo_header_group_promotion_approval,sale_promo_header_group_promotion_approval,besco_promotion.model_sale_promo_header,group_promotion_approval,1,1,1,1
+access_sale_promo_lines_group_promotion_approval,sale_promo_lines_group_promotion_approval,besco_promotion.model_sale_promo_lines,group_promotion_approval,1,1,1,1
+,,,,,,,
+access_promotion_combo_line_detail_user,access_promotion_combo_line_detail_user,model_sale_promo_combo_line_detail,,1,1,1,1

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <record id="show_case_tree" model="ir.ui.view">
+            <field name="name">show_case_tree</field>
+            <field name="model">show.case</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+        <record id="show_case_form" model="ir.ui.view">
+            <field name="name">show_case_form</field>
+            <field name="model">show.case</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <div name="button_box" class="oe_button_box">
+                            <button class="oe_stat_button" type="object" name="action_published" icon="fa-globe" groups=""
+                                attrs="{'invisible': [('is_published', '=', False)],}">
+                                <span style="color: green">Published</span>
+                            </button>
+                            <button class="oe_stat_button" type="object" name="action_published" icon="fa-globe" groups=""
+                                attrs="{'invisible': [('is_published', '!=', False)],}">
+                                <span style="color: red">Unpublish</span>
+                            </button>
+                            <button name="toggle_active" type="object"
+                                    class="oe_stat_button" icon="fa-archive">
+                                <field name="active" widget="boolean_button"/>
+                            </button>
+                        </div>
+                        <group>
+                            <field name="is_published" invisible="1"/>
+                            <field name="name" required="1"/>
+                            <field name="short_des" required="1"/>
+                            <field name="image" required="1" widget="image" options="{'preview_image': 'image'}"/>
+                        </group>
+                        <group>
+                            <field name="view_type" required="1"/>
+                            <field name="use_for" attrs="{'invisible': [('view_type', '!=', '2')]}"/>
+                            <field name="product_id" attrs="{'required': [('use_for', '=', 'product')], 'invisible': [('use_for', '!=', 'product')]}"/>
+                            <field name="combo_id" attrs="{'required': [('use_for', '=', 'combo')], 'invisible': [('use_for', '!=', 'combo')]}" domain="[('state', '=', 'approved')]"/>
+                        </group>
+                        <notebook>
+                            <page string="Body" name="new_body">
+                                <field name="body_html" class="oe_read_only" widget="html"
+                                    options="{'cssReadonly': 'mass_mailing.iframe_css_assets_readonly'}"/>
+                                <field name="body_arch" class="o_mail_body oe_edit_only" widget="mass_mailing_html"
+                                    options="{
+                                        'snippets': 'mass_mailing.email_designer_snippets',
+                                        'cssEdit': 'mass_mailing.iframe_css_assets_edit',
+                                        'inline-field': 'body_html'
+                                }"/>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record id="show_case_act" model="ir.actions.act_window">
+            <field name="name">Show Case</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">show.case</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+    </data>
+</odoo>

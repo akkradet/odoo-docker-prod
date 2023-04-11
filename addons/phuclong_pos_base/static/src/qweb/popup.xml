@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">	
+	
+    <t t-name="Text2AreaPopupWidget">
+        <div role="dialog" class="modal-dialog">
+            <div class="popup popup-textinput" style="height:550px;">
+                <header class="title"><t t-esc=" widget.options.title || '' " /></header>
+                <div class="checkbox-item" style="margin-bottom:5px">
+                   <div class="mycustom-checkbox" id="callcenter_checkbox">
+                       <input name="cc_is_timer" type="checkbox" id="cc_is_timer" class="checkbox-input" t-att-checked="widget ? undefined : true"/>
+                       <label for="cc_is_timer" class="checkbox-label"></label>
+                   </div>
+                   <label style="margin-left:5px">Đơn hẹn giờ</label>
+                </div>
+                <textarea style="height:30%" placeholder="Ghi chú..."><t t-esc="widget.options.value" /></textarea>
+                <input class="mobile" placeholder="Số điện thoại..." type='text' t-att-value="widget.options.value_text || ''"></input>
+                <div style="display: flex;align-items: center; width: 80%;margin: auto;">
+	                <select class="select-customize" id="callcenter_date" name="callcenter_date" 
+	                	style="width: 300%;margin-top:7px">
+	                    <t t-if="widget.next_day_list and widget.next_day_list.length">
+	                    	<option value='0'>Chọn ngày giao hàng...</option>
+	                        <t t-foreach='widget.next_day_list' t-as='day'>
+	                            <option t-att-value='day'>
+	                                <t t-esc='day'/>
+	                            </option>
+	                        </t>
+	                    </t>
+	                </select>
+	                <input placeholder="Giờ giao hàng..." class='timepicker'></input>
+                </div>
+                <t t-if="widget.options.error">
+                	<div style="color:red"><t t-esc="widget.options.error" /></div>
+                </t>
+                <div class="note-error-mess" style="color:red" />
+                <footer class="footer">
+                    <div class="button confirm">
+                        Ok
+                    </div>
+                    <div class="button cancel">
+                        Cancel
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </t>
+    <t t-extend="SelectionPopupWidget">
+        <t t-jquery='.modal-dialog' t-operation='replace'>
+			<div role="dialog" class="modal-dialog">
+                <div class="popup popup-selection">
+                    <header class="title"><t t-esc=" widget.options.title || 'Select' " /></header>
+                    <div class='selection scrollable-y touch-scrollable'>
+                        <t t-foreach="widget.list || []" t-as="item">
+                            <div t-attf-class="selection-item {{ widget.is_selected.call(widget, item.item) ? 'selected' : '' }}" t-att-data-item-index='item_index'>
+                                <span t-att-data-item-index='item_index'><t t-esc='item.label'/></span>
+                                <t t-if="item.description">
+                                    <span t-att-data-item-index='item_index' style="float:right;" t-esc="item.description"></span>
+                                </t>
+                            </div>
+                        </t>
+                    </div>
+                    <footer class="footer">
+                        <div class="button cancel">
+                            Cancel
+                        </div>
+                    </footer>
+                </div>
+            </div>
+	    </t>
+    </t>
+</templates>

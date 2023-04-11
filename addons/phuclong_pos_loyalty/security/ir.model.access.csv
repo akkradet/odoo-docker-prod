@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_pos_order_line_loyalty_user,access_pos_order_line_loyalty_user,model_pos_order_line,besco_loyalty.group_loyalty_user,1,0,0,0
+access_pos_order_loyalty_user,access_pos_order_loyalty_user,model_pos_order,besco_loyalty.group_loyalty_user,1,0,0,0

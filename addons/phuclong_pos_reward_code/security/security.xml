@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<odoo>
+	<data noupdate="0">
+        <record model="ir.module.category" id="module_category_reward">
+	        <field name="name">Reward Code</field>
+	    </record>
+	    
+        <record id="group_reward_code_user" model="res.groups">
+	        <field name="name">Reward Code User</field>
+	        <field name="category_id" ref="module_category_reward"/>
+	        <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+	    </record>
+		
+		<record id="group_reward_code_manager" model="res.groups">
+	        <field name="name">Reward Code Manager</field>
+	        <field name="category_id" ref="module_category_reward"/>
+	        <field name="implied_ids" eval="[(4, ref('group_reward_code_user'))]"/>
+            <field name="users" eval="[
+                (4, ref('base.user_root')),
+                (4, ref('base.user_admin')),
+            ]"/>
+	    </record>
+	
+	    <record id="profile_reward_code_user" model="profile">
+	        <field name="name">Reward Code User</field>
+	        <field name="groups_ids" eval="[(4, ref('group_reward_code_user'))]"/>
+	        <field name="description">- Có quyền xem dữ liệu ở menu Reward Code</field>
+	        <field name="category_id" ref="module_category_reward"/>
+	    </record>
+
+        <record id="profile_reward_code_manager" model="profile">
+	        <field name="name">Reward Code Manager</field>
+	        <field name="groups_ids" eval="[(4, ref('group_reward_code_manager'))]"/>
+	        <field name="description">- Quản lý dữ liệu ở menu Reward Code</field>
+	        <field name="category_id" ref="module_category_reward"/>
+	    </record>
+	</data>
+	
+</odoo>

@@ -1,0 +1,256 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* phuclong_pos_config
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0+e-20200401\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: phuclong_pos_config
+#: model_terms:ir.ui.view,arch_db:phuclong_pos_config.phuclong_pos_config
+msgid "<span class=\"o_form_label\">Logo</span>"
+msgstr ""
+
+#. module: phuclong_pos_config
+#: model_terms:ir.ui.view,arch_db:phuclong_pos_config.phuclong_pos_config
+msgid "<span class=\"o_form_label\">Number of orders</span>"
+msgstr ""
+
+#. module: phuclong_pos_config
+#: model_terms:ir.ui.view,arch_db:phuclong_pos_config.phuclong_pos_config
+msgid "<span class=\"o_form_label\">Sale type default</span>"
+msgstr ""
+
+#. module: phuclong_pos_config
+#: model_terms:ir.ui.view,arch_db:phuclong_pos_config.phuclong_pos_config
+msgid "<span class=\"o_form_label\">Sale types</span>"
+msgstr ""
+
+#. module: phuclong_pos_config
+#: model:ir.model.fields,field_description:phuclong_pos_config.field_pos_banner_config__active
+#: model_terms:ir.ui.view,arch_db:phuclong_pos_config.pos_banner_tree_form
+msgid "Active"
+msgstr ""
+
+#. module: phuclong_pos_config
+#: model_terms:ir.ui.view,arch_db:phuclong_pos_config.pos_banner_tree_form
+msgid "Archived"
+msgstr ""
+
+#. module: phuclong_pos_config
+#: model:ir.model.fields,field_description:phuclong_pos_config.field_pos_banner_config__name
+msgid "Banner Name"
+msgstr ""
+
+#. module: phuclong_pos_config
+#: model:ir.model.fields,field_description:phuclong_pos_config.field_pos_banner_config__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: phuclong_pos_config
+#: model:ir.model.fields,field_description:phuclong_pos_config.field_pos_banner_config__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: phuclong_pos_config
+#: model_terms:ir.ui.view,arch_db:phuclong_pos_config.phuclong_pos_config
+msgid "Currency default is Dollar"
+msgstr ""
+
+#. module: phuclong_pos_config
+#: model:ir.model.fields,field_description:phuclong_pos_config.field_pos_banner_config__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: phuclong_pos_config
+#: model:ir.model.fields,field_description:phuclong_pos_config.field_pos_banner_config__end_date
+msgid "End Date"
+msgstr ""
+
+#. module: phuclong_pos_config
+#: model:ir.model.fields,field_description:phuclong_pos_config.field_pos_banner_config__id
+msgid "ID"
+msgstr ""
+
+#. module: phuclong_pos_config
+#: model:ir.model.fields,field_description:phuclong_pos_config.field_pos_config__printer_ip
+msgid "IP Address"
+msgstr ""
+
+#. module: phuclong_pos_config
+#: model_terms:ir.ui.view,arch_db:phuclong_pos_config.phuclong_pos_config
+msgid ""
+"If this option is enebled, This Point Of Sale will be set to Sandbox "
+"Enviroment in order to test performance."
+msgstr ""
+
+#. module: phuclong_pos_config
+#: model:ir.model.fields,field_description:phuclong_pos_config.field_pos_config__is_callcenter_pos
+msgid "Is Call Center POS"
+msgstr ""
+
+#. module: phuclong_pos_config
+#: model:ir.model.fields,field_description:phuclong_pos_config.field_pos_config__is_sandbox_env
+msgid "Is Sanbox enviroment"
+msgstr ""
+
+#. module: phuclong_pos_config
+#: model:ir.model.fields,field_description:phuclong_pos_config.field_pos_banner_config____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: phuclong_pos_config
+#: model:ir.model.fields,field_description:phuclong_pos_config.field_pos_banner_config__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: phuclong_pos_config
+#: model:ir.model.fields,field_description:phuclong_pos_config.field_pos_banner_config__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: phuclong_pos_config
+#: model:ir.model.fields,field_description:phuclong_pos_config.field_pos_config__max_order_to_create
+msgid ""
+"Number of orders will be duplicated and saved            to DB on POS at the"
+" same time after each POS Order"
+msgstr ""
+
+#. module: phuclong_pos_config
+#: model_terms:ir.ui.view,arch_db:phuclong_pos_config.phuclong_pos_config
+msgid ""
+"Number of orders will be duplicated and saved to DB on POS at the same time "
+"after each POS Order"
+msgstr ""
+
+#. module: phuclong_pos_config
+#: model:ir.model.fields,field_description:phuclong_pos_config.field_pos_config__use_barcode_scanner_to_open_session
+msgid "Open Session via Card"
+msgstr ""
+
+#. module: phuclong_pos_config
+#: model:ir.actions.act_window,name:phuclong_pos_config.action_pos_banner
+#: model:ir.ui.menu,name:phuclong_pos_config.menu_pos_banner_action
+#: model:ir.ui.menu,name:phuclong_pos_config.menu_pos_banner_config
+#: model_terms:ir.ui.view,arch_db:phuclong_pos_config.pos_banner_tree_view
+msgid "POS Banner"
+msgstr ""
+
+#. module: phuclong_pos_config
+#: model:res.groups,name:phuclong_pos_config.group_pos_banner_config
+msgid "POS Banner Config"
+msgstr ""
+
+#. module: phuclong_pos_config
+#: model:ir.actions.server,name:phuclong_pos_config.auto_auto_disable_banner_ir_actions_server
+msgid "POS Config: Auto Disable Banner"
+msgstr ""
+
+#. module: phuclong_pos_config
+#: model:ir.model,name:phuclong_pos_config.model_pos_config
+msgid "Point of Sale Configuration"
+msgstr ""
+
+#. module: phuclong_pos_config
+#: model:ir.model.fields,field_description:phuclong_pos_config.field_pos_banner_config__logo
+#: model:ir.model.fields,field_description:phuclong_pos_config.field_pos_config__logo
+msgid "Receipt Logo"
+msgstr ""
+
+#. module: phuclong_pos_config
+#: model:ir.model.fields,field_description:phuclong_pos_config.field_pos_config__sale_type_ids
+msgid "Sale type"
+msgstr ""
+
+#. module: phuclong_pos_config
+#: model_terms:ir.ui.view,arch_db:phuclong_pos_config.phuclong_pos_config
+msgid "Sale type available"
+msgstr ""
+
+#. module: phuclong_pos_config
+#: model:ir.model.fields,field_description:phuclong_pos_config.field_pos_config__sale_type_default_id
+msgid "Sale type default"
+msgstr ""
+
+#. module: phuclong_pos_config
+#: model_terms:ir.ui.view,arch_db:phuclong_pos_config.phuclong_pos_config
+msgid "Sale type default when start order"
+msgstr ""
+
+#. module: phuclong_pos_config
+#: model:ir.model.fields,field_description:phuclong_pos_config.field_pos_banner_config__start_date
+msgid "Start Date"
+msgstr ""
+
+#. module: phuclong_pos_config
+#: model:ir.model.fields,field_description:phuclong_pos_config.field_pos_config__stock_location_id
+msgid "Stock Location"
+msgstr ""
+
+#. module: phuclong_pos_config
+#: model:ir.model.fields,field_description:phuclong_pos_config.field_pos_banner_config__warehouse_ids
+msgid "Stores"
+msgstr ""
+
+#. module: phuclong_pos_config
+#: model:ir.model.fields,field_description:phuclong_pos_config.field_pos_config__update_cashier_to_session
+#: model_terms:ir.ui.view,arch_db:phuclong_pos_config.phuclong_pos_config
+msgid "Update Cashier To Session"
+msgstr ""
+
+#. module: phuclong_pos_config
+#: model_terms:ir.ui.view,arch_db:phuclong_pos_config.phuclong_pos_config
+msgid "Use Barcode Scanner or Card Scanner to Open Session"
+msgstr ""
+
+#. module: phuclong_pos_config
+#: model:ir.model.fields,field_description:phuclong_pos_config.field_pos_config__use_replacement_printer
+msgid "Use Replacement Printer"
+msgstr ""
+
+#. module: phuclong_pos_config
+#: model:ir.model.fields,field_description:phuclong_pos_config.field_pos_config__is_dollar_pos
+msgid "Use dollar"
+msgstr ""
+
+#. module: phuclong_pos_config
+#: model_terms:ir.ui.view,arch_db:phuclong_pos_config.phuclong_pos_config
+msgid "Use for Call Center"
+msgstr ""
+
+#. module: phuclong_pos_config
+#: model:ir.model.fields,field_description:phuclong_pos_config.field_pos_config__use_for_mobile
+msgid "Use for Mobile App"
+msgstr ""
+
+#. module: phuclong_pos_config
+#: model:ir.model.fields,field_description:phuclong_pos_config.field_pos_config__use_multi_printer
+msgid "Use multiple printers"
+msgstr ""
+
+#. module: phuclong_pos_config
+#: model_terms:ir.ui.view,arch_db:phuclong_pos_config.phuclong_pos_config
+msgid "Use multiple printers to print Receipt and Label"
+msgstr ""
+
+#. module: phuclong_pos_config
+#: model_terms:ir.ui.view,arch_db:phuclong_pos_config.phuclong_pos_config
+msgid "Use to config IP to replacement printer"
+msgstr ""
+
+#. module: phuclong_pos_config
+#: model_terms:ir.ui.view,arch_db:phuclong_pos_config.phuclong_pos_config
+msgid "Use to get order from Mobile App"
+msgstr ""
+
+#. module: phuclong_pos_config
+#: model:ir.model,name:phuclong_pos_config.model_pos_banner_config
+msgid "pos.banner.config"
+msgstr ""

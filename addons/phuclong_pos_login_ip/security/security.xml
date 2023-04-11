@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+	<record id="group_pos_address_config_manager" model="res.groups">
+        <field name="name">POS Address Config Manager</field>
+        <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+    </record>
+
+    <record model="res.users" id="base.user_root">
+        <field eval="[(4,ref('group_pos_address_config_manager'))]" name="groups_id"/>
+    </record>
+
+    <record model="res.users" id="base.user_admin">
+        <field eval="[(4,ref('group_pos_address_config_manager'))]" name="groups_id"/>
+    </record>
+    <!-- Profile -->
+	<record id="profile_pos_address_config_manager" model="profile">
+       	<field name="name">POS Address Config Manager</field>
+        <field name="groups_ids" eval="[
+			(6, 0, [ref('group_pos_address_config_manager')]),
+		]"/>
+        <field name="description">- Quản lý cấu hình địa chỉ IP POS</field>
+    </record>
+	
+</odoo>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+	<record model="ir.ui.view" id="phuclong_stock_move_filter_inherit_stock">
+		<field name="name">phuclong_stock_move_filter_inherit_stock</field>
+		<field name="model">stock.move</field>
+		<field name="inherit_id" ref="stock.view_move_search" />
+		<field name="arch" type="xml">
+			<xpath expr="//field[@name='name']" position="before">
+				<field string="Warehouse" name="warehouse_id"
+					filter_domain="['|', ('warehouse_id.code', 'ilike', self), ('warehouse_id.name', 'ilike', self),]" />
+			</xpath>
+			
+			<xpath expr="//filter[@name='incoming']" position="before">
+				<filter string="Return To Supplier" name="return_to_supplier"
+					domain="[('picking_type_id.code', '=', 'return_supplier'),]" />
+			</xpath>
+
+			<xpath expr="//filter[@name='groupby_location_id']" position="before">
+				<filter string="Warehouse" name="groupby_warehouse_id"
+					domain="[]" context="{'group_by': 'warehouse_id'}" />
+			</xpath>
+
+			<xpath expr="//filter[@name='status']" position="before">
+				<filter string="Operation Type" name="groupby_picking_type"
+					domain="[]" context="{'group_by': 'picking_type_id'}" />
+			</xpath>
+		</field>
+	</record>
+	
+	<record model="ir.ui.view" id="phuclong_view_move_tree_inherit_stock">
+		<field name="name">phuclong_view_move_tree_inherit_stock</field>
+		<field name="model">stock.move</field>
+		<field name="inherit_id" ref="stock.view_move_tree" />
+		<field name="arch" type="xml">
+			<xpath expr="//field[@name='product_id']" position="before">
+				<field name="ref_code"/>
+			</xpath>
+			<xpath expr="//field[@name='product_uom_qty']" position="before">
+				<field name="vendor_document"/>
+			</xpath>
+			<xpath expr="//field[@name='product_uom_qty']" position="after">
+				<field name="quantity_done"/>
+			</xpath>
+		</field>
+	</record>
+	
+	<record id="stock.stock_move_action" model="ir.actions.act_window">
+		<field name="name">Stock Moves</field>
+		<field name="res_model">stock.move</field>
+		<field name="type">ir.actions.act_window</field>
+		<field name="view_id" ref="stock.view_move_tree" />
+		<field name="search_view_id" ref="stock.view_move_search" />
+		<field name="context">{'search_default_done': 1,
+			'search_default_groupby_warehouse_id': 1}
+		</field>
+		<field name="help" type="html">
+			<p class="o_view_nocontent_smiling_face">
+				Create a new stock movement
+			</p>
+			<p>
+				This menu gives you the full traceability of inventory
+				operations
+				on a specific product. You can filter on the product
+				to see all the
+				past or future movements for the product.
+			</p>
+		</field>
+	</record>
+</odoo>

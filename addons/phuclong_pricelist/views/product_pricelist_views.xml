@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data noupdate="0">
+        <!-- Add you code here -->
+        <!-- product.pricelist action window -->
+        <record id="product_pricelist_card_code_action" model="ir.actions.act_window">
+            <field name="name">Pricelist By Card Code</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">product.pricelist</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[('card_code_pricelist','=',True)]</field>
+            <field name="context">{"search_default_running": True, "search_default_group_order_type": True, "default_price_type": "base_price", "default_card_code_pricelist": True, "default_apply_type": 'select_warehouse', 'default_order_type': 'all',  'card_code': True,  'search_by_field_date': ['from_date','to_date'],           				"hide_base_price": True           						}</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    <!-- Add Text Here -->
+                </p>
+                <p>
+                    <!-- More details about what a user can do with this object will be OK -->
+                </p>
+            </field>
+        </record>
+
+        <record id="product.product_pricelist_action2" model="ir.actions.act_window">
+            <field name="domain">[('price_type', '=', 'base_price'),('card_code_pricelist','!=',True)]</field>
+        </record>
+
+        <!-- product.pricelist inherit form view -->
+        <record id="product_pricelist_view_inherit_besco_pos_pricelist_inherit" model="ir.ui.view">
+            <field name="name">product_pricelist_view_inherit_besco_pos_pricelist_inherit</field>
+            <field name="model">product.pricelist</field>
+            <field name="inherit_id" ref="besco_pricelist.product_pricelist_view_inherit_besco_pos_pricelist"/>
+            <field name="arch" type="xml">
+                <!-- Add your xpath here -->
+                <xpath expr="//div[@name='button_box']" position="inside">
+                    <!-- Add your fields here -->
+                    <field name="card_code_pricelist" invisible="1" />
+                    <button name="action_view_card_code_partners" attrs="{'invisible': [('card_code_pricelist','!=',True)]}" class="oe_stat_button" icon="fa-users" type="object">
+                        <field name="card_code_partner_count" widget="statinfo" string="Partners"/>
+                    </button>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

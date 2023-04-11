@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+	
+		<record id="wizard_login_scanner_wizard" model="ir.ui.view">
+			<field name="name">wizard_login_scanner_wizard</field>
+			<field name="model">login.scanner.wizard</field>
+			<field name="arch" type="xml">
+				<form string="Employee Login Scanner">
+                    <div style="text-align:center;color:black;font-size:18px;margin:auto;">
+                        <p>Please swipe the employee card into the scanner</p>
+                        <img alt="barcode scanner" src="/phuclong_pos_theme/static/src/img/card.png" style="margin-bottom:15px;"></img>
+						<field name="_barcode_scanned" widget="login_barcode_handler" invisible="1"/>
+                    </div>
+					<footer class="login-popup-scanner" style="text-align: right">
+						<button string="Logout" type="object" href="/web/login"
+							name="confirm_cancel" class="oe_highlight" />
+					</footer>
+					<script>
+                        $(document).ready(function(){
+							$('.modal-header .close').hide();
+							$(".login-popup-scanner").closest('.modal-dialog').removeClass('modal-lg').addClass('modal-md');
+                        });
+                    </script>
+				</form>
+			</field>
+		</record>
+		<record id="action_wizard_login_scanner_wizard" model="ir.actions.act_window">
+			<field name="name">Employee Login Scanner</field>
+			<field name="res_model">login.scanner.wizard</field>
+			<field name="view_mode">form</field>
+			<field name="view_id" ref="wizard_login_scanner_wizard" />
+			<field name="target">new</field>
+		</record>
+		
+	</data>
+</odoo>

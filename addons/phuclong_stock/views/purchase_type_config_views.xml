@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+	<record id="purchase_type_config_view_tree_inherit_phuclong_stock" model="ir.ui.view">
+		<field name="name">purchase_type_config_view_tree_inherit_phuclong_stock</field>
+		<field name="model">purchase.type.config</field>
+		<field name="inherit_id" ref="phuclong_purchase.purchase_type_config_view_tree" />
+		<field name="arch" type="xml">
+			<xpath	expr="//field[@name='description']" position="after">
+               	<field name="is_used_for_orderpoint" />
+			</xpath>
+		</field>
+	</record>
+	
+</odoo>

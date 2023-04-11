@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <record id="inherit_res_config_settings_view_mobile" model="ir.ui.view">
+            <field name="name">inherit_res_config_settings_view_mobile</field>
+            <field name="model">res.config.settings</field>
+            <field name="priority" eval="96"/>
+            <field name="inherit_id" ref="base.res_config_settings_view_form" />
+            <field name="arch" type="xml">
+                <xpath expr="//div[hasclass('settings')]" position="inside">
+                    <div class="app_settings_block" data-string="Mobile APP" string="Mobile APP" data-key="phuclong_mobile_backend" groups="phuclong_mobile_backend.group_marketing_manager">
+                        <h2>Range</h2>
+                        <div class="row mt16 o_settings_container">
+                            <div class="col-12 col-lg-6 o_setting_box" title="This KM is applied to delivery.">
+                                <div class="o_setting_right_pane">
+                                    <div>
+                                        <label string="Maximum KM Delivery" for="maximum_km"/>
+                                        <div class="text-muted">
+                                            Maximum KM Delivery
+                                        </div>
+                                        <div class="content-group mt16">
+                                            <field name="maximum_km" colspan="4" nolabel="1" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <h2>Create Coupon APP</h2>
+                        <div class="row mt16 o_settings_container">
+                            <div class="col-12 col-lg-6 o_setting_box">
+                                <div class="o_setting_right_pane">
+                                    <div>
+                                        <label string="Prefix Birthday" for="prefix_birthday"/>
+                                        <div class="content-group mt16">
+                                            <field name="prefix_birthday" colspan="4" nolabel="1" />
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <label string="Prefix Reward" for="prefix_reward"/>
+                                        <div class="content-group mt16">
+                                            <field name="prefix_reward" colspan="4" nolabel="1" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-6 o_setting_box">
+                                <div class="o_setting_right_pane">
+                                    <div>
+                                        <label string="Code Size" for="code_size"/>
+                                        <div class="content-group mt16">
+                                            <field name="code_size" colspan="4" nolabel="1" />
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <label string="Alphabet" for="alphabet"/>
+                                        <div class="content-group mt16">
+                                            <field name="alphabet" colspan="4" nolabel="1" />
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <label string="Stand" for="stand"/>
+                                        <div class="content-group mt16">
+                                            <field name="stand" colspan="4" nolabel="1" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-12 o_setting_box">
+                                <group string="Legend (for prefix)">
+                                    <group>
+                                        <span colspan="2">Current Year with Century: %%(year)s</span>
+                                        <span colspan="2">Current Year without Century: %%(y)s</span>
+                                        <span colspan="2">Month: %%(month)s</span>
+                                        <span colspan="2">Day: %%(day)s</span>
+                                    </group>
+                                    <group>
+                                        <span colspan="2">Day of the Year: %%(doy)s</span>
+                                        <span colspan="2">Week of the Year: %%(woy)s</span>
+                                        <span colspan="2">Day of the Week (0:Monday): %%(weekday)s</span>
+                                    </group>
+                                    <group>
+                                        <span colspan="2">Hour 00->24: %%(h24)s</span>
+                                        <span colspan="2">Hour 00->12: %%(h12)s</span>
+                                        <span colspan="2">Minute: %%(min)s</span>
+                                        <span colspan="2">Second: %%(sec)s</span>
+                                    </group>
+                                </group>
+                            </div>
+                        </div>
+                    </div>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="action_mobile_configuration" model="ir.actions.act_window">
+            <field name="name">Settings</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">res.config.settings</field>
+            <field name="view_mode">form</field>
+            <field name="target">inline</field>
+            <field name="context">{'module' : 'phuclong_mobile_backend'}</field>
+        </record>
+
+    </data>
+</odoo>

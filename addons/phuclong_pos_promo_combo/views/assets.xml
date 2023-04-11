@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="phuclong_layout_assets_combo" inherit_id="point_of_sale.assets">
+          <xpath expr="." position="inside">
+                <script src="/phuclong_pos_promo_combo/static/src/js/db.js"></script>
+                <script src="/phuclong_pos_promo_combo/static/src/js/models.js"></script>
+          </xpath>
+        </template>
+    </data>
+</odoo>

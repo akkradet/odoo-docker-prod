@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data noupdate="0">
+        <!-- Add you code here -->
+        <!-- stock.overprocessed.transfer inherit form view -->
+        <record id="view_overprocessed_transfer_inherit" model="ir.ui.view">
+            <field name="name">view_overprocessed_transfer_inherit</field>
+            <field name="model">stock.overprocessed.transfer</field>
+            <field name="inherit_id" ref="stock.view_overprocessed_transfer"/>
+            <field name="arch" type="xml">
+                <!-- Add your xpath here -->
+                <xpath expr="//form/p" position="replace">
+                    <!-- Add your fields here -->
+                    <p>
+                        <field name="overprocessed_product_name" class="oe_inline"/>
+                    </p>
+                </xpath>
+            </field>
+        </record>
+        <!-- stock.overprocessed.transfer inherit form view -->
+        <record id="overprocessed_transfer_inherit_besco_stock_inherit" model="ir.ui.view">
+            <field name="name">overprocessed_transfer_inherit_besco_stock_inherit</field>
+            <field name="model">stock.overprocessed.transfer</field>
+            <field name="inherit_id" ref="besco_stock.overprocessed_transfer_inherit_besco_stock"/>
+            <field name="arch" type="xml">
+                <!-- Add your xpath here -->
+                <xpath expr="//field[@name='responsible']" position="attributes">
+                    <attribute name="readonly">1</attribute>
+                    <attribute name="force_save">1</attribute>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

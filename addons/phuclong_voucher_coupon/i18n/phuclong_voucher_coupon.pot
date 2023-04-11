@@ -1,0 +1,209 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* phuclong_voucher_coupon
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0+e-20200401\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: phuclong_voucher_coupon
+#: model:ir.model.fields,field_description:phuclong_voucher_coupon.field_wizard_check_voucher_coupon__appear_code
+msgid "Appear Code"
+msgstr ""
+
+#. module: phuclong_voucher_coupon
+#: model_terms:ir.ui.view,arch_db:phuclong_voucher_coupon.wizard_check_voucher_coupon_view
+msgid "Cancel"
+msgstr ""
+
+#. module: phuclong_voucher_coupon
+#: model_terms:ir.ui.view,arch_db:phuclong_voucher_coupon.wizard_check_voucher_coupon_view
+msgid "Check"
+msgstr ""
+
+#. module: phuclong_voucher_coupon
+#: model:ir.actions.act_window,name:phuclong_voucher_coupon.action_wizard_check_voucher_coupon
+#: model:ir.ui.menu,name:phuclong_voucher_coupon.menu_action_check_coupon_voucher
+msgid "Check Coupon/Voucher"
+msgstr ""
+
+#. module: phuclong_voucher_coupon
+#: model:ir.model.fields,field_description:phuclong_voucher_coupon.field_wizard_check_voucher_coupon__code
+msgid "Code"
+msgstr ""
+
+#. module: phuclong_voucher_coupon
+#: code:addons/phuclong_voucher_coupon/wizard/wizard_check_voucher_coupon.py:0
+#, python-format
+msgid ""
+"Code already in use\n"
+"Bill: %s\n"
+"Store: %s\n"
+"Date: %s\n"
+msgstr ""
+
+#. module: phuclong_voucher_coupon
+#: code:addons/phuclong_voucher_coupon/wizard/wizard_check_voucher_coupon.py:0
+#, python-format
+msgid "Code is cancelled and not available"
+msgstr ""
+
+#. module: phuclong_voucher_coupon
+#: code:addons/phuclong_voucher_coupon/wizard/wizard_check_voucher_coupon.py:0
+#, python-format
+msgid "Code is not exist"
+msgstr ""
+
+#. module: phuclong_voucher_coupon
+#: code:addons/phuclong_voucher_coupon/wizard/wizard_check_voucher_coupon.py:0
+#, python-format
+msgid ""
+"Code is valid\n"
+"Used Count: %s\n"
+"Remaining Count: %s\n"
+"Date from: %s\n"
+"Date to: %s\n"
+msgstr ""
+
+#. module: phuclong_voucher_coupon
+#: model:ir.model.fields.selection,name:phuclong_voucher_coupon.selection__wizard_check_voucher_coupon__type__coupon
+msgid "Coupon"
+msgstr ""
+
+#. module: phuclong_voucher_coupon
+#: model:ir.model.fields.selection,name:phuclong_voucher_coupon.selection__wizard_check_voucher_coupon__type__coupon_employee
+msgid "Coupon Employee"
+msgstr ""
+
+#. module: phuclong_voucher_coupon
+#: model:ir.model,name:phuclong_voucher_coupon.model_crm_voucher_info
+msgid "Coupon Information"
+msgstr ""
+
+#. module: phuclong_voucher_coupon
+#: code:addons/phuclong_voucher_coupon/wizard/wizard_check_voucher_coupon.py:0
+#, python-format
+msgid "Coupon is using out of limit"
+msgstr ""
+
+#. module: phuclong_voucher_coupon
+#: model:res.groups,name:phuclong_voucher_coupon.group_coupon_voucher_user
+msgid "Coupon/Voucher User"
+msgstr ""
+
+#. module: phuclong_voucher_coupon
+#: model:ir.model.fields,field_description:phuclong_voucher_coupon.field_wizard_check_voucher_coupon__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: phuclong_voucher_coupon
+#: model:ir.model.fields,field_description:phuclong_voucher_coupon.field_wizard_check_voucher_coupon__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: phuclong_voucher_coupon
+#: model:ir.model.fields,field_description:phuclong_voucher_coupon.field_crm_voucher_info__date_used
+#: model_terms:ir.ui.view,arch_db:phuclong_voucher_coupon.view_crm_voucher_info_filter_inherit
+msgid "Date Used"
+msgstr ""
+
+#. module: phuclong_voucher_coupon
+#: model:ir.model.fields,field_description:phuclong_voucher_coupon.field_wizard_check_voucher_coupon__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: phuclong_voucher_coupon
+#: model_terms:ir.ui.view,arch_db:phuclong_voucher_coupon.view_crm_voucher_info_filter_inherit
+msgid "Effective From"
+msgstr ""
+
+#. module: phuclong_voucher_coupon
+#: model_terms:ir.ui.view,arch_db:phuclong_voucher_coupon.view_crm_voucher_info_filter_inherit
+msgid "Effective To"
+msgstr ""
+
+#. module: phuclong_voucher_coupon
+#: code:addons/phuclong_voucher_coupon/wizard/wizard_check_voucher_coupon.py:0
+#, python-format
+msgid "Employee is not exist"
+msgstr ""
+
+#. module: phuclong_voucher_coupon
+#: model:ir.model.fields,field_description:phuclong_voucher_coupon.field_wizard_check_voucher_coupon__id
+msgid "ID"
+msgstr ""
+
+#. module: phuclong_voucher_coupon
+#: model:ir.model.fields,field_description:phuclong_voucher_coupon.field_wizard_check_voucher_coupon____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: phuclong_voucher_coupon
+#: model:ir.model.fields,field_description:phuclong_voucher_coupon.field_wizard_check_voucher_coupon__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: phuclong_voucher_coupon
+#: model:ir.model.fields,field_description:phuclong_voucher_coupon.field_wizard_check_voucher_coupon__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: phuclong_voucher_coupon
+#: code:addons/phuclong_voucher_coupon/wizard/wizard_check_voucher_coupon.py:0
+#, python-format
+msgid "No employee coupons have been issued for this card code"
+msgstr ""
+
+#. module: phuclong_voucher_coupon
+#: model:ir.model.fields,field_description:phuclong_voucher_coupon.field_crm_voucher_info__pos_order_id
+msgid "Pos Order"
+msgstr ""
+
+#. module: phuclong_voucher_coupon
+#: model:ir.model.fields,field_description:phuclong_voucher_coupon.field_crm_voucher_info__product_coupon_order_ref
+msgid "Product Coupon Order Ref"
+msgstr ""
+
+#. module: phuclong_voucher_coupon
+#: model:ir.ui.menu,name:phuclong_voucher_coupon.menu_action_report_coupon_voucher_all
+msgid "Report"
+msgstr ""
+
+#. module: phuclong_voucher_coupon
+#: model_terms:ir.ui.view,arch_db:phuclong_voucher_coupon.view_crm_voucher_info_form_inherit
+#: model:res.groups,name:phuclong_voucher_coupon.group_reset_voucher
+msgid "Reset Voucher"
+msgstr ""
+
+#. module: phuclong_voucher_coupon
+#: model:ir.model.fields,field_description:phuclong_voucher_coupon.field_wizard_check_voucher_coupon__result
+#: model_terms:ir.ui.view,arch_db:phuclong_voucher_coupon.wizard_check_voucher_coupon_view
+msgid "Result"
+msgstr ""
+
+#. module: phuclong_voucher_coupon
+#: model:ir.model.fields,field_description:phuclong_voucher_coupon.field_wizard_check_voucher_coupon__type
+msgid "Type"
+msgstr ""
+
+#. module: phuclong_voucher_coupon
+#: model:ir.model.fields.selection,name:phuclong_voucher_coupon.selection__wizard_check_voucher_coupon__type__voucher
+msgid "Voucher"
+msgstr ""
+
+#. module: phuclong_voucher_coupon
+#: model:ir.model,name:phuclong_voucher_coupon.model_wizard_check_voucher_coupon
+msgid "WizardCheckVoucherCoupon"
+msgstr ""
+
+#. module: phuclong_voucher_coupon
+#: model:ir.model,name:phuclong_voucher_coupon.model_report_coupon_voucher
+msgid "report.coupon.voucher"
+msgstr ""

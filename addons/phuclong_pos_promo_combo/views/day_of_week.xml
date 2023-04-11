@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="day_of_week_tree_view" model="ir.ui.view">
+			<field name="name">day_of_week_tree_view</field>
+			<field name="model">day.of.week.config</field>
+			<field name="arch" type="xml">
+				<tree string="Day of Week" editable="top">
+			        <field name="name"/>
+                    <field name="value"/>
+			   	</tree>
+			</field>
+		</record>
+        <record model="ir.actions.act_window" id="action_day_of_week_config">
+            <field name="name">Day of Week Configuration</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">day.of.week.config</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+            <field name="context">{}</field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="product_material_inherit_form">
+            <field name="name">product_material_inherit_form</field>
+            <field name="model">product.material</field>
+            <field name="inherit_id" ref="phuclong_product.product_material_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='name']" position="after">
+                    <field name="available_in_mobile"/>
+                    <field name="name_mobile"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

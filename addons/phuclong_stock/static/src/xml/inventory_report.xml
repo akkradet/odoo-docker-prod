@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<templates id="template" xml:space="preserve">
+    <t t-name="InventoryLines.Template">
+        <button type="button" class='btn btn-primary o_button_template_inventory'>
+            TEMPLATE
+        </button>
+    </t>
+    <t t-name="Inventory.Update">
+        <button type="button" class='btn btn-primary fa fa-refresh o_button_update_inventory'>
+            CẬP NHẬT TỒN KHO HIỆN TẠI
+        </button>
+    </t>
+</templates>

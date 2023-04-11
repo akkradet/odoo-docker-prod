@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="phuclong_pos_lock_product_templates" xml:space="preserve">
+    <t t-name="Product">
+        <t t-set="is_locked" t-value="widget.pos.db.check_is_locked(product.product_tmpl_id)"/>
+        <div t-att-class="is_locked ? 'item-product hidden' : 'item-product'" t-att-data-product-id="product.id" >
+            <div class="wrap-info-item">
+                <t t-if="product.check_get_price(widget)">
+                    <p class="price-product"><t t-esc="widget.format_currency(product.get_price(pricelist, 1),'Product Price')"/></p>
+                </t>
+                <t t-if="widget.product_has_combo.indexOf(product.product_tmpl_id) &gt;= 0 or widget.categ_has_combo.indexOf(product.categ_id[0]) &gt;= 0 or widget.product_has_promo.indexOf(product.product_tmpl_id) &gt;= 0">
+                    <img class="ico-promo" src="/phuclong_pos_theme/static/src/img/icon_promo.png" alt="" />
+                </t>
+            </div>
+            <img t-att-src='image_url' alt="" style="width: 80%; margin: auto;"/>
+            <p class="name-product eclipsis-text-2" t-attf-id="article_product_#{product.id}">
+                <t t-esc="product.display_name"/>
+            </p>
+            <div class="blur-background"></div>
+        </div>
+    </t>
+</templates>

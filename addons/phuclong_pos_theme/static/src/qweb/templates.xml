@@ -1,0 +1,2335 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="phuclong_pos_templates" xml:space="preserve">
+
+    <t t-name="ThrobberCustom">
+        <div>
+            <div class="oe_blockui_spin" style="height: 50px">
+                <img src="/phuclong_pos_theme/static/src/img/_loading.gif" style="position: fixed;z-index: 999; max-width: 200px; top: 40%; left: 40%;" />
+            </div>
+            <br />
+            <div class="oe_throbber_message oe_hidden" style="color:white"></div>
+        </div>
+    </t>
+    <t t-name="ReceiptScreenWidget">
+        <div class='receipt-screen screen'>
+            <div class='screen-content'>
+                <div class='top-content'>
+                    <h1 style="padding-top:13px;">Tiền dư: <span style="font-size:30px;color:#219553;" class='change-value'>0.00</span>
+                    </h1>
+                    <span class='button next'>
+                        Tiếp tục bán
+                        <i class='fa fa-angle-double-right'></i>
+                    </span>
+                </div>
+                <div class="centered-content">
+                    <div class="button print">
+                        <i class='fa fa-print'></i> In phiếu
+                    </div>
+                    <!-- <div class="button" id="installedPrinters">
+                        <label for="installedPrinterName">Select an installed Printer:</label>
+                        <select name="installedPrinterName" id="installedPrinterName"></select>
+                    </div> -->
+                    <div class="pos-receipt-container-bill">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </t>
+    <t t-name="ComboSimpleButton">
+        <a t-attf-class="category-simple-button combo-item #{ actived ? 'combo-actived' : '' }" t-att-data-combo-id="combo.id">
+            <t t-esc="combo.name"/>
+        </a>
+    </t>
+    <t t-extend="ProductScreenWidget">
+        <t t-jquery='.product-screen.screen' t-operation='replace'>
+            <div class="product-screen">
+                <div class="pos-pages pos-main-page container-fluid">
+                    <div class="placeholder-OrderWidget"></div>
+                    <div class="right-side-pos">
+                        <div class="wrap-item-product">
+                            <span class="placeholder-ProductCategoriesWidget" />
+                            <span class="placeholder-ProductListWidget" />
+                        </div>
+                        <div class="wrap-handle-selection">
+                            <div class="placeholder-ActionpadWidget"></div>
+                            <div class="placeholder-NumpadWidget"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </t>
+    </t>
+    <t t-name="ActionpadWidget">
+        <div class="wrap-method-promo">
+            <ul class="list-method-promo">
+                <li class="item-method-promo button popup-customer">
+                    Khách hàng
+                </li>
+                <li class="item-method-promo button choose-combo open">
+                    Combo
+                </li>
+                <li class="item-method-promo button history-order">
+                    Lịch sử
+                    <span class="badge hidden" style="
+                        color: #fff!important;
+                        background-color:#31723E!important;
+                        border-radius: 50%;
+                        margin-left: 5px;
+                    ">                    </span>
+                </li>
+                <li class="item-method-promo button choose-promotion">
+                    Chọn KM
+                </li>
+                <li class="item-method-promo button choose-reward-loyalty">
+                    Đổi quà
+                </li>
+                <li class="item-method-promo button disable-loyalty">
+                    Khóa Loyalty
+                </li>
+                <li class="item-method-promo button set-label">
+                    Label
+                </li>
+                <li class="item-method-promo button choose-topping">
+                    Extra Topping
+                </li>
+                <li class="item-method-promo button choose-coupon">
+                    Coupon
+                </li>
+                <li class="oe_hidden button pay">
+                    Thanh toán
+                </li>
+            </ul>
+        </div>
+    </t>
+    <t t-name="NumpadWidget">
+        <div class="wrap-pad-number">
+            <div class="wrap-numpad">
+                <!-- <div class="two-row-first">
+                    <div class="item item-numpad number-char"><span>1</span></div>
+                    <div class="item item-numpad number-char"><span>2</span></div>
+                    <div class="item item-numpad number-char"><span>3</span></div>
+                    <div class="item item-fast-action set-manual-discount"><span> Giảm <br/> trực tiếp</span></div>
+                    <div class="item item-fast-action change-topping"><span> Topping, size</span></div>
+                    <div class="item item-numpad number-char"><span>4</span></div>
+                    <div class="item item-numpad number-char"><span>5</span></div>
+                    <div class="item item-numpad number-char"><span>6</span></div>
+                    <div class="item item-fast-action set-label"><span style="width: 4ch;overflow: hidden;">Labels</span></div>
+                    <div class="item item-fast-action set-cash-payment"><span>Tiền mặt</span></div>
+                </div> -->
+                <div class="two-row-second">
+                    <div class="wrap-payment">
+                        <div class="item item-numpad set-manual-discount">
+                            <span> Giảm <br/>
+ trực tiếp</span>
+                        </div>
+                        <div class="item item-numpad change-topping">
+                            <span> Topping, size</span>
+                        </div>
+                        <div class="item item-numpad set-cash-payment">
+                            <span>Tiền mặt</span>
+                        </div>
+                        <div class="item item-fast-action apply-coupon" style="display:none">
+                            <span class="coupon-string">Coupon</span>
+                        </div>
+                        <div class="item item-fast-action set-note">
+                            <span>Note</span>
+                        </div>
+                        <div class="item item-numpad del-price numpad-backspace-pos">
+                            <span>Xóa</span>
+                        </div>
+                        <div class="item item-numpad invoice-info">
+                            <span>HĐĐT</span>
+                        </div>
+                        <div class="item item-numpad open-cashbox">
+                            <span>Mở két</span>
+                        </div>
+                        <div class="item item-numpad open-numpad-widget">
+                            <span>
+                                <i class="fa fa-calculator" style="font-size:20px;"/>
+                            </span>
+                        </div>
+                        <div class="item item-numpad">
+                            <span class="mobile-order"></span>
+                        </div>
+                    </div>
+                    <div class="wrap-payment">
+                        <div class="item colspan2 button pay">
+                            <span> Thanh toán</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </t>
+    <t t-name="CategorySimpleButton">
+        <a class='category-simple-button js-category-switch handle-tab' t-att-data-category-id="category.id">
+            <t t-esc="category.name"/>
+        </a>
+    </t>
+    <t t-name="ProductCategoriesWidget">
+        <div style="display:grid;">
+            <div class="header-product">
+                <div class="">
+                    <span class="">
+                        <span class="btn-backhome breadcrumb-button breadcrumb-home js-category-switch">
+                            <img src="/phuclong_pos_theme/static/src/img/icon_home_white.png" alt="" style="width:25px" />
+                        </span>
+                    </span>
+                    <t t-foreach="widget.breadcrumb" t-as="category">
+                        <span class="breadcrumb-button js-category-switch" t-att-data-category-id="category.id" style="font-size: 14px; color: #000;">
+                            <i class="fa fa-angle-right" style="font-size: 20px; margin: 0 10px;"></i>
+                            <t t-esc="category.name"/>
+                        </span>
+                    </t>
+                </div>
+                <form autocomplete="off" class="search-form" onsubmit="return false;">
+                    <p class="box-search searchbox">
+                        <label class="ico-search search-clear left">
+                            <img src="/phuclong_pos_theme/static/src/img/search.png" alt="" />
+                        </label>
+                        <input type="text" class="search-product" value="" placeholder="Tìm kiếm"/>
+                        <label class="del-input search-clear right">&#215;</label>
+                    </p>
+                </form>
+            </div>
+            <div id="tabProduct" class="nav nav-tabs tab-product" role="tablist" style="overflow-y:hidden;">
+                <div class="box-handle-button"></div>
+                <div class="owl-carousel custom-carousel-2 category-list">
+                </div>
+                <div class="box-handle-button"></div>
+            </div>
+        </div>
+    </t>
+    <t t-name="ComboTitle">
+        <li t-attf-class="item-order combo-done-header" style="background:#C8E6C9;padding:0 15px;">
+            <span class="name-order">
+                <t t-esc="combo ? combo.name : ''"/>
+                <!-- x <t t-esc="total_combo_qty"/> -->
+            </span>
+            <span class="price-order">
+                <t t-esc="widget.format_currency_no_symbol(total_combo_amount)"/>
+            </span>
+        </li>
+    </t>
+    <t t-name="Orderline">
+        <li t-attf-class="item-order orderline #{ line.selected ? 'selected' : '' } #{ line.is_done_combo ? 'combo-done' : '' }">
+            <span class="name-order">
+                <t t-esc="line.get_product().display_name"/>
+            </span>
+            <span class="price-order" t-if="!line.combo_id">
+                <!-- <t t-esc="widget.format_currency_no_symbol(line.get_display_price_w_topping())"/> -->
+                <t t-esc="widget.format_currency_no_symbol(line.get_quantity_str()*line.get_unit_display_price())"/>
+            </span>
+            <ul class="wrap-topping-order">
+                <li class="amount-product">
+                    <t t-esc="line.get_quantity_str()" />
+                    <t t-esc="line.get_unit().name" />
+                    <!-- x <t t-esc="widget.format_currency_no_symbol(line.get_unit_display_price(),'Product Price')" /> -->
+                </li>
+                <t t-if="line.promotion_id">
+                    <span class="highlight_info_pos" style="font-style:italic;color:#219653;font-weight:bold">KM: <t t-esc="widget.pos.get_order().get_promo_header_by_id(line.promotion_id).name" />
+                    </span>
+                </t>
+                <t t-if="line.promotion_condition_id and !line.promotion_id">
+                    <span class="highlight_info_pos" style="font-style:italic;color:#219653;font-weight:bold">KM: <t t-esc="widget.pos.get_order().get_promo_header_by_id(line.promotion_condition_id).name" />
+                    </span>
+                </t>
+                <t t-if="line.promotion_all_order_id">
+                    <span class="highlight_info_pos" style="font-style:italic;color:#219653;font-weight:bold">KM: <t t-esc="widget.pos.get_order().get_promo_header_by_id(line.promotion_all_order_id).name" />
+                    </span>
+                </t>
+                <t t-if="line.loyalty_discount_percent">
+                    <span class="highlight_info_pos" style="font-style:italic;color:#219653;font-weight:bold">Giảm giá loyalty: <t t-esc="line.loyalty_discount_percent" />
+%</span>
+                </t>
+
+                <t t-if="line.is_birthday_promotion">
+                    <span class="highlight_info_pos" style="font-style:italic;color:#219653;font-weight:bold">Quà tặng sinh nhật</span>
+                </t>
+
+                <t t-if="line.get_reward()">
+                    <span class="highlight_info_pos" style="font-style:italic;color:#219653;font-weight:bold">
+                        <t t-esc="line.get_reward_name()" />
+                    </span>
+                </t>
+
+                <t t-if="line.get_topping_name().length &gt; 0">
+                    <t t-foreach="line.get_topping_name()" t-as="topping">
+                        <li class="topping">
+                            <t t-esc="topping" />
+                        </li>
+                    </t>
+                </t>
+                <li class="material">
+                    <t t-esc="line.material_name" />
+                </li>
+                <t t-if="line.note">
+                    <li class="note-line">
+                        <span style="text-decoration:underline; font-weight:bold">Ghi chú: </span>
+                        <t t-esc="line.note"/>
+                    </li>
+                </t>
+                <t t-if="line.notice">
+                    <li class="notice">
+                        <span style="text-decoration:underline; font-weight:bold">Ghi chú CK: </span>
+                        <t t-esc="line.notice"/>
+                    </li>
+                </t>
+            </ul>
+        </li>
+    </t>
+    <t t-name="OrderWidget">
+        <div class="left-side-pos order" style="padding-bottom:0;">
+            <div class="content-order">
+                <div class="wrap-title">
+                    <p class="type-name" t-esc="order.sale_type_name"></p>
+                </div>
+            </div>
+            <div style="display:none;">
+                <img t-attf-src='data:image/png;base64,#{widget.pos.config.logo}'/>
+                <img style="margin: 5px auto 0 auto;max-width:100%;" src="https://i.postimg.cc/Px5150N3/logo-pl.png"/>
+            </div>
+            <t t-set="order_sale_type" t-value="widget.pos.db.sale_type_ids[order.sale_type_id]"/>
+            <ul t-attf-class="orderlines list-order order-scroller {{order.get_client() ? '':'no-client'}}">
+                <t t-if="orderlines.length === 0">
+                    <img t-attf-src="data:image/png;base64,{{order_sale_type.logo}}" style="max-width: 75px;margin: auto;margin-top: 10%;"/>
+                    <p class="text-center highlight_info_pos" style="margin-top: 16px;">Vui lòng chọn món <i class="fa fa-hand-o-right" style="color: #219653; font-size: 24px;"></i>
+                    </p>
+                </t>
+            </ul>
+            <div t-attf-class="wrap-detail-bill summary {{order.get_client() ? '':'no-client'}}">
+                <table>
+                    <tbody>
+                        <tr class="box-item total">
+                            <td class="title">Số lượng</td>
+                            <td class="quantity value">0</td>
+                        </tr>
+                        <tr class="box-item total">
+                            <td class="title">Tạm tính</td>
+                            <td class="subtotal value">0</td>
+                        </tr>
+                        <tr class="box-item total">
+                            <td class="title">Giảm giá</td>
+                            <td class="discount value">0</td>
+                        </tr>
+                        <tr class="box-item total">
+                            <td class="title">Phụ thu</td>
+                            <td class="surcharge value">0</td>
+                        </tr>
+                        <tr class="box-item">
+                            <td class="coupon value oe_hidden"></td>
+                        </tr>
+                        <tr class="box-item">
+                            <td class="title">SL Coupon</td>
+                            <td class="coupon-qty value"></td>
+                        </tr>
+                        <tr class="box-item summary-bill total">
+                            <td class="title">Tổng tiền</td>
+                            <td class="total_amount value">0</td>
+                        </tr>
+                        <tr class="total oe_hidden">
+                            <td class="title">Thuế</td>
+                            <td class="subentry">
+                                <span class="value">0</span>
+                            </td>
+                        </tr>
+                        <tr class="oe_hidden note">
+                            <td class="title">Ghi chú</td>
+                            <td class="note value">0</td>
+                        </tr>
+                        <tr class="oe_hidden loyalty_level level">
+                            <td class="title">Hạng thẻ</td>
+                            <td class="level  value">0</td>
+                        </tr>
+                        <tr class="oe_hidden total">
+                            <td class="title">Khách hàng</td>
+                            <td class="note partner value">0</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <t t-if="order.get_client()">
+                <div class="wrap-detail-customer summary">
+                    <table>
+                        <tbody>
+                            <tr class="box-item total">
+                                <td class="title">Khách hàng</td>
+                                <td class="partner value name-customer">Chưa chọn khách hàng</td>
+                            </tr>
+                            <tr class="box-item">
+                                <td class="title">Hạng thẻ</td>
+                                <td class="value"></td>
+                            </tr>
+                            <tr class="box-item">
+                                <td class="title">Ví tiền</td>
+                                <td class="value walet-customer"></td>
+                            </tr>
+                            <tr class="box-item">
+                                <td class="title">Điểm khả dụng</td>
+                                <td class="value">0</td>
+                            </tr>
+                            <tr class="box-item summary-bill">
+                                <td class="title">Điểm đơn hàng</td>
+                                <td class="value">0</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </t>
+        </div>
+    </t>
+    <t t-extend="Chrome">
+        <t t-jquery=".pos-topheader" t-operation='replace'>
+            <div class="pos-topheader pos-pages container-fluid">
+                <div class="left-side-pos">
+                    <div class="box-logo">
+                        <img class="ico-logo config-printer" src="/phuclong_pos_theme/static/src/img/printer.png" alt="" style="max-width:50px; max-height:30px"/>
+                        <div style="color: white;margin-left: 10px;font-weight: 700;font-size: 12px;" class="item-info-menu" id="user-name"></div>
+                    </div>
+                </div>
+                <div class="right-side-pos">
+                    <div class="wrap-header-menu">
+                        <div class="header-menu-left">
+                            <span class="placeholder-OrderSelectorWidget"></span>
+                        </div>
+                        <div class="header-menu-right">
+                            <span class="placeholder-UsernameWidget"></span>
+                            <span class="pos-rightheader" style="position:unset;"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </t>
+        <t t-jquery=".loader" t-operation='replace'>
+            <div class="loader" style="font-family: Roboto !important;font-weight:100;background-image: url(/phuclong_pos_theme/static/src/img/loader.gif);background-position: center;background-repeat: no-repeat;">
+                <div class='loader-feedback oe_hidden' style="width:50%;margin:-60px -25%;">
+                    <p class='message' style="font-size: 25px;font-weight: 300;">Loading</p>
+                    <div class='progressbar' style="margin-top:15px;">
+                        <div class='progress' width='75%'></div>
+                    </div>
+                    <div class='oe_hidden button skip'>
+                        Skip
+                    </div>
+                </div>
+            </div>
+        </t>
+    </t>
+    <t t-name="OrderSelectorWidget">
+        <!-- <div class="hanging-time oe_hidden">
+            <p> Thời gian nhận đơn:</p>
+            <t t-if="widget.pos.get_order().date_first_order">
+                <p class="value" t-esc="widget.pos.get_order().date_first_order"></p>
+            </t>
+        </div> -->
+        <div class="order-selector">
+            <span class="orders touch-scrollable">
+                <span class="wrap-btn deleteorder-button">
+                    <i class='fa fa-minus' role="img" aria-label="Delete order" title="Delete order"/>
+                </span>
+                <div class="owl-carousel custom-carousel-1 wrap-center-menu" style="max-width: 355px;">
+                    <t t-foreach="widget.pos.get_order_list()" t-as="order">
+                        <t t-if="order === widget.pos.get_order()">
+                            <div class="order-button select-order selected item-list-order active-test " t-att-data-uid="order.uid">
+                                <t t-if="order.note_label">
+                                    <span class="note-label">
+                                        <t t-esc="order.get_note_label_display()"/>
+                                    </span>
+                                </t>
+                                <t t-else="1">
+                                    <span class="number">
+                                        <t t-esc="order.sequence_number" />
+                                    </span>
+                                    <span class="time-create">
+                                        <t t-esc="moment(order.creation_date).format('hh:mm')"/>
+                                    </span>
+                                </t>
+                            </div>
+                        </t>
+                        <t t-if="order !== widget.pos.get_order()">
+                            <div class="order-button select-order item-list-order " t-att-data-uid="order.uid" style="width: 100%;">
+                                <t t-if="order.note_label">
+                                    <span class="note-label">
+                                        <t t-esc="order.get_note_label_display()"/>
+                                    </span>
+                                </t>
+                                <t t-else="1">
+                                    <span class="number">
+                                        <t t-esc="order.sequence_number" />
+                                    </span>
+                                </t>
+                                <!-- 
+                                <span class="time-create">
+                                    <t t-esc="moment(order.creation_date).format('hh:mm')"/>
+                                </span>
+                                 -->
+                            </div>
+                        </t>
+                    </t>
+                </div>
+                <span class="wrap-btn neworder-button">
+                    <i class='fa fa-plus' role="img" aria-label="New order" title="New order"/>
+                </span>
+            </span>
+        </div>
+    </t>
+    <t t-name="SynchNotificationWidget">
+        <div class="oe_status js_synch" style="border:none !important;margin:auto;padding:0;display:inline-flex;">
+            <span class='js_msg oe_hidden' style="font-size:20px;padding:10px 5px 5px 5px;line-height:25px;color:red;">0</span>
+            <div class="item-info-menu rerole js_connected">
+                <img style="width:22px;" src="/phuclong_pos_theme/static/src/img/sync.svg" alt="" />
+            </div>
+            <div class="item-info-menu rerole js_connecting oe_hidden">
+                <img style="width:22px;" src="/phuclong_pos_theme/static/src/img/sync.svg" alt="" />
+            </div>
+            <div class="item-info-menu rerole js_disconnected oe_hidden">
+                <img style="width:22px;" src="/phuclong_pos_theme/static/src/img/unsync.svg" alt="" />
+            </div>
+        </div>
+    </t>
+    <t t-name="HeaderButtonWidget">
+        <button type="button" class="item-info-menu btn-close" style="background:none;">Close</button>
+    </t>
+    <t t-name="UsernameWidget">
+        <div class="item-info-menu name-user">
+            <t t-esc="widget.get_cashier_name()" />
+        </div>
+        <div>
+        </div>
+        <t t-if="widget.pos.config.use_external_display">
+            <t t-if="widget.pos.db.presentationConnected">
+                <div class="cast-on" style="width: 40px; height: 40px;">
+                    <img style="width:20px; margin-left:20px; margin-top:10px;" src="/phuclong_pos_theme/static/src/img/cast-on.png" alt="" />
+                </div>
+            </t>
+            <t t-else="1">
+                <div class="cast-off" style="width: 40px; height: 40px;">
+                    <img style="width:20px; margin-left:20px; margin-left:20px;margin-top:10px;" src="/phuclong_pos_theme/static/src/img/cast-off.png" alt="" />
+                </div>
+            </t>
+            <div style="width:5px"></div>
+        </t>
+        <div class="fullscreen" style="width: 40px; height: 40px;">
+            <img style="width:20px; margin-left:20px; margin-top:10px;" src="/phuclong_pos_theme/static/src/img/fullscreen.svg" alt="" />
+        </div>
+        <div class="fullscreen-exit oe_hidden" style="width: 40px; height: 40px;">
+            <img style="width:20px; margin-left:20px; margin-top:10px;" src="/phuclong_pos_theme/static/src/img/fullscreen_exit.svg" alt="" />
+        </div>
+
+    </t>
+    <t t-name="ProductListWidget">
+        <div class="tab-content">
+            <div class="list-product product-list">
+            </div>
+        </div>
+    </t>
+    <t t-name="Product">
+        <div class="item-product" t-att-data-product-id="product.id">
+            <div class="wrap-info-item">
+                <t t-if="product.check_get_price(widget)">
+                    <p class="price-product">
+                        <t t-esc="widget.format_currency_no_symbol(product.get_price(pricelist, 1),'Product Price')"/>
+                    </p>
+                </t>
+                <t t-if="widget.product_has_combo.indexOf(product.product_tmpl_id) &gt;= 0 or widget.categ_has_combo.indexOf(product.categ_id[0]) &gt;= 0 or widget.product_has_promo.indexOf(product.product_tmpl_id) &gt;= 0">
+                    <img class="ico-promo" src="/phuclong_pos_theme/static/src/img/icon_promo.png" alt="" />
+                </t>
+            </div>
+            <img t-att-src='image_url' alt="" style="width: 80%; margin: auto;"/>
+            <p class="name-product eclipsis-text-2" t-attf-id="article_product_#{product.id}">
+                <t t-esc="product.display_name"/>
+            </p>
+            <div class="blur-background"></div>
+        </div>
+    </t>
+    <t t-name="LoyaltyPoints">
+        <table class="customer_info">
+            <tbody>
+                <tr class="box-item total">
+                    <td class="title">Khách hàng</td>
+                    <td class="partner value name-customer">
+                        <t t-if="partner">
+                            <t t-esc="partner.name"/>
+                        </t>
+                        <t t-else="1">
+                            Chưa chọn khách hàng
+                        </t>
+
+                    </td>
+                </tr>
+                <tr class="box-item">
+                    <td class="title">
+                    	Hạng thẻ
+                        <t t-if="partner and partner.expired_date and !partner.card_code_pricelist_id and !partner.use_for_on_account">
+                            <span class="highlight_info_pos" style="color:#219653;font-weight:bold;font-size:12px"> (                                <t t-esc="widget.pos.get_format_date(partner.expired_date)"/>
+)</span>
+                        </t>
+                        <t t-if="partner and (partner.card_code_pricelist_id or partner.use_for_on_account) and partner.appear_code_id and widget.pos.db.card_code_by_id[partner.appear_code_id[0]].date_expired">
+                            <span class="highlight_info_pos" style="color:#219653;font-weight:bold;font-size:12px"> (                                <t t-esc="widget.pos.get_format_date(widget.pos.db.card_code_by_id[partner.appear_code_id[0]].date_expired)"/>
+)</span>
+                        </t>
+                    </td>
+                    <td class="value">
+                        <t t-esc="level_name"/>
+                    </td>
+                </tr>
+                <tr class="box-item">
+                    <td class="title">Ví tiền</td>
+                    <td class="value walet-customer"></td>
+                </tr>
+                <tr class="box-item">
+                    <td class="title">Điểm khả dụng</td>
+                    <td class="value">
+                        <t t-esc="points_old"/>
+                    </td>
+                </tr>
+                <tr class="box-item summary-bill">
+                    <td class="title">Điểm đơn hàng</td>
+                    <td class="value">
+                        <t t-esc="points_won-points_spent"/>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </t>
+    <t t-name="SaletypeSelectionPopupWidget">
+        <div role="dialog" class="modal-dialog modal-warning">
+            <div class="popup popup-SaletypeSelectionPopupWidget" style="padding-bottom: 10px;max-width: 673px; width: 100%; height: fit-content;">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        Cảnh báo
+                    </div>
+                    <div class="tab-pane wrap-type-order active show">
+                        <div class="modal-body" style="padding: 1rem;">
+                            <p class="warning-messenger">Chọn loại đơn hàng</p>
+                            <div class="type-order-inner">
+                                <t t-if="widget.list">
+                                    <t t-foreach="widget.list" t-as="item">
+                                        <div t-attf-class="item-type-order selection-item {{ widget.is_selected.call(widget, item.item) ? 'selected' : '' }}" t-att-data-item-index='item_index'>
+                                            <img t-attf-src="data:image/png;base64,{{ item.item.logo }}" alt="" />
+                                            <p class="type-order-name" t-esc='item.label'/>
+                                        </div>
+                                    </t>
+                                </t>
+                                <t t-else="1">
+                                    <div class="item-type-order">
+                                        <img src="/phuclong_pos_theme/static/src/img/store.png" alt="" />
+                                        <p class="type-order-name">Cửa hàng</p>
+                                    </div>
+                                    <div class="item-type-order">
+                                        <img src="/phuclong_pos_theme/static/src/img/deliver_grab.png" alt="" />
+                                        <p class="type-order-name">Grab</p>
+                                    </div>
+                                    <div class="item-type-order">
+                                        <img src="/phuclong_pos_theme/static/src/img/deliver_go.png" alt="" />
+                                        <p class="type-order-name">Go Việt</p>
+                                    </div>
+                                    <div class="item-type-order">
+                                        <img src="/phuclong_pos_theme/static/src/img/deliver_now.png" alt="" />
+                                        <p class="type-order-name">Now</p>
+                                    </div>
+                                    <div class="item-type-order">
+                                        <img src="/phuclong_pos_theme/static/src/img/deliver_beamin.png" alt="" />
+                                        <p class="type-order-name">Beamin</p>
+                                    </div>
+                                </t>
+                            </div>
+                        </div>
+                        <div class="modal-footer footer">
+                            <button class="btn-deny button cancel">Thoát</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </t>
+    <t t-name="ClientMethodPopupWidget">
+        <div role="dialog" class="modal-dialog modal-warning">
+            <div class="popup popup-ClientMethodPopupWidget" style="padding-bottom: 10px;max-width: 673px; width: 100%; height: fit-content;">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        Cảnh báo
+                    </div>
+                    <div class="tab-pane wrap-method-customer active show">
+                        <div class="modal-body" style="padding: 1rem;">
+                            <p class="warning-messenger">Chọn hình thức nhập thông tin khách hàng:</p>
+                            <div class="method-customer-inner">
+                                <div class="item-method card" id="card">
+                                    <img src="/phuclong_pos_theme/static/src/img/card.png" alt="" />
+                                    <p class="name-method">Quét thẻ</p>
+                                </div>
+                                <div class="item-method keyboard" id="keyboard">
+                                    <img src="/phuclong_pos_theme/static/src/img/keyboard.png" alt="" />
+                                    <p class="name-method">Nhập mã</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn-deny cancel">Thoát</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </t>
+    <t t-name="CouponMethodPopupWidget">
+        <div role="dialog" class="modal-dialog modal-warning">
+            <div class="popup" style="padding-bottom: 10px;max-width: 673px; width: 100%; height: fit-content;">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        Cảnh báo
+                    </div>
+                    <div class="tab-pane wrap-method-customer active show">
+                        <div class="modal-body" style="padding: 1rem;">
+                            <p class="warning-messenger">Bạn muốn Nhập hay Hủy Coupon ?</p>
+                            <div class="method-customer-inner">
+                                <div class="item-method coupon-edit" id="card">
+                                    <img src="/phuclong_pos_theme/static/src/img/coupon_edit.png" alt="" style="width: 120px;height: 97px"/>
+                                    <p class="name-method">Nhập Coupon</p>
+                                </div>
+                                <div class="item-method coupon-cancel" id="keyboard">
+                                    <img src="/phuclong_pos_theme/static/src/img/coupon_cancel.png" alt="" style="width: 120px;height: 97px" />
+                                    <p class="name-method">Hủy Coupon</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn-deny cancel">Thoát</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </t>
+    <t t-name="selectPromotionPopupWidget">
+        <div role="dialog" class="modal-dialog modal-warning">
+            <div class="popup popup-selectPromotionPopupWidget" style="padding-bottom: 10px;max-width: 900px; width: 100%; height: fit-content;">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        Chọn chương trình khuyến mãi
+                    </div>
+                    <div class="tab-pane wrap-promotions">
+                        <div class="modal-body" style="padding: 1rem;">
+                            <div class="promotions-inner">
+                                <div class="header-list">
+                                    <p class="header-product">Chọn tất cả</p>
+                                    <p class="header-info-promo">Chương trình khuyến mãi</p>
+                                </div>
+                                <div class="wrap-item-promotions">
+                                    <div class="list-item-promotions">
+                                        <div class="item-promotions" style="border-bottom: 2px dashed; padding-bottom: 7px; margin-bottom:5px" id="promotion_all">
+                                            <div class="card-selection-promo">
+                                                <div class="number-item">0.</div>
+                                                <div class="checkbox-item">
+                                                    <div class="mycustom-checkbox" id="promotion_all">
+                                                        <input name="promotion" type="checkbox" id="promotion_all_promo" value="promotion_all" class="checkbox-input" t-att-checked="widget ? undefined : true"/>
+                                                        <label for="promotion_all_promo" class="checkbox-label"></label>
+                                                    </div>
+                                                </div>
+                                                <label class="name-product"></label>
+                                            </div>
+
+                                            <div class="list-promo-inner">
+                                                <select class="select-customize" id="promotion_all" name="promotion">
+                                                    <option value='0'></option>
+                                                    <t t-if="widget.promotion_all_ids and widget.promotion_all_ids.length">
+                                                        <t t-foreach='widget.promotion_all_ids' t-as='promotion'>
+                                                            <option t-att-value='promotion.id'>
+                                                                <t t-esc='promotion.display_name'/>
+                                                            </option>
+                                                        </t>
+                                                    </t>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="header-list">
+                                    <p class="header-product">Sản phẩm</p>
+                                    <p class="header-info-promo">Chương trình khuyến mãi</p>
+                                </div>
+                                <div class="wrap-item-promotions">
+                                    <t t-if="widget.orderlines and widget.orderlines.length">
+                                        <div class="list-item-promotions">
+                                            <t t-set='i' t-value="0" />
+                                            <t t-foreach="widget.orderlines" t-as="line">
+                                                <t t-set="i" t-value="i+1"/>
+                                                <div class="item-promotions" t-att-id="line.id">
+                                                    <div class="card-selection-promo">
+                                                        <div class="number-item">
+                                                            <t t-esc="i"/>
+.</div>
+                                                        <div class="checkbox-item">
+                                                            <div class="mycustom-checkbox" t-att-id="line.id">
+                                                                <input name="promotion" type="checkbox" t-att-value="line.id" t-attf-id="product-{{line.id}}" class="checkbox-input" t-att-checked="(line.promotion_line_id or line.loyalty_discount_percent) ? true : undefined" />
+                                                                <label t-attf-for="product-{{line.id}}" class="checkbox-label"></label>
+                                                            </div>
+                                                        </div>
+                                                        <label class="name-product">
+                                                            <t t-esc="line.product.display_name" />
+                                                        </label>
+                                                    </div>
+
+                                                    <div class="list-promo-inner">
+                                                        <select class="select-customize" t-att-id="line.id" name="promotion">
+                                                            <option value='0'></option>
+                                                            <t t-foreach='widget.promotion_ids' t-as='promotion'>
+                                                                <t t-if="promotion.id=='loyalty' and line.canbe_loyalty_line">
+                                                                    <option t-att-value='promotion.id' t-att-selected="(line.loyalty_discount_percent and promotion.id=='loyalty') ? true : undefined">
+                                                                        <t t-esc='promotion.display_name'/>
+                                                                    </option>
+                                                                </t>
+                                                                <t t-if="promotion.id!='loyalty'">
+                                                                    <t t-if="promotion.is_product_coupon_promotion">
+                                                                        <t t-if="line.promotion_line_id==promotion.id">
+                                                                            <option t-att-value='promotion.id' t-att-selected="(line.promotion_line_id==promotion.id) ? true : undefined">
+                                                                                <t t-esc='promotion.display_name'/>
+                                                                            </option>
+                                                                        </t>
+                                                                    </t>
+                                                                    <t t-else="1">
+                                                                        <option t-att-value='promotion.id' t-att-selected="(line.promotion_line_id==promotion.id) ? true : undefined">
+                                                                            <t t-esc='promotion.display_name'/>
+                                                                        </option>
+                                                                    </t>
+                                                                </t>
+                                                            </t>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </t>
+                                        </div>
+                                    </t>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn-deny cancel">Thoát</button>
+                            <button class="btn-accept">
+                                <span class="accept">Xác nhận</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </t>
+    <t t-name="CardScannerPopupWidget">
+        <div role="dialog" class="modal-dialog modal-warning">
+            <div class="popup popup-CardScannerPopupWidget" style="padding-bottom: 10px;max-width: 673px; width: 100%; height: fit-content;">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        Cảnh báo
+                    </div>
+                    <div class="tab-pane wrap-method-customer active show">
+                        <div class="modal-body" style="padding: 1rem;">
+                            <p class="warning-messenger">
+                                <t t-esc=" widget.options.title || '' " />
+                            </p>
+                            <div class="box-image-midle">
+                                <img src="/phuclong_pos_theme/static/src/img/card_large.png" alt="" />
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn-deny cancel" data-dismiss="modal">Thoát</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </t>
+    <t t-name="ToppingPopupWidget">
+        <div role="dialog" class="modal-dialog modal-warning">
+            <img src="/phuclong_pos_theme/static/src/img/btn_check.png" alt="" style="display:none"/>
+            <img src="/phuclong_pos_theme/static/src/img/btn_radio.png" alt="" style="display:none"/>
+            <div class="popup popup-ToppingPopupWidget modal-selection" style="max-width: 1050px; width: 95%; height: fit-content;font-family: Roboto;max-height:95%;">
+                <div class="modal-content topping-popup">
+                    <div class="modal-header topping-popup">
+                        <div class="header-top">
+                            <t t-if="widget.is_promotion_product">
+                                <h5 class="modal-title" style="color:red; font-weight:unset;margin-right:10px">Quà tặng:</h5>
+                            </t>
+                            <t t-if="widget.product">
+                                <h5 class="modal-title" style="font-weight:unset" t-esc="widget.product.display_name"></h5>
+                                <h5 class="modal-title topping-product-price" style="font-weight:unset; color:#219553; margin-left:10px" t-esc="widget.format_currency(widget.product_price)"></h5>
+                            </t>
+                            <t t-else="1">
+                                <h5 class="modal-title">Tên sản phẩm</h5>
+                            </t>
+
+                            <t t-if="!widget.is_promotion_product">
+                                <div class="close-topping" style="margin-left:auto">
+                                    <span aria-hidden="true">
+                                        <img style="max-width: 30px;" src="/phuclong_pos_theme/static/src/img/close.png"/>
+                                    </span>
+                                </div>
+                            </t>
+                        </div>
+                    </div>
+                    <div class="tab-content">
+                        <div class="wrap-select-option" id="selectOption" role="tabpanel">
+                            <div class="modal-body">
+                                <div class="wrap-list-option" style="max-height: 400px; overflow-y: scroll;">
+                                    <t t-if="widget.product">
+                                        <t t-if="widget.is_promotion_product and widget.promotion_name">
+                                            <div class="row-item-option">
+                                                <p class="subtitle highlight_info_pos" style="color:#219653;font-weight:bold">KM: <t t-esc="widget.promotion_name" />
+                                                </p>
+                                            </div>
+                                        </t>
+                                        <t t-if="widget.product.size_id and !widget.combo_id and !widget.is_done_combo and !widget.is_promotion_product and 
+                                    			 !widget.reward and !(widget.orderline and (widget.orderline.is_promotion_line or widget.orderline.reward_id))">
+                                            <div class="row-item-option">
+                                                <p class="subtitle">Size:</p>
+                                                <div class="wrap-selection">
+                                                    <t t-foreach="widget.pos.db.get_product_by_parent_code(widget.product)" t-as="product_parent">
+                                                        <t t-if="product_parent.size_id">
+                                                            <t t-set="size" t-value="product_parent.size_id"/>
+                                                            <div class="item-selection">
+                                                                <div class="mycustom-radio">
+                                                                    <t t-if="size[0] == widget.product.size_id[0]">
+                                                                        <input type="radio" t-attf-id="size-{{size[0]}}" name="size" t-att-value="product_parent.id" class="radio-input" t-att-checked="true"/>
+                                                                    </t>
+                                                                    <t t-else="1">
+                                                                        <input type="radio" t-attf-id="size-{{size[0]}}" name="size" t-att-value="product_parent.id" class="radio-input"/>
+                                                                    </t>
+                                                                    <label t-attf-for="size-{{size[0]}}" class="radio-label"></label>
+                                                                </div>
+                                                                <label class="name-option" t-attf-for="size-{{size[0]}}">
+                                                                    <t t-esc="size[1]"/>
+                                                                </label>
+                                                            </div>
+                                                        </t>
+                                                    </t>
+                                                </div>
+                                            </div>
+                                        </t>
+                                        <t t-if="widget.product.suitable_topping_ids.length &gt; 0">
+                                            <div class="row-item-option">
+                                                <p class="subtitle">Topping:</p>
+                                                <div class="wrap-selection">
+                                                    <t t-foreach="widget.product.suitable_topping_ids" t-as="topping">
+                                                        <t t-set="product_topping_id" t-value="widget.pos.db.product_ids_by_tmpl_id[topping][0].id"/>
+                                                        <div class="item-selection">
+                                                            <div class="mycustom-checkbox">
+                                                                <input type="checkbox" t-attf-id="topping-{{product_topping_id}}" name="topping" t-att-value="product_topping_id" class="checkbox-input" t-att-checked="(widget.default_topping_list.length and widget.default_topping_list.includes(product_topping_id)) ? true : undefined"/>
+                                                                <label t-attf-for="topping-{{product_topping_id}}" class="checkbox-label"></label>
+                                                            </div>
+                                                            <label class="name-option" t-attf-for="topping-{{product_topping_id}}">
+                                                                <t t-esc="widget.pos.db.product_ids_by_tmpl_id[topping][0].display_name"/>
+                                                                ( +                                                                <t t-esc="widget.format_currency_no_symbol(widget.pos.get_order().get_new_price(widget.pos.db.product_ids_by_tmpl_id[topping][0], 1))"/>
+)
+                                                            </label>
+                                                        </div>
+                                                    </t>
+                                                </div>
+                                            </div>
+                                        </t>
+                                        <t t-if="widget.product.custom_material_ids.length &gt; 0">
+                                            <t t-foreach="widget.product.custom_material_ids" t-as="material_id">
+                                                <div class="row-item-option">
+                                                    <t t-set="material" t-value="widget.pos.db.material_ids[material_id]"/>
+                                                    <p class="subtitle">
+                                                        <t t-esc="material.name" />
+:</p>
+                                                    <div class="wrap-selection">
+                                                        <t t-if="widget.check_option_type(material.option_unavailable_dom, 'normal')">
+                                                            <div class="item-selection">
+                                                                <div class="mycustom-radio">
+                                                                    <input type="radio" t-attf-id="material_normal-{{material_id}}" t-attf-name="{{material_id}}" t-attf-value="normal" class="radio-input material" t-att-checked="widget.check_default_material(material_id, 'normal') ? undefined : true" />
+                                                                    <label t-attf-for="material_normal-{{material_id}}" class="radio-label"></label>
+                                                                </div>
+                                                                <label class="name-option" t-attf-for="material_normal-{{material_id}}">
+	                                                                Bình thường
+                                                                </label>
+                                                            </div>
+                                                        </t>
+                                                        <t t-if="widget.check_option_type(material.option_unavailable_dom, 'none')">
+                                                            <div class="item-selection">
+                                                                <div class="mycustom-radio">
+                                                                    <input type="radio" t-attf-id="material_none-{{material_id}}" t-attf-name="{{material_id}}" t-attf-value="none" class="radio-input material" t-att-checked="widget.check_default_material(material_id, 'none') ? true : undefined" />
+                                                                    <label t-attf-for="material_none-{{material_id}}" class="radio-label"></label>
+                                                                </div>
+                                                                <label class="name-option" t-attf-for="material_none-{{material_id}}">
+	                                                                Không
+                                                                </label>
+                                                            </div>
+                                                        </t>
+
+                                                        <t t-if="widget.check_option_type(material.option_unavailable_dom, 'below')">
+                                                            <div class="item-selection">
+                                                                <div class="mycustom-radio">
+                                                                    <input type="radio" t-attf-id="material_below-{{material_id}}" t-attf-name="{{material_id}}" t-attf-value="below" class="radio-input material" t-att-checked="widget.check_default_material(material_id, 'below') ? true : undefined" />
+                                                                    <label t-attf-for="material_below-{{material_id}}" class="radio-label"></label>
+                                                                </div>
+                                                                <label class="name-option" t-attf-for="material_below-{{material_id}}">
+	                                                                Ít
+                                                                </label>
+                                                            </div>
+                                                        </t>
+
+                                                        <t t-if="widget.check_option_type(material.option_unavailable_dom, 'over')">
+                                                            <div class="item-selection">
+                                                                <div class="mycustom-radio">
+                                                                    <input type="radio" t-attf-id="material_over-{{material_id}}" t-attf-name="{{material_id}}" t-attf-value="over" class="radio-input material" t-att-checked="widget.check_default_material(material_id, 'over') ? true : undefined" />
+                                                                    <label t-attf-for="material_over-{{material_id}}" class="radio-label"></label>
+                                                                </div>
+                                                                <label class="name-option" t-attf-for="material_over-{{material_id}}">
+	                                                                Nhiều
+                                                                </label>
+                                                            </div>
+                                                        </t>
+                                                    </div>
+                                                </div>
+                                            </t>
+                                        </t>
+                                        <t t-set="cup_type" t-value="widget.pos.get_order().get_default_cup_by_product(widget.product)"/>
+                                        <t t-if="cup_type">
+                                            <t t-if="widget.product.fnb_type == 'drink' ">
+                                                <div class="row-item-option">
+                                                    <p class="subtitle">Ly:</p>
+                                                    <div class="wrap-selection">
+                                                        <t t-if="widget.pos.get_order().get_sale_type_default() and widget.pos.get_order().sale_type_id">
+                                                            <t t-if="widget.pos.get_order().get_sale_type_default()[0] == widget.pos.get_order().sale_type_id">
+                                                                <div class="item-selection">
+                                                                    <div class="mycustom-radio">
+                                                                        <input type="radio" t-attf-id="cup-0" name="cup" t-att-value="0" class="radio-input" t-att-checked="widget.cup_type_default=='none' ? true : undefined"/>
+                                                                        <label t-attf-for="cup-0" class="radio-label"></label>
+                                                                    </div>
+                                                                    <label class="name-option" t-attf-for="cup-0">
+			                                                            Không lấy Ly
+                                                                    </label>
+                                                                </div>
+                                                                <t t-if="!widget.pos.config.is_callcenter_pos and !widget.combo_id and !widget.is_done_combo and !widget.is_promotion_product and 
+                                    			 !widget.reward and !(widget.orderline and (widget.orderline.is_promotion_line or widget.orderline.reward_id))">
+                                                                    <div class="item-selection">
+                                                                        <div class="mycustom-radio">
+                                                                            <input type="radio" id="cup_themos" name="cup" value="cup_themos" class="radio-input" t-att-checked="widget.cup_type_default=='themos' ? true : undefined"/>
+                                                                            <label for="cup_themos" class="radio-label"></label>
+                                                                        </div>
+                                                                        <label class="name-option" for="cup_themos">
+				                                                            Ly giữ nhiệt
+                                                                        </label>
+                                                                    </div>
+                                                                </t>
+                                                                <t t-if="cup_type == 'paper_1st'">
+                                                                    <div class="item-selection">
+                                                                        <div class="mycustom-radio">
+                                                                            <input type="radio" id="cup_plastic" name="cup" value="cup_plastic" class="radio-input" t-att-checked="widget.cup_type_default=='plastic' ? true : undefined"/>
+                                                                            <label for="cup_plastic" class="radio-label"></label>
+                                                                        </div>
+                                                                        <label class="name-option" for="cup_plastic">
+				                                                            Ly Nhựa
+                                                                        </label>
+                                                                    </div>
+                                                                </t>
+                                                                <t t-if="cup_type == 'plastic_1st'">
+                                                                    <div class="item-selection">
+                                                                        <div class="mycustom-radio">
+                                                                            <input type="radio" id="cup_paper" name="cup" value="cup_paper" class="radio-input" t-att-checked="widget.cup_type_default=='paper' ? true : undefined"/>
+                                                                            <label for="cup_paper" class="radio-label"></label>
+                                                                        </div>
+                                                                        <label class="name-option" for="cup_paper">
+				                                                            Ly Giấy
+                                                                        </label>
+                                                                    </div>
+                                                                </t>
+                                                            </t>
+                                                        </t>
+                                                        <t t-if="cup_type == 'paper' or cup_type == 'paper_1st'">
+                                                            <div class="item-selection">
+                                                                <div class="mycustom-radio">
+                                                                    <input type="radio" id="cup_paper_default" name="cup" value="cup_paper_default" class="radio-input" t-att-checked="(widget.cup_type_default and widget.cup_type_default!='paper') ? undefined : true"/>
+                                                                    <label for="cup_paper_default" class="radio-label"></label>
+                                                                </div>
+                                                                <label class="name-option" for="cup_paper_default">
+		                                                            Ly Giấy
+                                                                </label>
+                                                            </div>
+                                                        </t>
+                                                        <t t-if="cup_type == 'plastic' or cup_type == 'plastic_1st'">
+                                                            <div class="item-selection">
+                                                                <div class="mycustom-radio">
+                                                                    <input type="radio" id="cup_plastic_default" name="cup" value="cup_plastic_default" class="radio-input" t-att-checked="(widget.cup_type_default and widget.cup_type_default!='plastic') ? undefined : true"/>
+                                                                    <label for="cup_plastic_default" class="radio-label"></label>
+                                                                </div>
+                                                                <label class="name-option" for="cup_plastic_default">
+		                                                            Ly Nhựa
+                                                                </label>
+                                                            </div>
+                                                        </t>
+                                                    </div>
+                                                </div>
+                                            </t>
+                                        </t>
+                                    </t>
+                                    <t t-if="widget.product and widget.product.is_cashless">
+                                        <div class="row-item-option">
+                                            <p class="subtitle">Nhập mã thẻ nổi:</p>
+                                            <input type="text" class="note-selection cashless-code" t-att-value="widget.orderline ? widget.orderline.cashless_code : ''"/>
+                                        </div>
+                                        <div class="cashless-error-mess" style="color:red">
+                                        </div>
+                                    </t>
+                                    <div class="row-item-option oe_hidden product_coupon_apply">
+                                        <p class="subtitle">Nhập mã Coupon giảm giá:</p>
+                                        <input type="text" readonly="1" onfocus="this.removeAttribute('readonly');" class="note-selection password-coupon product-coupon-apply" t-att-value="widget.orderline ? widget.orderline.product_coupon_code : ''"/>
+                                        <div class="product-coupon-apply-error-mess" style="color:red">
+                                        </div>
+                                    </div>
+                                    <t t-if="widget.product and widget.product.update_coupon_expiration">
+                                        <div class="row-item-option">
+                                            <p class="subtitle">Nhập mã Coupon:</p>
+                                            <input type="text" class="note-selection product-coupon-code password-coupon" t-att-value="widget.orderline ? widget.orderline.product_coupon_code : ''"/>
+                                        </div>
+                                        <div class="cashless-error-mess" style="color:red">
+                                        </div>
+                                    </t>
+                                    <div class="row-item-option">
+                                        <p class="subtitle">Ghi chú:</p>
+                                        <input type="text" class="note-selection set-note-line" t-att-value="widget.orderline ? widget.orderline.note : ''"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <div class="total-payment">
+                                    <div class="wrap-amount">
+                                        <p class="">Số lượng:</p>
+                                        <t t-if="!widget.is_promotion_product and !widget.is_done_combo and (widget.product and !widget.product.is_cashless)">
+                                            <label class="btn-custom btn-minus" for="">
+                                                <img src="/phuclong_pos_theme/static/src/img/circle_minus.png" alt=""/>
+                                            </label>
+                                        </t>
+                                        <input class="amount-number" type="text" t-attf-value="{{widget.default_qty}}" readonly="readonly" />
+                                        <t t-if="!widget.is_promotion_product and !widget.is_done_combo and (widget.product and !widget.product.is_cashless)">
+                                            <label class="btn-custom btn-plus" for="">
+                                                <img src="/phuclong_pos_theme/static/src/img/circle_plus.png" alt=""/>
+                                            </label>
+                                        </t>
+                                    </div>
+                                    <div class="wrap-total">
+                                        <p class="subtitle">Tổng tiền:</p>
+                                        <p class="cash"/>
+                                    </div>
+                                </div>
+                                <button class="button confirm" data-dismiss="modal">Lưu</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </t>
+    <t t-name="ChooseExtraPopupWidget">
+        <div role="dialog" class="modal-dialog modal-warning">
+            <div class="popup popup-ToppingPopupWidget modal-selection" style="max-width: 1050px; width: 95%; height: fit-content;font-family: Roboto;">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <div class="header-top">
+                            <h5 class="modal-title">Chọn topping</h5>
+                            <button type="button" class="close button cancel" style="margin-top:0; margin-right:unset; width:auto; height:unset; padding-right:0; padding-top:0;background-color:white">
+                                <span aria-hidden="true">
+                                    <img style="max-width: 30px;" src="/phuclong_pos_theme/static/src/img/close.png"/>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="tab-content">
+                        <div class="wrap-extra-topping" role="tabpanel">
+                            <div class="modal-body">
+                                <div class="list-topping">
+                                    <div class="list-topping-header">
+                                        <div class="item-tr">
+                                            <div class="item-th name-topping">Extra Topping:</div>
+                                            <div class="item-th unit-price">Đơn giá</div>
+                                            <div class="item-th amount-topping">Số lượng</div>
+                                            <div class="item-th total-price text-right">Thành tiền</div>
+                                        </div>
+                                    </div>
+
+                                    <div class="list-topping-body" style="overflow-y: scroll; max-height: 450px;">
+                                        <t t-if="widget.pos.db.product_topping.length &gt; 0">
+                                            <t t-foreach="widget.pos.db.product_topping" t-as="topping">
+                                                <t t-set="topping_price" t-value="widget.format_currency(widget.pos.get_order().get_new_price(topping, 1))"/>
+                                                <div class="item-tr">
+                                                    <input class="topping-price" style="display:none" type="text" t-attf-value="{{widget.pos.get_order().get_new_price(topping, 1)}}" readonly="readonly"/>
+                                                    <div class="item-td name-topping">
+                                                        <t t-esc="topping.display_name"/>
+                                                    </div>
+                                                    <div class="item-td unit-price">
+                                                        <t t-esc="topping_price"/>
+                                                    </div>
+                                                    <div class="item-td wrap-amount amount-topping">
+                                                        <label class="btn-custom btn-minus" for="">
+                                                            <img src="/phuclong_pos_theme/static/src/img/circle_minus.png" alt=""/>
+                                                        </label>
+                                                        <input class="amount-number" type="text" t-attf-value="{{widget.get_topping_current_qty(topping.id)}}" readonly="readonly"/>
+                                                        <label class="btn-custom btn-plus" for="">
+                                                            <img src="/phuclong_pos_theme/static/src/img/circle_plus.png" alt=""/>
+                                                        </label>
+                                                    </div>
+                                                    <div class="item-td total-price">
+                                                        <p class="total-cash-topping">
+                                                            <t t-esc="widget.format_currency(0)"/>
+                                                        </p>
+                                                    </div>
+                                                    <input class="topping-product" style="display:none" type="text" t-attf-value="{{topping.id}}" readonly="readonly"/>
+                                                </div>
+                                            </t>
+                                        </t>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <div class="total-payment">
+                                    <p class="subtitle">Tổng tiền:</p>
+                                    <p class="cash">
+                                        <t t-esc="widget.format_currency(0)"/>
+                                    </p>
+                                </div>
+                                <button class="button confirm" data-dismiss="modal">Lưu</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </t>
+    <t t-name="PaymentScreenWidget">
+        <div class="payment-screen pos-pages pos-payment-pages container-fluid">
+            <div class="left-side-pos placeholder-Order">
+            </div>
+            <div class="right-side-pos">
+                <div class="wrap-item-product">
+                    <div class="header-product">
+                        <button class="btn-backhome button back" style="font-size: 20px;">
+                            <i class='fa fa-angle-double-left'></i> Trở về </button>
+                        <h1 class="title ">thanh toán</h1>
+                    </div>
+                    <div class="content-payment">
+                        <div class="method-payment-left">
+                            <!-- 
+                            <p class="subtitle">Phương thức thanh toán</p>
+                             -->
+                            <div class='paymentmethods-container'>
+                            </div>
+                        </div>
+                        <div class="form-payment-right">
+                            <section class='paymentlines-container'>
+                            </section>
+                            <t t-if="widget.pos.get_order().order_in_app">
+                                <section style="background:white; border-radius: 10px; border: 2px solid #828282; padding: 10px;color:black">
+                                    <div>Người nhận: <span style="font-weight:bold">
+                                        <t t-esc="widget.pos.get_order().mobile_receiver_info_raw"/>
+                                    </span>
+                                </div>
+                                <div>Nhận hàng dự kiến: <span style="font-weight:bold">
+                                    <t t-esc="widget.pos.get_order().date_order_mobile"/>
+                                </span>
+                            </div>
+                            <div class="mobile-description">
+	                                	Địa chỉ giao hàng: 
+                                <t t-if="widget.pos.get_order().delivery_address">
+                                    <span style="font-weight:bold">
+                                        <t t-esc="widget.pos.get_order().delivery_address"/>
+                                    </span>
+                                </t>
+                            </div>
+                            <div class="mobile-description">
+	                                	Ghi chú đơn hàng:
+                                <t t-if="widget.pos.get_order().description_for_app">
+                                    <span style="font-weight:bold">
+                                        <t t-esc="widget.pos.get_order().description_for_app"/>
+                                    </span>
+                                </t>
+                            </div>
+                            <!-- 	                                <div class="mobile-description"> -->
+                            <!-- 	                                	Ghi chú đơn hàng:  -->
+                            <!-- 	                                	<t t-if="widget.pos.get_order().note"> -->
+                            <!-- 	                                		<span style="font-weight:bold"><t t-esc="widget.pos.get_order().note"/></span> -->
+                            <!-- 	                                	</t> -->
+                            <!-- 	                                </div> -->
+                        </section>
+                    </t>
+                </div>
+            </div>
+        </div>
+        <div class="wrap-handle-selection">
+            <div class="wrap-pad-number payment-numpad">
+            </div>
+        </div>
+    </div>
+</div>
+</t>
+<t t-name="PaymentScreen-PaymentlinesCustom">
+<t t-if="!paymentlines.length">
+    <div class='paymentlines-empty'>
+        <div class='total'>
+            <t t-esc="widget.format_currency(order.get_total_with_tax())"/>
+        </div>
+        <div class='message'>
+                    Xin mời chọn phương thức thanh toán.  
+        </div>
+    </div>
+    <t t-if="widget.pos.get_order().order_in_call_center">
+        <br/>
+        <section style="background:white; border-radius: 10px; border: 2px solid #828282; padding: 10px;color:black">
+            <div class="mobile-description">
+                    	Ghi chú đơn hàng: 
+                <t t-if="widget.pos.get_order().note">
+                    <span style="font-weight:bold">
+                        <t t-esc="widget.pos.get_order().note"/>
+                    </span>
+                </t>
+            </div>
+        </section>
+    </t>
+</t>
+<t t-if="paymentlines.length">
+    <table class='paymentlines'>
+        <colgroup>
+            <col class='due' />
+            <col class='tendered' />
+            <col class='change' />
+            <col class='method' />
+            <col class='controls' />
+        </colgroup>
+        <thead>
+            <tr class='label'>
+                <th>Số tiền</th>
+                <th>Thanh toán</th>
+                <th>Tiền thừa</th>
+                <th>Phương thức</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <t t-foreach='paymentlines' t-as='line'>
+                <t t-if='line.selected'>
+                    <tr class='paymentline selected'>
+                        <td class='col-due'>
+                            <t t-esc='widget.format_currency_no_symbol(order.get_due(line))' />
+                        </td>
+                        <td class='col-tendered edit'>
+                            <t t-esc='widget.inputbuffer' />
+                            <!-- <t t-esc='line.get_amount()' /> -->
+                        </td>
+                        <t t-if='order.get_change(line)'>
+                            <td class='col-change highlight' >
+                                <t t-esc='widget.format_currency_no_symbol(order.get_change(line))' />
+                            </td>
+                        </t>
+                        <t t-if='!order.get_change(line)'>
+                            <td class='col-change' ></td>
+                        </t>
+                        <td class='col-name' >
+                            <t t-esc='line.name' />
+                            <t t-if="line.voucher_code">
+                                    	(                                <t t-esc="line.voucher_code"/>
+)
+                            </t>
+                            <t t-if="line.max_on_account_amount">
+                                    	(                                <t t-esc="widget.format_currency_no_symbol(line.max_on_account_amount)"/>
+)
+                            </t>
+                            <t t-if="line.currency_name">
+                                        (                                <t t-esc="line.currency_name"/>
+)
+                            </t>
+                        </td>
+                        <td class='delete-button' t-att-data-cid='line.cid'>
+                            <i class='fa fa-times-circle' />
+                        </td>
+                    </tr>
+                </t>
+                <t t-if='!line.selected'>
+                    <tr class='paymentline' t-att-data-cid='line.cid'>
+                        <td class='col-due'>
+                            <t t-esc='widget.format_currency_no_symbol(order.get_due(line))' />
+                        </td>
+                        <td class='col-tendered'>
+                            <t t-esc='widget.format_currency_no_symbol(line.get_amount())' />
+                        </td>
+                        <td class='col-change'>
+                            <t t-if='order.get_change(line)'>
+                                <t t-esc='widget.format_currency_no_symbol(order.get_change(line))' />
+                            </t>
+                        </td>
+                        <td class='col-name'>
+                            <t t-esc='line.name' />
+                            <t t-if="line.voucher_code">
+                                    	(                                <t t-esc="line.voucher_code"/>
+)
+                            </t>
+                            <t t-if="line.max_on_account_amount">
+                                    	(                                <t t-esc="widget.format_currency_no_symbol(line.max_on_account_amount)"/>
+)
+                            </t>
+                            <t t-if="line.currency_name">
+                                        (                                <t t-esc="line.currency_name"/>
+)
+                            </t>
+                        </td>
+                        <td class='delete-button' t-att-data-cid='line.cid'>
+                            <i class='fa fa-times-circle' />
+                        </td>
+                    </tr>
+                </t>
+            </t>
+            <t t-if='extradue'>
+                <tr class='paymentline extra' t-att-data-cid='0'>
+                    <td class='col-due'>
+                        <t t-esc='widget.format_currency_no_symbol(extradue)' />
+                    </td>
+                </tr>
+            </t>
+            <t t-if="widget.pos.get_order().order_in_call_center">
+                <tr>
+                    <td colspan="5" style="background:#155435;">
+                        <section style="background:white; border-radius: 10px; border: 2px solid #828282; padding: 10px;color:black">
+                            <div class="mobile-description">
+		                      	Ghi chú đơn hàng: 
+                                <t t-if="widget.pos.get_order().note">
+                                    <span style="font-weight:bold">
+                                        <t t-esc="widget.pos.get_order().note"/>
+                                    </span>
+                                </t>
+                            </div>
+                        </section>
+                    </td>
+                </tr>
+            </t>
+        </tbody>
+    </table>
+</t>
+</t>
+<t t-name="PaymentScreen-Paymentmethods">
+<div class="list-method-payment">
+    <t t-foreach="widget.pos.payment_methods" t-as="payment_method">
+        <div t-attf-class="button paymentmethod item-selected {{widget.pos.check_method_has_payment(payment_method.id) ? 'item-hightlight':''}}" t-att-data-id="payment_method.id">
+            <t t-if="payment_method.logo">
+                <img t-attf-src="data:image/png;base64,{{ payment_method.logo }}" alt="" style="width: 30px; display: inline-block; margin-left: 10px;"/>
+            </t>
+            <t t-esc="payment_method.name" />
+        </div>
+    </t>
+</div>
+</t>
+<t t-name="Payment-Order">
+<div class="content-order">
+    <div class="wrap-title">
+        <p class="type-name" t-esc="order.sale_type_name"></p>
+    </div>
+</div>
+<t t-set="order_sale_type" t-value="widget.pos.db.sale_type_ids[order.sale_type_id]"/>
+<t t-set="total_label" t-value="0"/>
+<ul t-attf-class="orderlines list-order order-scroller {{order.get_client() ? '':'no-client'}}">
+    <t t-foreach="orderlines" t-as="group">
+        <t t-if="!group.combo_seq">
+            <t t-set="line" t-value="group.lines"></t>
+            <li t-if="line.get_product().default_code != 'reward_code'" class="item-order orderline" style="padding:3px 15px 10px 15px;">
+                <span class="name-order">
+                    <t t-esc="line.get_product().display_name"/>
+                </span>
+                <span class="price-order" t-if="!line.combo_id">
+                    <!-- <t t-esc="widget.format_currency_no_symbol(line.get_display_price_w_topping())"/> -->
+                    <t t-esc="widget.format_currency_no_symbol(line.get_quantity_str()*line.get_unit_display_price())"/>
+                </span>
+                <ul class="wrap-topping-order">
+                    <li class="amount-product">
+                        <t t-set="total_label" t-value="total_label+line.quantity"/>
+                        <t t-esc="line.get_quantity_str()" />
+                        <t t-esc="line.get_unit().name" />
+ x <t t-esc="widget.format_currency_no_symbol(line.get_unit_display_price(),'Product Price')" />
+                    </li>
+                    <t t-if="line.promotion_id">
+                        <span class="highlight_info_pos" style="font-style:italic;color:#219653;font-weight:bold">KM: <t t-esc="widget.pos.get_order().get_promo_header_by_id(line.promotion_id).name" />
+                        </span>
+                    </t>
+                    <t t-if="line.promotion_condition_id and !line.promotion_id">
+                        <span class="highlight_info_pos" style="font-style:italic;color:#219653;font-weight:bold">KM: <t t-esc="widget.pos.get_order().get_promo_header_by_id(line.promotion_condition_id).name" />
+                        </span>
+                    </t>
+                    <t t-if="line.promotion_all_order_id">
+                        <span class="highlight_info_pos" style="font-style:italic;color:#219653;font-weight:bold">KM: <t t-esc="widget.pos.get_order().get_promo_header_by_id(line.promotion_all_order_id).name" />
+                        </span>
+                    </t>
+                    <t t-if="line.loyalty_discount_percent">
+                        <span class="highlight_info_pos" style="font-style:italic;color:#219653;font-weight:bold">Giảm giá loyalty: <t t-esc="line.loyalty_discount_percent" />
+%</span>
+                    </t>
+                    <t t-if="line.is_birthday_promotion">
+                        <span class="highlight_info_pos" style="font-style:italic;color:#219653;font-weight:bold">Quà tặng sinh nhật</span>
+                    </t>
+                    <t t-if="line.get_reward()">
+                        <span class="highlight_info_pos" style="font-style:italic;color:#219653;font-weight:bold">
+                            <t t-esc="line.get_reward_name()" />
+                        </span>
+                    </t>
+                    <t t-if="line.get_topping_name().length &gt; 0">
+                        <t t-foreach="line.get_topping_name()" t-as="topping">
+                            <li class="topping">
+                                <t t-esc="topping" />
+                            </li>
+                        </t>
+                    </t>
+                    <li class="material">
+                        <t t-esc="line.material_name" />
+                    </li>
+                    <t t-if="line.note">
+                        <li class="note">
+                            <span style="text-decoration:underline; font-weight:bold">Ghi chú: </span>
+                            <t t-esc="line.note"/>
+                        </li>
+                    </t>
+                    <t t-if="line.notice">
+                        <li class="notice">
+                            <span style="text-decoration:underline; font-weight:bold">Ghi chú CK: </span>
+                            <t t-esc="line.notice"/>
+                        </li>
+                    </t>
+                </ul>
+            </li>
+        </t>
+        <t t-else="1">
+            <li t-attf-class="item-order combo-done-header" style="background:#C8E6C9;padding:0 15px;">
+                <span class="name-order">
+                    <t t-esc="group.combo ? group.combo.name : ''"/>
+                    <!-- x <t t-esc="group.total_combo_qty"/> -->
+                </span>
+                <span class="price-order">
+                    <t t-esc="widget.format_currency_no_symbol(group.total_combo_amount)"/>
+                </span>
+            </li>
+            <t t-foreach="group.lines" t-as="line">
+                <li t-if="line.get_product().default_code != 'reward_code'" class="item-order orderline combo-done">
+                    <span class="name-order">
+                        <t t-esc="line.get_product().display_name"/>
+                    </span>
+                    <span class="price-order" t-if="!line.combo_id">
+                        <!-- <t t-esc="widget.format_currency_no_symbol(line.get_display_price_w_topping())"/> -->
+                        <t t-esc="widget.format_currency_no_symbol(line.get_quantity_str()*line.get_unit_display_price())"/>
+                    </span>
+                    <ul class="wrap-topping-order">
+                        <li class="amount-product">
+                            <t t-set="total_label" t-value="total_label+line.quantity"/>
+                            <t t-esc="line.get_quantity_str()" />
+                            <t t-esc="line.get_unit().name" />
+                            <!-- x <t t-esc="widget.format_currency_no_symbol(line.get_unit_display_price(),'Product Price')" /> -->
+                        </li>
+                        <t t-if="line.promotion_id">
+                            <span class="highlight_info_pos" style="font-style:italic;color:#219653;font-weight:bold">KM: <t t-esc="widget.pos.get_order().get_promo_header_by_id(line.promotion_id).name" />
+                            </span>
+                        </t>
+                        <t t-if="line.promotion_condition_id and !line.promotion_id">
+                            <span class="highlight_info_pos" style="font-style:italic;color:#219653;font-weight:bold">KM: <t t-esc="widget.pos.get_order().get_promo_header_by_id(line.promotion_condition_id).name" />
+                            </span>
+                        </t>
+                        <t t-if="line.promotion_all_order_id">
+                            <span class="highlight_info_pos" style="font-style:italic;color:#219653;font-weight:bold">KM: <t t-esc="widget.pos.get_order().get_promo_header_by_id(line.promotion_all_order_id).name" />
+                            </span>
+                        </t>
+                        <t t-if="line.loyalty_discount_percent">
+                            <span class="highlight_info_pos" style="font-style:italic;color:#219653;font-weight:bold">Giảm giá loyalty: <t t-esc="line.loyalty_discount_percent" />
+%</span>
+                        </t>
+                        <t t-if="line.is_birthday_promotion">
+                            <span class="highlight_info_pos" style="font-style:italic;color:#219653;font-weight:bold">Quà tặng sinh nhật</span>
+                        </t>
+                        <t t-if="line.get_reward()">
+                            <span class="highlight_info_pos" style="font-style:italic;color:#219653;font-weight:bold">
+                                <t t-esc="line.get_reward_name()" />
+                            </span>
+                        </t>
+                        <t t-if="line.get_topping_name().length &gt; 0">
+                            <t t-foreach="line.get_topping_name()" t-as="topping">
+                                <li class="topping">
+                                    <t t-esc="topping" />
+                                </li>
+                            </t>
+                        </t>
+                        <li class="material">
+                            <t t-esc="line.material_name" />
+                        </li>
+                        <t t-if="line.note">
+                            <li class="note">
+                                <span style="text-decoration:underline; font-weight:bold">Ghi chú: </span>
+                                <t t-esc="line.note"/>
+                            </li>
+                        </t>
+                        <t t-if="line.notice">
+                            <li class="notice">
+                                <span style="text-decoration:underline; font-weight:bold">Ghi chú CK: </span>
+                                <t t-esc="line.notice"/>
+                            </li>
+                        </t>
+                    </ul>
+                </li>
+            </t>
+        </t>
+    </t>
+</ul>
+<div t-attf-class="wrap-detail-bill summary {{order.get_client() ? '':'no-client'}}">
+    <table>
+        <tbody>
+            <tr class="box-item total">
+                <td class="title">Số lượng</td>
+                <td class="quantity value" t-esc="total_label or '0'"></td>
+            </tr>
+            <tr class="box-item total">
+                <td class="title">Tạm tính</td>
+                <td class="subtotal value">
+                    <t t-esc="widget.format_value(subtotal)"/>
+
+                </td>
+            </tr>
+            <tr class="box-item total">
+                <td class="title">Giảm giá</td>
+                <td class="discount value">
+                    <t t-esc="widget.format_value(total_discount)"/>
+                </td>
+            </tr>
+            <tr class="box-item total">
+                <td class="title">Phụ thu</td>
+                <td class="surcharge value">
+                    <t t-esc="widget.format_value(order.total_surcharge)"/>
+                </td>
+            </tr>
+            <tr class="box-item">
+                <td class="title">SL Coupon</td>
+                <td class="value">
+                    <t t-esc="order.coupon_code_array.length"/>
+                </td>
+            </tr>
+            <!-- <tr class="box-item">
+                        <td class="title">Loyalty Point</td>
+                        <td class="value"></td>
+                    </tr> -->
+            <tr class="box-item summary-bill total">
+                <td class="title">Tổng tiền</td>
+                <td class="total_amount value">
+                    <t t-esc="widget.format_currency_no_symbol(order.get_total_with_tax())"/>
+                </td>
+            </tr>
+            <tr class="box-item" t-if="order.note">
+                <td class="title">Ghi chú: </td>
+                <td class="value">
+                    <t t-esc="order.note"/>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<t t-if="order.get_client()">
+    <div class="wrap-detail-customer summary">
+        <table>
+            <tbody>
+                <tr class="box-item total">
+                    <td class="title">Khách hàng</td>
+                    <td class="partner value name-customer">
+                        <t t-if="client">
+                            <t t-esc="client.name"/>
+                        </t>
+                        <t t-else="1">
+                                    Chưa chọn khách hàng
+                        </t>
+                    </td>
+                </tr>
+                <t t-if="client">
+                    <tr class="box-item">
+                        <td class="title">Hạng thẻ
+                            <t t-if="client and client.expired_date and !client.card_code_pricelist_id and !client.use_for_on_account">
+                                <span class="highlight_info_pos" style="color:#219653;font-weight:bold;font-size:12px"> (                                    <t t-esc="widget.pos.get_format_date(client.expired_date)"/>
+)</span>
+                            </t>
+                            <t t-if="client and (client.card_code_pricelist_id or client.use_for_on_account) and client.appear_code_id and widget.pos.db.card_code_by_id[client.appear_code_id[0]].date_expired">
+                                <span class="highlight_info_pos" style="color:#219653;font-weight:bold;font-size:12px"> (                                    <t t-esc="widget.pos.get_format_date(widget.pos.db.card_code_by_id[client.appear_code_id[0]].date_expired)"/>
+)</span>
+                            </t>
+                        </td>
+                        <td class="value" t-esc="level_name"></td>
+                    </tr>
+                    <tr class="box-item">
+                        <td class="title">Ví tiền</td>
+                        <td class="value walet-customer"></td>
+                    </tr>
+                    <tr class="box-item">
+                        <td class="title">Điểm khả dụng</td>
+                        <td class="value" t-esc="points_old"></td>
+                    </tr>
+                    <tr class="box-item summary-bill">
+                        <td class="title">Điểm đơn hàng</td>
+                        <td class="value" t-esc="points_won-points_spent"></td>
+                    </tr>
+                </t>
+                <t t-else="1">
+                    <tr class="box-item">
+                        <td class="title">Hạng thẻ</td>
+                        <td class="value"></td>
+                    </tr>
+                    <tr class="box-item">
+                        <td class="title">Ví tiền</td>
+                        <td class="value walet-customer"></td>
+                    </tr>
+                    <tr class="box-item">
+                        <td class="title">Điểm khả dụng</td>
+                        <td class="value">0</td>
+                    </tr>
+                    <tr class="box-item summary-bill">
+                        <td class="title">Điểm đơn hàng</td>
+                        <td class="value">0</td>
+                    </tr>
+                </t>
+            </tbody>
+        </table>
+    </div>
+</t>
+</t>
+<t t-name="PaymentScreen-Numpad">
+<div class="wrap-numpad pseudo-content">
+    <t t-set="sale_type_id" t-value="widget.pos.get_order().sale_type_id"/>
+    <t t-set="sale_type" t-value="widget.pos.db.sale_type_ids[sale_type_id]"/>
+    <t t-if="sale_type.allow_print_label_first and !widget.pos.config.is_callcenter_pos and widget.pos.get_order().note_label">
+        <div class="wrap-btn-payment"></div>
+        <div class="wrap-btn-payment">
+            <div t-attf-class="btn-pay print-label #{widget.pos.get_order().has_printed_label_first ? 'printed':''}">
+                <span>In Label</span>
+            </div>
+            <div class="label-content" style="z-index: -1;position: absolute;">
+            </div>
+        </div>
+    </t>
+    <t t-jquery=".pseudo-content" t-operation="append">
+        <t t-if="widget.pos.get_order().order_in_app or (!widget.pos.get_order().note_label and widget.pos.get_order().order_in_call_center and !widget.pos.config.is_callcenter_pos)">
+            <div class="wrap-btn-payment"></div>
+            <div class="wrap-btn-payment">
+                <div class="btn-pay set-label">
+                    <span>Nhập Label</span>
+                </div>
+            </div>
+        </t>
+    </t>
+</div>
+<div class="wrap-numpad">
+    <div class="list-item-numpad">
+        <button class="item item-numpad input-button number-char" data-action='1'>
+            <span>1</span>
+        </button>
+        <button class="item item-numpad input-button number-char" data-action='2'>
+            <span>2</span>
+        </button>
+        <button class="item item-numpad input-button number-char" data-action='3'>
+            <span>3</span>
+        </button>
+        <button class="item item-numpad input-button number-char" data-action='4'>
+            <span>4</span>
+        </button>
+        <button class="item item-numpad input-button number-char" data-action='5'>
+            <span>5</span>
+        </button>
+        <button class="item item-numpad input-button number-char" data-action='6'>
+            <span>6</span>
+        </button>
+        <button class="item item-numpad input-button number-char" data-action='7'>
+            <span>7</span>
+        </button>
+        <button class="item item-numpad input-button number-char" data-action='8'>
+            <span>8</span>
+        </button>
+        <button class="item item-numpad input-button number-char" data-action='9'>
+            <span>9</span>
+        </button>
+        <button class="item item-numpad del-price input-button numpad-char" data-action='CLEAR'>
+            <span>Xóa</span>
+        </button>
+        <button class="item item-numpad input-button number-char" data-action='0'>
+            <span>0</span>
+        </button>
+        <button class="item item-numpad input-button numpad-backspace" data-action='BACKSPACE'>
+            <img src="/point_of_sale/static/src/img/backspace.png" style="width: 30px; height: 30px; margin: auto;" alt="Backspace"/>
+        </button>
+    </div>
+    <div class="list-item-price">
+        <button class="item-price mode-button" data-action='+10000'>
+            <span>+10,000</span>
+        </button>
+        <button class="item-price mode-button" data-action='+20000'>
+            <span>+20,000</span>
+        </button>
+        <button class="item-price mode-button" data-action='+50000'>
+            <span>+50,000</span>
+        </button>
+        <button class="item-price mode-button" data-action='+100000'>
+            <span>+100,000</span>
+        </button>
+        <button class="item-price mode-button" data-action='+200000'>
+            <span>+200,000</span>
+        </button>
+        <button class="item-price mode-button" data-action='+500000'>
+            <span>+500,000</span>
+        </button>
+        <button class="item-price input-button number-char" data-action='00'>
+            <span>00</span>
+        </button>
+        <button class="item-price input-button number-char" data-action='000'>
+            <span>000</span>
+        </button>
+    </div>
+    <div class="wrap-btn-payment">
+        <div class="btn-pay next">
+            <span>Thanh toán</span>
+        </div>
+    </div>
+</div>
+</t>
+<t t-name="HistoryOrdesScreenWidget">
+<div class="pos-pages pos-infobill-pages container-fluid hidden-printed">
+    <div class="content-bill-info">
+        <div class="container" style="width:35%;float:right;">
+            <div class="header-bill" style="width:100%;padding:5px;color:white;min-height:55px;">
+                <div class="button re-print-bill oe_hidden" style="background:#219653; padding:7px; border-radius:5px; width:100%; margin:auto;padding:7px;font-size:18px;">
+                    <i class='fa fa-print'></i> In lại bill
+                </div>
+                <div class="button payment-bill oe_hidden" style="background:#219653; padding:7px; border-radius:5px; width:100%; margin:auto;padding:7px;font-size:18px;">
+                    <i class="fa fa-credit-card"></i> Thanh toán
+                </div>
+            </div>
+            <div class="body-bill pos-return-container" style="padding:0;">
+            </div>
+        </div>
+        <div class="container">
+            <div class="header-bill">
+                <button class="btn-backhome button highlight back" style="font-size: 22px;">
+                    <i class='fa fa-angle-double-left'></i> Trở về </button>
+                <form autocomplete="off" onsubmit="return false;">
+                    <div class="box-search searchbox" style="left: 0; margin-left:50px">
+                        <label class="ico-search">
+                            <img src="/phuclong_pos_theme/static/src/img/search.png" alt="" />
+                        </label>
+                        <input type="text" class="search-product" value="" placeholder="Nhập mã đơn hàng" />
+                    </div>
+                </form>
+            </div>
+            <div class="body-bill">
+                <table class="tb-bill">
+                    <thead class="thead-bill">
+                        <tr class="record-head">
+                            <th class="title-name">Mã bill</th>
+                            <th class="title-name label">Label</th>
+                            <th class="title-name">Ngày tạo</th>
+                            <th class="title-name">Khách hàng</th>
+                            <th class="title-name">Sale type</th>
+                            <th class="title-name amount-total">Tổng tiền 
+                                <i class="fa fa-sort-down oe_hidden"/>
+                                <i class="fa fa-sort-up oe_hidden"/>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody class='tbody-bill order-list-contents'></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="printed-area" class="pos-return-container">
+</div>
+</t>
+<t t-name="HistoryOrderLine">
+<tr t-attf-class="record-body order-line #{ order.is_draft_order ? 'draft' : '' } #{ (order.is_draft_order and order.order_in_call_center) ? 'callcenter' : '' }" t-att-data-name='order.order_name'>
+    <td class="item-record">
+        <t t-esc='order.order_name' />
+    </td>
+    <td class="item-record">
+        <t t-esc="order.label || ''" />
+    </td>
+    <td class="item-record">
+        <t t-esc='order.date_order' />
+    </td>
+    <td class="item-record">
+        <t t-esc='order.partner'/>
+    </td>
+    <td class="item-record">
+        <t t-esc='order.sale_type'/>
+    </td>
+    <td class="item-record">
+        <t t-esc='widget.format_currency_no_symbol(order.amount)' />
+    </td>
+    <!-- <td class="item-record"><button class="btn-print-bill" t-att-data-name='order.order_name'>In lại bill</button></td> -->
+</tr>
+</t>
+
+<t t-extend='ClientLine'>
+<t t-jquery='.client-line' t-operation='replace'>
+    <tr class='client-line' t-att-data-id='partner.id'>
+        <td>
+            <t t-esc='partner.name' />
+        </td>
+        <td>
+            <t t-esc='widget.format_value(partner.wallet_on_account)' />
+        </td>
+        <td>
+            <t t-esc='partner.mobile or partner.phone or ""' />
+        </td>
+        <td>
+            <t t-esc='partner.appear_code_id and partner.appear_code_id[1] or ""' />
+        </td>
+        <td>
+            <t t-esc='widget.format_pr(partner.current_point_act || 0, widget.pos.get_loyalty_program() ? widget.pos.get_loyalty_program().rounding : 1.0)' />
+        </td>
+        <td>
+            <t t-esc='widget.format_pr(partner.total_point_act || 0, widget.pos.get_loyalty_program() ? widget.pos.get_loyalty_program().rounding : 1.0)' />
+        </td>
+        <td>
+            <t t-esc='partner.loyalty_level_id ? partner.loyalty_level_id[1] : False' />
+        </td>
+    </tr>
+</t>
+</t>
+
+<t t-extend="ClientListScreenWidget">
+<!--     	<t t-jquery='.new-customer' t-operation='replace'> -->
+<!-- 	     </t> -->
+<t t-jquery='.client-list thead tr' t-operation='replace'>
+    <tr>
+        <th>Họ tên</th>
+        <th>Số tiền On Account</th>
+        <th>Điện thoại</th>
+        <th>Mã thẻ nổi</th>
+        <th>Điểm tích lũy</th>
+        <th>Điểm khả dụng</th>
+        <th>Cấp độ thẻ</th>
+    </tr>
+</t>
+</t>
+
+<t t-extend="ClientDetailsEdit">
+<t t-jquery='.client-details' t-operation='replace'>
+    <section class='client-details edit'>
+        <!-- 
+	            <div class='client-picture'>
+	                <t t-if='!partner.id'>
+	                    <i class='fa fa-camera'></i>
+	                </t>
+	                <t t-if='partner.id'>
+	                    <img t-att-src='widget.partner_icon_url(partner.id)' />
+	                </t>
+	                <input type='file' class='image-uploader'></input>   
+	            </div>
+	             -->
+        <form autocomplete="off" class="search-form" onsubmit="return false;">
+            <input class='detail client-name' name='name' t-att-value='partner.name' placeholder='Họ tên khách hàng'></input>
+            <div class='edit-buttons'>
+                <div class='button undo'>
+                    <i class='fa fa-undo' />
+                </div>
+                <div class='button save'>
+                    <i class='fa fa-floppy-o' />
+                </div>
+            </div>
+            <div class='client-details-box clearfix'>
+                <div class='client-details-left'>
+                    <div class='client-detail'>
+                        <span class='label'>Điện thoại</span>
+                        <input class='detail mobile' name='mobile' t-att-value='partner.mobile || ""'></input>
+                    </div>
+                    <div class='client-detail'>
+                        <span class='label'>POS Note</span>
+                        <input class='detail client-note' style="background-color:#D2D2FF !important" name='pos_note' type='pos_note' placeholder='Nhập POS Note' t-att-value='partner.pos_note || ""'></input>
+                    </div>
+                    <div class='client-detail'>
+                        <span class='label'>Ngày sinh</span>
+                        <input class='detail birthday' name='birthday' placeholder='dd/mm/yyyy' t-att-value='widget.pos.db.get_partner_birthday_by_id(partner.id) || ""'></input>
+                    </div>
+                    <div class='client-detail'>
+                        <span class='label'>E-mail</span>
+                        <input class='detail client-email' name='email' type='email' t-att-value='partner.email || ""'></input>
+                    </div>
+                </div>
+                <div class='client-details-right'>
+                    <div class='client-detail'>
+                        <span class='label' style="width:25%;">Địa chỉ</span>
+                        <input class='detail client-address-street' name='street' t-att-value='partner.street || ""' ></input>
+                    </div>
+                    <div class='client-detail'>
+                        <span class='label' style="width:25%;">Tỉnh/Thành phố</span>
+                        <select name="state_id" class="detail onchange_state_id">
+                            <t t-if="!partner.state_id">
+                                <option value="">Chọn tỉnh/thành phố</option>
+                            </t>
+                            <t t-foreach="widget.pos.db.states" t-as="state">
+                                <t t-if="partner.state_id and partner.state_id[0] == state.id">
+                                    <option t-att-value="state.id" selected="selected">
+                                        <t t-esc="state.name"/>
+                                    </option>
+                                </t>
+                                <t t-else="1">
+                                    <option t-att-value="state.id">
+                                        <t t-esc="state.name"/>
+                                    </option>
+                                </t>
+
+                            </t>
+                        </select>
+                    </div>
+                    <div class='client-detail'>
+                        <span class='label' style="width:25%;">Quận/Huyện</span>
+                        <select name="district_id" class="detail onchange_district_id">
+                            <t t-if="partner.district_id">
+                                <option t-att-value="partner.district_id[0]" selected="selected">
+                                    <t t-esc="partner.district_id[1]"/>
+                                </option>
+                            </t>
+                            <t t-else="1">
+                                <option value="">Chọn quận/huyện</option>
+                            </t>
+
+                        </select>
+                    </div>
+                    <div class='client-detail'>
+                        <span class='label' style="width:25%;">Phường/Xã</span>
+                        <select name="ward_id" class="detail onchange_ward_id">
+                            <t t-if="partner.ward_id">
+                                <option t-att-value="partner.ward_id[0]">
+                                    <t t-esc="widget.pos.db.wards[partner.ward_id[0]].name"/>
+                                </option>
+                            </t>
+                            <t t-else="1">
+                                <option value="">Chọn phường/xã</option>
+                            </t>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </section>
+</t>
+</t>
+<t t-name="partnerAddressDistrict">
+<t t-set="selected_district" t-value="0"/>
+<t t-foreach="district_ids" t-as="dis">
+    <t t-if="selected_district == 0">
+        <option t-att-value="dis.id" selected="selected">
+            <t t-esc="dis.name"/>
+        </option>
+    </t>
+    <t t-else="1">
+        <option t-att-value="dis.id">
+            <t t-esc="dis.name"/>
+        </option>
+    </t>
+    <t t-set="selected_district" t-value="selected_district + 1"/>
+</t>
+</t>
+<t t-name="partnerAddressWard">
+<t t-set="selected_ward" t-value="0"/>
+<t t-foreach="ward_ids" t-as="ward">
+    <t t-if="selected_ward == 0">
+        <option t-att-value="ward.id" selected="selected">
+            <t t-esc="ward.name"/>
+        </option>
+    </t>
+    <t t-else="1">
+        <option t-att-value="ward.id">
+            <t t-esc="ward.name"/>
+        </option>
+    </t>
+    <t t-set="selected_ward" t-value="selected_ward + 1"/>
+
+</t>
+</t>
+
+<t t-name="VoucherInputPopupWidget">
+<div role="dialog" class="modal-dialog">
+    <div class="popup popup-textinput">
+        <header class="title">
+            <t t-esc=" widget.options.title || '' " />
+        </header>
+        <input type='text' style="width: 60%" t-att-value="widget.options.value || ''"></input>
+        <div class="button check-voucher highlight_info_pos_bg" style="margin-top:3px;margin-right:30px;background:#219653;color:white;height:43px;">
+                    Kiểm tra
+        </div>
+        <t t-if="widget.options.state == 'success'">
+            <p class="highlight_info_pos" style="color:#219653; margin-top:10px">Mã Voucher hợp lệ</p>
+            <p class="highlight_info_pos" style="color:#219653; font-size:18px">
+                <t t-esc="widget.options.voucher_publish_name || '' "/>
+            </p>
+        </t>
+
+        <t t-if="widget.options.state == 'error'">
+            <p style="color:red; margin-top:20px;margin-left:30px;margin-right:30px;">
+                <t t-if='widget.options.error and Array.isArray(widget.options.error) and widget.options.error.length'>
+                    <t t-foreach="widget.options.error" t-as="item">
+                        <t t-esc='item'/>
+                        <br/>
+                    </t>
+                </t>
+                <t t-else="1">
+                    <t t-esc="  widget.options.error || '' "/>
+                </t>
+            </p>
+        </t>
+
+        <p style="margin-top:10px;text-align:left;margin-left:30px;">
+                	Danh sách voucher hợp lệ
+        </p>
+
+        <p style="text-align:left;margin-top:20px;padding-left:30px;padding-right:20px;font-weight:normal;margin:0px;font-size:16px;overflow: hidden;
+    					text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 4;-webkit-box-orient: vertical;">
+            <t t-esc=" widget.code_list_char || '' " />
+        </p>
+
+        <t t-if="widget.change_amount">
+            <p style="margin-top:20px;margin-left:30px;color:red;">
+	                	Voucher còn thừa <t t-esc="widget.format_currency(widget.change_amount)" />
+ , số tiền thừa sẽ không được trả lại 
+            </p>
+        </t>
+
+        <div class="footer">
+            <div class="button confirm-voucher highlight_info_pos_bg" style="background:#219653;color:white">
+	                     Xác nhận 
+            </div>
+            <div class="button cancel">
+	                     Quay lại 
+            </div>
+        </div>
+    </div>
+</div>
+</t>
+<t t-name="InvoiceInfoInputPopupWidget">
+<div role="dialog" class="modal-dialog">
+    <div class="popup popup-textinput" style="padding-bottom: 10px;max-width: 800px; width: 100%; height: fit-content;">
+        <header class="title">
+            <t t-esc=" widget.options.title || 'Nhập thông tin xuất HĐĐT' " />
+        </header>
+        <div style="display:flex; flex-direction: row; align-items: center">
+            <label for="name" style="width:20%; margin-left:10px; text-align:left; margin-left:10px">Tên công ty/ Cá nhân</label>
+            <input type='text' style="width:75%; height:50%; margin:5px; background-color:#D2D2FF !important" class="name" t-att-value="widget.pos.get_order().invoice_name || ''"></input>
+        </div>
+
+        <div style="display:flex; flex-direction: row; align-items: center">
+            <label for="vat" style="width:20%; margin-left:10px; text-align:left; margin-left:10px">Mã số thuế</label>
+            <input type='text' style="width:75%; height:50%; margin:5px; background-color:#D2D2FF !important" class="vat" t-att-value="widget.pos.get_order().invoice_vat || ''"></input>
+        </div>
+
+        <div style="display:flex; flex-direction: row; align-items: center">
+            <label for="address" style="width:20%; margin-left:10px; text-align:left; margin-left:10px">Địa chỉ xuất HĐĐT</label>
+            <input type='text' style="width:75%; height:50%; margin:5px; background-color:#D2D2FF !important" class="address" t-att-value="widget.pos.get_order().invoice_address || ''"></input>
+        </div>
+
+        <div style="display:flex; flex-direction: row; align-items: center">
+            <label for="email" style="width:20%; margin-left:10px; text-align:left; margin-left:10px">Email nhận HĐĐT</label>
+            <input type='text' style="width:75%; height:50%; margin:5px; background-color:#D2D2FF !important" class="email" t-att-value="widget.pos.get_order().invoice_email || ''"></input>
+        </div>
+
+        <div style="display:flex; flex-direction: row; align-items: center">
+            <label for="email" style="width:20%; margin-left:10px; text-align:left; margin-left:10px">Thông tin liên hệ</label>
+            <textarea type='text' rows="2" style="width:75%; height:50%; margin:5px; background-color:#D2D2FF !important;font-weight: bold;font-size: 25px;font-family: Roboto !important;" class="contact" t-att-value="widget.pos.get_order().invoice_contact || ''"></textarea>
+        </div>
+
+        <div style="display:flex; flex-direction: row; align-items: center">
+            <label for="note" style="width:20%; margin-left:10px; text-align:left; margin-left:10px">Ghi chú</label>
+            <input type='text' style="width:75%; height:50%; margin:5px" class="note" t-att-value="widget.pos.get_order().invoice_note || ''"></input>
+        </div>
+        <div class="invoice-error-mess" style="color:red" />
+        <div class="modal-footer">
+            <button class="button confirm highlight_info_pos_bg" style="color:white">Xác nhận</button>
+            <button class="button cancel">Thoát</button>
+        </div>
+    </div>
+</div>
+</t>
+<t t-name="NotificationCashierScanner">
+<div t-attf-class="o_notification #{className}" t-translation="off">
+    <a t-if="widget.sticky" class="fa fa-times o_close" href="#"/>
+    <div class="o_notification_title force_close">
+        <span class="o_icon fa fa-3x fa-lightbulb-o"/>
+        <t t-raw="widget.title"/>
+    </div>
+    <div class="o_notification_content force_close" t-if="widget.text">
+        <t t-raw="widget.text"/>
+    </div>
+</div>
+</t>
+<t t-name="EmployeeCouponAlertPopupWidget">
+<div role="dialog" class="modal-dialog">
+    <div class="popup popup-alert popup-alert-error">
+        <p class="title">
+            <t t-esc=" widget.options.title || 'Alert' " />
+        </p>
+        <p class="body">
+            <t t-if='widget.options.body and Array.isArray(widget.options.body) and widget.options.body.length'>
+                <t t-foreach="widget.options.body" t-as="item">
+                    <t t-esc='item'/>
+                    <br/>
+                </t>
+            </t>
+            <t t-else="1">
+                <t t-esc="  widget.options.body || '' "/>
+            </t>
+        </p>
+        <div class="footer">
+            <div class="button cancel">
+                        Ok
+            </div>
+        </div>
+    </div>
+</div>
+</t>
+<t t-name="NumberPopupWidgetNoPlus">
+<div role="dialog" class="modal-dialog">
+    <div class="popup popup-number">
+        <header class="title">
+            <t t-esc=" widget.options.title || '' " />
+        </header>
+        <div class='popup-input value active'>
+            <t t-esc='widget.inputbuffer' />
+        </div>
+        <div class='popup-numpad'>
+            <button class="input-button number-char" data-action='1'>1</button>
+            <button class="input-button number-char" data-action='2'>2</button>
+            <button class="input-button number-char" data-action='3'>3</button>
+            <br />
+            <button class="input-button number-char" data-action='4'>4</button>
+            <button class="input-button number-char" data-action='5'>5</button>
+            <button class="input-button number-char" data-action='6'>6</button>
+            <br />
+            <button class="input-button number-char" data-action='7'>7</button>
+            <button class="input-button number-char" data-action='8'>8</button>
+            <button class="input-button number-char" data-action='9'>9</button>
+            <br />
+            <button class="input-button numpad-char" data-action='CLEAR' style="font-size:20px;">Xóa</button>
+            <button class="input-button number-char" data-action='0'>0</button>
+            <button class="input-button numpad-backspace" data-action='BACKSPACE' >
+                <img style="pointer-events: none;max-width: 30px; margin: auto;" src="/point_of_sale/static/src/img/backspace.png" width="24" height="21" alt="Backspace"/>
+            </button>
+            <br />
+        </div>
+        <footer class="footer centered">
+            <div class="button cancel">
+                        Cancel
+            </div>
+            <div class="button confirm">
+                        Ok
+            </div>
+        </footer>
+    </div>
+</div>
+</t>
+
+<t t-extend="SelectionPromoPopupWidget">
+<t t-jquery='.footer' t-operation='replace'>
+    <div class="footer">
+        <div class="button cancel">
+                     Hủy
+        </div>
+    </div>
+</t>
+</t>
+
+<t t-name="SelectionWarehousePopupWidget">
+<div class="modal-dialog">
+    <div class="popup popup-selection">
+        <div style="">
+            <div class="searchbox" style="margin-right:10px; margin-top:15px">
+                <input placeholder="Tìm kiếm" style="border-radius:20px; border:1px solid #219653 !important;font-size:14px !important"/>
+                <span class="search-clear"></span>
+            </div>
+        </div>
+        <p class="title" style="text-align:left">
+                	Vui lòng chọn kho hàng
+        </p>
+        <div class='selection scrollable-y touch-scrollable' style="max-height:250px">
+            <t t-foreach="widget.list || []" t-as="item">
+                <div t-attf-class="selection-item {{ widget.is_selected.call(widget, item.item) ? 'selected' : '' }}" t-att-data-item-index='item_index'>
+                    <t t-esc='item.label'/>
+                </div>
+            </t>
+        </div>
+        <div class="footer">
+            <div class="button cancel">
+                        Hủy
+            </div>
+        </div>
+    </div>
+</div>
+</t>
+
+<t t-extend="ClientDetails">
+<t t-jquery='.client-details' t-operation='replace'>
+    <section class='client-details'>
+        <!-- 
+	            <div class='client-picture'>
+	                <img t-att-src='widget.partner_icon_url(partner.id)' />
+	            </div>
+	             -->
+        <div class='client-name'>
+            <t t-esc='partner.name' />
+        </div>
+        <div class='client-details-box clearfix'>
+            <div class='client-details-left'>
+                <div class='client-detail'>
+                    <span class='label'>Điện thoại</span>
+                    <t t-if='partner.mobile'>
+                        <span class='detail client-id'>
+                            <t t-esc='partner.mobile'/>
+                        </span>
+                    </t>
+                    <t t-if='!partner.mobile'>
+                        <span class='detail client-id empty'>N/A</span>
+                    </t>
+                </div>
+
+                <div class='client-detail'>
+                    <span class='label'>Mã thẻ nổi</span>
+                    <t t-if='partner.pos_note'>
+                        <span class='detail client-note'>
+                            <t t-esc='partner.pos_note' />
+                        </span>
+                    </t>
+                    <t t-if='!partner.pos_note'>
+                        <span class='detail client-note empty'>N/A</span>
+                    </t>
+                </div>
+                <div class='client-detail'>
+                    <span class='label'>Ngày sinh</span>
+                    <t t-if='partner.birthday'>
+                        <span class='detail birthday'>
+                            <t t-esc='widget.pos.db.get_partner_birthday_format_by_id(partner.id)'/>
+                        </span>
+                    </t>
+                    <t t-if='!partner.birthday'>
+                        <span class='detail birthday empty'>N/A</span>
+                    </t>
+                </div>
+            </div>
+            <div class='client-details-right'>
+                <div class='client-detail'>
+                    <span class='label'>Địa chỉ</span>
+                    <t t-if='partner.address'>
+                        <span class='detail client-address'>
+                            <t t-esc='partner.address' />
+                        </span>
+                    </t>
+                    <t t-if='!partner.address'>
+                        <span class='detail client-address empty'>N/A</span>
+                    </t>
+                </div>
+                <div class='client-detail'>
+                    <span class='label'>E-mail</span>
+                    <t t-if='partner.email'>
+                        <span class='detail client-email'>
+                            <t t-esc='partner.email' />
+                        </span>
+                    </t>
+                    <t t-if='!partner.email'>
+                        <span class='detail client-email empty'>N/A</span>
+                    </t>
+                </div>
+            </div>
+        </div>
+    </section>
+</t>
+</t>
+
+</templates>

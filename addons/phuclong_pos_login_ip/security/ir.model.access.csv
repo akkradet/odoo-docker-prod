@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_pos_address_config_manager,access_pos_address_config_manager,model_pos_address_config,,1,1,1,1
+access_pos_ip_address_manager,access_pos_ip_address_manager,model_pos_ip_address,,1,1,1,1
+access_pos_config_address_config_manager,access_pos_config_address_config_manager,point_of_sale.model_pos_config,phuclong_pos_login_ip.group_pos_address_config_manager,1,1,1,1

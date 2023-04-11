@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="login_clear_session" name="Clear User Sessions" inherit_id="web.login">
+        
+    </template>
+</odoo>

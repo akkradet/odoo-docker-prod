@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<record id="wizard_input_session_balance_view" model="ir.ui.view">
+			<field name="name">wizard_input_session_balance_view</field>
+			<field name="model">wizard.input.session.balance</field>
+			<field name="arch" type="xml">
+				<form>
+					<group col="4">
+						<field name="balance_start" widget="monetary" class="field_bold_custom" options="{'currency_field': 'currency_id'}"/>
+						<field name="currency_id" invisible="1" />
+					</group>
+					<footer>
+						<button string="Confirm" type="object"
+							name="set_balance_start" class="oe_highlight" />
+						<button string="Cancel" special="cancel" />
+					</footer>
+				</form>
+			</field>
+		</record>
+		
+		<record id="action_wizard_input_session_balance" model="ir.actions.act_window">
+            <field name="name">Input Session Starting Cash</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">wizard.input.session.balance</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="wizard_input_session_balance_view"/>
+            <field name="target">new</field>
+        </record>
+
+	</data>
+</odoo>

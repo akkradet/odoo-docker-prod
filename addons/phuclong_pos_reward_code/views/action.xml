@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="action_reward_publish" model="ir.actions.act_window">
+            <field name="name">Reward Code Publish</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">reward.code.publish</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+		    <field name="context">{}</field>
+        </record>
+        
+        <record id="action_reward_info" model="ir.actions.act_window">
+            <field name="name">Reward Code Info</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">reward.code.info</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+		    <field name="context">{}</field>
+        </record>
+    </data>
+</odoo>

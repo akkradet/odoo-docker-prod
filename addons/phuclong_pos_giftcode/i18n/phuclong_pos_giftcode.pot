@@ -1,0 +1,434 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* phuclong_pos_giftcode
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0+e-20200401\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: phuclong_pos_giftcode
+#: model:ir.model.fields,field_description:phuclong_pos_giftcode.field_giftcode_api_response__type
+msgid "API Type"
+msgstr ""
+
+#. module: phuclong_pos_giftcode
+#: model:ir.model.fields,field_description:phuclong_pos_giftcode.field_giftcode_api_config__api_url
+#: model:ir.model.fields,field_description:phuclong_pos_giftcode.field_giftcode_api_config_method__api_url
+msgid "API URL"
+msgstr ""
+
+#. module: phuclong_pos_giftcode
+#: model:ir.model.fields,field_description:phuclong_pos_giftcode.field_giftcode_api_config__access_key
+msgid "Access key"
+msgstr ""
+
+#. module: phuclong_pos_giftcode
+#: model:ir.model.fields.selection,name:phuclong_pos_giftcode.selection__giftcode_api_config_method__type__activate
+#: model:ir.model.fields.selection,name:phuclong_pos_giftcode.selection__giftcode_api_response__type__activate
+msgid "Activate"
+msgstr ""
+
+#. module: phuclong_pos_giftcode
+#: model:ir.model.fields,field_description:phuclong_pos_giftcode.field_giftcode_api_config__agent_site
+msgid "Agent site"
+msgstr ""
+
+#. module: phuclong_pos_giftcode
+#: model:ir.model.fields.selection,name:phuclong_pos_giftcode.selection__giftcode_api_config__store_mapping_type__all2one
+msgid "All store Odoo - One store Giftcode"
+msgstr ""
+
+#. module: phuclong_pos_giftcode
+#: model:ir.model.fields,field_description:phuclong_pos_giftcode.field_giftcode_api_config_method__api_config_id
+msgid "Api Config"
+msgstr ""
+
+#. module: phuclong_pos_giftcode
+#: model:ir.model.fields,field_description:phuclong_pos_giftcode.field_giftcode_api_config__branch_code
+msgid "Branch Code"
+msgstr ""
+
+#. module: phuclong_pos_giftcode
+#: model:ir.model.fields,field_description:phuclong_pos_giftcode.field_giftcode_api_config__brand_id
+msgid "Brand"
+msgstr ""
+
+#. module: phuclong_pos_giftcode
+#: model_terms:ir.ui.view,arch_db:phuclong_pos_giftcode.giftcode_config_view_tree
+msgid "Cardcode Info"
+msgstr ""
+
+#. module: phuclong_pos_giftcode
+#: model:ir.model.fields.selection,name:phuclong_pos_giftcode.selection__giftcode_api_config_method__type__validate
+#: model:ir.model.fields.selection,name:phuclong_pos_giftcode.selection__giftcode_api_response__type__validate
+msgid "Check"
+msgstr ""
+
+#. module: phuclong_pos_giftcode
+#. openerp-web
+#: code:addons/phuclong_pos_giftcode/static/src/js/screens.js:0
+#, python-format
+msgid "Chọn phương thức thanh toán"
+msgstr ""
+
+#. module: phuclong_pos_giftcode
+#: model:ir.model.fields,field_description:phuclong_pos_giftcode.field_giftcode_api_store__store_conf_id
+msgid "Config"
+msgstr ""
+
+#. module: phuclong_pos_giftcode
+#. openerp-web
+#: code:addons/phuclong_pos_giftcode/static/src/js/screens.js:0
+#, python-format
+msgid "Coupon/Voucher không hợp lệ hoặc đã được sử dụng: "
+msgstr ""
+
+#. module: phuclong_pos_giftcode
+#: model:ir.model.fields,field_description:phuclong_pos_giftcode.field_giftcode_api_config__create_uid
+#: model:ir.model.fields,field_description:phuclong_pos_giftcode.field_giftcode_api_config_method__create_uid
+#: model:ir.model.fields,field_description:phuclong_pos_giftcode.field_giftcode_api_response__create_uid
+#: model:ir.model.fields,field_description:phuclong_pos_giftcode.field_giftcode_api_store__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: phuclong_pos_giftcode
+#: model:ir.model.fields,field_description:phuclong_pos_giftcode.field_giftcode_api_config__create_date
+#: model:ir.model.fields,field_description:phuclong_pos_giftcode.field_giftcode_api_config_method__create_date
+#: model:ir.model.fields,field_description:phuclong_pos_giftcode.field_giftcode_api_response__create_date
+#: model:ir.model.fields,field_description:phuclong_pos_giftcode.field_giftcode_api_store__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: phuclong_pos_giftcode
+#: model:ir.model.fields,field_description:phuclong_pos_giftcode.field_giftcode_api_config__display_name
+#: model:ir.model.fields,field_description:phuclong_pos_giftcode.field_giftcode_api_config_method__display_name
+#: model:ir.model.fields,field_description:phuclong_pos_giftcode.field_giftcode_api_response__display_name
+#: model:ir.model.fields,field_description:phuclong_pos_giftcode.field_giftcode_api_store__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: phuclong_pos_giftcode
+#. openerp-web
+#: code:addons/phuclong_pos_giftcode/static/src/js/popup.js:0
+#: code:addons/phuclong_pos_giftcode/static/src/js/popup.js:0
+#: code:addons/phuclong_pos_giftcode/static/src/js/popup.js:0
+#: code:addons/phuclong_pos_giftcode/static/src/js/screens.js:0
+#: code:addons/phuclong_pos_giftcode/static/src/js/screens.js:0
+#: code:addons/phuclong_pos_giftcode/static/src/js/screens.js:0
+#: code:addons/phuclong_pos_giftcode/static/src/js/screens.js:0
+#: code:addons/phuclong_pos_giftcode/static/src/js/screens.js:0
+#: code:addons/phuclong_pos_giftcode/static/src/js/screens.js:0
+#: code:addons/phuclong_pos_giftcode/static/src/js/screens.js:0
+#: code:addons/phuclong_pos_giftcode/static/src/js/screens.js:0
+#: code:addons/phuclong_pos_giftcode/static/src/js/screens.js:0
+#: code:addons/phuclong_pos_giftcode/static/src/js/screens.js:0
+#: code:addons/phuclong_pos_giftcode/static/src/js/screens.js:0
+#: code:addons/phuclong_pos_giftcode/static/src/js/screens.js:0
+#: code:addons/phuclong_pos_giftcode/static/src/js/screens.js:0
+#: code:addons/phuclong_pos_giftcode/static/src/js/screens.js:0
+#: code:addons/phuclong_pos_giftcode/static/src/js/screens.js:0
+#, python-format
+msgid "Error: Could not Save Changes"
+msgstr ""
+
+#. module: phuclong_pos_giftcode
+#: model:ir.model.fields.selection,name:phuclong_pos_giftcode.selection__pos_payment_method__use_for__gift_code
+msgid "Gift Code"
+msgstr ""
+
+#. module: phuclong_pos_giftcode
+#: model:ir.ui.menu,name:phuclong_pos_giftcode.api_menuitem
+msgid "Gift Code API"
+msgstr ""
+
+#. module: phuclong_pos_giftcode
+#: model:ir.actions.act_window,name:phuclong_pos_giftcode.action_api
+#: model:ir.ui.menu,name:phuclong_pos_giftcode.menu_api_menuitem
+msgid "Gift Code API Config"
+msgstr ""
+
+#. module: phuclong_pos_giftcode
+#: model:ir.model.fields.selection,name:phuclong_pos_giftcode.selection__giftcode_api_config__type__giftpop
+#: model:ir.model.fields.selection,name:phuclong_pos_giftcode.selection__giftcode_api_response__giftcode_type__giftpop
+msgid "Gift Pop"
+msgstr ""
+
+#. module: phuclong_pos_giftcode
+#: model:ir.model.fields,field_description:phuclong_pos_giftcode.field_pos_payment_method__giftcode_api
+msgid "Giftcode API"
+msgstr ""
+
+#. module: phuclong_pos_giftcode
+#: model:ir.actions.act_window,name:phuclong_pos_giftcode.action_giftcode_api_response
+#: model:ir.ui.menu,name:phuclong_pos_giftcode.menu_giftcode_api_response
+#: model_terms:ir.ui.view,arch_db:phuclong_pos_giftcode.view_giftcode_api_response_tree
+msgid "Giftcode API Response Log"
+msgstr ""
+
+#. module: phuclong_pos_giftcode
+#: model:ir.model.fields,field_description:phuclong_pos_giftcode.field_giftcode_api_store__gifcode_store_id
+msgid "Giftcode Store ID"
+msgstr ""
+
+#. module: phuclong_pos_giftcode
+#: model:ir.model.fields,field_description:phuclong_pos_giftcode.field_giftcode_api_response__giftcode_type
+msgid "Giftcode Type"
+msgstr ""
+
+#. module: phuclong_pos_giftcode
+#: model:ir.model.fields,field_description:phuclong_pos_giftcode.field_giftcode_api_config__id
+#: model:ir.model.fields,field_description:phuclong_pos_giftcode.field_giftcode_api_config_method__id
+#: model:ir.model.fields,field_description:phuclong_pos_giftcode.field_giftcode_api_response__id
+#: model:ir.model.fields,field_description:phuclong_pos_giftcode.field_giftcode_api_store__id
+msgid "ID"
+msgstr ""
+
+#. module: phuclong_pos_giftcode
+#: model:ir.model.fields,field_description:phuclong_pos_giftcode.field_giftcode_api_config____last_update
+#: model:ir.model.fields,field_description:phuclong_pos_giftcode.field_giftcode_api_config_method____last_update
+#: model:ir.model.fields,field_description:phuclong_pos_giftcode.field_giftcode_api_response____last_update
+#: model:ir.model.fields,field_description:phuclong_pos_giftcode.field_giftcode_api_store____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: phuclong_pos_giftcode
+#: model:ir.model.fields,field_description:phuclong_pos_giftcode.field_giftcode_api_config__write_uid
+#: model:ir.model.fields,field_description:phuclong_pos_giftcode.field_giftcode_api_config_method__write_uid
+#: model:ir.model.fields,field_description:phuclong_pos_giftcode.field_giftcode_api_response__write_uid
+#: model:ir.model.fields,field_description:phuclong_pos_giftcode.field_giftcode_api_store__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: phuclong_pos_giftcode
+#: model:ir.model.fields,field_description:phuclong_pos_giftcode.field_giftcode_api_config__write_date
+#: model:ir.model.fields,field_description:phuclong_pos_giftcode.field_giftcode_api_config_method__write_date
+#: model:ir.model.fields,field_description:phuclong_pos_giftcode.field_giftcode_api_response__write_date
+#: model:ir.model.fields,field_description:phuclong_pos_giftcode.field_giftcode_api_store__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: phuclong_pos_giftcode
+#. openerp-web
+#: code:addons/phuclong_pos_giftcode/static/src/js/screens.js:0
+#, python-format
+msgid "Mã dự thưởng không hợp lệ hoặc đã được sử dụng"
+msgstr ""
+
+#. module: phuclong_pos_giftcode
+#: model:ir.model.fields,field_description:phuclong_pos_giftcode.field_giftcode_api_config__name
+#: model_terms:ir.ui.view,arch_db:phuclong_pos_giftcode.giftcode_config_view_form
+msgid "Name"
+msgstr ""
+
+#. module: phuclong_pos_giftcode
+#. openerp-web
+#: code:addons/phuclong_pos_giftcode/static/src/js/screens.js:0
+#, python-format
+msgid "Nhập mã  để thanh toán"
+msgstr ""
+
+#. module: phuclong_pos_giftcode
+#. openerp-web
+#: code:addons/phuclong_pos_giftcode/static/src/js/popup.js:0
+#: code:addons/phuclong_pos_giftcode/static/src/js/popup.js:0
+#, python-format
+msgid ""
+"Nếu xác nhận sử dụng Giftcode trên đơn hàng này, hệ thống sẽ tự động xóa "
+"toàn bộ chương trình khuyến mãi trước đó"
+msgstr ""
+
+#. module: phuclong_pos_giftcode
+#: model:ir.model.fields.selection,name:phuclong_pos_giftcode.selection__giftcode_api_config__store_mapping_type__one2one
+msgid "One store Odoo - One store Giftcode"
+msgstr ""
+
+#. module: phuclong_pos_giftcode
+#: model:ir.model.fields,field_description:phuclong_pos_giftcode.field_giftcode_api_response__order_name
+msgid "Order Name"
+msgstr ""
+
+#. module: phuclong_pos_giftcode
+#. openerp-web
+#: code:addons/phuclong_pos_giftcode/static/src/js/screens.js:0
+#, python-format
+msgid "Phương thức thanh toán Giftcode API chưa sẵn sàng."
+msgstr ""
+
+#. module: phuclong_pos_giftcode
+#. openerp-web
+#: code:addons/phuclong_pos_giftcode/static/src/js/screens.js:0
+#, python-format
+msgid "Phương thức thanh toán Giftcode chưa được thiết lập"
+msgstr ""
+
+#. module: phuclong_pos_giftcode
+#: model:ir.model,name:phuclong_pos_giftcode.model_pos_order
+msgid "Point of Sale Orders"
+msgstr ""
+
+#. module: phuclong_pos_giftcode
+#: model:ir.model,name:phuclong_pos_giftcode.model_pos_payment_method
+msgid "Point of Sale Payment Methods"
+msgstr ""
+
+#. module: phuclong_pos_giftcode
+#: model:ir.model.fields,field_description:phuclong_pos_giftcode.field_giftcode_api_config__pub_key
+msgid "Public Key"
+msgstr ""
+
+#. module: phuclong_pos_giftcode
+#. openerp-web
+#: code:addons/phuclong_pos_giftcode/static/src/xml/popup.xml:0
+#, python-format
+msgid "Quay lại"
+msgstr ""
+
+#. module: phuclong_pos_giftcode
+#: model:ir.model.fields,field_description:phuclong_pos_giftcode.field_giftcode_api_response__request_string
+msgid "Request String"
+msgstr ""
+
+#. module: phuclong_pos_giftcode
+#: model:ir.model.fields,field_description:phuclong_pos_giftcode.field_giftcode_api_response__response_string
+msgid "Response String"
+msgstr ""
+
+#. module: phuclong_pos_giftcode
+#: model:ir.model.fields,field_description:phuclong_pos_giftcode.field_giftcode_api_config__sec_key
+msgid "Secret Key"
+msgstr ""
+
+#. module: phuclong_pos_giftcode
+#: model:ir.model.fields,help:phuclong_pos_giftcode.field_giftcode_api_store__store_code
+msgid "Short name used to identify your warehouse"
+msgstr ""
+
+#. module: phuclong_pos_giftcode
+#: model:ir.model.fields,field_description:phuclong_pos_giftcode.field_giftcode_api_store__store_id
+msgid "Store"
+msgstr ""
+
+#. module: phuclong_pos_giftcode
+#: model:ir.model.fields,field_description:phuclong_pos_giftcode.field_giftcode_api_store__store_code
+msgid "Store Code"
+msgstr ""
+
+#. module: phuclong_pos_giftcode
+#: model:ir.model.fields,field_description:phuclong_pos_giftcode.field_giftcode_api_config__store_mapping_type
+msgid "Store Mapping Type"
+msgstr ""
+
+#. module: phuclong_pos_giftcode
+#: model:ir.model.fields,field_description:phuclong_pos_giftcode.field_giftcode_api_config__store_ids
+msgid "Store Setting"
+msgstr ""
+
+#. module: phuclong_pos_giftcode
+#. openerp-web
+#: code:addons/phuclong_pos_giftcode/static/src/js/popup.js:0
+#: code:addons/phuclong_pos_giftcode/static/src/js/popup.js:0
+#, python-format
+msgid "Sử dụng Giftcode trên đơn hàng nguyên giá"
+msgstr ""
+
+#. module: phuclong_pos_giftcode
+#. openerp-web
+#: code:addons/phuclong_pos_giftcode/static/src/js/popup.js:0
+#, python-format
+msgid "Thanh toán không thành công"
+msgstr ""
+
+#. module: phuclong_pos_giftcode
+#: model_terms:ir.ui.view,arch_db:phuclong_pos_giftcode.giftcode_config_view_form
+msgid "Title"
+msgstr ""
+
+#. module: phuclong_pos_giftcode
+#: model:ir.model.fields,field_description:phuclong_pos_giftcode.field_giftcode_api_config__type
+#: model:ir.model.fields,field_description:phuclong_pos_giftcode.field_giftcode_api_config_method__type
+msgid "Type"
+msgstr ""
+
+#. module: phuclong_pos_giftcode
+#: model:ir.model.fields,field_description:phuclong_pos_giftcode.field_giftcode_api_config__methods
+msgid "Types"
+msgstr ""
+
+#. module: phuclong_pos_giftcode
+#: model:ir.model.fields.selection,name:phuclong_pos_giftcode.selection__giftcode_api_config__type__urbox
+#: model:ir.model.fields.selection,name:phuclong_pos_giftcode.selection__giftcode_api_response__giftcode_type__urbox
+msgid "Urbox"
+msgstr ""
+
+#. module: phuclong_pos_giftcode
+#: model:ir.model.fields,field_description:phuclong_pos_giftcode.field_pos_payment_method__use_for
+msgid "Use For"
+msgstr ""
+
+#. module: phuclong_pos_giftcode
+#. openerp-web
+#: code:addons/phuclong_pos_giftcode/static/src/js/popup.js:0
+#: code:addons/phuclong_pos_giftcode/static/src/js/popup.js:0
+#, python-format
+msgid "Vui lòng nhập Giftcode"
+msgstr ""
+
+#. module: phuclong_pos_giftcode
+#. openerp-web
+#: code:addons/phuclong_pos_giftcode/static/src/xml/popup.xml:0
+#, python-format
+msgid "Xác nhận"
+msgstr ""
+
+#. module: phuclong_pos_giftcode
+#. openerp-web
+#: code:addons/phuclong_pos_giftcode/static/src/js/popup.js:0
+#: code:addons/phuclong_pos_giftcode/static/src/js/popup.js:0
+#: code:addons/phuclong_pos_giftcode/static/src/js/popup.js:0
+#: code:addons/phuclong_pos_giftcode/static/src/js/screens.js:0
+#: code:addons/phuclong_pos_giftcode/static/src/js/screens.js:0
+#: code:addons/phuclong_pos_giftcode/static/src/js/screens.js:0
+#: code:addons/phuclong_pos_giftcode/static/src/js/screens.js:0
+#: code:addons/phuclong_pos_giftcode/static/src/js/screens.js:0
+#: code:addons/phuclong_pos_giftcode/static/src/js/screens.js:0
+#: code:addons/phuclong_pos_giftcode/static/src/js/screens.js:0
+#: code:addons/phuclong_pos_giftcode/static/src/js/screens.js:0
+#: code:addons/phuclong_pos_giftcode/static/src/js/screens.js:0
+#: code:addons/phuclong_pos_giftcode/static/src/js/screens.js:0
+#, python-format
+msgid "Your Internet connection is probably down."
+msgstr ""
+
+#. module: phuclong_pos_giftcode
+#: model:ir.model,name:phuclong_pos_giftcode.model_giftcode_api_config
+msgid "giftcode.api.config"
+msgstr ""
+
+#. module: phuclong_pos_giftcode
+#: model:ir.model,name:phuclong_pos_giftcode.model_giftcode_api_config_method
+msgid "giftcode.api.config.method"
+msgstr ""
+
+#. module: phuclong_pos_giftcode
+#: model:ir.model,name:phuclong_pos_giftcode.model_giftcode_api_response
+msgid "giftcode.api.response"
+msgstr ""
+
+#. module: phuclong_pos_giftcode
+#: model:ir.model,name:phuclong_pos_giftcode.model_giftcode_api_store
+msgid "giftcode.api.store"
+msgstr ""
+
+#. module: phuclong_pos_giftcode
+#. openerp-web
+#: code:addons/phuclong_pos_giftcode/static/src/js/screens.js:0
+#, python-format
+msgid "Áp dụng Giftcode không thành công"
+msgstr ""

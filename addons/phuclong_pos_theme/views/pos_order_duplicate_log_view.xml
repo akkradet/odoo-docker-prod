@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="pos_order_duplicate_log_view_search" model="ir.ui.view">
+			<field name="name">pos_order_duplicate_log_view_search</field>
+			<field name="model">pos.order.duplicate.log</field>
+			<field name="arch" type="xml">
+				<search>
+					<group expand="0" string="Group By...">
+						<filter string="Store" name="warehouse_id" domain="[]" context="{'group_by': 'warehouse_id'}" />
+						<filter string="Pos Reference" name="name" domain="[]" context="{'group_by': 'name'}" />
+					</group>
+				</search>
+			</field>
+		</record>
+	
+		<!-- TREE VIEW -->
+		<record model="ir.ui.view" id="pos_order_duplicate_log_view_tree">
+			<field name="name">pos_order_duplicate_log_view_tree</field>
+			<field name="model">pos.order.duplicate.log</field>
+			<field name="arch" type="xml">
+				<tree create="0" edit="0" delete="0">
+					<field name="name" />
+					<field name="warehouse_id" />
+					<field name="date_order" />
+					<field name="amount_total" />
+					<field name="recreated" />
+				</tree>
+			</field>
+		</record>
+	
+		<!-- FORM VIEW -->
+		<record model="ir.ui.view" id="pos_order_duplicate_log_view_form">
+			<field name="name">pos_order_duplicate_log_view_form</field>
+			<field name="model">pos.order.duplicate.log</field>
+			<field name="arch" type="xml">
+				<form create="0" edit="0" delete="0">
+					<header>
+	        			<button name="recreate_order" string="Recreate Order" type="object" attrs="{'invisible' : [('recreated', '=', True)]}"
+	        					class="oe_highlight" confirm="Are you sure to recreate this order?"/>
+	        		</header>
+					<sheet>
+						<group col="4">
+							<field name="name" />
+							<field name="warehouse_id" />
+							<field name="date_order" />
+							<field name="amount_total" />
+							<field name="recreated" />
+						</group>
+						<group>
+							<field name="log_data" />
+						</group>
+					</sheet>
+				</form>
+			</field>
+		</record>
+	
+		<record model="ir.actions.act_window" id="pos_order_duplicate_log_action">
+			<field name="name">Order Duplicate Logs</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">pos.order.duplicate.log</field>
+			<field name="view_mode">tree,form</field>
+			<field name="domain">[]</field>
+			<field name="context">{'create': False, 'edit': False, 'delete': False,
+								   'search_default_warehouse_id':1, 'search_default_name':1}</field>
+			<field name="search_view_id" ref="pos_order_duplicate_log_view_search" />
+		</record>
+		
+		<menuitem parent="point_of_sale.menu_point_rep" 
+            id="menu_pos_order_duplicate_log_action" 
+            action="phuclong_pos_theme.pos_order_duplicate_log_action" sequence="100" 
+            groups="base.group_no_one"/> 
+		
+    </data>
+</odoo>

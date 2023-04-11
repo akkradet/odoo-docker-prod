@@ -1,0 +1,1036 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-04-07 15:52+0000\n"
+"PO-Revision-Date: 2021-05-23 05:05+0000\n"
+"Last-Translator: Nguyễn Thanh Tùng <tung.nt@besco.vn>\n"
+"Language-Team: Vietnamese <http://weblate.besco.vn/projects/besco-phuc-long/"
+"phuclong_pos_base/vi_VN/>\n"
+"Language: vi_VN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 3.8\n"
+
+#. module: phuclong_pos_base
+#: model_terms:ir.ui.view,arch_db:phuclong_pos_base.view_pos_config_kanban_phuclong
+msgid "<span>Cash Balance</span>"
+msgstr "<span>Tiền mặt kết ca gần nhất</span>"
+
+#. module: phuclong_pos_base
+#: model_terms:ir.ui.view,arch_db:phuclong_pos_base.view_pos_config_kanban_phuclong
+msgid "<span>Last Closing Date</span>"
+msgstr "<span>Ngày đóng ca gần nhất</span>"
+
+#. module: phuclong_pos_base
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_pos_sale_type__active
+msgid "Active"
+msgstr "Hiệu lực"
+
+#. module: phuclong_pos_base
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_pos_modify_payment_history__amount_after
+msgid "Amount After"
+msgstr "Số tiền sau"
+
+#. module: phuclong_pos_base
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_pos_modify_payment_history__amount_before
+msgid "Amount Before"
+msgstr "Số tiền trước"
+
+#. module: phuclong_pos_base
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_pos_order__auto_paid_by_cron
+msgid "Auto Paid By Cron"
+msgstr "Tự động thanh toán"
+
+#. module: phuclong_pos_base
+#: model:ir.model.fields.selection,name:phuclong_pos_base.selection__pos_payment_method__use_for__bank
+msgid "Bank"
+msgstr "Ngân hàng"
+
+#. module: phuclong_pos_base
+#: model:ir.model.fields.selection,name:phuclong_pos_base.selection__pos_order_line_option__option_type__below
+msgid "Below"
+msgstr "Dưới"
+
+#. module: phuclong_pos_base
+#: model_terms:ir.ui.view,arch_db:phuclong_pos_base.view_pos_order_filter_inherit_phuclong
+msgid "Bill"
+msgstr ""
+
+#. module: phuclong_pos_base
+#: model_terms:ir.ui.view,arch_db:phuclong_pos_base.view_pos_pos_form_phuclong_modify
+#: model_terms:ir.ui.view,arch_db:phuclong_pos_base.wizard_clear_user_session_view
+#: model_terms:ir.ui.view,arch_db:phuclong_pos_base.wizard_input_session_balance_view
+msgid "Cancel"
+msgstr "Huỷ"
+
+#. module: phuclong_pos_base
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_pos_order__cancel_from_be
+msgid "Cancel From Be"
+msgstr "Huỷ ở BE"
+
+#. module: phuclong_pos_base
+#: model:ir.model.fields.selection,name:phuclong_pos_base.selection__pos_order__state__cancel
+msgid "Cancelled"
+msgstr "Huỷ"
+
+#. module: phuclong_pos_base
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_pos_payment_method__is_cash_count
+#: model:ir.model.fields.selection,name:phuclong_pos_base.selection__pos_payment_method__use_for__cash
+msgid "Cash"
+msgstr "Tiền mặt"
+
+#. module: phuclong_pos_base
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_pos_operation_history__cashier_id
+#: model_terms:ir.ui.view,arch_db:phuclong_pos_base.view_pos_operation_history_search
+msgid "Cashier"
+msgstr "Thu ngân"
+
+#. module: phuclong_pos_base
+#: code:addons/phuclong_pos_base/models/pos_session.py:0
+#, python-format
+msgid ""
+"Cashier has an opening session: %s, please close it before change session"
+msgstr ""
+"Thu ngân này có phiên đang thực hiện: %s, Vui lòng thoát thu ngân khỏi phiên "
+"trước"
+
+#. module: phuclong_pos_base
+#: model_terms:ir.ui.view,arch_db:phuclong_pos_base.view_pos_payment_search
+msgid "Cashless Appear Code"
+msgstr "Mã thẻ nổi cashless"
+
+#. module: phuclong_pos_base
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_pos_order_line__cashless_code
+msgid "Cashless Code"
+msgstr "Mã thẻ nổi"
+
+#. module: phuclong_pos_base
+#: model:ir.model.fields.selection,name:phuclong_pos_base.selection__pos_operation_history__type__change_promotion
+msgid "Change Promotion"
+msgstr "Thay đổi CTKM"
+
+#. module: phuclong_pos_base
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_pos_order__check_group_manager_pos
+msgid "Check Group Manager Pos"
+msgstr ""
+
+#. module: phuclong_pos_base
+#: model:ir.actions.act_window,name:phuclong_pos_base.action_wizard_clear_user_session
+#: model:ir.ui.menu,name:phuclong_pos_base.menu_pos_clear_user_session_action
+#: model:ir.ui.menu,name:phuclong_pos_base.menu_pos_clear_user_session_execute_action
+#: model:res.groups,name:phuclong_pos_base.group_clear_session_user
+msgid "Clear Session Login"
+msgstr "Xoá phiên đăng nhập"
+
+#. module: phuclong_pos_base
+#: model:ir.actions.act_window,name:phuclong_pos_base.action_clear_user_session_history
+#: model:ir.ui.menu,name:phuclong_pos_base.menu_pos_clear_user_session_report_action
+msgid "Clear Session Login History"
+msgstr "Lịch sử xoá phiên đăng nhập"
+
+#. module: phuclong_pos_base
+#: model:ir.model,name:phuclong_pos_base.model_clear_user_session_history
+msgid "ClearUserSessionHistory"
+msgstr "Lịch sử xoá phiên đăng nhập"
+
+#. module: phuclong_pos_base
+#. openerp-web
+#: code:addons/phuclong_pos_base/static/src/js/screens.js:0
+#, python-format
+msgid "Close"
+msgstr "Đóng"
+
+#. module: phuclong_pos_base
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_pos_payment_method_visa__code
+msgid "Code"
+msgstr "Mã"
+
+#. module: phuclong_pos_base
+#: model_terms:ir.ui.view,arch_db:phuclong_pos_base.wizard_clear_user_session_view
+#: model_terms:ir.ui.view,arch_db:phuclong_pos_base.wizard_input_session_balance_view
+msgid "Confirm"
+msgstr "Xác nhận"
+
+#. module: phuclong_pos_base
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_clear_user_session_history__create_uid
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_pos_modify_payment_history__create_uid
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_pos_operation_history__create_uid
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_pos_order_line_option__create_uid
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_pos_payment_method_visa__create_uid
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_pos_sale_type__create_uid
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_product_cup_default__create_uid
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_product_cup_line__create_uid
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_product_cup_update__create_uid
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_product_cup_update_line__create_uid
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_wizard_clear_user_session__create_uid
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_wizard_input_session_balance__create_uid
+msgid "Created by"
+msgstr "Được tạo bởi"
+
+#. module: phuclong_pos_base
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_clear_user_session_history__create_date
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_pos_modify_payment_history__create_date
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_pos_operation_history__create_date
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_pos_order_line_option__create_date
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_pos_payment_method_visa__create_date
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_pos_sale_type__create_date
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_product_cup_default__create_date
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_product_cup_line__create_date
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_product_cup_update__create_date
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_product_cup_update_line__create_date
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_wizard_clear_user_session__create_date
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_wizard_input_session_balance__create_date
+msgid "Created on"
+msgstr "Được tạo vào"
+
+#. module: phuclong_pos_base
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_pos_order_line__cup_id
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_product_cup_line__cup_id
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_product_cup_update_line__cup_id
+#: model_terms:ir.ui.view,arch_db:phuclong_pos_base.view_product_cup_update_form
+msgid "Cup"
+msgstr "Ly"
+
+#. module: phuclong_pos_base
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_product_cup_line__cup_default_id
+msgid "Cup Default"
+msgstr "Ly mặc định"
+
+#. module: phuclong_pos_base
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_product_cup_default__cup_line_ids
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_product_cup_update__cup_line_ids
+msgid "Cup List"
+msgstr "Danh sách ly"
+
+#. module: phuclong_pos_base
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_pos_order_line__cup_type
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_product_cup_line__cup_type
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_product_cup_update_line__cup_type
+msgid "Cup Type"
+msgstr "Loại ly"
+
+#. module: phuclong_pos_base
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_product_cup_default__cup_type_load_pos
+msgid "Cup Type Load POS"
+msgstr "Loại ly tải lên POS"
+
+#. module: phuclong_pos_base
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_product_cup_update_line__product_cup_update_id
+msgid "Cup Update"
+msgstr "Cập nhật loại ly"
+
+#. module: phuclong_pos_base
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_wizard_input_session_balance__currency_id
+msgid "Currency"
+msgstr "Tiền tệ"
+
+#. module: phuclong_pos_base
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_pos_modify_payment_history__currency_name
+msgid "Currency Name"
+msgstr "Tên tiền tệ"
+
+#. module: phuclong_pos_base
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_pos_order__current_coupon_limit
+msgid "Current Coupon Limit"
+msgstr "Giới hạn Coupon hiện tại"
+
+#. module: phuclong_pos_base
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_pos_order__current_coupon_promotion
+msgid "Current Coupon promotion"
+msgstr "CTKM của Coupon hiện tại"
+
+#. module: phuclong_pos_base
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_pos_modify_payment_history__date_perform
+msgid "Date Perform"
+msgstr "Ngày thực hiện"
+
+#. module: phuclong_pos_base
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_product_product__cup_ids
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_product_template__cup_ids
+msgid "Default Cup"
+msgstr "Ly mặc định"
+
+#. module: phuclong_pos_base
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_pos_sale_type__description
+msgid "Description"
+msgstr "Mô tả"
+
+#. module: phuclong_pos_base
+#: model:ir.model.fields.selection,name:phuclong_pos_base.selection__pos_operation_history__type__destroy_order
+msgid "Destroy Order"
+msgstr "Huỷ đơn hàng"
+
+#. module: phuclong_pos_base
+#: model:ir.model.fields.selection,name:phuclong_pos_base.selection__pos_operation_history__type__destroy_order_line
+msgid "Destroy Order Line"
+msgstr "Huỷ dòng sản phẩm"
+
+#. module: phuclong_pos_base
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_pos_order_line__disable_loyalty
+msgid "Disable Loyalty"
+msgstr "Tắt chiết khấu Loyalty"
+
+#. module: phuclong_pos_base
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_pos_order_line__disable_promotion
+msgid "Disable Promotion"
+msgstr "Tắt khuyến mãi"
+
+#. module: phuclong_pos_base
+#: model:ir.model.fields.selection,name:phuclong_pos_base.selection__pos_operation_history__type__discount_line
+msgid "Discount Line"
+msgstr "Giảm giá trên dòng"
+
+#. module: phuclong_pos_base
+#: model:ir.model.fields.selection,name:phuclong_pos_base.selection__pos_operation_history__type__discount_total
+msgid "Discount Total"
+msgstr "Giảm giá tổng đơn"
+
+#. module: phuclong_pos_base
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_clear_user_session_history__display_name
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_pos_modify_payment_history__display_name
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_pos_operation_history__display_name
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_pos_order_line_option__display_name
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_pos_payment_method_visa__display_name
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_pos_sale_type__display_name
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_product_cup_default__display_name
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_product_cup_line__display_name
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_product_cup_update__display_name
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_product_cup_update_line__display_name
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_wizard_clear_user_session__display_name
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_wizard_input_session_balance__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: phuclong_pos_base
+#: model_terms:ir.ui.view,arch_db:phuclong_pos_base.view_product_cup_update_form
+msgid "Drink"
+msgstr "Thức uống"
+
+#. module: phuclong_pos_base
+#: model:ir.model,name:phuclong_pos_base.model_hr_employee
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_pos_payment__employee_id
+msgid "Employee"
+msgstr "Nhân viên"
+
+#. module: phuclong_pos_base
+#: model_terms:ir.ui.view,arch_db:phuclong_pos_base.view_pos_payment_search
+msgid "Employee Appear Code"
+msgstr "Mã thẻ nổi NV"
+
+#. module: phuclong_pos_base
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_pos_order__emp_coupon_code
+msgid "Employee Coupon Code"
+msgstr "Mã Coupon NV"
+
+#. module: phuclong_pos_base
+#: model_terms:ir.ui.view,arch_db:phuclong_pos_base.hr_employee_form_inherit_phuclong_pos_base
+msgid "Employee On Account"
+msgstr "Ví On Account NV"
+
+#. module: phuclong_pos_base
+#. openerp-web
+#: code:addons/phuclong_pos_base/static/src/js/models.js:0
+#, python-format
+msgid "Error: Could not Save Changes"
+msgstr "Lỗi: KHông thể lưu thay đổi"
+
+#. module: phuclong_pos_base
+#. openerp-web
+#: code:addons/phuclong_pos_base/static/src/js/screens.js:0
+#, python-format
+msgid "Ghi chú"
+msgstr "Ghi chú"
+
+#. module: phuclong_pos_base
+#: model_terms:ir.ui.view,arch_db:phuclong_pos_base.view_pos_operation_history_search
+msgid "Group By..."
+msgstr "Nhóm theo..."
+
+#. module: phuclong_pos_base
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_pos_order__has_printed_label_first
+msgid "Has Printed Label First"
+msgstr "Có label in đầu tiên"
+
+#. module: phuclong_pos_base
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_clear_user_session_history__id
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_pos_modify_payment_history__id
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_pos_operation_history__id
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_pos_order_line_option__id
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_pos_payment_method_visa__id
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_pos_sale_type__id
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_product_cup_default__id
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_product_cup_line__id
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_product_cup_update__id
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_product_cup_update_line__id
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_wizard_clear_user_session__id
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_wizard_input_session_balance__id
+msgid "ID"
+msgstr "Mã ID"
+
+#. module: phuclong_pos_base
+#: model:ir.actions.act_window,name:phuclong_pos_base.action_wizard_input_session_balance
+msgid "Input Session Starting Cash"
+msgstr "Nhập tiền mặt đầu ca"
+
+#. module: phuclong_pos_base
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_pos_order__invisible_cancel
+msgid "Invisible Cancel"
+msgstr ""
+
+#. module: phuclong_pos_base
+#: model:ir.model.fields.selection,name:phuclong_pos_base.selection__pos_order__state__invoiced
+msgid "Invoiced"
+msgstr ""
+
+#. module: phuclong_pos_base
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_pos_order_line__is_topping_line
+msgid "Is Topping Line"
+msgstr "Dòng topping"
+
+#. module: phuclong_pos_base
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_pos_order__note_label
+msgid "Label"
+msgstr "Label"
+
+#. module: phuclong_pos_base
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_clear_user_session_history____last_update
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_pos_modify_payment_history____last_update
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_pos_operation_history____last_update
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_pos_order_line_option____last_update
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_pos_payment_method_visa____last_update
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_pos_sale_type____last_update
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_product_cup_default____last_update
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_product_cup_line____last_update
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_product_cup_update____last_update
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_product_cup_update_line____last_update
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_wizard_clear_user_session____last_update
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_wizard_input_session_balance____last_update
+msgid "Last Modified on"
+msgstr "Sửa đổi lần cuối vào"
+
+#. module: phuclong_pos_base
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_pos_config__last_order_auto_paid_noti
+msgid "Last Order Auto Paid Noti"
+msgstr ""
+
+#. module: phuclong_pos_base
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_clear_user_session_history__write_uid
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_pos_modify_payment_history__write_uid
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_pos_operation_history__write_uid
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_pos_order_line_option__write_uid
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_pos_payment_method_visa__write_uid
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_pos_sale_type__write_uid
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_product_cup_default__write_uid
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_product_cup_line__write_uid
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_product_cup_update__write_uid
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_product_cup_update_line__write_uid
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_wizard_clear_user_session__write_uid
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_wizard_input_session_balance__write_uid
+msgid "Last Updated by"
+msgstr "Cập nhật lần cuối bởi"
+
+#. module: phuclong_pos_base
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_clear_user_session_history__write_date
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_pos_modify_payment_history__write_date
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_pos_operation_history__write_date
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_pos_order_line_option__write_date
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_pos_payment_method_visa__write_date
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_pos_sale_type__write_date
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_product_cup_default__write_date
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_product_cup_line__write_date
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_product_cup_update__write_date
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_product_cup_update_line__write_date
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_wizard_clear_user_session__write_date
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_wizard_input_session_balance__write_date
+msgid "Last Updated on"
+msgstr "Cập nhật lần cuối vào"
+
+#. module: phuclong_pos_base
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_hr_employee__payment_pos_order_ref
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_hr_employee_public__payment_pos_order_ref
+msgid "Lasted Payment Ref"
+msgstr "Tham chiếu thanh toán"
+
+#. module: phuclong_pos_base
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_product_cup_line__lid_id
+msgid "Lid"
+msgstr "Nắp"
+
+#. module: phuclong_pos_base
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_pos_order_line_option__line_id
+msgid "Line ID"
+msgstr "Mã dòng"
+
+#. module: phuclong_pos_base
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_pos_order__linked_draft_order_be
+msgid "Linked Draft Order"
+msgstr "Liên kết đơn hàng nháp"
+
+#. module: phuclong_pos_base
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_pos_payment_method__logo
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_pos_sale_type__logo
+msgid "Logo"
+msgstr "Hình ảnh"
+
+#. module: phuclong_pos_base
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_pos_order__modify_payment_ids
+msgid "Modify Payment"
+msgstr "Cập nhật thanh toán"
+
+#. module: phuclong_pos_base
+#: model_terms:ir.ui.view,arch_db:phuclong_pos_base.view_pos_pos_form_phuclong_modify
+msgid "Modify Payment History"
+msgstr "Lịch sử sửa đổi thanh toán"
+
+#. module: phuclong_pos_base
+#: model:ir.model.fields.selection,name:phuclong_pos_base.selection__pos_payment_method__use_for__momo
+msgid "Momo"
+msgstr "MoMo"
+
+#. module: phuclong_pos_base
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_pos_sale_type__name
+#: model_terms:ir.ui.view,arch_db:phuclong_pos_base.pos_sale_type_form_view
+msgid "Name"
+msgstr "Tên"
+
+#. module: phuclong_pos_base
+#: model:ir.model.fields.selection,name:phuclong_pos_base.selection__pos_order__state__draft
+msgid "New"
+msgstr "Mới"
+
+#. module: phuclong_pos_base
+#: model:ir.model.fields.selection,name:phuclong_pos_base.selection__pos_order_line_option__option_type__none
+#: model:ir.model.fields.selection,name:phuclong_pos_base.selection__product_cup_default__cup_type_load_pos__none
+msgid "None"
+msgstr "Không"
+
+#. module: phuclong_pos_base
+#: model:ir.model.fields.selection,name:phuclong_pos_base.selection__pos_order_line_option__option_type__normal
+msgid "Normal"
+msgstr "Bình thường"
+
+#. module: phuclong_pos_base
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_hr_employee__on_acount_amount
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_hr_employee_public__on_acount_amount
+msgid "On Account Amount"
+msgstr "Ví On Account"
+
+#. module: phuclong_pos_base
+#: model:ir.model.fields.selection,name:phuclong_pos_base.selection__pos_payment_method__use_for__on_account_customer
+msgid "On Account Customer"
+msgstr "Ví On Account KH"
+
+#. module: phuclong_pos_base
+#: model:ir.model.fields.selection,name:phuclong_pos_base.selection__pos_payment_method__use_for__on_account_emp
+msgid "On Account Employee"
+msgstr "Ví On Account NV"
+
+#. module: phuclong_pos_base
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_pos_payment__on_account_info
+msgid "On Account Info"
+msgstr "Ví On Account"
+
+#. module: phuclong_pos_base
+#: model_terms:ir.ui.view,arch_db:phuclong_pos_base.view_pos_pos_form_phuclong_modify
+msgid ""
+"Once an order is canceled, it cannot be reopened. Are you sure you want to "
+"cancel this order?"
+msgstr ""
+"Sau khi đơn đặt hàng bị hủy, nó không thể được mở lại. Bạn có chắc chắn muốn "
+"hủy đơn đặt hàng này không?"
+
+#. module: phuclong_pos_base
+#: model:ir.model.fields.selection,name:phuclong_pos_base.selection__pos_operation_history__type__open_cash
+msgid "Open Cash"
+msgstr "Tiền mặt đầu ca"
+
+#. module: phuclong_pos_base
+#: model:ir.actions.act_window,name:phuclong_pos_base.action_pos_operation_history
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_pos_order__operation_history_ids
+#: model:ir.ui.menu,name:phuclong_pos_base.menu_action_pos_operation_history
+#: model_terms:ir.ui.view,arch_db:phuclong_pos_base.view_pos_operation_history_tree
+#: model_terms:ir.ui.view,arch_db:phuclong_pos_base.view_pos_pos_form_phuclong_modify
+msgid "Operation History"
+msgstr "Lịch sử vận hành"
+
+#. module: phuclong_pos_base
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_pos_order_line_option__option_id
+msgid "Option"
+msgstr "Tuỳ chọn"
+
+#. module: phuclong_pos_base
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_pos_order_line__option_ids
+msgid "Option Line"
+msgstr "Dòng tuỳ chọn"
+
+#. module: phuclong_pos_base
+#: model_terms:ir.ui.view,arch_db:phuclong_pos_base.view_pos_operation_history_search
+msgid "Order"
+msgstr "Đơn hàng"
+
+#. module: phuclong_pos_base
+#: model_terms:ir.ui.view,arch_db:phuclong_pos_base.view_pos_session_form_phuclong_modify
+msgid "Orders"
+msgstr "Đơn hàng"
+
+#. module: phuclong_pos_base
+#: model:ir.model.fields.selection,name:phuclong_pos_base.selection__pos_order_line_option__option_type__over
+msgid "Over"
+msgstr "Nhiều"
+
+#. module: phuclong_pos_base
+#: model:res.groups,name:phuclong_pos_base.group_pos_config
+msgid "POS Config"
+msgstr "Cấu hình POS"
+
+#. module: phuclong_pos_base
+#: model:ir.actions.act_window,name:phuclong_pos_base.action_pos_sale_type
+#: model:ir.ui.menu,name:phuclong_pos_base.menu_pos_sale_type_action
+#: model_terms:ir.ui.view,arch_db:phuclong_pos_base.pos_sale_type_tree_view
+msgid "POS Sale Type"
+msgstr "Sale type POS"
+
+#. module: phuclong_pos_base
+#: model:ir.actions.server,name:phuclong_pos_base.auto_paid_pos_order_draft_ir_actions_server
+#: model:ir.cron,cron_name:phuclong_pos_base.auto_paid_pos_order_draft
+#: model:ir.cron,name:phuclong_pos_base.auto_paid_pos_order_draft
+msgid "POS: Auto Paid for draft order"
+msgstr "POS: Tự động thanh toán bill treo"
+
+#. module: phuclong_pos_base
+#: model:ir.model.fields.selection,name:phuclong_pos_base.selection__pos_order__state__paid
+msgid "Paid"
+msgstr ""
+
+#. module: phuclong_pos_base
+#: model:ir.model.fields.selection,name:phuclong_pos_base.selection__pos_order_line__cup_type__paper
+#: model:ir.model.fields.selection,name:phuclong_pos_base.selection__product_cup_default__cup_type_load_pos__paper
+msgid "Paper"
+msgstr "Giấy"
+
+#. module: phuclong_pos_base
+#: model:ir.model.fields.selection,name:phuclong_pos_base.selection__product_cup_default__cup_type_load_pos__paper_1st
+msgid "Paper First"
+msgstr "Giấy thứ nhất"
+
+#. module: phuclong_pos_base
+#: model_terms:ir.ui.view,arch_db:phuclong_pos_base.view_pos_payment_search
+msgid "Partner Appear Code"
+msgstr "Mã thẻ nổi KH"
+
+#. module: phuclong_pos_base
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_pos_payment__on_account_partner_id
+msgid "Partner On Account"
+msgstr "Ví On Account KH"
+
+#. module: phuclong_pos_base
+#: model_terms:ir.ui.view,arch_db:phuclong_pos_base.view_pos_order_filter_inherit_phuclong
+msgid "Payment"
+msgstr "Thanh toán"
+
+#. module: phuclong_pos_base
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_pos_payment_method_visa__payment_method_id
+msgid "Payment Method"
+msgstr "PTTT"
+
+#. module: phuclong_pos_base
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_pos_modify_payment_history__payment_method_after_id
+msgid "Payment Method After"
+msgstr "PTTT trước"
+
+#. module: phuclong_pos_base
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_pos_modify_payment_history__payment_method_before_id
+msgid "Payment Method Before"
+msgstr "PTTT sau"
+
+#. module: phuclong_pos_base
+#: code:addons/phuclong_pos_base/models/pos_session.py:0
+#: model_terms:ir.ui.view,arch_db:phuclong_pos_base.view_pos_session_form_phuclong_modify
+#, python-format
+msgid "Payments"
+msgstr "Thanh toán"
+
+#. module: phuclong_pos_base
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_pos_operation_history__date_perform
+msgid "Perform Date"
+msgstr "Ngày thực hiện"
+
+#. module: phuclong_pos_base
+#: model:ir.model.fields.selection,name:phuclong_pos_base.selection__pos_order_line__cup_type__plastic
+#: model:ir.model.fields.selection,name:phuclong_pos_base.selection__product_cup_default__cup_type_load_pos__plastic
+msgid "Plastic"
+msgstr "Nhựa"
+
+#. module: phuclong_pos_base
+#: model:ir.model.fields.selection,name:phuclong_pos_base.selection__product_cup_default__cup_type_load_pos__plastic_1st
+msgid "Plastic First"
+msgstr "Nhựa đầu tiên"
+
+#. module: phuclong_pos_base
+#: code:addons/phuclong_pos_base/models/product_cup_update_tool.py:0
+#, python-format
+msgid "Please choose cup(s) to apply."
+msgstr "Vui lòng chọn ly."
+
+#. module: phuclong_pos_base
+#: code:addons/phuclong_pos_base/models/product_cup_update_tool.py:0
+#, python-format
+msgid "Please choose drink to apply."
+msgstr "Vui lòng chọn thức uống."
+
+#. module: phuclong_pos_base
+#: code:addons/phuclong_pos_base/wizard/wizard_input_session_balance.py:0
+#, python-format
+msgid "Please input smaller number."
+msgstr "Tiền mặt đầu ca không được vượt quá 15 ký tự."
+
+#. module: phuclong_pos_base
+#: model:ir.model,name:phuclong_pos_base.model_pos_config
+msgid "Point of Sale Configuration"
+msgstr "Cấu hình POS"
+
+#. module: phuclong_pos_base
+#: model:ir.model,name:phuclong_pos_base.model_pos_order_line
+msgid "Point of Sale Order Lines"
+msgstr "Chi tiết sản phẩm"
+
+#. module: phuclong_pos_base
+#: model:ir.model,name:phuclong_pos_base.model_pos_order
+msgid "Point of Sale Orders"
+msgstr "Đơn hàng POS"
+
+#. module: phuclong_pos_base
+#: model:ir.model,name:phuclong_pos_base.model_pos_payment_method
+msgid "Point of Sale Payment Methods"
+msgstr "Phương thức thanh toán POS"
+
+#. module: phuclong_pos_base
+#: model:ir.model,name:phuclong_pos_base.model_pos_payment
+msgid "Point of Sale Payments"
+msgstr "Thanh toán"
+
+#. module: phuclong_pos_base
+#: model:ir.model,name:phuclong_pos_base.model_pos_session
+msgid "Point of Sale Session"
+msgstr "Ca bán hàng"
+
+#. module: phuclong_pos_base
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_pos_operation_history__pos_manager_id
+msgid "Pos Manager"
+msgstr "Quản lý cửa hàng"
+
+#. module: phuclong_pos_base
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_pos_modify_payment_history__pos_order_id
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_pos_operation_history__pos_order_id
+msgid "Pos Order"
+msgstr "Đơn hàng POS"
+
+#. module: phuclong_pos_base
+#: code:addons/phuclong_pos_base/models/pos_order.py:0
+#, python-format
+msgid "Pos Order %s is %s."
+msgstr ""
+"Đơn hàng POS %s đã được %s rồi. Vui lòng tải lại trang để cập nhật thông tin "
+"mới nhất."
+
+#. module: phuclong_pos_base
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_pos_operation_history__pos_permisson_id
+msgid "Pos Permission"
+msgstr "Quyền giảm giá POS"
+
+#. module: phuclong_pos_base
+#: model:ir.model,name:phuclong_pos_base.model_pos_payment_method_visa
+msgid "PosPaymentMethodVisa"
+msgstr "PTTT Visa"
+
+#. module: phuclong_pos_base
+#: model:ir.model.fields.selection,name:phuclong_pos_base.selection__pos_order__state__done
+msgid "Posted"
+msgstr "Đã vào sổ"
+
+#. module: phuclong_pos_base
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_pos_sale_type__allow_print_label_first
+msgid "Print Label First"
+msgstr "In Label trước"
+
+#. module: phuclong_pos_base
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_pos_operation_history__product_id
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_product_cup_default__product_id
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_product_cup_update__product_ids
+msgid "Product"
+msgstr "Sản phẩm"
+
+#. module: phuclong_pos_base
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_pos_order_line__product_coupon_code
+msgid "Product Coupon Code"
+msgstr "Mã Coupon SP"
+
+#. module: phuclong_pos_base
+#: model:ir.model,name:phuclong_pos_base.model_product_template
+msgid "Product Template"
+msgstr "Mẫu sản phẩm"
+
+#. module: phuclong_pos_base
+#: model:ir.model,name:phuclong_pos_base.model_hr_employee_public
+#, fuzzy
+#| msgid "Employee"
+msgid "Public Employee"
+msgstr "Nhân viên"
+
+#. module: phuclong_pos_base
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_pos_operation_history__reason
+msgid "Reason"
+msgstr "Lý do"
+
+#. module: phuclong_pos_base
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_product_cup_update_line__ref_code
+msgid "Reference Code"
+msgstr "Mã tham chiếu"
+
+#. module: phuclong_pos_base
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_pos_order_line__related_line_id
+msgid "Related Order Line"
+msgstr "Đơn hàng liên quan"
+
+#. module: phuclong_pos_base
+#: code:addons/phuclong_pos_base/models/pos_order.py:0
+#, python-format
+msgid "Reload"
+msgstr ""
+
+#. module: phuclong_pos_base
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_pos_modify_payment_history__user_id
+msgid "Responsible"
+msgstr "Người thực hiện"
+
+#. module: phuclong_pos_base
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_pos_order__sale_type_id
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_product_cup_default__sale_type_id
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_product_cup_update__sale_type_ids
+#: model_terms:ir.ui.view,arch_db:phuclong_pos_base.view_pos_order_filter_inherit_phuclong
+msgid "Sale Type"
+msgstr "Sale type"
+
+#. module: phuclong_pos_base
+#: model:ir.model.fields.selection,name:phuclong_pos_base.selection__pos_operation_history__type__search_customer
+msgid "Search Customer"
+msgstr "Tìm kiếm KH"
+
+#. module: phuclong_pos_base
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_pos_payment_method__sequence
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_product_cup_line__sequence
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_product_cup_update_line__sequence
+msgid "Sequence"
+msgstr "Trình tự"
+
+#. module: phuclong_pos_base
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_pos_sale_type__show_original_subtotal
+msgid "Show Original Subtotal"
+msgstr "Hiển thị giá gốc"
+
+#. module: phuclong_pos_base
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_product_cup_update_line__size_id
+msgid "Size"
+msgstr "Size"
+
+#. module: phuclong_pos_base
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_pos_session__cash_register_balance_start
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_wizard_input_session_balance__balance_start
+msgid "Starting Balance"
+msgstr "Tiền mặt đầu ca"
+
+#. module: phuclong_pos_base
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_pos_order__state
+msgid "Status"
+msgstr "Trạng thái"
+
+#. module: phuclong_pos_base
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_pos_operation_history__warehouse_id
+#: model_terms:ir.ui.view,arch_db:phuclong_pos_base.view_pos_operation_history_search
+msgid "Store"
+msgstr "Cửa hàng"
+
+#. module: phuclong_pos_base
+#: model:res.groups,name:phuclong_pos_base.group_store_accounting
+msgid "Store Accounting"
+msgstr "Kế toán cửa hàng"
+
+#. module: phuclong_pos_base
+#: model:res.groups,name:phuclong_pos_base.group_pos_store_audit
+msgid "Store Audit"
+msgstr "Audit cửa hàng"
+
+#. module: phuclong_pos_base
+#: model:ir.model.constraint,message:phuclong_pos_base.constraint_product_cup_line_sequence_product_cup_line_uniq
+#: model:ir.model.constraint,message:phuclong_pos_base.constraint_product_cup_update_line_sequence_product_cup_update_line_uniq
+msgid "The sequence must be unique per Cup List!"
+msgstr "Trình tự phải là duy nhất cho từng danh sách ly!"
+
+#. module: phuclong_pos_base
+#: model:ir.model.fields.selection,name:phuclong_pos_base.selection__pos_order_line__cup_type__themos
+msgid "Themos"
+msgstr "Ly giữ nhiệt"
+
+#. module: phuclong_pos_base
+#: model:ir.model.fields,help:phuclong_pos_base.field_pos_session__cash_register_balance_start
+msgid "Total of opening cash control lines."
+msgstr "Tổng số dòng kiểm soát tiền mặt mở ca."
+
+#. module: phuclong_pos_base
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_pos_operation_history__type
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_pos_order_line_option__option_type
+#: model_terms:ir.ui.view,arch_db:phuclong_pos_base.view_pos_operation_history_search
+msgid "Type"
+msgstr "Loại"
+
+#. module: phuclong_pos_base
+#: model:ir.actions.act_window,name:phuclong_pos_base.action_product_cup_update
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_product_cup_update__name
+#: model:ir.ui.menu,name:phuclong_pos_base.menu_product_cup_update
+#: model_terms:ir.ui.view,arch_db:phuclong_pos_base.view_product_cup_update_form
+msgid "Update Cup"
+msgstr "Cập nhật ly"
+
+#. module: phuclong_pos_base
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_pos_order__use_emp_coupon
+msgid "Use Employee Coupon"
+msgstr "Sử dụng Coupon NV"
+
+#. module: phuclong_pos_base
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_pos_payment_method__use_for
+msgid "Use For"
+msgstr "Sử dụng cho"
+
+#. module: phuclong_pos_base
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_pos_session__use_opening_balance
+msgid "Use Opening Balance"
+msgstr "Sử dụng số dư"
+
+#. module: phuclong_pos_base
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_pos_sale_type__use_for_call_center
+msgid "Use for call center"
+msgstr "Sử dụng cho tổng đài"
+
+#. module: phuclong_pos_base
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_clear_user_session_history__user_id
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_wizard_clear_user_session__user_id
+msgid "User"
+msgstr "Người dùng"
+
+#. module: phuclong_pos_base
+#: model:ir.model,name:phuclong_pos_base.model_res_users
+msgid "Users"
+msgstr "Người dùng"
+
+#. module: phuclong_pos_base
+#: model:res.groups,name:phuclong_pos_base.group_view_payment_analysis
+msgid "View Payment Analysis"
+msgstr ""
+
+#. module: phuclong_pos_base
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_pos_payment_method__visa_ids
+#: model:ir.model.fields.selection,name:phuclong_pos_base.selection__pos_payment_method__use_for__visa
+msgid "Visa"
+msgstr "Thẻ Visa"
+
+#. module: phuclong_pos_base
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_pos_modify_payment_history__voucher_code
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_wizard_modify_payment_line__voucher_code
+msgid "Voucher Code"
+msgstr "Mã voucher"
+
+#. module: phuclong_pos_base
+#: model:ir.model.fields,field_description:phuclong_pos_base.field_wizard_modify_payment__voucher_list
+msgid "Voucher List"
+msgstr "Danh sách Voucher"
+
+#. module: phuclong_pos_base
+#: code:addons/phuclong_pos_base/models/pos_order.py:0
+#, python-format
+msgid "Warning"
+msgstr ""
+
+#. module: phuclong_pos_base
+#: model:ir.model,name:phuclong_pos_base.model_wizard_clear_user_session
+msgid "WizardClearUserSession"
+msgstr "Xoá phiên đăng nhập"
+
+#. module: phuclong_pos_base
+#: code:addons/phuclong_pos_base/models/pos_order.py:0
+#, python-format
+msgid "You can only cancel the order which has been ordered within today."
+msgstr "Bạn chỉ được phép huỷ đơn hàng trong ngày"
+
+#. module: phuclong_pos_base
+#: code:addons/phuclong_pos_base/wizard/wizard_modify_payment.py:0
+#, python-format
+msgid "You can't delete payment method."
+msgstr "Bạn không thể xóa Phương thức thanh toán."
+
+#. module: phuclong_pos_base
+#. openerp-web
+#: code:addons/phuclong_pos_base/static/src/js/models.js:0
+#, python-format
+msgid "Your Internet connection is probably down."
+msgstr "Kết nổi internet bị gián đoạn."
+
+#. module: phuclong_pos_base
+#: model:ir.model,name:phuclong_pos_base.model_pos_modify_payment_history
+msgid "pos.modify.payment.history"
+msgstr ""
+
+#. module: phuclong_pos_base
+#: model:ir.model,name:phuclong_pos_base.model_pos_operation_history
+msgid "pos.operation.history"
+msgstr "Lịch sử vận hành POS"
+
+#. module: phuclong_pos_base
+#: model:ir.model,name:phuclong_pos_base.model_pos_order_line_option
+msgid "pos.order.line.option"
+msgstr "Lựa chọn"
+
+#. module: phuclong_pos_base
+#: model:ir.model,name:phuclong_pos_base.model_pos_sale_type
+msgid "pos.sale.type"
+msgstr "Loại bán"
+
+#. module: phuclong_pos_base
+#: model:ir.model,name:phuclong_pos_base.model_product_cup_default
+msgid "product.cup.default"
+msgstr "Ly mặc định"
+
+#. module: phuclong_pos_base
+#: model:ir.model,name:phuclong_pos_base.model_product_cup_line
+msgid "product.cup.line"
+msgstr "Dòng ly"
+
+#. module: phuclong_pos_base
+#: model:ir.model,name:phuclong_pos_base.model_product_cup_update
+msgid "product.cup.update"
+msgstr "Cập nhật ly"
+
+#. module: phuclong_pos_base
+#: model:ir.model,name:phuclong_pos_base.model_product_cup_update_line
+msgid "product.cup.update.line"
+msgstr "Dòng cập nhật ly"
+
+#. module: phuclong_pos_base
+#: model:ir.model,name:phuclong_pos_base.model_wizard_input_session_balance
+msgid "wizard.input.session.balance"
+msgstr ""
+
+#. module: phuclong_pos_base
+#: model:ir.model,name:phuclong_pos_base.model_wizard_modify_payment
+msgid "wizard.modify.payment"
+msgstr ""
+
+#. module: phuclong_pos_base
+#: model:ir.model,name:phuclong_pos_base.model_wizard_modify_payment_line
+msgid "wizard.modify.payment.line"
+msgstr ""
+
+#~ msgid "%s has %s bill draft auto paid by system:\n"
+#~ msgstr "%s có %s bill treo được hệ thống xử lý:\n"
