@@ -1,1 +1,4 @@
 .env
+/traefik/traefik.log
+/traefik/acme.json
+/traefik/access.log

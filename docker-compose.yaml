@@ -1,19 +1,31 @@
 version: '3'
 services:
-  web:
-    container_name: ${WEB_HOST}
-    image: ${WEB_IMAGE_NAME}:${WEB_IMAGE_TAG}
+  odoo:
+    container_name: ${ODOO_HOST}
+    image: ${ODOO_IMAGE}:${ODOO_TAG}
     build: ./
     depends_on:
       - db
-    ports:
-      - "${WEB_PORT}:8069"
+   # ports:
+   #  - "${ODOO_PORT}:8069"
     volumes:
       - odoo-web-data:/var/lib/odoo
       - ./config:/etc/odoo
       - ./addons:/mnt/extra-addons
     tty: true
-    command: -- --dev=reload
+   # command: -- --dev=reload
+    labels:
+      - traefik.enable=true
+      - traefik.http.services.odoo.loadbalancer.server.port=8069
+      - traefik.http.routers.odoo.entrypoints=web
+      - traefik.http.routers.odoo.rule=Host(`${ODOO_HOSTNAME}`)
+      - traefik.http.middlewares.odoo-https.redirectscheme.scheme=websecure
+      - traefik.http.routers.odoo.middlewares=odoo-https
+      - traefik.http.routers.odoo-secure.entrypoints=websecure
+      - traefik.http.routers.odoo-secure.rule=Host(`${ODOO_HOSTNAME}`)
+      - traefik.http.routers.odoo-secure.tls=true
+      - traefik.http.routers.oodoo-securee.tls.certresolver=le
+
   db:
     container_name: ${DB_HOST}
     image: ${DB_IMAGE}:${DB_TAG}
@@ -22,10 +34,58 @@ services:
       - POSTGRES_PASSWORD=${DB_PASSWD}
       - POSTGRES_USER=${DB_USER}
       - PGDATA=/var/lib/postgresql/data/pgdata
-    ports:
-      - "${DB_PORT}:5432"
+    #ports:
+    #  - "${DB_PORT}:5432"
     volumes:
       - odoo-db-data:/var/lib/postgresql/data/pgdata
+      
+  traefik:
+    container_name: ${TRAEFIK_HOST}
+    image: ${TRAEFIK_IMAGE}:${TRAEFIK_TAG}
+    environment:
+      - TZ=Asia/Bangkok
+    command:
+      - --api.insecure=true
+      - --api.dashboard=true
+      - --api.debug=true
+      - --providers.docker 
+      - --accesslog=true
+      - --accesslog.fields.names.StartUTC=drop
+      - --accesslog.filepath=/traefik/access.log
+      - --accesslog.bufferingsize=10000
+      - --entrypoints.web.address=:80
+      - --log=true
+      - --log.filePath=/traefik/traefik.log
+      - --log.level=INFO
+      - --entryPoints.traefik.address=:8080
+      - --entrypoints.websecure.address=:443
+      # TLS certificate
+      - --certificatesresolvers.le.acme.email=${LETS_ENCRYPT_EMAIL}
+      - --certificatesresolvers.le.acme.storage=/traefik/acme.json
+      - --certificatesresolvers.le.acme.tlschallenge=true
+
+      
+    ports:
+      - "80:80"
+      - "443:443"
+      # The Web UI (enabled by --api.insecure=true)
+      - "8080:8080"
+      
+    volumes:
+      # So that Traefik can listen to the Docker events
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./traefik:/traefik
+    labels:
+      - "traefik.http.routers.traefik.rule=Host(`${TRAEFIK_URL}`) && (PathPrefix(`/`))"
+      - "traefik.http.services.traefik.loadbalancer.server.port=8080"
+      - "traefik.http.routers.traefik.service=api@internal"
+      - "traefik.http.routers.traefik.tls.certresolver=le"
+      - "traefik.http.middlewares.redirect-to-https.redirectscheme.scheme=https"
+      - "traefik.http.routers.redirs.rule=hostregexp(`{host:.+}`)"
+      - "traefik.http.routers.redirs.entrypoints=web"
+      - "traefik.http.routers.redirs.middlewares=redirect-to-https"
+      - "traefik.http.routers.traefik.middlewares=admin-auth"
+      - "traefik.http.middlewares.admin-auth.basicauth.users=${HTTP_AUTH}"
 volumes:
   odoo-db-data:
   odoo-web-data:
