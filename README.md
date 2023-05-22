@@ -3,6 +3,9 @@
 
 # odoo-docker-prod
 Odoo docker Production
+  + Odoo
+  + PostgreSQL
+  + Traefik 
 
 # Credits
 
